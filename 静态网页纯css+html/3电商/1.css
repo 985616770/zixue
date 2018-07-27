@@ -1,0 +1,488 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/*页眉*/
+
+.header {
+    height: 25px;
+    width: auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(128, 125, 125);
+}
+
+.header ul {
+    list-style: none;
+}
+
+.header ul li {
+    float: right;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: -20px;
+}
+
+header .input-header {
+    position: absolute;
+    top: 70px;
+    right: 120px;
+}
+
+.input-header input {
+    width: 500px;
+    height: 30px;
+}
+
+.input-header img {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    cursor: pointer;
+}
+
+header .ul-header {
+    width: 1000px;
+    height: 40px;
+    border-bottom: 3px solid rgb(82, 82, 247);
+    list-style: none;
+}
+
+header .ul-header li {
+    float: left;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: rgb(82, 82, 247);
+}
+
+header .ul-header li:hover {
+    background: rgb(82, 82, 247);
+    cursor: pointer;
+    color: aliceblue;
+}
+
+/*导航*/
+
+nav {
+    position: relative;
+    height: auto;
+    width: 1000px;
+    margin-top: 10px;
+}
+
+.nav-main {
+    width: 200px;
+    height: 250px;
+    background: rgb(93, 173, 184);
+}
+
+.nav-main p {
+    background: rgb(62, 123, 202);
+    color: white;
+    padding: 5px 15px;
+}
+
+.nav-main ul {
+    list-style: none;
+    padding-left: 30px;
+}
+
+.nav-main ul li {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+nav img {
+    position: absolute;
+}
+
+nav img:nth-child(2) {
+    top: 0px;
+    left: 200px;
+}
+
+nav img:nth-child(3) {
+    top: 0px;
+    right: 10px;
+}
+
+nav img:nth-child(4) {
+    top: 130px;
+    right: 10px;
+}
+
+/*主体*/
+
+.main {
+    position: relative;
+}
+
+.part1 {
+    width: 1000px;
+    height: 360px;
+}
+
+.part1 .p-part1 {
+    border-top: 2px solid rgb(96, 174, 238);
+    background: rgb(144, 206, 221);
+    font-weight: bolder;
+    padding-left: 10px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.part1 main {
+    margin: 10px 0;
+    width: 750px;
+    border: 1px solid rgb(133, 131, 131);
+    max-height: 320px;
+    overflow: hidden;
+}
+
+.part1 main .part1-1 {
+    margin: 5px;
+    display: inline-block;
+    width: 350px;
+    height: 150px;
+}
+
+.part1-1 p:nth-child(2) {
+    font-size: 14px;
+}
+
+.part1-1 p:nth-child(3) {
+    font-size: 12px;
+    padding: 10px 10px;
+}
+
+.part1-1 p:nth-child(4) {
+    color: red;
+    margin: 10px
+}
+
+.part1-1 p:nth-child(4) span {
+    text-decoration: line-through;
+    color: black;
+}
+
+.part1-1 p:nth-child(5) span {
+    color: red;
+    font-weight: bolder;
+}
+
+.part1-1-1 {
+    float: left;
+}
+
+.part1-1-1 img:nth-child(2) {
+    display: block;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.part1-1-1 img:nth-child(1) {
+    padding: 20px 10px;
+    border: 1px solid rgb(197, 197, 187);
+}
+
+.part1 aside {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    width: 230px;
+    height: 320px;
+    border: 1px solid rgb(73, 27, 27);
+    overflow: hidden;
+}
+
+.part1 aside p {
+    border-bottom: 1px solid rgb(139, 139, 139);
+}
+
+.part1 aside ul {
+    list-style: none;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.part1 aside ul li {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.part1 aside ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.part1 aside ul li a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+/*part2*/
+
+.part2 {
+    position: relative;
+}
+
+.part2-p {
+    border-top: 2px solid rgb(96, 174, 238);
+    background: rgb(144, 206, 221);
+    font-weight: bolder;
+    padding-left: 10px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.part2-p2 {
+    text-align: right;
+    border-bottom: 3px solid rgb(33, 125, 179);
+    color: rgb(33, 125, 179);
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.part2-main {
+    width: 710px;
+    height: 300px;
+}
+
+.part2-zuo {
+    border: 1px solid rgb(155, 154, 154);
+    width: 710px;
+    height: 300px;
+}
+
+.part2-pic {
+    display: inline-block;
+    width: 160px;
+    height: 280px;
+    text-align: center;
+    margin: 5px;
+    padding: 10px 0;
+}
+
+.part2-pic p:nth-child(2) {
+    font-size: 12px;
+}
+
+.part2-pic p:nth-child(3) {
+    color: rgb(156, 156, 156);
+    font-size: 12px;
+}
+
+.part2-pic p:nth-child(4) {
+    color: rgb(156, 156, 156);
+    font-size: 13px;
+}
+
+.part2-pic p:nth-child(4) span {
+    color: red;
+    text-decoration: line-through;
+}
+
+.part2-pic p:nth-child(5) {
+    font-size: 13px;
+}
+
+.part2-pic p:nth-child(5) span {
+    color: red;
+}
+
+.part2 img:nth-child(3) {
+    position: absolute;
+    right: 0;
+    top: 30px;
+}
+
+.part2 img:nth-child(4) {
+    position: absolute;
+    right: 0;
+    top: 180px;
+}
+
+/**/
+
+.part3 {
+    width: 1000px;
+    height: 360px;
+    position: relative;
+}
+
+.part3 .p-part3 {
+    border-top: 2px solid rgb(96, 174, 238);
+    background: rgb(144, 206, 221);
+    font-weight: bolder;
+    padding-left: 10px;
+    height: 30px;
+    margin-top: 30px;
+}
+
+.part3 main {
+    margin: 10px 0;
+    width: 750px;
+    border: 1px solid rgb(133, 131, 131);
+    max-height: 320px;
+    overflow: hidden;
+}
+
+.part3 main .part3-1 {
+    margin: 5px;
+    display: inline-block;
+    width: 350px;
+    height: 150px;
+}
+
+.part3-1 p:nth-child(2) {
+    font-size: 14px;
+}
+
+.part3-1 p:nth-child(3) {
+    font-size: 12px;
+    padding: 10px 10px;
+}
+
+.part3-1 p:nth-child(4) {
+    color: red;
+    margin: 10px
+}
+
+.part3-1 p:nth-child(4) span {
+    text-decoration: line-through;
+    color: black;
+}
+
+.part3-1 p:nth-child(5) span {
+    color: red;
+    font-weight: bolder;
+}
+
+.part3-1-1 {
+    float: left;
+}
+
+.part3-1-1 img:nth-child(2) {
+    display: block;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.part3-1-1 img:nth-child(1) {
+    padding: 20px 10px;
+    border: 1px solid rgb(197, 197, 187);
+}
+
+.part3 aside {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    width: 230px;
+    height: 320px;
+    border: 1px solid rgb(73, 27, 27);
+    overflow: hidden;
+}
+
+.part3 aside ul {
+    list-style: none;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.part3 aside ul li {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.part3 aside ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.part3 aside ul li a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+#a {
+    border-bottom: 1px solid rgb(156, 153, 153);
+    padding: 5px;
+}
+
+#s {
+    float: left;
+    margin: 5px;
+}
+
+#d {
+    font-size: 12px;
+    color: rgb(161, 154, 154);
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(156, 153, 153);
+}
+
+/*part4*/
+
+.part4 {}
+
+.part4 p {
+    margin-top: 10px;
+    float: left;
+    width: 80px;
+    height: 20px;
+}
+
+.part4 ul {
+    list-style: none;
+    margin-left: 80px;
+}
+
+.part4 ul li {
+    float: left;
+    margin: 5px;
+}
+
+.part4 ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.part4 ul li a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/*页尾*/
+
+footer {
+    text-align: center;
+    clear: both;
+}
+
+footer hr {
+    height: 5px;
+    background: rgb(78, 81, 221);
+}
+
+footer ul {
+    list-style: none;
+    text-align: center;
+    margin: 0 auto;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 15px;
+    cursor: pointer;
+}
+
+footer p:nth-child(3) {
+    clear: both;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+
+<body>
+    <table id="tb" border="1">
+        <tbody id="tbd">
+            <tr>
+                <td>猪猪:</td>
+                <td>我喜欢吃肉</td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        昵称:
+        <input type="text" value="" id="userName" />
+        <br/>
+        <textarea name="" id="tt" cols="30" rows="10"></textarea>
+        <br/>
+        <input type="button" value="评论一下" id="btn" />
+        <br/>
+    </div>
+    <script src="common.js"></script>
+    <script>
+        document.getElementById("btn").onclick = function () {
+            //获取昵称的元素
+            var userName = my$("userName");
+            var tt = my$("tt");
+            var tr = document.createElement("tr");
+            var td1 = document.createElement("td");
+            my$("tbd").appendChild(tr);
+
+            tr.appendChild(td1);
+            td1.innerHTML = userName.value;
+            td2 = document.createElement("td");
+            tr.appendChild(td2);
+            td2.innerHTML = tt.value;
+            userName.value = "";
+            tt.value = "";
+
+        };
+    </script>
+</body>
+
+</html>

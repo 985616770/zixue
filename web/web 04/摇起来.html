@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="common.js"></script>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+        }
+
+        div {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="摇起来" id="btn1" />
+    <input type="button" value="停止" id="btn2" />
+    <div id="dv">
+        <img src="images/heihei.jpg" alt="" />
+        <img src="images/lyml.jpg" alt="" />
+    </div>
+    <script>
+        var timeId = "";
+        my$("btn1").onclick = function () {
+            timeId = setInterval(function () {
+                var x = parseInt(Math.random() * 100 + 1);
+                var y = parseInt(Math.random() * 100 + 1);
+                my$("dv").style.left = x + "px";
+                my$("dv").style.top = y + "px";
+            }, 100);
+
+        }
+        my$("btn2").onclick = function () {
+            clearInterval(timeId);
+        }
+    </script>
+</body>
+
+</html>

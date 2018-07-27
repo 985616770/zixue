@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+
+</head>
+
+<body>
+    <input type="button" value="拼接吧" id="btn" />
+    <br/>
+    <input type="text" value="" />
+    <br/>
+    <input type="text" value="" />
+    <br/>
+    <input type="text" value="" />
+    <br/>
+    <input type="text" value="" />
+    <br/>
+    <input type="text" value="" />
+    <br/>
+    <script src="common.js"></script>
+    <script>
+        document.getElementById("btn").onclick = function () {
+            var str = [];
+            //获取所有的文本框
+            var inputs = document.getElementsByTagName("input");
+            //每个文本框的VALUE属性值
+            for (let i = 0; i < inputs.length; i++) {
+                if (inputs[i].type != "button") {
+                    str.push(inputs[i].value);
+                }
+            }
+            document.innerHtml="+ str.join("|") +" ; //字符串
+
+        };
+    </script>
+
+</body>
+
+</html>

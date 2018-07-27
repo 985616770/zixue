@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>document.write() Example</title>
+</head>
+
+<body>
+    <p>the sss</p>
+    <div accesskey="sdsad" data-ng-strict-di="sdd" aria-grabbed="sadsd"></div>
+    <script>
+        document.write("<strong>" + (new Date()).toString() + "</strong>");
+
+        function outputAttributes(element) {
+            var paires = new Array(),
+                attrName,
+                attrValue,
+                i,
+                len;
+            for (i = 0, len = element.attributes.length; i < len; i++) {
+                attrName = element.attributes[i].nodeName;
+                attrValue = element.attributes[i].nodeValue;
+                paires.push(attrName + "+\"" + attrValue + "\"");
+            }
+            return paires.join(" ");
+        }
+        console.log(outputAttributes(document.getElementsByTagName("div")[0]));
+
+        outputAttributes(document.getElementsByTagName("div")[0]);
+        var element = document.createElement("div");
+        element.className = "message";
+
+        var textNode = document.createTextNode("hello world");
+        element.appendChild(textNode);
+        document.body.appendChild(element);
+
+        var table = document.createElement("table");
+        table.border = 1;
+        table.width = "100%";
+
+        var tbody = document.createElement("tbody");
+        table.appendChild(tbody);
+
+        tbody.insertRow(0);
+        tbody.rows[0].insertCell(0);
+        tbody.rows[0].cells[0].appendChild(document.createTextNode("Cell 1,1"));
+        tbody.rows[0].insertCell(1);
+        tbody.rows[0].cells[1].appendChild(document.createTextNode("Cell 2,1"));
+
+        tbody.insertRow(1);
+        tbody.rows[1].insertCell(0);
+        tbody.rows[1].cells[0].appendChild(document.createTextNode("Cell 1,2"));
+        tbody.rows[1].insertCell(1);
+        tbody.rows[1].cells[1].appendChild(document.createTextNode("Cell 2,2"));
+        document.body.appendChild(table);
+    </script>
+</body>
+
+</html>

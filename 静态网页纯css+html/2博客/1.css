@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(189, 136, 75);
+}
+h2{
+    color:rgb(173, 144, 62);
+    margin: 10px;
+}
+p{
+    font-size: 14px;
+    line-height: 30px;
+    margin: 10px;
+}
+
+/*页眉*/
+
+.header {
+    height: 120px;
+    width: auto;
+    margin: 10px;
+    background: rgb(131, 88, 63);
+}
+
+.header img:nth-child(1) {
+    float: left;
+}
+
+.header img:nth-child(2) {
+    float: right;
+}
+
+/*导航*/
+
+nav {
+    height: 20px;
+    width: auto;
+    background: rgb(218, 185, 124);
+    margin: 10px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    float: left;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+nav ul li:hover {
+    background: rgb(163, 126, 77);
+}
+
+/*文章主体*/
+
+.main {
+    position: relative;
+}
+
+.left-aside,
+.main-aside,
+.right-aside {
+    position: absolute;
+    height: 1600px;
+    background: url(素材/background.gif);
+    margin: 0 10px;
+}
+
+/*左侧栏*/
+
+.left-aside {
+    width: 20%;
+    left: 0;
+}
+.inner{
+    width: 80%;
+    height: 460px;
+   background: #eee;
+   margin: 10px auto;
+   text-align: center;
+   border:  1px solid rgb(112, 110, 110);
+}
+.inner p:first-child{
+    background: rgb(209, 186, 144);
+    margin: 0;
+}
+.inner img:nth-child(2){
+    border: 1px solid rgb(112, 110, 110);
+    margin: 10px;
+}
+.inner button{
+    width: 100px;
+    height: 30px;
+    margin-top:5px; 
+    
+}
+.inner button:hover{
+    cursor: pointer;
+}
+.inner div{
+    margin: 30px 0;
+    border-top:1px solid rgb(160, 158, 158); 
+    padding: 10px;
+}
+/*中间*/
+
+.main-aside {
+    width: auto;
+    left: 20%;
+    margin: 0px 30% 0px 20px;
+}
+
+/*右边*/
+
+.right-aside {
+    width: auto;
+    left: 70%;
+    text-align: center;
+}
+.right-aside img{
+    margin:50px 0; 
+}
+span{
+    color:rgb(173, 144, 62);
+    text-decoration: rgb(173, 144, 62) underline;
+}
+.right-aside p{
+    color:rgb(173, 144, 62);
+}
+.right-aside p:nth-child(2){
+    color: black;
+}
+.right-aside p:nth-child(6){
+    color: black;
+    text-align: left;
+    margin: 10px;
+}
+/*页脚*/
+footer{
+    
+    width: auto;
+    background: rgba(248, 172, 58, 0.836);
+    height: 80px;
+    margin: 1620px 10px 10px 10px;
+}
+footer p{
+    text-align: center;
+    color: rgb(228, 222, 222);
+}

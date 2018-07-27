@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        /* body {
+            font-family: "Helvetica", "Arial", serif;
+            color: #333;
+            background-color: #ccc;
+            margin: 1em 10%;
+        }
+
+        h1 {
+            color: #333;
+            background-color: transparent;
+        }
+
+        a {
+            color: #c60;
+            background-color: transparent;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        li {
+            float: left;
+            padding: 1em;
+            list-style: none;
+        }
+
+        #imagegallery {
+
+            list-style: none;
+        }
+
+        #imagegallery li {
+            margin: 0px 20px 20px 0px;
+            padding: 0px;
+            display: inline;
+        }
+
+        #imagegallery li a img {
+            border: 0;
+        } */
+
+        /* .nodeSmall {
+            width: 50px;
+            height: 50px;
+            background: url(images/bgs.png) no-repeat -159px -51px;
+            position: fixed;
+            right: 10px;
+            top: 40%;
+        }
+
+        .erweima {
+            position: absolute;
+            top: 0;
+            left: -150px;
+        }
+
+        .nodeSmall a {
+            display: block;
+            width: 50px;
+            height: 50px;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }*/
+    </style>
+</head>
+
+<body>
+
+    <!-- <input type="button" value="关灯" id="btn"> -->
+    <!-- <input type="button" value="禁用文本框" id="btn" />
+    <input type="text" value="文本框" id="txt" />
+    <a href="http://www.baidu.com" id="ak">百度</a> -->
+    <!-- <a href="images/1.jpg" id="ak">
+        <img src="images/1-small.jpg" alt="">
+    </a> -->
+    <!-- <img src="" alt="" id="big">
+    <h2>
+        美女画廊
+    </h2>
+
+    <ul id="imagegallery">
+        <li>
+            <a href="images/1.jpg" title="美女A">
+                <img src="images/1-small.jpg" width="100" alt="美女1" />
+            </a>
+        </li>
+        <li>
+            <a href="images/2.jpg" title="美女B">
+                <img src="images/2-small.jpg" width="100" alt="美女2" />
+            </a>
+        </li>
+        <li>
+            <a href="images/3.jpg" title="美女C">
+                <img src="images/3-small.jpg" width="100" alt="美女3" />
+            </a>
+        </li>
+        <li>
+            <a href="images/4.jpg" title="美女D">
+                <img src="images/4-small.jpg" width="100" alt="美女4" />
+            </a>
+        </li>
+    </ul>
+
+
+    <div style="clear:both"></div>
+    <!--显示大图的-->
+    <!-- <img id="image" src="images/placeholder.png" alt="" width="450" />
+    <p id="des">选择一个图片</p> -->
+    <!-- <input type="button" value="隔行变色" id="btn" />
+    <ul id="uu">
+        <li>红旗</li>
+        <li>五菱宏光</li>
+        <li>奔驰</li>
+        <li>兰博基尼</li>
+        <li>哈弗</li>
+        <li>奥拓</li>
+        <li>奥迪</li>
+        <li>悍马</li>
+    </ul> -->
+
+    <!-- <ul>
+        <li>金士百</li>
+        <li>雪花</li>
+        <li>百威</li>
+        <li>燕京</li>
+        <li>青岛</li>
+        <li>崂山</li>
+        <li>珠江</li>
+        <li>华丹</li>
+    </ul> -->
+    <!-- <div class="nodeSmall" id="node_small">
+        <a href="#"></a>
+        <!--锚定-->
+    <!-- <div class="erweima hide" id="er">
+            <img src="images/456.png" alt="" />
+        </div>
+    </div> -->
+    <!-- <input type="button" value="显示效果" id="btn" /> -->
+    <p>这是一个p</p>
+    <p class="cls">这是一个p</p>
+    <span>这是一个span</span>
+    <span class="cls">这是一个span</span>
+
+    <script src="common.js"></script>
+    <script>
+        // my$("btn").onclick = function () {
+        //     document.body.className = document.body.className != "cls" ? "cls" : "";
+        // }
+        // document.getElementById("btn").onclick = function () {
+        //     document.getElementById("txt").disabled = true;
+        // }
+        // document.getElementById("ak").onclick = function () {
+        //     alert("嘎嘎");
+        // }
+        // document.getElementById("ak").onclick = function(){
+        //     document.getElementById("big").src = this.href;
+        //     return false;
+        // }
+        // var aObjs = my$("imagegallery").getElementsByTagName("a");
+        // for (let i = 0; i < aObjs.length; i++) {
+        //     aObjs[i].onclick = function () {
+        //         my$("image").src = this.href;
+        //         my$("image").innerText = this.title;
+        //         return false;
+        //     }
+        // }
+        // my$("btn").onclick = function () {
+        //     //获取所有的li标签
+        //     var list = my$("uu").getElementsByTagName("li");
+        //     for (var i = 0; i < list.length; i++) {
+        //         list[i].style.backgroundColor = i % 2 == 0 ? "red" : "yellow";
+        //     }
+        // };
+
+        // var list = document.getElementsByTagName("li");
+        // for (let i = 0; i < list.length; i++) {
+        //     list[i].onmouseover = function () {
+        //         this.style.backgroundColor = "yellow";
+        //     }
+        //     list[i].onmouseout = function () {
+        //         this.style.backgroundColor = "";
+        //     }
+        // }
+        // var aObj = my$("node_small").getElementsByTagName("a")[0];
+        // aObj.onmouseover = function () {
+        //     my$("er").className ="erweima show";
+        // }
+        // aObj.onmouseout = function () {
+        //     my$("er").className ="erweima hide";
+        // }
+
+        var objs = document.querySelectorAll(".cls");
+        for (let i = 0; i < objs.length; i++) {
+            objs[i].style.backgroundColor = "green";
+        }
+    </script>
+</body>
+
+</html>

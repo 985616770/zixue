@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="common.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrap {
+            width: 300px;
+            margin: 100px auto 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid #c0c0c0;
+            width: 300px;
+        }
+
+        th,
+        td {
+            border: 1px solid #d0d0d0;
+            color: #404060;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #09c;
+            font: bold 16px "微软雅黑";
+            color: #fff;
+        }
+
+        td {
+            font: 14px "微软雅黑";
+        }
+
+        tbody tr {
+            background-color: #f0f0f0;
+        }
+
+        tbody tr:hover {
+            cursor: pointer;
+            background-color: #fafafa;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div>
+    <!-- <div id="dv">哦哦
+        <span>这是div中的第一个span标签</span>12312
+        <p>这是div中的第二个元素,第一个p标签</p>
+        <ul id="uu">
+            <li>乔峰</li>
+            <li>鹿茸</li>
+            <li id="three">段誉</li>
+            <li>卡卡西</li>
+            <li>雏田</li>
+        </ul>
+    </div> -->
+    <!-- <input type="button" value="变色" id="btn" />
+    <div id="dv">
+        <span>这是span</span>
+        <p>这是p</p>
+        <span>这是span</span>
+        <p>这是p</p>
+        <span>这是span</span>
+        <p>这是p</p>
+        <span>这是span</span>
+        <a href="http://www.baidu.com">百度</a>
+    </div> -->
+
+    <!-- <input type="button" value="变色" id="btn" />
+    <ul id="uu">
+        <li>爆炒助教</li>
+        <li>油炸班主任</li>
+        <li>清蒸小苏</li>
+        <li>红烧班长</li>
+        <li>红烧肉</li>
+        <li>糖醋排骨</li>
+        <li>凉拌秋葵</li>
+        <li>鱼香胡萝卜丝</li>
+    </ul> -->
+    <!-- <ul id="uu">
+        <li>第一个</li>
+        <li>第二个</li>
+        <li>第三个</li>
+        <li>第四个</li>
+        <li>第五个</li>
+    </ul> -->
+
+    <!-- <div class="wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox" id="j_cbAll" />
+                    </th>
+                    <th>菜名</th>
+                    <th>饭店</th>
+                </tr>
+            </thead>
+            <tbody id="j_tb">
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>红烧肉</td>
+                    <td>田老师</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>西红柿鸡蛋</td>
+                    <td>田老师</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>油炸榴莲</td>
+                    <td>田老师</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>清蒸助教</td>
+                    <td>田老师</td>
+                </tr>
+
+            </tbody>
+        </table> -->
+    <!-- <input type="button" value="创建一个p" id="btn" />
+    <div id="dv"></div> -->
+    <!-- <input type="button" value="创建列表" id="btn" />
+    <div id="dv"></div> -->
+    <!-- <input type="button" value="创建p" id="btn" />
+    <div id="dv"></div> -->
+    </div> -->
+    <input type="button" value="创建列表" id="btn" />
+    <div id="dv"></div>
+
+
+    <script>
+        // var ckAll = my$("j_cbAll");
+        // var cks = my$("j_tb").getElementsByTagName("input");
+        // ckAll.onclick = function () {
+        //     for (let i = 0; i < cks.length; i++) {
+        //         cks[i].checked = this.checked;
+        //     }
+        // }
+        // for (let i = 0; i < cks.length; i++) {
+        //     cks[i].onclick = function () {
+        //         var flag = true;
+        //         for (let j = 0; j < cks.length; j++) {
+        //             if (!cks[j].checked) {
+        //                 flag = false;
+        //                 break;
+        //             }
+        //         }
+        //         ckAll.checked = flag;
+        //     }
+        // }
+
+        // my$("btn").onclick = function () {
+        //     my$("dv").innerHTML = "<p>窗前明月光,疑是地上霜,举头望明月,低头思故乡</p>";
+        // };
+
+        // var names = ["杨过", "郭靖", "张无忌", "张三丰", "乔峰", "段飞", "丁棚"];
+        // my$("btn").onclick = function () {
+        //     var str = "<ul style='list-style-type: none;cursor: pointer'>";
+        //     for (let i = 0; i < names.length; i++) {
+        //         str += "<li>" + names[i] + "</li>";
+        //     }
+        //     str += "</ul>";
+        //     my$("dv").innerHTML = str;
+        // }
+        // my$("btn").onclick = function () {
+        //     var pObj = document.createElement("p");
+        //     setInnerText(pObj, "zhhhh");
+        //     my$("dv").appendChild(pObj);
+        // };
+        var kungfu = ["降龙十八掌", "黯然销魂掌", "葵花宝典", "九阴真经", "吸星大法", "如来神掌", "化骨绵掌", "玉女心经", "极乐神功", "辟邪剑谱"];
+        //点击按钮动态的创建列表,把列表加到div中
+        my$("btn").onclick = function () {
+            //创建ul,把ul立刻加入到父级元素div中
+            var ulObj = document.createElement("ul");
+            my$("dv").appendChild(ulObj);
+            //动态的创建li,加到ul中
+            for (var i = 0; i < kungfu.length; i++) {
+                var liObj = document.createElement("li");
+                //设置li中间的文字内容
+                liObj.innerHTML = kungfu[i];
+                ulObj.appendChild(liObj);
+                //为li添加鼠标进入事件
+                liObj.onmouseover = mouseoverHandle;
+                //为li添加鼠标离开事件
+                liObj.onmouseout = mouseoutHandle;
+            }
+        };
+
+        //此位置.按钮的点击事件的外面
+        function mouseoverHandle() {
+            this.style.backgroundColor = "red";
+        }
+
+        function mouseoutHandle() {
+            this.style.backgroundColor = "";
+        }
+
+        //如果是循环的方式添加事件,推荐用命名函数
+        //如果不是循环的方式添加事件,推荐使用匿名函数
+    </script>
+    <script>
+        // var ulObj= document.getElementById("uu");
+        // console.log(ulObj.parentNode);
+        // console.log(ulObj.parentElement);
+        // console.log(ulObj.childNodes);
+        // console.log(ulObj.children);
+        // console.log(ulObj.firstChild);
+        // console.log(ulObj.firstElementChild);
+        // console.log(ulObj.lastChild);
+        // console.log(ulObj.lastElementChild);
+        // console.log(ulObj.nextSibling);
+        // console.log(ulObj.nextElementSibling);
+        // my$("btn").onclick = function () {
+        //     var dvObj = my$("dv");
+        //     var nodes = dvObj.childNodes;
+        //     for (let i = 0; i < nodes.length; i++) {
+        //         if (nodes[i].nodeType == 1 && nodes[i].nodeName == "P") {
+        //             nodes[i].style.backgroundColor = "red";
+        //         }
+        //     }
+        // };
+
+        // my$("btn").onclick = function () {
+        //     var count = 0;
+        //     var nodes = my$("uu").childNodes;
+        //     for (let i = 0; i < nodes.length; i++) {
+        //         if (nodes[i].nodeType == 1&&nodes[i].nodeName == "LI") {
+        //             nodes[i].style.backgroundColor = count%2==0?"red":"yellow";
+        //             count++;
+        //         }
+        //     }
+        // }
+
+        // function getFirstElementChild(element) {
+        //     if (element.getFirstElementChild) {
+        //         return element.firstElementChild;
+        //     }else{
+        //         var node = element.firstChild;
+        //         while (node&&node.nodeType !=1) {
+        //             node = node.nextSibling;
+        //         }
+        //         return node;
+        //     }
+        // }
+        // function getLastElementChild(element) {
+        //     if (element.getLastElementChild) {
+        //         return element.lastElementChild;
+        //     }else{
+        //         var node = element.lastChild;
+        //         while (node&&node.nodeType != 1) {
+        //             node = node.previousSibling;
+        //         }
+        //         return node;
+        //     }
+        // }
+        // console.log(getFirstElementChild(my$("uu")));
+        // console.log(getLastElementChild(my$("uu")));
+    </script>
+</body>
+
+</html>

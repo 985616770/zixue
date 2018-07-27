@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="common.js"></script>
+</head>
+
+<body>
+
+    <input type="button" value="点击" id="btn">
+
+    <img src="#" alt="" id="im">
+    <div>
+        <p>qq</p>
+        <p>ww</p>
+        <p>ee</p>
+        <p>dd</p>
+        <p>11</p>
+    </div>
+    <a href="#" id="a">
+        <img src="liuyan.jpg" alt="" id="aa" title="aqwe">
+    </a>
+    <br>
+    <input type="button" value="45745" id="btn2">
+    <br>
+
+    <input type="text" value="qwe">
+    <br>
+    <input type="text" value="aaa">
+    <br>
+    <input type="text" value="aaa">
+    <br>
+    <input type="text" value="aaa">
+    <br>
+    <input type="text" value="aaa">
+    <br>
+    <input type="text" value="aaa">
+    <br>
+    <input type="button" value="怀孕了">
+    <input type="button" value="怀孕了">
+    <input type="button" value="怀孕了">
+    <input type="button" value="怀孕了">
+    <input type="button" value="怀孕了">
+    <script>
+
+        var obj = document.getElementsByTagName("input");
+        for (let i = 0; i < obj.length; i++) {
+            obj[i].onclick = function () {
+                for (let j = 0; j < obj.length; j++) {
+                    obj[j].value = "怀孕了";
+                }
+                this.value = "sss"
+            }
+        }
+    </script>
+</body>
+
+</html>

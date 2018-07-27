@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box {
+            width: 450px;
+            margin: 200px auto;
+        }
+
+        #txt {
+            width: 350px;
+        }
+
+        #pop {
+            width: 350px;
+            border: 1px solid red;
+        }
+
+        #pop ul {
+            margin: 10px;
+            padding: 0px;
+            width: 200px;
+            list-style-type: none;
+
+        }
+
+        #pop ul li {
+            border: 1px solid rgba(179, 5, 5, 0.336);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="box">
+        <input type="text" id="txt" value="">
+        <input type="button" value="搜索" id="btn">
+
+    </div>
+
+    <script src="common.js"></script>
+    <script>
+        var keyWords = ["小杨才是最纯洁的", "小杨才是最帅的", "小段是最猥琐的", "小超是最龌龊的", "传智播客是一个培训机构", "传说在传智有个很帅很纯洁的小杨", "苹果好吃",
+            "苹果此次召回还是没有中国"
+        ];
+        my$("txt").onkeyup = function () {
+            if (my$("dv")) {
+                my$("box").removeChild(my$("dv"));
+            }
+            var text = this.value;
+            var tempArr = [];
+            for (let i = 0; i < keyWords.length; i++) {
+                if (keyWords[i].indexOf(text) == 0) {
+                    tempArr.push(keyWords[i]);
+                }
+            }
+        
+        if (this.value.length == 0 || tempArr.length == 0) {
+            if (my$("dv")) {
+                my$("box").removeChild(my$("dv"));
+            }
+            return;
+        }
+        var dvObj = document.createElement("div");
+        my$("box").appendChild(dvObj);
+        console.log(tempArr);
+        dvObj.id = "dv";
+        dvObj.style.width = "350px";
+        dvObj.style.border = "1px solid green";
+        for (let i = 0; i < tempArr.length; i++) {
+            var pObj = document.createElement("p");
+            dvObj.appendChild(pObj);
+            setInnerText(pObj, tempArr[i]);
+            pObj.style.margin = 0;
+            pObj.style.padding = 0;
+            pObj.style.cursor = "pointer";
+            pObj.style.marginTop = "5px";
+            pObj.style.marginLeft = "5px";
+            pObj.onmouseover = function () {
+                this.style.backgroundColor = "yellow";
+            };
+            pObj.onmouseout = function () {
+                this.style.backgroundColor = "";
+            };
+        }
+    }
+        
+        console.log(window.navigator.userAgent);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="common.js"></script>
+    <style>
+    div{
+        height: 100px;
+        width: 200px;
+        background: blue;
+        margin: 10px;
+        box-sizing: border-box;
+    }
+    div:hover{
+        border: 2px solid red;
+    }
+    </style>
+</head>
+
+<body>
+    <a href="http://www.baidu.com " id="ak">百度</a>
+    <a href="2.jpg" id="a">
+        <img src="liuyan.jpg" alt="">
+    </a>
+    <img src="#" alt="" id="big">
+    <input type="button" id="btn">
+    <ul id="uu">
+        <li>11</li>
+        <li>22</li>
+        <li>33</li>
+        <li>44</li>
+        <li>55</li>
+        <li>66</li>
+        <li>77</li>
+        <li>55</li>
+    </ul>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        my$("ak").onclick = function () {
+            alert("123123");
+            return false;
+        }
+        my$("a").onclick = function () {
+            my$("big").src = this.href;
+            return false;
+        };
+        my$("btn").onclick = function () {
+            var list = my$("uu").getElementsByTagName("li");
+            for (let i = 0; i < list.length; i++) {
+                list[i].style.background = i % 2 == 0 ?"blue":"red";
+            }
+        }
+    </script>
+</body>
+
+</html>

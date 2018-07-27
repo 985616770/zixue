@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="common.js"></script>
+</head>
+
+<body>
+    <a href="2.jpg" id="a">
+        <img src="liuyan.jpg" alt="" id="img">
+    </a>
+    <input type="button" value="选择兴趣" id="btn2" />
+    <input type="checkbox" value="1" name="xingqu" />吃饭
+    <input type="checkbox" value="2" name="xingqu" />睡觉
+    <input type="checkbox" value="3" name="xingqu" id="ck1" />打豆豆
+    <input type="checkbox" value="4" name="xingqu" />打篮球
+    <input type="checkbox" value="5" name="xingqu" />打足球
+    <input type="checkbox" value="6" name="xingqu" id="ck2" />打铅球
+    <textarea name="aa" id="qq" cols="30" rows="10">
+        注册用户的协议: 某人问智者, 大师:您觉得怎么做才是最快乐的? 回答说:不要和愚者辩论 这个人说:我不这么认为! 大师说:您说的对, 我就是这么帅
+
+    </textarea>
+    <script>
+        my$("img").onclick = function () {
+            this.src = document.getElementById("a").href;
+            return false;
+        }
+        my$("btn2").onclick = function () {
+            my$("ck1").checked = true;
+            my$("ck2").checked = true;
+        }
+    </script>
+</body>
+
+</html>

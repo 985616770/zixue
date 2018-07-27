@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="common.js"></script>
+    <style>
+        div {
+            height: 200px;
+            width: 200px;
+            border: 1px solid red;
+        }
+
+        ul {
+            list-style: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="选择" id="btn">
+    <div id="dv">真是太神奇了</div>
+    <ul id="ul">
+        <li>asdasd</li>
+        <li>asdasd</li>
+        <li>asdasd</li>
+        <li>asdasd</li>
+        <li>asdasd</li>
+    </ul>
+    <script>
+        function setInnerText(element, text) {
+            if (typeof element.textContent == "undefined") {
+                element.innerText = text;
+            } else {
+                element.textContent = text;
+            }
+        }
+
+        function getInnerText(element) {
+            if (typeof element.textContent == "undefined") {
+                return element.innerText;
+            } else {
+                return element.textContent;
+            }
+        }
+        my$("btn").onclick = function () {
+            setInnerText(my$("dv"), "哈哈,我又变帅了");
+        };
+
+        var list = my$("ul").getElementsByTagName("li");
+        for (let i = 0; i < list.length; i++) {
+            list[i].setAttribute("score", (i + 1) * 10);
+            list[i].onclick = function () {
+                alert(this.getAttribute("score"));
+            }
+        }
+    </script>
+</body>
+
+</html>

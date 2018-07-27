@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <meta charset="UTF-8">
+  <title> asd</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .box {
+      width: 400px;
+      height: 300px;
+      border: 1px solid #ccc;
+      margin: 100px auto;
+      overflow: hidden;
+    }
+
+    .hd {
+      height: 45px;
+    }
+
+    .hd span {
+      display: inline-block;
+      width: 90px;
+      background-color: pink;
+      line-height: 45px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .hd span.current {
+      background-color: purple;
+    }
+
+    .bd li {
+      height: 255px;
+      background-color: purple;
+      display: none;
+    }
+
+    .bd li.current {
+      display: block;
+    }
+  </style>
+  <script src="common.js"></script>
+</head>
+
+<body>
+  <div class="box" id="box">
+    <div class="hd">
+      <span class="current">体育</span>
+      <span>娱乐</span>
+      <span id="aa">新闻</span>
+      <span>综合</span>
+    </div>
+    <div class="bd">
+      <ul>
+        <li class="current">我是体育模块</li>
+        <li>我是娱乐模块</li>
+        <li>我是新闻模块</li>
+        <li>我是综合模块</li>
+      </ul>
+    </div>
+  </div>
+  <script src="common.js"></script>
+  <script>
+    var box = my$("box");
+    var hd = box.getElementsByTagName("div")[0];
+    var bd = box.getElementsByTagName("div")[1];
+    var list = bd.getElementsByTagName("li");
+    var spans = hd.getElementsByTagName("span");
+
+    for (var i = 0; i < spans.length; i++) {
+      spans[i].setAttribute("index", i);
+      spans[i].onclick = function () {
+        for (var j = 0; j < spans.length; j++) {
+          spans[j].removeAttribute("class");
+        }
+
+        this.className = "current";
+        var num = this.getAttribute("index");
+
+        for (var k = 0; k < list.length; k++) {
+          list[k].removeAttribute("class");
+        }
+        list[num].className = "current";
+      };
+    }
+    var abc = document.getElementById("aa");
+    // console.log(abc.parentNode);
+    // console.log(abc.parentElement);
+    // console.log(abc.childNodes);
+    // console.log(abc.children);
+    // console.log(abc.firstChild);
+    // console.log(abc.firstElementChild);
+    // console.log(abc.lastChild);
+    // console.log(abc.lastElementChild);
+    // console.log(my$("aa").previousSibling);
+    // console.log(my$("aa").previousElementSibling);
+    // console.log(my$("aa").nextSibling);
+    // console.log(my$("aa").nextElementSibling);
+    console.log(typeof my$("aa").previousSibling);
+  </script>
+
+
+</body>
+
+</html>
