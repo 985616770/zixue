@@ -1,0 +1,2 @@
+Host gitcafe.com www.gitcafe.com
+  IdentityFile ~/.ssh/gitcafe
