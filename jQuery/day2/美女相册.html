@@ -53,7 +53,15 @@
     <script src="../jquery-1.12.4.js"></script>
     <script>
         $(function () {
+            $("#imagegallery a").click(function () {
+                var href = $(this).attr("href");
+                $("#image").attr("src", href);
+                var title = $(this).attr("title");
+                $("#des").text(title);
 
+                return false;
+
+            });
         });
     </script>
 </head>
