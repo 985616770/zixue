@@ -50,20 +50,36 @@
         }
     </style>
 
-    <script src="../jquery-1.12.4.js"></script>
+    <script src="jquery-1.12.4.js"></script>
     <script>
+        // $(function () {
+        //     $("#imagegallery a").click(function () {
+        //         var href = $(this).attr("href");
+        //         $("#image").attr("src", href);
+        //         var title = $(this).attr("title");
+        //         $("#des").text(title);
+
+        //         return false;
+
+        //     });
+        // });
         $(function () {
-            $("#imagegallery a").click(function () {
-                var href = $(this).attr("href");
-                $("#image").attr("src", href);
-                var title = $(this).attr("title");
-                $("#des").text(title);
-
-                return false;
-
-            });
-        });
+      //1. 给所有的a注册点击事件
+      
+      
+      $("#imagegallery a").click(function () {
+        var href = $(this).attr("href");
+        $("#image").attr("src", href);
+        
+        var title = $(this).attr("title");
+        $("#des").text(title);
+        
+        return false;
+      });
+    });
+    
     </script>
+    
 </head>
 
 <body>
@@ -96,7 +112,7 @@
 
     <div style="clear:both"></div>
 
-    <img id="image" src="images/placeholder.png" alt="" width="450px" />
+    <img id="image" src="images/1.jpg" alt="" width="450px" />
 
     <p id="des">选择一个图片</p>
 
