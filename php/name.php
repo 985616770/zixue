@@ -10,8 +10,7 @@ foreach ($lines as $item) {
   $cols = explode('|', $item);
   $data[] = $cols;
 };
-
-// var_dump($data);
+var_dump($data);
 ?>
 <!DOCTYPE html>
 <html lang="en">
