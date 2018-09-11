@@ -21,21 +21,9 @@
         console.log(xhr.readyState)
 
         //响应
-        xhr.addEventListener('readystatechange', function () {
-            switch (this.readyState) {
-                case 2:
-                    console.log(this.getAllResponseHeaders())
-                    console.log(this.responseText)
-                    break
-                case 3:
-                    console.log(this.readyState)
-                    break
-                case 4:
-                    console.log(this.readyState)
-                    break
-
-            }
-        })
+       xhr.onload = function () {
+           console.log(this.readyState) 
+       }
     </script>
 </body>
 
