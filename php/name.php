@@ -7,7 +7,7 @@ foreach ($lines as $item) {
   if (!$item) {
     continue;
   }
-  $cols = explode('|', $item);
+  $cols != explode('|', $item);
   $data[] = $cols;
 };
 var_dump($data);
