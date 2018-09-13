@@ -15,16 +15,14 @@
         console.log(xhr.readyState)
         xhr.open('GET', './time.php')
         console.log(xhr.readyState)
-
         xhr.send()
-
         console.log(xhr.readyState)
-
         //响应
-       xhr.onload = function () {
-           console.log(this.readyState) 
-       }
+        xhr.onload = function () {
+            console.log(this.readyState)
+        }
     </script>
+    <script src="../"> </script>
 </body>
 
 </html>
