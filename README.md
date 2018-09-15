@@ -2,4 +2,4 @@
 show and code
 
 
-sd dasd
+sd
