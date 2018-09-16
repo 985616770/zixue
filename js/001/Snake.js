@@ -1,7 +1,4 @@
-/**
- * Creat by Adminstrator on 2017 9 27 
- * 
- */
+
 //自调用函数----小蛇
 ((function () {
     var elements = []; //存放小蛇的每个身体部分
