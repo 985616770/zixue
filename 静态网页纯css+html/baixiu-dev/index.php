@@ -1,6 +1,6 @@
 <?php
 
-require_once 'config,php';
+require_once 'config.php';
 
 ?>
 <h1>前台</h1>
