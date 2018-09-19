@@ -6,7 +6,7 @@
  */
 
 @mixin border-ri {
-  border-radius: 25px 25px 25px 25px;
+  border-radius: 25px 50px 25px 50px;
 }
 
 @mixin wh($width, $height) {
