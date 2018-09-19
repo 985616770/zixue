@@ -211,7 +211,7 @@ function noop() {
 }
 
 function dbgBreak(val) {
-	// Usage examples: {{dbg:...}}, {{:~dbg(...)}}, {{dbg .../static/}}, {^{for ... onAfterLink=~dbg}} etc.
+	// Usage examples: {{dbg:...}}, {{:~dbg(...)}}, {{dbg .../}}, {^{for ... onAfterLink=~dbg}} etc.
 	try {
 		console.log("JsRender dbg breakpoint: " + val);
 		throw "dbg breakpoint"; // To break here, stop on caught exceptions.
@@ -2150,7 +2150,7 @@ function buildCode(ast, tmpl, isLinkExpr) {
 										+ "\nreturn {" + tagCtx + "};");
 					tagCtxFn._er = onError;
 					tagCtxFn._tag = tagName;
-					tagCtxFn._bd = !!pathBindings; // data-linked tag {^{.../static/}}
+					tagCtxFn._bd = !!pathBindings; // data-linked tag {^{.../}}
 					tagCtxFn._lr = lateRender;
 
 					if (isLinkExpr) {
