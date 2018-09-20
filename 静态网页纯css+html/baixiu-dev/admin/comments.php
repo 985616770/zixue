@@ -91,6 +91,7 @@
     </div>
   </div>
 
+  <?php $current_page = 'comments'; ?>
   <?php include 'inc/sidebar.php' ?>
 
 

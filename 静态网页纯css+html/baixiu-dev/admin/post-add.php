@@ -1,3 +1,6 @@
+<?php 
+$current_page = isset($current_page) ? $current_page : '';
+?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -71,6 +74,7 @@
     </div>
   </div>
 
+  <?php $current_page = 'post-add'; ?>
   <?php include 'inc/sidebar.php' ?>
 
   <script src="../static/assets/vendors/jquery/jquery.js"></script>

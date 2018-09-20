@@ -72,6 +72,7 @@
     </div>
   </div>
 
+ <?php $current_page = 'settings'; ?>
   <?php include 'inc/sidebar.php' ?>
 
   <script src="../static/assets/vendors/jquery/jquery.js"></script>
