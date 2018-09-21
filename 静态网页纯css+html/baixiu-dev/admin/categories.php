@@ -1,13 +1,40 @@
+<?php
+require_once '../functions.php';
+
+function add_category()
+{
+    if (empty($_POST['name']) || empty($_POST['slug'])) {
+        $GLOBALS['message']='请完整填写表单';
+        $GLOBALS['success']=false;
+        return;
+    }
+
+    $name = $_POST['name'];
+    $slug = $_POST['slug'];
+    $rows = xiu_execute("INSERT into categories VALUES (null, '{$name}','{$slug}');");
+
+
+    $GLOBALS['success'] = $rows > 0;
+    $GLOBALS['message'] = $rows <=0 ? '添加失败':'添加成功';
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    add_category();
+}
+
+//查询所有数据
+$categories = xiu_fetch_all('SELECT * FROM  categories;');
+?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <title>Categories &laquo; Admin</title>
-  <link rel="stylesheet" href="../static/assets/vendors/bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="../static/assets/vendors/font-awesome/css/font-awesome.css">
-  <link rel="stylesheet" href="../static/assets/vendors/nprogress/nprogress.css">
-  <link rel="stylesheet" href="../static/assets/css/admin.css">
-  <script src="../static/assets/vendors/nprogress/nprogress.js"></script>
+  <link rel="stylesheet" href="/static/assets/vendors/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/static/assets/vendors/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="/static/assets/vendors/nprogress/nprogress.css">
+  <link rel="stylesheet" href="/static/assets/css/admin.css">
+  <script src="/static/assets/vendors/nprogress/nprogress.js"></script>
 </head>
 <body>
   <script>NProgress.start()</script>
@@ -20,13 +47,21 @@
       <div class="page-title">
         <h1>分类目录</h1>
       </div>
-      <!-- 有错误信息时展示 -->
-      <!-- <div class="alert alert-danger">
-        <strong>错误！</strong>发生XXX错误
-      </div> -->
+      <?php if (isset($message)): ?>
+      <?php if ($success): ?>
+      <div class="alert alert-success">
+      <strong>成功！<?php echo $message; ?> </strong>
+      </div>
+      <?php else: ?>
+      <div class="alert alert-danger">
+      <strong>错误！<?php echo $message; ?> </strong>
+      </div>
+      <?php endif ?>
+      <?php endif ?>
       <div class="row">
         <div class="col-md-4">
-          <form>
+        
+          <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
             <h2>添加新分类目录</h2>
             <div class="form-group">
               <label for="name">名称</label>
@@ -37,7 +72,13 @@
               <input id="slug" class="form-control" name="slug" type="text" placeholder="slug">
               <p class="help-block">https://zce.me/category/<strong>slug</strong></p>
             </div>
+
+
+            
+
+
             <div class="form-group">
+              
               <button class="btn btn-primary" type="submit">添加</button>
             </div>
           </form>
@@ -45,7 +86,7 @@
         <div class="col-md-8">
           <div class="page-action">
             <!-- show when multiple checked -->
-            <a class="btn btn-danger btn-sm" href="javascript:;" style="display: none">批量删除</a>
+            <a id="btn_delete" class="btn btn-danger btn-sm" href="javascript:;" style="display: block">批量删除</a>
           </div>
           <table class="table table-striped table-bordered table-hover">
             <thead>
@@ -57,33 +98,18 @@
               </tr>
             </thead>
             <tbody>
+              <?php foreach ($categories as $item): ?>
               <tr>
                 <td class="text-center"><input type="checkbox"></td>
-                <td>未分类</td>
-                <td>uncategorized</td>
+                <td><?php echo $item['name'] ?></td>
+                <td><?php echo $item['slug'] ?></td>
                 <td class="text-center">
                   <a href="javascript:;" class="btn btn-info btn-xs">编辑</a>
-                  <a href="javascript:;" class="btn btn-danger btn-xs">删除</a>
+                  <a href="category-del.php?id=<?php echo $item['id']; ?>" class="btn btn-danger btn-xs">删除</a>
                 </td>
               </tr>
-              <tr>
-                <td class="text-center"><input type="checkbox"></td>
-                <td>未分类</td>
-                <td>uncategorized</td>
-                <td class="text-center">
-                  <a href="javascript:;" class="btn btn-info btn-xs">编辑</a>
-                  <a href="javascript:;" class="btn btn-danger btn-xs">删除</a>
-                </td>
-              </tr>
-              <tr>
-                <td class="text-center"><input type="checkbox"></td>
-                <td>未分类</td>
-                <td>uncategorized</td>
-                <td class="text-center">
-                  <a href="javascript:;" class="btn btn-info btn-xs">编辑</a>
-                  <a href="javascript:;" class="btn btn-danger btn-xs">删除</a>
-                </td>
-              </tr>
+              <?php endforeach ?>
+              
             </tbody>
           </table>
         </div>
@@ -93,8 +119,8 @@
   <?php $current_page = 'categories'; ?>
   <?php include 'inc/sidebar.php' ?>
 
-  <script src="../static/assets/vendors/jquery/jquery.js"></script>
-  <script src="../static/assets/vendors/bootstrap/js/bootstrap.js"></script>
+  <script src="/static/assets/vendors/jquery/jquery.js"></script>
+  <script src="/static/assets/vendors/bootstrap/js/bootstrap.js"></script>
   <script>NProgress.done()</script>
 </body>
 </html>

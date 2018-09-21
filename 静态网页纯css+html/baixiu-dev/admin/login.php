@@ -58,15 +58,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
   <meta charset="utf-8">
   <title>Sign in &laquo; Admin</title>
-  <link rel="stylesheet" href="../static/assets/vendors/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/static/assets/vendors/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="/static/assets/vendors/animate/animate.min.css">
-  <link rel="stylesheet" href="../static/assets/css/admin.css">
+  <link rel="stylesheet" href="/static/assets/css/admin.css">
 </head>
 
 <body>
 <div class="login">
   <form class="login-wrap<?php echo isset($message) ? ' shake animated' : '' ?>" action ="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" novalidate autocomplete="off">
-    <img class="avatar" src="../static/assets/img/default.png">
+    <img class="avatar" src="/static/assets/img/default.png">
     <?php if (isset($message)): ?>
     <div class="alert alert-danger">
       <strong>错误！</strong>
@@ -84,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <button class="btn btn-primary btn-block" type="submit">登 录</button>
   </form>
   </div>
-  <script src="../static/assets/vendors/jquery/jquery.min.js"></script>
+  <script src="/static/assets/vendors/jquery/jquery.min.js"></script>
   <script>
   $(function ($) {
       // 目标:用户输入自己的邮箱后,页面显示对应的头像

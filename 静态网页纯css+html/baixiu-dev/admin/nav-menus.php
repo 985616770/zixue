@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <title>Navigation menus &laquo; Admin</title>
-  <link rel="stylesheet" href="../static/assets/vendors/bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="../static/assets/vendors/font-awesome/css/font-awesome.css">
-  <link rel="stylesheet" href="../static/assets/vendors/nprogress/nprogress.css">
-  <link rel="stylesheet" href="../static/assets/css/admin.css">
-  <script src="../static/assets/vendors/nprogress/nprogress.js"></script>
+  <link rel="stylesheet" href="/static/assets/vendors/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/static/assets/vendors/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="/static/assets/vendors/nprogress/nprogress.css">
+  <link rel="stylesheet" href="/static/assets/css/admin.css">
+  <script src="/static/assets/vendors/nprogress/nprogress.js"></script>
 </head>
 <body>
   <script>NProgress.start()</script>
@@ -96,8 +96,8 @@
   <?php $current_page = 'nav-menus'; ?>
   <?php include 'inc/sidebar.php' ?>
 
-  <script src="../static/assets/vendors/jquery/jquery.js"></script>
-  <script src="../static/assets/vendors/bootstrap/js/bootstrap.js"></script>
+  <script src="/static/assets/vendors/jquery/jquery.js"></script>
+  <script src="/static/assets/vendors/bootstrap/js/bootstrap.js"></script>
   <script>NProgress.done()</script>
 </body>
 </html>

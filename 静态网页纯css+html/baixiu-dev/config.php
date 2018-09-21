@@ -5,7 +5,7 @@
  */
 
 /**
- * 数据库主机
+ * 数据库主机           
  */
 define('XIU_DB_HOST', 'localhost');
 define('XIU_DB_USER', 'root');

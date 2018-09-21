@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <title>Settings &laquo; Admin</title>
-  <link rel="stylesheet" href="../static/assets/vendors/bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="../static/assets/vendors/font-awesome/css/font-awesome.css">
-  <link rel="stylesheet" href="../static/assets/vendors/nprogress/nprogress.css">
-  <link rel="stylesheet" href="../static/assets/css/admin.css">
-  <script src="../static/assets/vendors/nprogress/nprogress.js"></script>
+  <link rel="stylesheet" href="/static/assets/vendors/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/static/assets/vendors/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="/static/assets/vendors/nprogress/nprogress.css">
+  <link rel="stylesheet" href="/static/assets/css/admin.css">
+  <script src="/static/assets/vendors/nprogress/nprogress.js"></script>
 </head>
 <body>
   <script>NProgress.start()</script>
@@ -29,7 +29,7 @@
             <input id="site_logo" name="site_logo" type="hidden">
             <label class="form-image">
               <input id="logo" type="file">
-              <img src="../static/assets/img/logo.png">
+              <img src="/static/assets/img/logo.png">
               <i class="mask fa fa-upload"></i>
             </label>
           </div>
@@ -75,8 +75,8 @@
  <?php $current_page = 'settings'; ?>
   <?php include 'inc/sidebar.php' ?>
 
-  <script src="../static/assets/vendors/jquery/jquery.js"></script>
-  <script src="../static/assets/vendors/bootstrap/js/bootstrap.js"></script>
+  <script src="/static/assets/vendors/jquery/jquery.js"></script>
+  <script src="/static/assets/vendors/bootstrap/js/bootstrap.js"></script>
   <script>NProgress.done()</script>
 </body>
 </html>
