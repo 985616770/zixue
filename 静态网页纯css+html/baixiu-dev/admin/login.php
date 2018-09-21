@@ -2,7 +2,8 @@
 //载入配置
 session_start();
 require_once '../config.php';
-function login(){
+function login()
+{
     // 1.接受并校验
 
     // 2.持久化
@@ -19,7 +20,9 @@ function login(){
     }
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+    //连接数据库
+    $conn = mysqli_connect(XIU_DB_HOST, XIU_DB_USER, XIU_DB_PASS, XIU_DB_NAME);
     if (!$conn) {
         exit('<h1>连接数据库失败</h1>');
     }
@@ -38,7 +41,7 @@ function login(){
         $GLOBALS['message'] = '邮箱与密码不匹配';
         return;
     }
-
+    //为了后续可以直接获取当前的登陆用户的信息,这里直接将用户信息放到session中
     $_SESSION['current_login_user'] = $user;
 
     header('Location:/admin/');
@@ -81,6 +84,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <button class="btn btn-primary btn-block" type="submit">登 录</button>
   </form>
   </div>
+  <script src="../static/assets/vendors/jquery/jquery.min.js"></script>
+  <script>
+  $(function ($) {
+      // 目标:用户输入自己的邮箱后,页面显示对应的头像
+    //   实现:
+    // 时机:邮箱文本框失去焦点.并且能拿到文本框填写的邮箱时
+    var emailFormat  = /[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+/
+    $('#email').on('blur',function () {
+        var value = $(this).val()
+        //忽略掉文本框为空,或者不是邮箱
+        if(!value || !emailFormat.test(value)) return
+
+
+        //获取邮箱对应的头像地址,通过发送  AJAX  请求 ,通过接口获取头像地址
+        $.get('/admin/api/avatar.php',{email:value},function (res) {
+            // res获取头像的地址
+            if (!res) return
+            $('.avatar').fadeOut(function () {
+                 $(this).on('load',function () {
+                    $(this).fadeIn()
+                  }).attr('src',res) }
+            )
+        })
+
+
+    })
+  })
+  </script>
   </body>
 
 </html>

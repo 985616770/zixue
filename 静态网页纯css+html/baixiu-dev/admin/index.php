@@ -1,11 +1,7 @@
 <?php 
-//校验数据当前访问用户的 箱子
+require_once '../functions.php';
 
-session_start();
-if (empty($_SESSION['current_login_user'])) {
-  header('Location:/admin/login.php');
-}
-
+xiu_get_current_user();
 ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
