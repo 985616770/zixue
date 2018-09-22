@@ -58,9 +58,9 @@ $comments_held = xiu_fetch_one("SELECT count(1) as num FROM comments WHERE statu
   <?php $current_page = 'index';?>
   <?php include 'inc/sidebar.php'?>
 
-  <script src="/static/assets/vendors/jquery/jquery.min.js"></script>
-  <script src="/static/assets/vendors/bootstrap/js/bootstrap.min.js"></script>
-  <script src="/static/assets/vendors/chart/Chart.min.js"></script>
+  <script src="/static/assets/vendors/jquery/jquery.js"></script>
+  <script src="/static/assets/vendors/bootstrap/js/bootstrap.js"></script>
+  <script src="/static/assets/vendors/chart/Chart.js"></script>
   <script>NProgress.done()</script>
   <script>
   var ctx = document.getElementById("myChart").getContext('2d');

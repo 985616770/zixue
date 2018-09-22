@@ -57,7 +57,7 @@ function xiu_fetch_one($sql){
     return isset($res[0])?$res[0]:null;
 }
 /**
- * 非查询语句
+ * 非查询语句,增删改
  */
 function xiu_execute($sql){
    $conn = mysqli_connect(XIU_DB_HOST, XIU_DB_USER, XIU_DB_PASS, XIU_DB_NAME);

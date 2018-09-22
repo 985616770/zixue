@@ -11,11 +11,9 @@ require_once '../functions.php';
 
  $id = $_GET['id'];
 
- $rows = xiu_execute('DELETE FROM categories WHERE id='.$id);
+ $rows = xiu_execute('DELETE FROM categories WHERE id in ('.$id.');');
 
- if ($rows > 0) {
-    
- }
+//  DELETE FROM categories WHERE id in ('.$id.');
 
 //sql 注入 
  header('Location: /admin/categories.php');
