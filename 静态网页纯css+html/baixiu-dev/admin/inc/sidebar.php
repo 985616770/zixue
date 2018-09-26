@@ -1,9 +1,12 @@
 
 <?php 
-$current_page = isset($current_page)?$current_page : '';
+
 require_once '../functions.php';
 
+$current_page = isset($current_page) ? $current_page : '';
 $current_user = xiu_get_current_user();
+
+
 ?>
 <div class="aside">
     <div class="profile">

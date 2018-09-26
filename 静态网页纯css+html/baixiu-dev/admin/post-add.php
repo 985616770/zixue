@@ -33,7 +33,10 @@ $current_page = isset($current_page) ? $current_page : '';
           </div>
           <div class="form-group">
             <label for="content">标题</label>
-            <textarea id="content" class="form-control input-lg" name="content" cols="30" rows="10" placeholder="内容"></textarea>
+            <script id="container" name="content" type="text/plain">
+        这里写你的初始化内容
+    </script>
+            <!-- <textarea id="content" class="form-control input-lg" name="content" cols="30" rows="10" placeholder="内容"></textarea> -->
           </div>
         </div>
         <div class="col-md-3">
@@ -79,6 +82,11 @@ $current_page = isset($current_page) ? $current_page : '';
 
   <script src="/static/assets/vendors/jquery/jquery.js"></script>
   <script src="/static/assets/vendors/bootstrap/js/bootstrap.js"></script>
+  <script src="/static/assets/vendors/ueditor/ueditor.config.js"></script>
+  <script src="/static/assets/vendors/ueditor/ueditor.all.js"></script>
+  <script>
+  UE.getEditor('container');
+  </script>
   <script>NProgress.done()</script>
 </body>
 </html>

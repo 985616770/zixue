@@ -50,7 +50,7 @@ function login()
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     login();
 }
-
+//点击退出 删除用户的session信息
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['action']) && $_GET['action'] === 'logout') {
     unset($_SESSION['current_login_user']);
 }
@@ -98,8 +98,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['action']) && $_GET['act
         var value = $(this).val()
         //忽略掉文本框为空,或者不是邮箱
         if(!value || !emailFormat.test(value)) return
-
-
         //获取邮箱对应的头像地址,通过发送  AJAX  请求 ,通过接口获取头像地址
         $.get('/admin/api/avatar.php',{email:value},function (res) {
             // res获取头像的地址
@@ -110,9 +108,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['action']) && $_GET['act
                   }).attr('src',res) }
             )
         })
-
-
     })
+    
+
   })
   </script>
   </body>

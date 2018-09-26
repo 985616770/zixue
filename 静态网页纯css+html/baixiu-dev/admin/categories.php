@@ -15,7 +15,7 @@ function add_category()
 
 
     $GLOBALS['success'] = $rows > 0;
-    $GLOBALS['message'] = $rows <=0 ? '添加失败'.var_dump($rows).'':'添加成功';
+    $GLOBALS['message'] = $rows <=0 ? '添加失败' : '添加成功';
 }
 
 function edit_category()
@@ -36,22 +36,22 @@ function edit_category()
 }
 
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (empty($_GET['id'])) {
+//判断是编辑主线 还是添加主线
+if (empty($_GET['id'])) {
+    //添加
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         add_category();
-    } else {
+    }
+} else {
+    //编辑
+    $current_edit_category = xiu_fetch_one('select * from categories where id ='.$_GET['id']);
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         edit_category();
     }
 }
 
 //查询所有数据
 $categories = xiu_fetch_all('SELECT * FROM  categories;');
-
-if (!empty($_GET['id'])) {
-    //没传参数=> 客户端 =>
-    $current_edit_category = xiu_fetch_one('select * from categories where id ='.$_GET['id']);
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -102,6 +102,8 @@ if (!empty($_GET['id'])) {
             </div>
             <div class="form-group">              
               <button class="btn btn-primary" type="submit">保存</button>
+              <a href="/admin/categories.php" class="btn btn-info">添加
+            </a>
             </div>
           </form>
         <?php else: ?>
@@ -173,7 +175,7 @@ if (!empty($_GET['id'])) {
       $tbodyCheckboxs.on('change',function(){
         var id = $(this).data('id')
         if ($(this).prop('checked')) {
-          allCheckeds.push(id)
+          allCheckeds.includes(id) || allCheckeds.push(id)
         }else{
           allCheckeds.splice(allCheckeds.indexOf(id),1)
         }
@@ -181,6 +183,14 @@ if (!empty($_GET['id'])) {
         $btnDelete.attr('href','/admin/category-del.php?id='+allCheckeds)
       })
       
+      //全选和全不选
+      $('thead input').on('change', function () {
+        //1.获取当前选中状态
+        var checked = $(this).prop('checked')
+        //2.设置给每一个
+        $tbodyCheckboxs.prop('checked',checked).trigger('change');
+         
+      });
   });
   </script>
 </body>
