@@ -55,19 +55,22 @@ $height) {
 
 header {
     height: 80px;
-    background-color: #000000;
+    background-color: #000;
+
     div {
         @include wh(1200px,
         80px);
         background: url(../images/header.jpg) no-repeat;
         margin: 0 auto;
+
         i {
             color: rgb(223, 221, 221);
             float: right;
             font-size: 30px;
         }
     }
-    #close{
+
+    #close {
         transition: all 2s;
     }
 }
@@ -77,28 +80,35 @@ header {
     30px);
     background: #e3e4e5;
     color: #999;
+
     .header-f-f {
         @include wh(1100px,
         auto);
         margin: 0 auto;
+
         span {
             line-height: 30px;
             margin-left: 150px;
+
             i {
                 font-family: 'icomoon';
                 font-style: normal;
                 color: rgb(235, 15, 15);
             }
         }
+
         ul {
             float: right;
+
             li {
                 display: inline-block;
                 margin: 5px 10px 0;
                 cursor: pointer;
+
                 &:nth-child(2) a {
                     color: red;
                 }
+
                 &:nth-child(9) {
                     margin-right: -100px;
                 }
@@ -112,6 +122,7 @@ header {
     140px);
     position: relative;
     margin: 0 auto;
+
     .header-s-logo {
         position: absolute;
         left: 0;
@@ -119,9 +130,11 @@ header {
         box-shadow: 2px 1px 2px rgb(133, 131, 131);
         background: white;
     }
+
     .header-s-main {
         margin-left: 190px;
         position: relative;
+
         .header-s-input {
             .header-s-search {
                 @include wh(500px,
@@ -129,16 +142,19 @@ header {
                 border: 1px solid red;
                 margin: 30px 0px 0 100px;
             }
+
             button {
                 background: #c81623;
                 height: 32px;
                 width: 30px;
                 cursor: pointer;
                 margin-left: -10px;
+
                 i {
                     color: #e3e4e5;
                 }
             }
+
             .header-s-gouwu {
                 display: inline-block;
                 color: #c81623;
@@ -146,6 +162,7 @@ header {
                 padding: 5px 30px;
                 margin: 0 20px;
                 position: relative;
+
                 div {
                     position: absolute;
                     border-radius: 10px;
@@ -158,38 +175,47 @@ header {
                     color: white;
                 }
             }
+
             .erweima {
                 float: right;
                 margin-right: 10px;
             }
         }
+
         .header-s-under {
             margin-left: 100px;
+
             li {
                 display: inline-block;
                 margin: 10px 2px;
                 cursor: pointer;
+
                 &:nth-child(1) {
                     margin-left: 0;
+
                     a {
                         color: #c81623;
                     }
                 }
             }
         }
+
         .header-s-bottom {
             color: #999;
             @include wh(770px,
             40px);
+
             li {
                 display: inline-block;
                 margin: 10px;
+
                 a {
                     font-size: 18px;
                     font-weight: bolder;
                 }
             }
         }
+
         #super {
             position: absolute;
             bottom: 10px;
@@ -204,15 +230,18 @@ header {
     margin: 0 auto;
     background: pink;
     position: relative;
+
     #header-t-logo {
         position: absolute;
         left: 0;
         top: 0;
+
         .ad-l {
             position: absolute;
             left: -250px;
             top: 0;
         }
+
         .ad-r {
             height: 480px;
             width: 0;
@@ -221,22 +250,27 @@ header {
             top: 0;
             transition: all 1s;
         }
+
         &:hover .ad-r {
             width: 990px;
         }
     }
+
     .header-t-left {
         @include wh(180px,
         480px);
         background: #5c5a5a;
         font-size: 18px;
         padding: 5px;
+
         ul {
             li {
                 margin: 10px;
                 color: white;
+
                 a {
                     color: #eee;
+
                     &:hover {
                         color: red;
                     }
@@ -244,7 +278,9 @@ header {
             }
         }
     }
+
     .header-t-middle {}
+
     .header-t-right {}
 }
 
@@ -252,12 +288,15 @@ footer {
     margin-top: 100px;
     background: #dedede;
     text-align: center;
+
     .footer-f {
         @include wh(1200px,
         108px);
         margin: 0 auto;
+
         ul {
             display: flex;
+
             li {
                 flex: 1;
                 height: 42px;
@@ -265,6 +304,7 @@ footer {
                 line-height: 42px;
                 font-weight: bolder;
                 margin: 40px 10px;
+
                 h1 {
                     background: url(../images/ico.png) no-repeat;
                     @include wh(36px,
@@ -272,33 +312,41 @@ footer {
                     float: left;
                     margin: 0;
                 }
+
                 p {
                     margin-left: 50px;
                 }
+
                 &:nth-child(2) h1 {
                     background-position: 0 -42px;
                 }
+
                 &:nth-child(3) h1 {
                     background-position: 0 -85px;
                 }
+
                 &:nth-child(4) h1 {
                     background-position: 0 -128px;
                 }
             }
         }
     }
+
     .footer-s {
         @include wh(1200px,
         150px);
         margin: 0 auto;
         border-bottom: 1px solid #777676;
+
         .footer-s-main {
             float: left;
+
             dl {
                 display: inline-block;
                 width: 192px;
             }
         }
+
         .footer-s-aside {
             background: url(../images/ico_footer.png) no-repeat;
             float: right;
@@ -306,17 +354,21 @@ footer {
             height: 150px;
         }
     }
+
     .footer-t {
         @include wh(1200px,
         42px);
         margin: 0 auto;
+
         ul {
             text-align: center;
+
             li {
                 display: inline-block;
                 margin: 0px 5px;
             }
         }
+
         .xiangan {
             width: 1px;
             height: 10px;
@@ -324,33 +376,42 @@ footer {
             margin-top: 20px;
         }
     }
+
     &>p {
         color: #5c5a5a;
         font-size: 13px;
     }
-    .yewei{
+
+    .yewei {
         margin-top: 10px;
-        p{
+
+        p {
             display: inline-block;
             background: url(../images/ico_footer.png) no-repeat;
-            @include wh(103px,33px );
+            @include wh(103px, 33px);
             cursor: pointer;
-            &:nth-child(1){
+
+            &:nth-child(1) {
                 background-position: 0 -150px;
             }
-            &:nth-child(2){
+
+            &:nth-child(2) {
                 background-position: -103px -150px;
             }
-            &:nth-child(3){
+
+            &:nth-child(3) {
                 background-position: 0px -184px;
             }
-            &:nth-child(4){
+
+            &:nth-child(4) {
                 background-position: -103px -184px;
             }
-            &:nth-child(5){
+
+            &:nth-child(5) {
                 background-position: 0 -150px;
             }
-            &:nth-child(6){
+
+            &:nth-child(6) {
                 background-position: -103px -216px;
             }
         }

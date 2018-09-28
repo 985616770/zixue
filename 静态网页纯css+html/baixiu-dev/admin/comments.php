@@ -13,7 +13,7 @@
   <script>NProgress.start()</script>
 
   <div class="main">
-  <?php include 'inc/navbar.php' ?>
+  <?php include 'inc/navbar.php' ?> 
     <div class="container-fluid">
       <div class="page-title">
         <h1>所有评论</h1>
@@ -34,7 +34,7 @@
           <li><a href="#">1</a></li>
           <li><a href="#">2</a></li>
           <li><a href="#">3</a></li>
-          <li><a href="#">下一页</a></li>
+          <li><a href="#">下一页</a></li> 
         </ul>
       </div>
       <table class="table table-striped table-bordered table-hover">
@@ -50,43 +50,8 @@
           </tr>
         </thead>
         <tbody>
-          <tr class="danger">
-            <td class="text-center"><input type="checkbox"></td>
-            <td>大大</td>
-            <td>楼主好人，顶一个</td>
-            <td>《Hello world》</td>
-            <td>2016/10/07</td>
-            <td>未批准</td>
-            <td class="text-center">
-              <a href="post-add.html" class="btn btn-info btn-xs">批准</a>
-              <a href="javascript:;" class="btn btn-danger btn-xs">删除</a>
-            </td>
-          </tr>
-          <tr>
-            <td class="text-center"><input type="checkbox"></td>
-            <td>大大</td>
-            <td>楼主好人，顶一个</td>
-            <td>《Hello world》</td>
-            <td>2016/10/07</td>
-            <td>已批准</td>
-            <td class="text-center">
-              <a href="post-add.html" class="btn btn-warning btn-xs">驳回</a>
-              <a href="javascript:;" class="btn btn-danger btn-xs">删除</a>
-            </td>
-          </tr>
-          <tr>
-            <td class="text-center"><input type="checkbox"></td>
-            <td>大大</td>
-            <td>楼主好人，顶一个</td>
-            <td>《Hello world》</td>
-            <td>2016/10/07</td>
-            <td>已批准</td>
-            <td class="text-center">
-              <a href="post-add.html" class="btn btn-warning btn-xs">驳回</a>
-              <a href="javascript:;" class="btn btn-danger btn-xs">删除</a>
-            </td>
-          </tr>
-        </tbody>
+         
+        </tbody> 
       </table>
     </div>
   </div>
@@ -97,6 +62,32 @@
 
   <script src="/static/assets/vendors/jquery/jquery.js"></script>
   <script src="/static/assets/vendors/bootstrap/js/bootstrap.js"></script>
-  <script>NProgress.done()</script>
+  <script src="/static/assets/vendors/jsrender/jsrender.js"></script>
+  <script id="comments_tmpl" type="text/x-jsrender">
+{{for comments}}
+<tr {{if status == 'held'}} class ="warning" {{else status == 'rejected'}} class ="danger"{{/if}}>
+            <td class="text-center"><input type="checkbox"></td>
+            <td>{{:author}}</td>
+            <td>{{:content}}</td>
+            <td>{{:created}}</td>
+            <td>{{:created}}</td>
+            <td>{{:status}}</td>
+            <td class="text-center">
+              <a href="post-add.html" class="btn btn-info btn-xs">批准</a>
+              <a href="javascript:;" class="btn btn-danger btn-xs">删除</a>
+            </td>
+</tr>
+{{/for}}
+  </script>
+  <script>
+    //发送ajax请求
+    $.getJSON("/admin/api/comments.php",{},function (res) {
+        // console.log(res);
+       var html = $('#comments_tmpl').render({ comments: res})
+       $('tbody').html(html)
+      
+})
+  </script>
+  <script>NProgress.done()</script> 
 </body>
 </html>
