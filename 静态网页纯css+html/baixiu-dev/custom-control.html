@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .checkbox1{
+        display: none;
+    }
+    .checkbox1 + i{
+        content: ' ';
+        display: inline-block;
+        font-style: normal;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color:#c0c0c0; 
+    }
+    .checkbox1:checked + i{
+        background-color:hotpink; 
+    }
+    .checkbox1 + i::after{
+        background-color:hotpink; 
+    }
+    .checkbox1:checked + i::after{
+        content: ' ';
+        display: inline-block;
+        font-style: normal;
+        width:10px;
+        height: 10px;
+        margin: 5px;
+        border-radius: 50%;
+        background-color:#c0c0c0; 
+    }
+    p{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    ul{
+        font-size: 0;
+    }
+    ul>li{
+        color: #207;
+        font-size: 12px;
+        display: inline-block;
+        /* margin-left:10px;  */
+    }
+    ul > li + li::before{
+        content: " | ";
+        display: inline-block;
+        width: 20px;
+        margin-left:20px;
+    }
+    </style>
+</head>
+<body>
+    <label>
+        <input type="checkbox" class ="checkbox1">
+        <i></i>
+        <p>sdfasdfsdaf</p>
+    </label>
+    <ul>
+        <li>iten 01</li>
+        <li>iten 02</li>
+        <li>iten 03</li>
+        <li class="first">iten 08</li>
+        <li>iten 05</li>
+        <li>iten 06</li>
+        <li>iten 07</li>
+        <li class="demo">iten 04</li>
+        <li>iten 09</li>
+        <li>iten 10</li>
+    </ul>
+
+</body>
+</html>

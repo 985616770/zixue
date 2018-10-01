@@ -29,6 +29,7 @@
             <label class="form-image">
               <input id="avatar" type="file">
               <img src="/static/assets/img/default.png">
+              <input type="hidden" name="avatar">
               <i class="mask fa fa-upload"></i>
             </label>
           </div>
@@ -75,6 +76,27 @@
 
   <script src="/static/assets/vendors/jquery/jquery.js"></script>
   <script src="/static/assets/vendors/bootstrap/js/bootstrap.js"></script>
+  <script>
+  $('#avatar').on('change', function () {
+    var $this = $(this)
+    var files = $(this).prop('files')
+    if (!files.length) return
+  //拿到我们上的文件
+    var file = files[0]
+  //
+    var data = new FormData()
+    data.append('avatar',file)
+    var xhr = new XMLHttpRequest()
+    xhr.open('POST','/admin/api/upload.php')
+    xhr.send(data)
+    xhr.onload = function () {  
+      $this.siblings('img').attr('src', this.responseText)
+      $this.siblings('input').val(this.responseText)
+    }
+  });
+  
+  </script>
+
   <script>NProgress.done()</script>
 </body>
 </html>
