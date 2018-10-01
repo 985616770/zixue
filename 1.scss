@@ -1,171 +1,176 @@
 /*
  * @Author: xuanjidd 
  * @Date: 2018-07-15 11:33:53 
- * @Last Modified by: xaunjidd
- * @Last Modified time: 2018-07-17 20:25:51
+ * @Last Modified by: mikey.zhaopeng
+ * @Last Modified time: 2018-10-01 21:47:34
  */
 
-@mixin border-ri {
-  border-radius: 25px 50px 25px 50px;
-}
-
-@mixin wh($width, $height) {
-  width: $width;
-  height: $height;
-}
-
-@mixin box ($margin, $padding) {
-  margin: $margin;
-  padding: $padding;
-}
-
-* {
-  @include box(0, 0);
-  box-sizing: border-box;
-}
-
-body {
-  background: rgb(163, 223, 193);
-  width: 100%;
-}
-
-header {
-  @include box(0 auto, 0);
-  @include wh(100%, 3500px);
-  position: relative;
-  text-align: center;
-  background: url(images/daylight-environment-forest-459225.jpg) no-repeat center;
-  cursor: pointer;
-}
-
-.header-c {
-  @include box(-150px 0 0 -150px, 0);
-  @include wh(300px, 300px);
-  position: relative;
-  border-radius: 50%;
-  background: #3366ff;
-  left: 50%;
-  top: 200px;
-  box-shadow: 0px 0px 10px rgb(5, 63, 240);
-  h1 {
-    line-height: 300px;
-    color: rgb(231, 133, 5);
-    text-shadow: 4px -6px 10px rgb(95, 149, 219);
-    font-size: 50px;
-    transition: all 2s;
+ @mixin border-ri {
+    border-radius: 25px 50px 25px 50px;
+  }
+  
+  @mixin wh($width, $height) {
+    width: $width;
+    height: $height;
+  }
+  
+  @mixin box ($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+  }
+  
+  * {
+    @include box(0, 0);
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: rgb(163, 223, 193);
+    width: 100%;
+  }
+  
+  header {
+    @include box(0 auto, 0);
+    @include wh(100%, 600px);
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .header-c {
+    @include box(-150px 0 0 -150px, 0);
+    @include wh(300px, 300px);
+    position: relative;
+    border-radius: 50%;
+    background: #3366ff;
+    left: 50%;
+    top: 200px;
+    box-shadow: 0px 0px 10px rgb(5, 63, 240);
     &:hover {
-      color: rgb(71, 8, 22);
+        opacity: 0.8;
+        transform: scale(1.5);
+      }
+    h1 {
+      line-height: 300px;
+      color: rgb(231, 133, 5);
+      text-shadow: 4px -6px 10px rgb(95, 149, 219);
+      font-size: 50px;
+      transition: all 1s;
+      &:hover {
+        color: rgb(255, 9, 62);
+        opacity: 0.9;
+      }
     }
   }
-}
-
-.title {
-  @include wh(50%, 50px);
-  @include box(200px 0 0 9%, 0);
-  border-bottom: 5px solid rgb(235, 14, 224);
-  p {
-    font-size: 30px;
-    color: rgb(19, 5, 95);
-  }
-}
-
-/*主体*/
-
-.body {
-  @include wh(80%, 1111px);
-  @include box(-200px 0 0 0, 0);
-  position: relative;
-}
-
-.main {
-  @include box(200px 0 0 10%, 0);
-  @include wh(70%, 0);
-}
-
-.part1 {
-  @include border-ri;
-  @include box(20px, 0);
-  @include wh(40%, 200px);
-  position: relative;
-  background: #ffffcc;
-  box-shadow: 5px 5px 5px rgb(128, 133, 139);
-  display: inline-block;
-  overflow: auto;
-}
-
-.float {
-  @include box(-40px 0 0 -40px, 0);
-  @include wh(80px, 80px);
-  position: absolute;
-  top: 50%;
-  left: 25%;
-  background: #ff6633;
-  border-radius: 50%;
-  line-height: 80px;
-  text-align: center;
-  cursor: pointer;
-  transition: all 1s;
-  box-shadow: 3px 3px 5px rgb(128, 133, 139);
-  a {
-    font-size: 30px;
-    color: #ccff66;
-    text-decoration: none;
-  }
-  &:hover {
-    background: #990000;
-    a {
-      color: #ffff33;
+  
+  .title {
+    @include wh(100%, 50px);
+    @include box(0 0 0 0, 0);
+    border-bottom: 1px solid rgb(58, 111, 209);
+    p {
+        text-align: center;
+      font-size: 30px;
+      color: rgb(19, 5, 95);
+      transition: all 2s;
+      &:hover{
+        transform: scale(2);
+        font-weight: 900;
+        text-shadow: 5px 5px -4px #3366ff;
     }
-  }
-}
-
-.part1-1 {
-  @include box(15% 0 0 50%, 0);
-  h4 {
-    line-height: 1.2em;
-    font: {
-      size: 30px;
-      family: KaiTi;
-    };
-  }
-  p {
-    @include box(-20px 0 0 0, 0);
-    line-height: 50px;
-    font-family: NSimSun;
-    &:nth-child(2) {
-      color: rgb(100, 99, 99);
-      font-style: italic;
     }
-  }
-}
 
-aside {
-  @include wh(25%, 800px);
-  @include border-ri;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: rgb(97, 174, 204);
-  box-shadow: 2px 2px 2px rgb(128, 137, 139);
-  line-height: 200px;
-  text-align: center;
-  p {
-    font-size: 10em;
-    color: wheat;
   }
-}
+  
+  /*主体*/
+  
+  .body {
+    @include wh(100%, 1111px);
+    @include box(0 0 0 0, 0);
+    position: relative;
+    
+    
 
-footer {
-  @include wh(100%, 50px);
-  clear: both;
-  background: #3366ff;
-  text-align: center;
-  line-height: 50px;
-  p {
-    color: white;
+  }
+  
+  .main {
+    @include box(auto , 0);
+    @include wh(80%, 500px);
+
+    
+  }
+  
+  .part1 {
+    @include border-ri;
+    @include box(50px 100px 23px 0, 0);
+    @include wh(42%, 200px);
+    display: inline-block;
+    position: relative;
+    background: #ffffcc;
+    box-shadow: 5px 5px 5px rgb(128, 133, 139);
+    overflow: auto;
     transition: all 1s;
-    &:hover{
-      color: #3d15cc;
+    &:hover {
+    background: #f5f5ad;
+    margin-top: -2px;
     }
   }
-}
+  
+  .float {
+    @include box(-40px 0 0 -40px, 0);
+    @include wh(100px, 100px);
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    background: rgb(34, 189, 163);
+    border-radius: 50%;
+    line-height: 100px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 1s;
+    box-shadow: 3px 3px 5px rgb(128, 133, 139);
+    a {
+      font-size: 40px;
+      display: inline-block;
+      color: #ccff66;
+      text-decoration: none;
+    }
+    &:hover {
+      background: #990000;
+    }
+  }
+  
+  .part1-1 {
+    @include box(10% 0 0 50%, 0);
+    h4 {
+      line-height: 40px;
+
+      font: {
+        size: 30px;
+        family: KaiTi;
+      };
+    }
+    p {
+      @include box(-20px 0 0 0, 0);
+      line-height: 50px;
+      font-family: NSimSun;
+      &:nth-child(2) {
+        color: rgb(100, 99, 99);
+        font-style: italic;
+      }
+    }
+  }
+  
+  footer {
+    @include wh(100%, 50px);
+    clear: both;
+    background: #3366ff;
+    text-align: center;
+    line-height: 50px;
+    p {
+      color: white;
+      transition: all 1s;
+      &:hover{
+        color: #3d15cc;
+      }
+    }
+  }

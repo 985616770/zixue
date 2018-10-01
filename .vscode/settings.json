@@ -1,11 +1,9 @@
 {
-    "docthis.includeAuthorTag": true,
-    "docthis.includeDateTag": true,
     "liveSassCompile.settings.formats": [
         {
             "format": "compressed",
-            "extensionName": ".min.css",
-            "savePath": "./css"
+            "extensionName": ".css",
+            "savePath": "/css/"
         }
     ]
 }
