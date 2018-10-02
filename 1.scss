@@ -25,7 +25,6 @@
   }
   
   body {
-    background: rgb(163, 223, 193);
     width: 100%;
   }
   
@@ -84,7 +83,7 @@
   /*主体*/
   
   .body {
-    @include wh(100%, 1111px);
+    @include wh(100%, 600px);
     @include box(0 0 0 0, 0);
     position: relative;
     
@@ -102,7 +101,7 @@
   .part1 {
     @include border-ri;
     @include box(50px 100px 23px 0, 0);
-    @include wh(42%, 200px);
+    @include wh(40%, 200px);
     display: inline-block;
     position: relative;
     background: #ffffcc;

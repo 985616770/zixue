@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,AAAA,CACA,MAAM,CAAE,KAAK,CACb,KAAK,CAAE,IAAI,CACd",
+    "sources": [
+        "../static/jd/sass/index.scss"
+    ],
+    "names": [],
+    "file": "index.css"
+}
