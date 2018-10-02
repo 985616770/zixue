@@ -7,19 +7,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/jquery.fullpage.css">
+    <link rel="stylesheet" href="css/index.css">
     <style>
-    .section:first-child{
-        background: red;
-    }
-    .section:last-child{
-        background: pink;
-    }
+        .section:first-child {
+            background: red;
+        }
+
+        .section:last-child {
+            background: pink;
+        }
     </style>
 </head>
 
 <body>
+    <!-- 公用的元素 -->
+    <a href="#" class="go"><img src="images/00-go.png" alt=""></a>
+    <a href="#" class="more"><img src="images/00-more.png" alt=""></a>
     <div class="container">
-        <div class="section">1</div>
+        <!-- 指示器 -->
+        <div class="screen01 section">
+            <div class="content">
+                <div class="goods"><img src="images/01-goods.png" alt=""></div>
+                <div class="sofa"><img src="images/01-sofa.png" alt=""></div>
+                <div class="fly"><img src="images/01-fly.png" alt=""></div>
+            </div>
+        </div>
         <div class="section">2</div>
         <div class="section">3</div>
         <div class="section">4</div>
