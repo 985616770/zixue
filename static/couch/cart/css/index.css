@@ -10,14 +10,16 @@
     z-index: 999;
 }
 
-.more{
+.more {
     position: fixed;
     z-index: 999;
     bottom: 60px;
     right: 60px;
+    animation: more 0.3s linear infinite alternate;
+
 }
 
-.content{
+.content {
     width: 900px;
     height: 600px;
     background: rgba(0, 0, 0, 0.1);
@@ -27,6 +29,163 @@
     margin-left: -450px;
 }
 
-.screen01 {
-    background: url("../images/01-bg.png");
+.screen1 {
+    background: url("../images/01-bg.png") no-repeat center bottom;
+}
+
+.screen1 .goods {
+    text-align: center;
+    margin-top: 230px;
+}
+
+.screen1 .sofa {
+    position: absolute;
+    left: 200px;
+    top: 200px;
+    animation: sofa 0.8s linear infinite alternate;
+}
+
+.screen1 .fly {
+    position: absolute;
+    right: -50px;
+    top: 20px;
+    /* 调用 */
+    animation: fly01 2s linear infinite alternate;
+    /*无限来回播放 */
+}
+
+@keyframes fly01 {
+    from {
+        transform: translateY(-30px);
+    }
+
+    to {
+        transform: translateY(30px);
+    }
+}
+
+@keyframes more {
+    from {
+        transform: translateY(-10px);
+    }
+
+    to {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes sofa {
+    from {
+        transform: translateY(-10px);
+    }
+
+    to {
+        transform: translateY(10px);
+    }
+}
+
+/* 第二屏 */
+
+.screen02 {
+    background: url("../images/02-bg.png") no-repeat center bottom;
+}
+
+.screen02 .goods {
+    position: absolute;
+    left: 50%;
+    bottom: 210px;
+    margin-left: -220px;
+    transform: scale(0)
+}
+
+.screen02 .sofa {
+    transform: scale(0.5);
+    position: absolute;
+    left: 292px;
+    top: 131px;
+    opacity: 0;
+}
+
+.screen02 .input {
+    position: absolute;
+    right: 171px;
+    top: 120px;
+    transform-origin: right top;
+    opacity: 0;
+    
+}
+
+
+.screen02 .input .search {}
+
+.screen02 .input .key {
+    position: absolute;
+    left: 100px;
+    top: 4px;
+    opacity: 0;
+}
+
+.screen02 .text {
+    text-align: center;
+}
+
+.screen02 .text .text01 {}
+
+.screen02 .text .text02 {
+    position: absolute;
+    opacity: 0;
+}
+
+/* 第二屏动画 */
+
+.screen02.now .text .text01 {
+    position: absolute;
+    opacity: 0;
+}
+
+.screen02.now .input {
+    animation: input 3s linear forwards
+}
+.screen02.now .text .text02 {
+    position: static;
+    opacity: 1;
+    transition: opacity 2s;
+}
+.screen02.now .input .key{
+    opacity: 1;
+    transition: all 1s linear 1s
+}
+.screen02.now .goods{
+    transform: none;
+    transition: all 1s linear 2s
+}
+/* 1.搜索框右边出来 */
+/* 中间显示 */
+/* 商品动画显示 搜索框出现 */
+
+@keyframes input {
+    0% {
+        /* 初始元素的样式 */
+        opacity: 1;
+        transform: translate(2000px, 130px)
+    }
+
+    33.3% {
+        transform: translate(-180px, 130px)
+    }
+
+    66.6% {
+        transform: translate(-180px, 130px)
+    }
+
+    100% {
+        transform: scale(0.7);
+        opacity: 1;
+    }
+}
+
+/* 第三屏 */
+
+.screen03{
+    background: url("../images/03-bg.png") no-repeat center bottom;
 }
