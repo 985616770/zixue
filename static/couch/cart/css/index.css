@@ -22,7 +22,6 @@
 .content {
     width: 900px;
     height: 600px;
-    background: rgba(0, 0, 0, 0.1);
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -730,14 +729,16 @@
 /* 第八屏 */
 .screen08 {
     background: url("../images/08-bg.png");
+    position: relative;
 }
 
 .screen08 .btn {
     width: 389px;
     height: 160px;
     position: absolute;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
 }
 
 .screen08 .btn img:last-child {
@@ -753,16 +754,13 @@
 
 .screen08 .again {
     position: absolute;
-    right: 0;
-    top: 80px;
+    right: 200px;
+    bottom: 700px;
     cursor: pointer;
 }
 
 .screen08 .hand {
     position: absolute;
-    top: 200px;
-    left: 50%;
-    width: 170px;
-    height: 449px;
-    margin-left: -85px;
+    left: 0;
+    top: 0;
 }

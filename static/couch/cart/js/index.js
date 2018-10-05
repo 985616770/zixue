@@ -4,7 +4,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2018-0-02 14:49:21 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2018-10-05 13:18:56
+ * @Last Modified time: 2018-10-05 13:29:34
  */
 $(function () {
     $(".container").fullpage({
@@ -38,11 +38,12 @@ $(function () {
                 $(".screen04 .text").addClass("show");
             });
             $(".screen08").on("mousemove", function (e) {
+                console.log(e);
                     $(this)
                         .find(".hand")
                         .css({
-                            left: e.clientX,
-                            top: e.clientY
+                            left:e.clientX,
+                            top: e.clientY 
                         })
                 }).find(".again")
                 .on("click", function () {
