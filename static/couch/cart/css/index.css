@@ -704,7 +704,50 @@
     transform: scale(0);
 }
 .screen07 .text.show{
-    transition: all 1s linear 2s;
-    transform: none;
+    /* transition: all 1s linear 2s;
+    transform: none; */
     opacity: 1;
+    animation:  text07 1.5s linear 2.3s forwards;
+}
+@keyframes text07{
+    from{
+
+    }
+    70%{
+        transform: scale(1.2)l
+    }
+    to{
+        transform: none;
+    }
+}
+/* 第八屏 */
+.screen08{
+    background: url("../images/08-bg.png");
+}
+.screen08 .btn{
+    width: 389px;
+    height: 160px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.screen08 .btn img:last-child{
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+.screen08 .btn:hover img:last-child{
+    opacity: 1;
+}
+.screen08 .again{
+    position: absolute;
+    right: 0;
+    top: 80px;
+}
+.screen08 .hand{
+    position: absolute;
+    top:200px;
+    left: 50%;
+    transform: translateX(-50%);
 }
