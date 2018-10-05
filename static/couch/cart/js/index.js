@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2018-0-02 14:49:21 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2018-10-05 13:42:27
+ * @Last Modified time: 2018-10-05 13:54:18
  */
 $(function () {
     $(".container").fullpage({
@@ -40,7 +40,7 @@ $(function () {
                     $(this)
                         .find(".hand")
                         .css({
-                            left:e.clientX,
+                            left:e.clientX +10,
                             top: e.clientY 
                         })
                 }).find(".again")
