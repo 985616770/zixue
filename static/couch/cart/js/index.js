@@ -1,10 +1,8 @@
-/// <reference path="../node_modules/@types/jquery/index.d.ts" />
-/// <reference path="../node_modules/@types/fullpage.js/index.d.ts" />
 /*
  * @Author: mikey.zhaopeng 
  * @Date: 2018-0-02 14:49:21 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2018-10-05 13:29:34
+ * @Last Modified time: 2018-10-05 13:42:27
  */
 $(function () {
     $(".container").fullpage({
