@@ -642,7 +642,7 @@
 
 .screen06 .person .personImg {
     position: absolute;
-    right:50px;
+    right: 50px;
     bottom: 102px;
     transform: scale(0);
     transform-origin: right bottom;
@@ -663,15 +663,16 @@
 
 .screen06.now .person .personImg {
     transform: none;
-    right:200px;
-    transition: transform  0.5s linear 5s,right 0.5s linear 5.5s;
+    right: 200px;
+    transition: transform 0.5s linear 5s, right 0.5s linear 5.5s;
 }
 
-.screen06.now .text img:first-child{
+.screen06.now .text img:first-child {
     opacity: 0;
     transition: all 0.1s linear 4.6s
 }
-.screen06.now .text img:last-child{
+
+.screen06.now .text img:last-child {
     opacity: 1;
     transition: all 0.5s linear 4.6s
 }
@@ -682,20 +683,23 @@
 }
 
 /* 第七屏 */
-.screen07{
-    background:url("../images/07-bg.png")no-repeat center bottom ;
+.screen07 {
+    background: url("../images/07-bg.png")no-repeat center bottom;
 }
-.screen07 .star{
+
+.screen07 .star {
     position: absolute;
     left: 155px;
     top: 139px;
-  
+
 }
-.screen07 .star img{
+
+.screen07 .star img {
     padding: 1px;
     display: none;
 }
-.screen07 .text{
+
+.screen07 .text {
     position: absolute;
     left: 166px;
     top: 178px;
@@ -703,51 +707,62 @@
     transform-origin: left bottom;
     transform: scale(0);
 }
-.screen07 .text.show{
+
+.screen07 .text.show {
     /* transition: all 1s linear 2s;
     transform: none; */
     opacity: 1;
-    animation:  text07 1.5s linear 2.3s forwards;
+    animation: text07 1.5s linear 2.3s forwards;
 }
-@keyframes text07{
-    from{
 
-    }
-    70%{
+@keyframes text07 {
+    from {}
+
+    70% {
         transform: scale(1.2)l
     }
-    to{
+
+    to {
         transform: none;
     }
 }
+
 /* 第八屏 */
-.screen08{
+.screen08 {
     background: url("../images/08-bg.png");
 }
-.screen08 .btn{
+
+.screen08 .btn {
     width: 389px;
     height: 160px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
-.screen08 .btn img:last-child{
+
+.screen08 .btn img:last-child {
     position: absolute;
     left: 0;
     top: 0;
     opacity: 0;
 }
-.screen08 .btn:hover img:last-child{
+
+.screen08 .btn:hover img:last-child {
     opacity: 1;
 }
-.screen08 .again{
+
+.screen08 .again {
     position: absolute;
     right: 0;
     top: 80px;
+    cursor: pointer;
 }
-.screen08 .hand{
+
+.screen08 .hand {
     position: absolute;
-    top:200px;
+    top: 200px;
     left: 50%;
-    transform: translateX(-50%);
+    width: 170px;
+    height: 449px;
+    margin-left: -85px;
 }
