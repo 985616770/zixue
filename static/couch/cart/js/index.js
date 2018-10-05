@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2018-0-02 14:49:21 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2018-10-05 13:54:18
+ * @Last Modified time: 2018-10-05 13:56:26
  */
 $(function () {
     $(".container").fullpage({
@@ -36,7 +36,6 @@ $(function () {
                 $(".screen04 .text").addClass("show");
             });
             $(".screen08").on("mousemove", function (e) {
-                console.log(e);
                     $(this)
                         .find(".hand")
                         .css({
