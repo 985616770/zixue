@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .nav {
+            list-style: none;
+        }
+
+        .nav li {
+            float: left;
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background: #ef0;
+            cursor: pointer;
+        }
+
+        .nav li.active {
+            background: blue;
+        }
+
+        .div li {
+            width: 800px;
+            height: 300px;
+            background: #4fe;
+            display: none;
+        }
+
+        li.show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+        <li data-content-id="content1" class="active">a</li>
+        <li data-content-id="content2">b</li>
+        <li data-content-id="content3">c</li>
+        <li data-content-id="content4">d</li>
+    </ul>
+    <ul class="div">
+        <li id="content1" class="show">a</li>
+        <li id="content2">b</li>
+        <li id="content3">c</li>
+        <li id="content4">d</li>
+    </ul>
+    <script>
+        window.onload = function () {
+            document.querySelector('.nav').onclick = function (e) {
+                var currentLi = e.target;
+                //已经选择 停止操作
+                if (currentLi.classList.contains('active')) return false;
+                var oldLi = document.querySelector('.nav li.active');
+                //更改样式
+                oldLi.classList.remove('active');
+                currentLi.classList.add('active');
+                //根据选择的页签 去显示对应的内容
+                //隐藏之前的
+                var oldContent = document.querySelector('#' + oldLi.dataset.contentId);
+                oldContent.classList.remove('show');
+                //显示当前的
+                var currentContent = document.querySelector('#' + currentLi.dataset.contentId);
+                currentContent.classList.add('show');
+            }
+        }
+    </script>
+</body>
+
+</html>

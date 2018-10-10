@@ -5,3 +5,10 @@ $(function () {
         responsive: true
     })
 });
+window.onload = function () {
+    document.querySelector('.nav').onclick = function (e) {
+        var currentLi = e.target;
+        currentLi
+    }
+}
+document.querySelectorAll('selector');

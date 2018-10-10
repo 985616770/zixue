@@ -24,7 +24,7 @@
             list-style: none;
             width: 100%;
             height: 100%;
-            overflow: hidden;
+            transform-style: preserve-3d;
 
         }
 
@@ -36,6 +36,7 @@
             position: relative;
             /*perspective: 500px;*/
             transform-style: preserve-3d;
+            transition: all 1s;
         }
 
 
@@ -48,7 +49,7 @@
             background: url("images/1.jpg") no-repeat;
         }
 
-        < !-- -->.box .imageBox li span:nth-child(1) {
+        .box .imageBox li span:nth-child(1) {
             background-image: url("images/1.jpg");
             background-position: 0 0;
         }
@@ -167,16 +168,30 @@
 
             */
             var index = 0;
+            var flag = true;
             $('.left').on('click', function () {
+                if (!flag) return false;
+                flag = false;
                 index--;
                 var angle = -index * 90;
-                $('li').css('transform', 'rotateX(' + angle + 'deg)')
+                $('li').css('transform', 'rotateX(' + angle + 'deg)').each(function (i, item) {
+                    $(this).css('transition-delay', i * 0.25 + 's')
+                })
             });
             $('.right').on('click', function () {
+                if (!flag) return false;
+                flag = false;
                 index++;
                 var angle = -index * 90;
-                $('li').css('transform', 'rotateX(' + angle + 'deg)')
+                $('li').css('transform', 'rotateX(' + angle + 'deg)').each(function (i, item) {
+                    $(this).css('transition-delay', i * 0.25 + 's')
+                })
             });
+            $('li:last').on('transitionend', function () {
+                /*最后一部分张图片旋转完毕 节流阀控制*/
+                flag = true;
+            });
+
         })
     </script>
 </body>
