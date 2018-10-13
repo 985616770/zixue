@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        canvas {}
+    </style>
+</head>
+
+<body>
+    <!-- 画布 -->
+    <canvas width="600" height="600"></canvas>
+    <!-- 绘制工具 -->
+    <!-- 工具绘图 -->
+    <script>
+        // 1.获取元素
+        const myCanvas = document.querySelector('canvas');
+        const ctx = myCanvas.getContext('2d');
+        // 绘制网格
+        // 网格大小
+        const girdSize = 10;
+        const canvasHeight = ctx.canvas.height;
+        const canvasWidth = ctx.canvas.width;
+        // const xLineTotal = Math.floor(canvasHeight / girdSize);
+        // for (let i = 0; i < xLineTotal; i++) {
+        //     ctx.beginPath();
+        //     ctx.moveTo(0, i * girdSize -0.5);
+        //     ctx.lineTo(canvasWidth, i * girdSize -0.5);
+        //     ctx.strokeStyle = '#eee';
+        //     ctx.stroke();
+        // }
+
+        // // 
+        // const yLineTotal = Math.floor(canvasWidth / girdSize);
+        // for (let i = 0; i < yLineTotal; i++) {
+        //     ctx.beginPath();
+        //     ctx.moveTo(i * girdSize -0.5, 0);
+        //     ctx.lineTo(i * girdSize -0.5, canvasHeight);
+        //     ctx.strokeStyle = '#eee';
+        //     ctx.stroke(); 
+        // }
+
+
+
+        // 1.绘制坐标系
+        // 2.确定原点
+        // 确定距离画布旁边的距离
+        // 确定坐标轴的长度
+        // 确定箭头的大小 是个等腰三角形
+        // 绘制箭头填充
+
+        const space = 20;
+        const arrowSize = 10;
+        const x0 = space;
+        const y0 = canvasHeight - space;
+
+        // 绘制X轴
+        ctx.beginPath();
+        ctx.moveTo(x0, y0);
+        ctx.lineTo(canvasWidth - space, y0);
+        ctx.stroke();
+        ctx.lineTo(canvasWidth - space - arrowSize, y0 + arrowSize / 2);
+        ctx.lineTo(canvasWidth - space - arrowSize, y0 - arrowSize / 2);
+        ctx.lineTo(canvasWidth - space, y0);
+        ctx.fill();
+
+        // 绘制Y轴
+        ctx.beginPath();
+        ctx.moveTo(x0, y0);
+        ctx.lineTo(space, space);
+        ctx.stroke();
+        ctx.lineTo(space + arrowSize / 2, space + arrowSize);
+        ctx.lineTo(space - arrowSize / 2, space + arrowSize);
+        ctx.lineTo(space, space);
+        ctx.fill();
+
+
+        // 绘制点
+
+        const coordinate = {
+            x: 146,
+            y: 357,
+        };
+        const dottedSize = 10;
+        ctx.beginPath();
+        ctx.moveTo(coordinate.x - dottedSize / 2,coordinate.y - dottedSize / 2);
+        ctx.lineTo(coordinate.x + dottedSize / 2,coordinate.y - dottedSize / 2);
+        ctx.lineTo(coordinate.x + dottedSize / 2,coordinate.y + dottedSize / 2);
+        ctx.lineTo(coordinate.x - dottedSize / 2,coordinate.y + dottedSize / 2);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+    </script>
+</body>
+
+</html>
