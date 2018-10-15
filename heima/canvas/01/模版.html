@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-    canvas {
-
-    }
+        canvas {}
     </style>
 </head>
+
 <body>
-    <!-- 画布 -->
     <canvas width="600" height="600"></canvas>
-    <!-- 绘制工具 -->
-    <!-- 工具绘图 -->
-<script>
-    // 1.获取元素
-    var myCanvas = document.querySelector('canvas');
-    var ctx = myCanvas.getContext('2d');
-    
-    // 移动画笔
-    ctx.moveTo(100,100);
-    ctx.lineTo(200,900);
-    // 描边
-    ctx.stroke();
-</script>
+    <script>
+        // 1.获取元素
+        var myCanvas = document.querySelector('canvas');
+        var ctx = myCanvas.getContext('2d');
+
+        /*
+         * 1. 绘制饼状图   
+         * 2. 根据数据绘制一个饼图 
+         * 3. 绘制标题 从扇形的弧中心伸出一条线 在华一条很闲在横线上面写文字标题 
+         * 4. 在画布的左上角 绘制说明 一个和扇形一样的颜色的矩形 旁边是文字说明
+         * */
+    </script>
 </body>
+
 </html>

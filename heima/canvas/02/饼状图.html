@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        canvas {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas width="600" height="600"></canvas>
+    <script>
+        // 1.获取元素
+        const PieChart = function (ctx) {
+            this.ctx = ctx || document.querySelector('canvas').getContext('2d');
+            this.w = this.ctx.canvas.width;
+            this.h = this.ctx.canvas.height;
+            this.x0 = this.w / 2 + 60;
+            this.y0 = this.h / 2;
+            this.radius = 150;
+
+        }
+
+        PieChart.prototype.init = function (data) {
+            this.drawPie(data);
+        }
+        PieChart.prototype.drawPie = function (data) {
+            // 转换弧度
+            const angleList = this.transformAngle(data);
+            // 绘制饼图
+            var startAngle = 0;
+            angleList.forEach((item) => {
+                let endAngle = startAngle + item.angle;
+                this.ctx.beginPath();
+                this.ctx.moveTo(this.x0, this.y0);
+                this.ctx.arc(this.x0, this.y0, this.radius, startAngle, endAngle);
+                this.ctx.fillStyle = this.getRandomColor();
+                this.ctx.fill();
+                startAngle = endAngle;
+            });
+        };
+        PieChart.prototype.drawTitle = () => {
+
+        }
+        PieChart.prototype.drawDesc = () => {
+
+        }
+        PieChart.prototype.transformAngle = function (data) {
+            let total = 0;
+            data.forEach((item) => {
+                total += item.num;
+            });
+            // 计算弧度
+            data.forEach((item) => {
+                let angle = item.num / total * Math.PI * 2;
+                item.angle = angle;
+            });
+            return data;
+        }
+        PieChart.prototype.getRandomColor = function () {
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            return `rgb(${r},${g},${b})`;
+        }
+
+        const data = [{
+                title: '10-20岁',
+                num: 8
+            },
+            {
+                title: '20-25岁',
+                num: 80
+            },
+            {
+                title: '25-30岁',
+                num: 40
+            },
+            {
+                title: '30-45岁',
+                num: 8
+            },
+        ];
+        const pieChart = new PieChart();
+        pieChart.init(data);
+    </script>
+</body>
+
+</html>

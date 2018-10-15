@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        canvas {}
+    </style>
+</head>
+
+<body>
+    <!-- 画布 -->
+    <canvas width="600" height="600"></canvas>
+    <!-- 绘制工具 -->
+    <!-- 工具绘图 -->
+    <script>
+        // 1.获取元素
+        var myCanvas = document.querySelector('canvas');
+        var ctx = myCanvas.getContext('2d');
+
+        // 移动画笔
+        // ctx.rect(100,100,200,100)
+        // ctx.fillStyle = 'red';
+        // ctx.stroke();
+        // ctx.fill();
+
+        // ctx.strokeRect(100, 100, 100, 100);
+        // ctx.fillRect(200, 200, 100, 200);
+        // 渐变色的创建使用
+        const linearGradient = ctx.createLinearGradient(100, 100, 500, 400);
+        linearGradient.addColorStop(0, 'pink');
+        linearGradient.addColorStop(1, 'blue');
+        ctx.fillStyle = linearGradient;
+        ctx.fillRect(100,100,400,100);
+    </script>
+</body>
+
+</html>

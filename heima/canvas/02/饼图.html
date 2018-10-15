@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <canvas width="600" height="600"></canvas>
+    <script>
+        // 1.获取元素
+        var myCanvas = document.querySelector('canvas');
+        var ctx = myCanvas.getContext('2d');
+        const data = [5, 22, 10, 9];
+        let total = 0;
+        const angleList = [];
+        data.forEach((ele) => {
+            total += ele;
+        });
+
+        data.forEach((ele) => {
+            let angle = Math.PI * 2 * (ele / total);
+            angleList.push(angle);
+        });
+
+        let startAngle = 0;
+        const w = ctx.canvas.width;
+        const h = ctx.canvas.height;
+        const getRandomColor = function () {
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            return `rgb(${r},${g},${b})`;
+        }
+        angleList.forEach((item) => {
+            let endAngle = startAngle + item;
+            ctx.beginPath();
+            ctx.moveTo(w / 2, h / 2);
+            ctx.arc(w / 2, h / 2, 150, startAngle, endAngle);
+            ctx.fillStyle = getRandomColor();
+            ctx.fill();
+            // 记录当前的结束位置 作为下一次起始位置
+            startAngle = endAngle;
+        });
+    </script>
+</body>
+
+</html>
