@@ -1,9 +1,9 @@
 /**
- * 
+ *
  * @param {
  * 红宝书的源代码如下
- * 
- * } name 
+ *
+ * } name
  */
 //6.1
 
@@ -308,7 +308,6 @@
 // console.log(person1[0]());
 // console.log(person1[1].sayName());
 
-
 //6.3继承
 //6.3.1 原型链
 // function SuperType() {
@@ -389,7 +388,6 @@
 // console.log(person.friends);
 // console.log(anotherPerson.name);
 
-
 //6.3.5寄生式继承
 
 // function createAnother(original) {
@@ -406,42 +404,40 @@
 // var anotherPerson = createAnother(person);
 // anotherPerson.sayHi();
 
-
 //6.3.6 寄生组合式继承
 
 function SuperType(name) {
-    this.name = name;
-    this.colors = ["red", "yellow", "green"];
+  this.name = name;
+  this.colors = ['red', 'yellow', 'green'];
 }
 SuperType.prototype.sayName = function () {
-    console.log("sss");
-}
+  console.log('sss');
+};
 
 function SubType(name, age) {
-    SuperType.call(this, name);
-    this.age = age;
+  SuperType.call(this, name);
+  this.age = age;
 }
 
 function inheritPrototype(SubType, SuperType) {
-    var prototype = Object.create(SuperType.prototype);
-    prototype.constructor = SubType;
-    SubType.prototype = prototype;
+  SubType.prototype = Object.create(SuperType.prototype);
+  SubType.prototype.constructor = SubType;
 }
 inheritPrototype(SubType, SuperType);
 SubType.prototype.sayAge = function () {
-    console.log(this.age);
+  console.log(this.age);
 };
 
-var instance = new SubType("aaa",11);
+const instance = new SubType('aaa', 11);
 instance.sayAge();
 
 /**
  * 总结:
  * 1创建对象的几种方式:工厂模式,构造函数,原型模式
  * 2继承的实现方式:原型式继承,组合继承(常用),寄生式继承,寄生组合式继承(比较完美)
- * 
+ *
  * 基本类型 null, undefined,number ,string,
- * 
- * 
- * 
+ *
+ *
+ *
  *  */

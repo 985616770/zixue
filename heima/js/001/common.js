@@ -7,8 +7,7 @@ function my$(id) {
  * attr---属性
  * */
 function getAttrValue(element, attr) {
-  return element.currentStyle ? element.currentStyle[attr]
-    : window.getComputedStyle(element, null)[attr] || 0;
+  return element.currentStyle ? element.currentStyle[attr] : window.getComputedStyle(element, null)[attr] || 0;
 }
 
 function attr() {

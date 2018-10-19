@@ -7,98 +7,98 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        canvas {}
+        canvas {
+        }
     </style>
 </head>
 
 <body>
-    <canvas width="600" height="600"></canvas>
-    <script>
-        const Person = function (ctx) {
+<canvas width="600" height="600"></canvas>
+<script>
+    const Person = function (ctx) {
 
-            this.ctx = ctx || document.querySelector('canvas').getContext('2d');
-            this.src = './image/03.png';
-            this.canvasWidth = this.ctx.canvas.width;
-            this.canvasHeight = this.ctx.canvas.height;
-            // 步伐
-            this.stepSize = 10;
-            //方向
-            this.direction = 0;
-            // 当前绘制的位置
-            // 偏移步数
-            this.stepX = 0;
-            this.stepY = 0;
-            this.init();
-        };
+        this.ctx = ctx || document.querySelector('canvas').getContext('2d');
+        this.src = './image/03.png';
+        this.canvasWidth = this.ctx.canvas.width;
+        this.canvasHeight = this.ctx.canvas.height;
+        // 步伐
+        this.stepSize = 10;
+        //方向
+        this.direction = 0;
+        // 当前绘制的位置
+        // 偏移步数
+        this.stepX = 0;
+        this.stepY = 0;
+        this.init();
+    };
 
-        Person.prototype.init = function () {
-            // 加载图片
-            this.loadImage((image) => {
-                // 图片大小
-                this.imageWidth = image.width;
-                this.imageHeight = image.height;
-                // 人物的大小
-                this.personWidth = this.imageWidth / 4;
-                this.personHeight = this.imageHeight / 4;
-                // 绘制图片的起点
-                this.x0 = this.canvasWidth / 2 - this.personWidth / 2;
-                this.y0 = this.canvasHeight / 2 - this.personHeight / 2;
-                //绘制在中心位置
-                this.ctx.drawImage(image,
-                    0, 0,
-                    this.personWidth, this.personHeight,
-                    this.x0, this.y0,
-                    this.personWidth, this.personHeight);
-                // 通过方向键控制任务行走
-                this.index = 0;
-                document.onkeydown = (e) => {
-                    if (e.keyCode == 38) {
-                        // 上
-                        this.direction = 3;
-                        this.stepY --;
-                        this.drawImage(image)
-                    } else if (e.keyCode == 37) {
-                        // 左
-                        this.direction = 1;
-                        this.stepX --;
-                        this.drawImage(image)
-                    } else if (e.keyCode == 39) {
-                        // 右
-                        this.direction = 2;
-                        this.stepX ++;
-                        this.drawImage(image)
-                    } else if (e.keyCode == 40) {
-                        // 后
-                        this.direction = 0;
-                        this.stepY ++;
-                        this.drawImage(image)
-                    }
-                }
-
-            });
-        }
-        Person.prototype.loadImage = function (callback) {
-            const image = new Image();
-            image.onload = function () {
-                callback && callback(image);
-            };
-            image.src = this.src;
-        };
-        Person.prototype.drawImage = function (image) {
-            this.index++;
-            this.ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
+    Person.prototype.init = function () {
+        // 加载图片
+        this.loadImage((image) => {
+            // 图片大小
+            this.imageWidth = image.width;
+            this.imageHeight = image.height;
+            // 人物的大小
+            this.personWidth = this.imageWidth / 4;
+            this.personHeight = this.imageHeight / 4;
+            // 绘制图片的起点
+            this.x0 = this.canvasWidth / 2 - this.personWidth / 2;
+            this.y0 = this.canvasHeight / 2 - this.personHeight / 2;
+            //绘制在中心位置
             this.ctx.drawImage(image,
-                this.index * this.personWidth, this.direction * this.personHeight,
-                this.personWidth, this.personHeight,
-                this.x0 +this.stepSize*this.stepX, this.y0 + this.stepSize*this.stepY,
+                0, 0, this.personWidth, this.personHeight,
+                this.x0, this.y0,
                 this.personWidth, this.personHeight);
-            // 索引
-            if (this.index >= 3) {
-                this.index = 0;
+            // 通过方向键控制任务行走
+            this.index = 0;
+            document.onkeydown = (e) => {
+                if (e.keyCode == 38) {
+                    // 上
+                    this.direction = 3;
+                    this.stepY--;
+                    this.drawImage(image)
+                } else if (e.keyCode == 37) {
+                    // 左
+                    this.direction = 1;
+                    this.stepX--;
+                    this.drawImage(image)
+                } else if (e.keyCode == 39) {
+                    // 右
+                    this.direction = 2;
+                    this.stepX++;
+                    this.drawImage(image)
+                } else if (e.keyCode == 40) {
+                    // 后
+                    this.direction = 0;
+                    this.stepY++;
+                    this.drawImage(image)
+                }
             }
+
+        });
+    }
+    Person.prototype.loadImage = function (callback) {
+        const image = new Image();
+        image.onload = function () {
+            callback && callback(image);
+        };
+        image.src = this.src;
+    };
+    Person.prototype.drawImage = function (image) {
+        this.index++;
+        this.ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
+        this.ctx.drawImage(image,
+            this.index * this.personWidth, this.direction * this.personHeight,
+            this.personWidth, this.personHeight,
+            this.x0 + this.stepSize * this.stepX, this.y0 + this.stepSize * this.stepY,
+            this.personWidth, this.personHeight);
+        // 索引
+        if (this.index >= 3) {
+            this.index = 0;
         }
-        new Person();
-    </script>
+    }
+    new Person();
+</script>
 </body>
 
 </html>
