@@ -186,7 +186,7 @@
 }
 
 .jd_product_box .tit h3::before {
-  content: "";
+  content: '';
   width: 3px;
   height: 12px;
   background: #d8505c;
@@ -212,7 +212,7 @@
   float: left;
   margin-left: 10px;
   margin-top: 7px;
-  background: url("../images/seckill-icon.png") no-repeat center/16px 20px;
+  background: url('../images/seckill-icon.png') no-repeat center/16px 20px;
 }
 
 .sk .name {
@@ -259,9 +259,11 @@
   display: block;
   border-right: 1px solid #ddd;
 }
+
 .sk .pro li:last-child a {
   border-right: none;
 }
+
 .sk .pro li a img {
   display: block;
   margin: 0 auto;
@@ -284,12 +286,11 @@
 }
 
 /* 组合样式的使用 */
-.jd_product_box .con {
-}
 
 .w_50p {
   width: 50%;
 }
+
 .w_50p img {
   display: block;
   width: 100%;
@@ -298,12 +299,15 @@
 .bl {
   border-left: 1px solid #eee;
 }
+
 .br {
   border-right: 1px solid #eee;
 }
+
 .bt {
   border-top: 1px solid #eee;
 }
+
 .bb {
   border-bottom: 1px solid #eee;
 }
