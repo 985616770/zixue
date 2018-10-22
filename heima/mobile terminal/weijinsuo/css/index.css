@@ -1,1 +1,162 @@
-@media screen and 
+/* ======== reset css ======== */
+body {
+  font-size: 14px;
+  font-family: 'Microsoft YaHei', sans-serif;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* 自定义字体图标 */
+@font-face {
+  font-family: 'wjs';
+  src: url(../fonts/MiFie-Web-Font.svg) format('svg'),
+    url(../fonts/MiFie-Web-Font.eot) format('embedded-opentype'),
+    url(../fonts/MiFie-Web-Font.ttf) format('truetype'),
+    url(../fonts/MiFie-Web-Font.woff) format('woff');
+}
+
+.wjs_icon {
+  font-family: wjs;
+}
+
+.wjs_icon_phone::before {
+  content: '\e908';
+}
+
+.wjs_icon_tel::before {
+  content: '\e909';
+}
+
+.wjs_icon_logo::before {
+  content: '\e920';
+}
+
+.wjs_icon_name::before {
+  content: '\e93e';
+}
+
+.wjs_icon_dollar::before {
+  content: '\e903';
+}
+
+.wjs_icon_clock::before {
+  content: '\e906';
+}
+
+.wjs_icon_video::before {
+  content: '\e905';
+}
+
+.wjs_icon_news_01::before {
+  content: '\e90e';
+}
+
+.wjs_icon_news_02::before {
+  content: '\e90f';
+}
+
+.wjs_icon_news_03::before {
+  content: '\e910';
+}
+
+.wjs_icon_news_04::before {
+  content: '\e911';
+}
+
+.wjs_icon_partner01::before {
+  content: '\e946';
+}
+
+.wjs_icon_partner02::before {
+  content: '\e92f';
+}
+
+.wjs_icon_partner03::before {
+  content: '\e92e';
+}
+
+.wjs_icon_partner04::before {
+  content: '\e92a';
+}
+
+.wjs_icon_partner05::before {
+  content: '\e929';
+}
+
+.wjs_icon_partner06::before {
+  content: '\e931';
+}
+
+.wjs_icon_partner07::before {
+  content: '\e92c';
+}
+
+.wjs_icon_partner08::before {
+  content: '\e92b';
+}
+
+.wjs_icon_partner09::before {
+  content: '\e92d';
+}
+/* ============ modal css ================ */
+
+.wjs_topBar {
+  border-bottom: 1px solid #ccc;
+}
+
+.wjs_topBar > .container {
+}
+
+.wjs_topBar > .container > .row {
+  text-align: center;
+}
+
+.wjs_topBar > .container > .row > div {
+  height: 40px;
+  line-height: 40px;
+}
+
+.wjs_topBar .row div a {
+  text-decoration: none;
+}
+
+.wjs_topBar [class*=' btn-register'] {
+  border: none;
+  background: #e92322;
+  color: #fff;
+  font-size: 12px;
+  padding: 3px 12px;
+}
+
+.wjs_topBar [class*=' btn-register'] + a {
+  color: #333;
+}
+
+/* ~ 选择后面所有元素 + 选择相邻元素 */
+.wjs_topBar .row > div ~ div {
+  border-left: 1px solid #ccc;
+}
+
+.wjs_app {
+  display: block;
+  position: relative;
+}
+
+.wjs_app img {
+  display: none;
+}
+
+.wjs_app:hover img {
+  display: block;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  margin-left: -60px;
+  border: 1px solid #ccc;
+  z-index: 1000;
+  border-top: none;
+}

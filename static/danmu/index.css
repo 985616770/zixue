@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  width: 100%;
+}
+
+.dan_box {
+  width: 95%;
+  height: 500px;
+  margin: 10px auto;
+  border: 1px solid #0ee;
+  position: relative;
+}
+
+.dan_box span {
+  display: inline-block;
+  position: absolute;
+  border: 1px solid #0ee;
+  right: 0;
+  top: 10px;
+  transition: all 2s linear;
+}
+
+.form {
+  width: 500px;
+  height: 150px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form input:nth-child(1) {
+  width: 100%;
+  display: block;
+  height: 40px;
+}
+
+.form input + input {
+  display: inline-block;
+  text-decoration: none;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #0ee;
+  text-align: center;
+  margin: 10px;
+  background: #fff;
+}
+
+.form input:nth-child(2){
+  color: aqua;
+  border: 1px solid aqua;
+}
+
+.form input:nth-child(3){
+  color: #00f;
+  border: 1px solid #00f;
+}
+
+
+
