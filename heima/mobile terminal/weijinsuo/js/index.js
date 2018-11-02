@@ -1,5 +1,11 @@
+/* eslint-disable no-new */
 $(() => {
+  // 动态轮播图
   banner();
+  // 滑动
+  initMobileTab();
+  // 初始化工具提示
+  $('[data-toggle="tooltip"]').tooltip();
 });
 
 const banner = function() {
@@ -74,4 +80,26 @@ const banner = function() {
       distanceX = 0;
       isMove = false;
     });
+};
+
+const initMobileTab = function() {
+  // 1.解决换行问题
+  const $navTabs = $('.wjs_product .nav-tabs');
+  let width = 0;
+  $navTabs.find('li').each(function(i, item) {
+    const $currLi = $(this);
+    const liWidth = $currLi.outerWidth(true);
+    width += liWidth;
+  });
+  console.log(width);
+  $navTabs.width(width);
+  // 2.修改结构使之区域滑动的结构
+  // 加父容器
+
+  // 3.自己实现滑动效果 或者 使用 iscroll
+  new IScroll($('.nav-tabs-parent')[0], {
+    scrollX: true,
+    scrollY: false,
+    click: true
+  });
 };
