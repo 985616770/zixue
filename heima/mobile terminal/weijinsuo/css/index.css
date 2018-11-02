@@ -6,7 +6,7 @@ body {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: #333;
 }
 
@@ -102,6 +102,7 @@ a {
 .wjs_icon_partner09::before {
   content: '\e92d';
 }
+
 /* ============ modal css ================ */
 
 .wjs_topBar {
@@ -159,4 +160,147 @@ a {
   border: 1px solid #ccc;
   z-index: 1000;
   border-top: none;
+}
+
+/* 默认样式 */
+
+/* 导航 */
+.wjs_nav {
+  margin-bottom: 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  z-index: 999; /* 固定导航样式 */
+  background: #fff;
+  width: 100%;
+  border-radius: 0;
+  top: 0;
+}
+
+.wjs_nav .navbar-brand {
+  color: #777;
+  height: 80px;
+  line-height: 50px;
+}
+
+.wjs_nav .wjs_icon_logo {
+  font-size: 50px;
+  color: #e92322;
+  vertical-align: middle;
+}
+
+.wjs_nav .wjs_icon_name {
+  font-size: 36px;
+  color: #333;
+  vertical-align: middle;
+}
+
+.wjs_nav .navbar-brand:hover,
+.wjs_nav .navbar-brand:focus {
+  color: #5e5e5e;
+  background-color: transparent;
+}
+
+.wjs_nav .navbar-text {
+  color: #777;
+}
+
+.wjs_nav .navbar-nav > li > a {
+  color: #777;
+  height: 80px;
+  line-height: 50px;
+}
+
+.wjs_nav .navbar-nav > li > a:hover,
+.wjs_nav .navbar-nav > li > a:focus {
+  color: #333;
+  background-color: transparent;
+  border-bottom: 3px solid #f00;
+}
+
+.wjs_nav .navbar-nav > .active > a,
+.wjs_nav .navbar-nav > .active > a:hover,
+.wjs_nav .navbar-nav > .active > a:focus {
+  color: #555;
+  background-color: #e7e7e7;
+  border-bottom: 3px solid #f00;
+}
+
+.wjs_nav .navbar-nav > .disabled > a,
+.wjs_nav .navbar-nav > .disabled > a:hover,
+.wjs_nav .navbar-nav > .disabled > a:focus {
+  color: #ccc;
+  background-color: transparent;
+}
+
+.wjs_nav .navbar-toggle {
+  border-color: #ddd;
+  margin-top: 23px;
+}
+
+.wjs_nav .navbar-toggle:hover,
+.wjs_nav .navbar-toggle:focus {
+  background-color: #ddd;
+}
+
+.wjs_nav .navbar-toggle .icon-bar {
+  background-color: #888;
+}
+
+.wjs_nav .navbar-collapse,
+.wjs_nav .navbar-form {
+  border-color: #e7e7e7;
+}
+
+.wjs_nav .navbar-nav > .open > a,
+.wjs_nav .navbar-nav > .open > a:hover,
+.wjs_nav .navbar-nav > .open > a:focus {
+  color: #555;
+  background-color: #e7e7e7;
+}
+
+/* 产品 */
+
+.wjs_info {
+  border-bottom: 1px solid #ccc;
+}
+
+.wjs_info .container {
+  width: 900px;
+}
+
+/* 小屏设备 */
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .wjs_info > .container {
+    width: 750px;
+  }
+}
+.wjs_info > .container > div > a {
+  display: block;
+  padding: 20px 0;
+  text-decoration: none;
+}
+
+.wjs_info > .container > div > a:hover {
+  color: #e92322;
+}
+
+.wjs_info > .container > div > a .wjs_icon_dollar {
+  font-size: 30px;
+}
+
+/* 预约模块 */
+
+.wjs_book {
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.wjs_book .book{
+  color: #e92322;
+  border-bottom: 1px dashed #e92322;
+}
+
+.wjs_book .video:hover{
+  color: #e92322;
 }
