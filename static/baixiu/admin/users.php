@@ -25,6 +25,7 @@ require_once '../functions.php';
       <!-- <div class="alert alert-danger">
         <strong>错误！</strong>发生XXX错误
       </div> -->
+
       <div class="row">
         <div class="col-md-4">
           <form>
