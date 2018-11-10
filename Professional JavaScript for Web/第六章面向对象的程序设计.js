@@ -410,7 +410,7 @@ function SuperType(name) {
   this.name = name;
   this.colors = ['red', 'yellow', 'green'];
 }
-SuperType.prototype.sayName = function () {
+SuperType.prototype.sayName = function() {
   console.log('sss');
 };
 
@@ -424,7 +424,7 @@ function inheritPrototype(SubType, SuperType) {
   SubType.prototype.constructor = SubType;
 }
 inheritPrototype(SubType, SuperType);
-SubType.prototype.sayAge = function () {
+SubType.prototype.sayAge = function() {
   console.log(this.age);
 };
 
