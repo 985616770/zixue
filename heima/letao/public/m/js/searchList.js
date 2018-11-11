@@ -1,17 +1,39 @@
-$(function () {
-    mui('.mui-scroll-wrapper').scroll({
-        indicator: false
-    });
-    /* 1 .页面初始化的时候: 关键词在输入框内显示*/
+/* eslint-disable spaced-comment */
+$(() => {
+  mui('.mui-scroll-wrapper').scroll({
+    indicator: false
+  });
+  /* 1 .页面初始化的时候: 关键词在输入框内显示*/
 
-    const params = CT.getParamsbyUrl();
-    /* 2 . 页面初始化的时候: 根据关键字查询第一页数据4条*/
+  const urlparams = CT.getParamsbyUrl();
+  const $input = $('input').val(urlparams.key || '');
 
-    /* 3 . 用户点击搜索的时候: 根据新的关键词搜索商品*/
+  /* 2 . 页面初始化的时候: 根据关键字查询第一页数据4条*/
+  getSearchData({
+    proName : $input.val(),
+    page : 1,
+    pageSize : 4
+  }, function(data){
+    console.log(data);
+  })
+  /* 3 . 用户点击搜索的时候: 根据新的关键词搜索商品*/
 
-    /* 4. 用户点击排序的时候 : 根据排序的选项去进行排序(默认的时候是降序 再次点击的时候升序)*/
+  /* 4. 用户点击排序的时候 : 根据排序的选项去进行排序(默认的时候是降序 再次点击的时候升序)*/
 
-    /* 5. 用户下拉的时候 根据当前条件刷新 上拉加载重置*/
+  /* 5. 用户下拉的时候 根据当前条件刷新 上拉加载重置*/
 
-    /* 6. 用户上拉的时候 加载下一页(没有数据不去加载了)*/
+  /* 6. 用户上拉的时候 加载下一页(没有数据不去加载了)*/
 });
+const getSearchData = function(params, callback) {
+  $.ajax({
+    url: '/product/queryProduct',
+    type: 'get',
+    data: params,
+    dataType: 'json',
+    // eslint-disable-next-line object-shorthand
+    success: function(data) {
+      // eslint-disable-next-line no-unused-expressions
+      callback && callback(data);
+    }
+  });
+};

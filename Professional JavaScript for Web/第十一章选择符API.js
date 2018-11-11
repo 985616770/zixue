@@ -1,3 +1,7 @@
+/* eslint-disable no-console */
+/* eslint-disable no-use-before-define */
+/* eslint-disable no-plusplus */
+/* eslint-disable no-unused-vars */
 /*
  * @Author: xuanjidd
  * @Date: 2018-07-24 15:06:07
@@ -43,7 +47,7 @@ let pos = -1;
 let i;
 let len;
 for (i = 0, len = classNames.length; i < len; i++) {
-  if (classNames[i] == 'user') {
+  if (classNames[i] === 'user') {
     pos = i;
     break;
   }
