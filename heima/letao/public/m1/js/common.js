@@ -1,13 +1,13 @@
-/*·â×°¹¤¾ßº¯Êı*/
+/*??*/
 window.lt = {};
-/*»ñÈ¡µØÖ·À¸²ÎÊı*/
+/*??*/
 lt.getUrlParams = function() {
-  /*ÄÃµ½ÒÔgetĞÎÊ½´«µİµÄµØÖ·À¸µÄÊı¾İ ?key=1&name=10*/
+  /*õget???? ?key=1&name=10*/
   var search = location.search;
-  /*ĞèÒª°Ñ×Ö·û´®×ª»»³É¶ÔÏó  ±ãÓÚ¿ª·¢Ê¹ÓÃ*/
+  /*????  ??*/
   var params = {};
-  /*Èç¹ûÓĞ£¿´ú±íÓĞ²ÎÊı*/
-  /*Ã»ÓĞÎÊºÅ¾ÍÃ»ÓĞ²ÎÊı*/
+  /*??*/
+  /*û?û?*/
   if (search.indexOf('?') == 0) {
     search = search.substr(1);
     var arr = search.split('&');
@@ -19,7 +19,7 @@ lt.getUrlParams = function() {
   }
   return params;
 };
-/*µÇÂ¼À¹½Ø  ·²ÊÂĞèÒªµÇÂ¼²Ù×÷ µ÷ÓÃ*/
+/*¼  ?¼ */
 lt.ajaxFilter = function(options) {
   $.ajax({
     type: options.type || 'get',
@@ -30,7 +30,7 @@ lt.ajaxFilter = function(options) {
       options.beforeSend && options.beforeSend();
     },
     success: function(data) {
-      /* error Èç¹û  400  ´ú±íÎ´µÇÂ¼ È¥µÇÂ¼Ò³  Ğ¯´øurl*/
+      /* error   400  ?¼ ?¼?  ?url*/
       if (data.error == 400) {
         location.href = '/m/user/login.html?returnUrl=' + location.href;
       } else {

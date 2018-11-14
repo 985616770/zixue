@@ -1,0 +1,16 @@
+.ct_order {
+  height: 30px;
+  line-height: 30px;
+  background: #eee;
+  padding: 0 10px;
+}
+.ct_order a {
+  font-size: 12px;
+  color: #333;
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+.ct_order a.now {
+  color: darkorange;
+}
