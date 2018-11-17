@@ -31,30 +31,34 @@
       </header>
       <div class="ct_content">
         <div class="ct_wrapper">
-          <!-- 搜索模块 -->
-          <div class="ct_search">
-            <!-- 在移动端 调用输入法的时候 enter 变成 搜索按钮 -->
-            <form action="#">
-              <input type="search" placeholder="搜索你喜欢的商品" />
-              <a href="javascript:;">搜索</a>
-            </form>
+          <div class="mui-scroll-wrapper" id="refreshContainer">
+            <div class="mui-scroll">
+              <!-- 搜索模块 -->
+              <div class="ct_search">
+                <!-- 在移动端 调用输入法的时候 enter 变成 搜索按钮 -->
+                <form action="#">
+                  <input type="search" placeholder="搜索你喜欢的商品" />
+                  <a href="javascript:;">搜索</a>
+                </form>
+              </div>
+              <!-- 搜索历史区域 -->
+              <div class="ct_order">
+                <a href="javascript:;" data-type="time"
+                  >上架时间<span class="fa fa-angle-down"></span
+                ></a>
+                <a data-type="price" href="javascript:;"
+                  >价格<span class="fa fa-angle-down"></span
+                ></a>
+                <a data-type="num" href="javascript:;"
+                  >库存<span class="fa fa-angle-down"></span
+                ></a>
+                <a href="javascript:;" data-type="makeup"
+                  >折扣<span class="fa fa-angle-down"></span
+                ></a>
+              </div>
+              <div class="ct_product"></div>
+            </div>
           </div>
-          <!-- 搜索历史区域 -->
-          <div class="ct_order">
-            <a href="javascript:;"
-              >上架时间<span class="fa fa-angle-down"></span
-            ></a>
-            <a data-type="price" href="javascript:;"
-              >价格<span class="fa fa-angle-down"></span
-            ></a>
-            <a data-type="num" href="javascript:;"
-              >库存<span class="fa fa-angle-down"></span
-            ></a>
-            <a href="javascript:;"
-              >折扣<span class="fa fa-angle-down"></span
-            ></a>
-          </div>
-          <div class="ct_product"></div>
         </div>
       </div>
       <footer class="ct_footer">

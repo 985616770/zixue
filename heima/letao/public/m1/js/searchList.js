@@ -68,7 +68,7 @@ $(function() {
         {
           proName: key,
           page: currPage,
-          pageSize: pageSize
+          pageSize
         },
         order
       ),
@@ -137,7 +137,7 @@ $(function() {
     pullRefresh: {
       container: '.mui-scroll-wrapper',
       down: {
-        callback: function() {
+        callback() {
           /*注意：下拉操作完成之后 业务 */
           /*模拟一次向后台发送请求 响应之后的时间消耗*/
           var that = this; /*这个是下拉组件对象  对象当中含有终止下拉操作的方法*/
@@ -152,7 +152,7 @@ $(function() {
       },
       /*5.上拉加载*/
       up: {
-        callback: function() {
+        callback() {
           /*注意：上拉操作完成之后 业务 */
           /*模拟一次向后台发送请求 响应之后的时间消耗*/
           var that = this; /*这个是上拉组件对象  对象当中含有终止下拉操作的方法*/
@@ -183,7 +183,7 @@ var getProductListData = function(prams, callback) {
     url: '/product/queryProduct',
     data: prams,
     dataType: 'json',
-    success: function(data) {
+    success(data) {
       /*模拟一下加载时间*/
       setTimeout(function() {
         if (data.data.length == 0) mui.toast('没有相关商品');
