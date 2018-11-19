@@ -45,7 +45,7 @@
 
 /* 加载动画 */
 .mui-icon-spinner::before {
-  animation: rotateLoading 1s infinite;
+  animation: rotateLoading 0.5s infinite alternate;
   color: #069;
   position: absolute;
   left: 50%;
@@ -53,6 +53,7 @@
   margin-left: -12px;
   margin-top: -12px;
 }
+
 .mui-scroll {
   height: 100%;
 }
@@ -61,4 +62,8 @@
   to {
     transform: rotate(-360deg);
   }
+}
+
+.mui-scroll-wrapper{
+  height: 100%;
 }

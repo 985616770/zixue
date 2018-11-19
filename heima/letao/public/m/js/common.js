@@ -1,4 +1,7 @@
+/* eslint-disable prefer-destructuring */
 window.CT = {};
+CT.loginUrl = '/m/user/login.html';
+CT.cartUrl = '/m/user/cart.html';
 
 // 对象存储
 CT.getParamsbyUrl = function() {
@@ -18,4 +21,34 @@ CT.getParamsbyUrl = function() {
   return params;
 };
 
-// 获取搜索数据
+// sign in
+CT.loginAjax = function(params) {
+  $.ajax({
+    type: params.type || 'get',
+    url: params.url || '#',
+    data: params.data || '',
+    dataType: params.dataType || 'json',
+    // eslint-disable-next-line object-shorthand
+    success: function(data) {
+      // for sign in {error 400 return false}
+      if (data.error === 400) {
+        location.href = `${CT.loginUrl}?returnUrl${location.href}`;
+        return false;
+      } else {
+        params.success && params.success(data);
+      }
+    },
+    error: function() {
+      mui.toast('服务器繁忙');
+    }
+  });
+};
+
+/* json 兼容性 json2.js 解决ie67版本*/
+CT.serialize2object = function(serializeStr) {
+  const obj = {};
+  /* key = value && k=v */
+  if (serialize) {
+    
+  }
+};
