@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.card {
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #134e5e;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#71b280), to(#134e5e));
+  background: linear-gradient(to right, #71b280, #134e5e);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+}
+
+.card .header {
+  height: 20%;
+  width: 100%;
+  background: #5c258d;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#4389a2), to(#5c258d));
+  background: linear-gradient(to right, #4389a2, #5c258d);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  text-align: center;
+  text-shadow: 0 0 2px #eee;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.card .article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card .article .img {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.card .article p {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: justify;
+  padding: 15px;
+}
+
+.card .footer {
+  clear: both;
+  height: 20%;
+  width: 100%;
+  background: #2bc0e4;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#eaecc6), to(#2bc0e4));
+  background: linear-gradient(to right, #eaecc6, #2bc0e4);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  text-align: right;
+}
+
+.card .footer p {
+  margin-right: 10%;
+}
+
+.card .footer p a {
+  text-decoration: none;
+}
+
+.card .footer p a:link {
+  color: white;
+}
+/*# sourceMappingURL=1.css.map */

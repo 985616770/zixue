@@ -2,7 +2,7 @@
 window.CT = {};
 CT.loginUrl = '/m/user/login.html';
 CT.cartUrl = '/m/user/cart.html';
-
+CT.userUrl = '/m/user/index.html';
 // 对象存储
 CT.getParamsbyUrl = function() {
   // 对象存储
@@ -44,11 +44,17 @@ CT.loginAjax = function(params) {
   });
 };
 
-/* json 兼容性 json2.js 解决ie67版本*/
+/* json 兼容性 json2.js 解决ie67版本 */
 CT.serialize2object = function(serializeStr) {
   const obj = {};
   /* key = value && k=v */
-  if (serialize) {
-    
+  if (serializeStr) {
+    const arr = serializeStr.split('&');
+    arr.forEach((item, i) => {
+      const itemArr = item.split('=');
+      console.log(itemArr);
+      obj[itemArr[0]] = itemArr[1];
+    });
   }
+  return obj;
 };
