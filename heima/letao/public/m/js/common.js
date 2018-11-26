@@ -34,11 +34,11 @@ CT.loginAjax = function(params) {
       if (data.error === 400) {
         location.href = `${CT.loginUrl}?returnUrl${location.href}`;
         return false;
-      } else {
+      } 
         params.success && params.success(data);
-      }
+      
     },
-    error: function() {
+    error() {
       mui.toast('服务器繁忙');
     }
   });

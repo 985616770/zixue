@@ -28,8 +28,10 @@ $(() => {
         //  如果没有 跳转个人中心
         if (data.success === true) {
           // 业务成功
-          const returnUrl = location.search.replace('?returnUrl=', '');
+          const returnUrl = location.search.replace('?returnUrl', '');
+          console.log(returnUrl);
           if (returnUrl) {
+
             location.href = returnUrl;
           } else {
             location.href = CT.userUrl;

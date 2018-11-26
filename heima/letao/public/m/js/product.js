@@ -97,37 +97,7 @@ $(() => {
           mui.toast('添加失败，请重试！please sign in');
         }
       }
-    });
-    // $.ajax({
-    //   url: '/cart/addCart',
-    //   type: 'post',
-    //   data: data1,
-    //   dataType: 'json',
-    //   success(data) {
-    //     /*4.成功*/
-    //     if (data.success) {
-    //       mui.confirm(
-    //         '加入购物车成功，去购物车看看？',
-    //         '温馨提示',
-    //         ['去看看', '继续浏览'],
-    //         e => {
-    //           if (e.index === 0) {
-    //             /* 按了第一个按钮 */
-    //             location.href = 'user/cart.html';
-    //           } else {
-    //             /* 按了其他按钮 暂时处理 */
-    //           }
-    //         }
-    //       );
-    //     } else {
-    //       /* 5.失败 */
-    //       mui.toast('添加失败，请重试！please sign in');
-    //     }
-    //   }
-    // });
-    // 4.成功
-    // 5.
-    // 6.需要获取数据
+    });  
   });
 
 });
@@ -141,7 +111,6 @@ const getProductData = function(productId, callback) {
     },
     dataType: 'json',
     success(data) {
-      console.log(data);
       setTimeout(() => {
         // eslint-disable-next-line no-unused-expressions
         callback && callback(data);
