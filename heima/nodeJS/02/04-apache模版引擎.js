@@ -28,5 +28,5 @@ server.on('request', function(req, res) {
   });
 });
 server.listen(3000, function() {
-  console.log('running...');
+  console.log('running 在发射了...');
 });
