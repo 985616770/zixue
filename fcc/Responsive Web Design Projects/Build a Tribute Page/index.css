@@ -1,0 +1,47 @@
+html,
+body {
+  text-align: center;
+}
+
+#main {
+  margin: 50px auto;
+  padding: 15px;
+  min-width: 260px;
+}
+
+#title{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+#img-div {
+  width: 100%;
+}
+
+#image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+#tribute-info {
+  width: 100%;
+  margin-top: 50px;
+}
+
+#tribute-info ul {
+  margin: 10px auto;
+  text-align: left;
+  list-style: none;
+  max-width:550px;
+}
+#tribute-info ul li{
+  padding: 10px;
+  color: #0f0;
+}
+
+#tribute-link{
+  text-decoration: none;
+  color: aqua;
+}
