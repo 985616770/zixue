@@ -1,6 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const template = require('art-template');
+const url = require('url');
 
 const comments = [
   {
@@ -32,8 +33,9 @@ const comments = [
 
 http
   .createServer(function(req, res) {
-    const url = req.url;
-    if (url === '/') {
+    const parseObj = url.parse(req.url, true);
+    const pathname = parseObj.pathname;
+    if (pathname === '/') {
       fs.readFile('./views/index.html', function(err, data) {
         if (err) {
           return res.end('404 Not Found.');
@@ -43,14 +45,22 @@ http
         });
         res.end(htmlStr);
       });
-    } else if (url.indexOf('/public/') === 0) {
-      fs.readFile('.' + url, function(err, data) {
+    } else if (pathname.indexOf('/public/') === 0) {
+      fs.readFile('.' + pathname, function(err, data) {
         if (err) {
           return res.end('404 Not Found');
         }
         res.end(data);
       });
-    } else if (url === '/post') {
+    } else if (pathname === '/pinglun') {
+      const comment = parseObj.query;
+      comment.dateTime = '2017-12-1 17212';
+      comments.unshift(comment);
+
+      res.statusCode = 302;
+      res.setHeader('Location', '/');
+      res.end();
+    } else if (pathname === '/post') {
       fs.readFile('./views/post.html', function(err, data) {
         if (err) {
           return res.end('404 Not Found.');

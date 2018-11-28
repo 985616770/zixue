@@ -1,6 +1,7 @@
-var server = require("./server");
-var router = require("./router");
-var requestHandlers = require("./requestHandlers");
+const server = require("./server");
+const router = require("./router");
+
+const requestHandlers = require("./requestHandlers");
 
 var handle = {}
 handle["/"] = requestHandlers.start;

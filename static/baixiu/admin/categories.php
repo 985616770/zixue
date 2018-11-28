@@ -104,7 +104,7 @@ $categories = xiu_fetch_all('SELECT * FROM  categories;');
               <button class="btn btn-primary" type="submit">保存</button>
               <a href="/admin/categories.php" class="btn btn-info">添加
             </a>
-            </div>
+            </div> 
           </form>
         <?php else: ?>
         
