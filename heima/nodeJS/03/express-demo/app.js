@@ -1,11 +1,7 @@
 const express = require('express');
-const express_template = require('express-art-template');
-const app = express();
+var bodyParser = require('body-parser');
 
-app.engine('art', require('express-art-template'));
-app.set('view options', {
-  debug: process.env.NODE_ENV !== 'production'
-});
+const app = express();
 
 const comments = [
   {
@@ -35,29 +31,25 @@ const comments = [
   }
 ];
 // 公开制定目录
-app.use('/public/', express.static('./public/'));
-app.use('/views/', express.static('./views/'));
-
-app.get('/', function(req, res) {
-  res.sendFile(__dirname + '/' + 'views/index.html', function(err, data) {
-    res.render('index.art', {
+app
+  .engine('html', require('express-art-template'))
+  .use('/public/', express.static('./public/'))
+  .use(bodyParser.urlencoded({ extended: false }))
+  .use(bodyParser.json())
+  .get('/', function(req, res) {
+    res.render('index.html', {
       comments: comments
     });
+  })
+  .get('/post', function(req, res) {
+    res.render('post.html');
+  })
+  .post('/post', function(req, res) {
+    const comment = req.body;
+    comment.dateTime = '2017-12-1 17212';
+    comments.unshift(comment);
+    res.redirect(302, '/');
+  })
+  .listen(3000, function() {
+    console.log('app is running');
   });
-});
-
-app.get('/post', function(req, res) {
-  res.sendFile(__dirname + '/' + 'views/post.html');
-});
-
-app.get('/pinglun', function(req, res) {
-  const comment = req.query;
-  comment.dateTime = '2017-12-1 17212';
-  comments.unshift(comment);
-
-  res.redirect(302, '/');
-});
-
-app.listen(3000, function() {
-  console.log('app is running');
-});
