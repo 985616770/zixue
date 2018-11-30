@@ -1,1 +1,11 @@
-{"students":[{"id":4,"name":"张三三","gender":"1","age":"12","hobbies":"吃饭、睡觉、打豆豆"}]}
+{
+  "students": [
+    {
+      "id": 4,
+      "name": "张三三",
+      "gender": "1",
+      "age": "12",
+      "hobbies": "吃饭、睡觉、打豆豆"
+    }
+  ]
+}
