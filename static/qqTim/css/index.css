@@ -1,315 +1,307 @@
 /* ==================reset css============ */
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background: url();
+  background: url();
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    color: #333;
-    text-decoration: none;
+  color: #333;
+  text-decoration: none;
 }
 
 /* ===================model css ============= */
 
-
-
 .qq_nav {
-    height: 150px;
-    background: url("../images/nav_bg.png") repeat-x;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
+  height: 150px;
+  background: url('../images/nav_bg.png') repeat-x;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 
 .qq_nav .wrapper {
-    width: 1080px;
-    margin: 0 auto;
-    height: 100px;
+  width: 1080px;
+  margin: 0 auto;
+  height: 100px;
 }
 
 .qq_nav .wrapper .logo {
-    background: url("../images/nav_brand.png") no-repeat center;
-    height: 75px;
-    width: 100px;
-    float: left;
+  background: url('../images/nav_brand.png') no-repeat center;
+  height: 75px;
+  width: 100px;
+  float: left;
 }
 
 .qq_nav .nav {
-    float: left;
-    list-style: none;
+  float: left;
+  list-style: none;
 }
 
 .qq_nav .nav li {
-    float: left;
-    line-height: 72px;
-    height: 72px;
-    text-align: center;
-    font: 20px;
-    margin-left: 20px;
+  float: left;
+  line-height: 72px;
+  height: 72px;
+  text-align: center;
+  font: 20px;
+  margin-left: 20px;
 }
 
 .qq_nav .nav li a {
-    display: block;
-    padding: 0 20px;
-    font-weight: 900;
+  display: block;
+  padding: 0 20px;
+  font-weight: 900;
 }
 
 .qq_nav .nav li:first-child {
-    background-color: #12b7f5;
+  background-color: #12b7f5;
 }
 
 .qq_nav .nav li a:hover {
-    background-color: #12b7f5;
+  background-color: #12b7f5;
 }
 
-
 .qq_nav .other {
-    float: right;
-    margin-left: 40px;
-    ;
+  float: right;
+  margin-left: 40px;
 }
 
 .other ul {
-    margin: 10px;
+  margin: 10px;
 }
 
 .other ul li {
-    float: left;
-    padding: 0 10px;
-    margin: 0 0 15px 0;
+  float: left;
+  padding: 0 10px;
+  margin: 0 0 15px 0;
 }
 
 .other ul li a {
-    font-size: 14px;
-    text-shadow: 0 0 2px #333;
-    height: 30px;
-    line-height: 30px;
+  font-size: 14px;
+  text-shadow: 0 0 2px #333;
+  height: 30px;
+  line-height: 30px;
 }
 
 .other span {
-    float: right;
-    font-size: 13px;
+  float: right;
+  font-size: 13px;
 }
 
 .qq_nav .register {
-    float: right;
-    display: block;
-    height: 36px;
-    width: 96px;
-    text-align: center;
-    line-height: 36px;
-    font-size: 16px;
-    background: #12b7f5;
-    color: #fff;
-    border-radius: 18px;
-    margin-top: 19px;
+  float: right;
+  display: block;
+  height: 36px;
+  width: 96px;
+  text-align: center;
+  line-height: 36px;
+  font-size: 16px;
+  background: #12b7f5;
+  color: #fff;
+  border-radius: 18px;
+  margin-top: 19px;
 }
 
-
-
 .qq_banner {
-    height: 880px;
-    background: url("../images/banner-bg.jpg") no-repeat center top;
-    padding-top: 150px;
+  height: 880px;
+  background: url('../images/banner-bg.jpg') no-repeat center top;
+  padding-top: 150px;
 }
 
 .qq_banner img {
-    display: block;
-    margin: 20px auto 0;
+  display: block;
+  margin: 20px auto 0;
 }
 
 .qq_banner img:last-child {
-    width: 100%;
+  width: 100%;
 }
 
-.qq_sound {}
+.qq_sound {
+}
 
 .qq_sound h1 {
-    height: 300px;
-    background: url(../images/sound-text.png) no-repeat center/cover;
-    font-size: 0;
+  height: 300px;
+  background: url(../images/sound-text.png) no-repeat center/cover;
+  font-size: 0;
 }
 
 .qq_sound .bg {
-    background-attachment: fixed;
-    height: 500px;
-    background: url(../images/sound-bg.jpg) no-repeat center/cover;
+  background-attachment: fixed;
+  height: 500px;
+  background: url(../images/sound-bg.jpg) no-repeat center/cover;
 }
 
 .qq_sound .content {
-    position: relative;
-    height: 500px;
-    width: 980px;
-    margin: 0 auto
+  position: relative;
+  height: 500px;
+  width: 980px;
+  margin: 0 auto;
 }
 
 .qq_sound .iphone {
-    position: absolute;
-    left: 0;
-    top: -200px;
-    width: 700px;
-    height: 700px;
-    background: url(../images/sound-phone.png) no-repeat center top/cover;
+  position: absolute;
+  left: 0;
+  top: -200px;
+  width: 700px;
+  height: 700px;
+  background: url(../images/sound-phone.png) no-repeat center top/cover;
 }
 
 .qq_sound .content h2 {
-    float: right;
-    padding-top: 100px;
-    width: 500px;
-    text-align: right;
-    font-size: 40px;
+  float: right;
+  padding-top: 100px;
+  width: 500px;
+  text-align: right;
+  font-size: 40px;
 }
 
 .qq_sound .content p {
-    float: right;
-    padding-top: 50px;
-    width: 500px;
-    text-align: right;
-    font-size: 18px;
-    text-shadow: 0 0 2px #333;
+  float: right;
+  padding-top: 50px;
+  width: 500px;
+  text-align: right;
+  font-size: 18px;
+  text-shadow: 0 0 2px #333;
 }
 
 .qq_file .bg {
-    background-attachment: fixed;
-    height: 500px;
-    background: url(../images/file-bg.jpg) no-repeat center/cover;
+  background-attachment: fixed;
+  height: 500px;
+  background: url(../images/file-bg.jpg) no-repeat center/cover;
 }
 
 .qq_file .content {
-    position: relative;
-    height: 500px;
-    width: 980px;
-    margin: 0 auto
+  position: relative;
+  height: 500px;
+  width: 980px;
+  margin: 0 auto;
 }
 
 .qq_file .content .mac {
-    width: 600px;
-    height: 340px;
-    background: url(../images/file-mac.png) no-repeat center/cover;
-    position: absolute;
-    right: -60px;
-    top: 100px;
+  width: 600px;
+  height: 340px;
+  background: url(../images/file-mac.png) no-repeat center/cover;
+  position: absolute;
+  right: -60px;
+  top: 100px;
 }
 
 .qq_file .content h2 {
-    float: left;
-    padding-top: 100px;
-    width: 500px;
-    text-align: left;
-    font-size: 40px;
+  float: left;
+  padding-top: 100px;
+  width: 500px;
+  text-align: left;
+  font-size: 40px;
 }
 
 .qq_file .content p {
-    float: left;
-    padding-top: 50px;
-    width: 500px;
-    text-align: left;
-    font-size: 18px;
-    text-shadow: 0 0 2px #333;
+  float: left;
+  padding-top: 50px;
+  width: 500px;
+  text-align: left;
+  font-size: 18px;
+  text-shadow: 0 0 2px #333;
 }
 
 .qq_interest .bg {
-    background-attachment: fixed;
-    height: 500px;
-    background: url(../images/interest-bg.jpg) no-repeat center/cover;
+  background-attachment: fixed;
+  height: 500px;
+  background: url(../images/interest-bg.jpg) no-repeat center/cover;
 }
 
 .qq_interest .content {
-    position: relative;
-    height: 500px;
-    width: 980px;
-    margin: 0 auto;
+  position: relative;
+  height: 500px;
+  width: 980px;
+  margin: 0 auto;
 }
 
 .qq_interest .iphone {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 350px;
-    height: 500px;
-    background: url(../images/interest-phone.png) no-repeat center top/cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 350px;
+  height: 500px;
+  background: url(../images/interest-phone.png) no-repeat center top/cover;
 }
 
 .qq_interest .content h2 {
-    float: right;
-    padding-top: 100px;
-    width: 500px;
-    text-align: left;
-    font-size: 40px;
+  float: right;
+  padding-top: 100px;
+  width: 500px;
+  text-align: left;
+  font-size: 40px;
 }
 
 .qq_interest .content p {
-    float: right;
-    padding-top: 50px;
-    width: 500px;
-    text-align: left;
-    font-size: 18px;
-    text-shadow: 0 0 2px #333;
+  float: right;
+  padding-top: 50px;
+  width: 500px;
+  text-align: left;
+  font-size: 18px;
+  text-shadow: 0 0 2px #333;
 }
 
 .qq_footer {
-    height: 250px;
-    background: #2a2a2a;
-    font-size: 12px;
-    text-align: center;
-    padding-top: 50px;
-    color: #666;
+  height: 250px;
+  background: #2a2a2a;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 50px;
+  color: #666;
 }
 
 .qq_footer .plats {
-    width: 800px;
-    height: 150px;
-    margin: 0 auto;
-    display: block;
+  width: 800px;
+  height: 150px;
+  margin: 0 auto;
+  display: block;
 }
 
 .qq_footer .plats a {
-    float: left;
-    background: transparent url(../images/footer.png) no-repeat 10px 0;
-    text-align: center;
-    font-size: 12px;
-    color: #666;
-    padding-top: 50px;
-    width: 80px;
-    margin: 0 60px;
+  float: left;
+  background: transparent url(../images/footer.png) no-repeat 10px 0;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  padding-top: 50px;
+  width: 80px;
+  margin: 0 60px;
 }
 .plats a:hover {
-    color: #12b7f5;
+  color: #12b7f5;
 }
 .qq_footer a.plmb {
-    background-position: 0 0;
-
+  background-position: 0 0;
 }
-.qq_footer a.plmb:hover{
-    background-position: 0 -93px;
+.qq_footer a.plmb:hover {
+  background-position: 0 -93px;
 }
 .qq_footer a.plpc {
-    background-position: -105px 0;
-
+  background-position: -105px 0;
 }
-.qq_footer a.plpc:hover{
-    background-position: -105px -93px;
+.qq_footer a.plpc:hover {
+  background-position: -105px -93px;
 }
 .qq_footer a.plmac {
-    background-position: -210px 0;
-
+  background-position: -210px 0;
 }
-.qq_footer a.plmac:hover{
-    background-position: -210px -93px;
+.qq_footer a.plmac:hover {
+  background-position: -210px -93px;
 }
 .qq_footer a.plpad {
-    background-position: -326px 0;
+  background-position: -326px 0;
 }
-.qq_footer a.plpad:hover{
-    background-position: -326px -93px;
+.qq_footer a.plpad:hover {
+  background-position: -326px -93px;
 }
