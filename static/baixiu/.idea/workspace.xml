@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6a9541e-d3f9-4486-86e7-d4209101f130" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../heima/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../heima/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../heima/mobile terminal/suning/less/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/../../heima/mobile terminal/suning/less/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../heima/work/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../heima/work/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../heima/work/models/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../heima/work/models/db.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../heima/work/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../heima/work/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../heima/work/public/admin/assets/echarts/echarts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../heima/work/public/admin/assets/echarts/echarts.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../heima/work/public/admin/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../heima/work/public/admin/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../heima/work/public/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../heima/work/public/admin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../heima/work/public/manage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../heima/work/public/manage/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../heima/work/public/manage/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../heima/work/public/manage/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -45,7 +32,7 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="10" />
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.20" value="1" />
@@ -54,7 +41,7 @@
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -63,7 +50,7 @@
           <entry key="comments" value="1" />
           <entry key="html" value="1" />
           <entry key="options" value="1" />
-          <entry key="php" value="9" />
+          <entry key="php" value="11" />
           <entry key="posts" value="1" />
           <entry key="sql" value="2" />
           <entry key="users" value="1" />
@@ -73,7 +60,7 @@
         <counts>
           <entry key="Database Element" value="5" />
           <entry key="HTML" value="1" />
-          <entry key="PHP" value="6" />
+          <entry key="PHP" value="8" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="Scratch" value="2" />
         </counts>
@@ -94,7 +81,26 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/categories.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="638">
+              <caret line="29" column="43" lean-forward="true" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -125,9 +131,9 @@
       <path value="C:/fuwuqi/php7.2" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="420" />
-    <option name="y" value="157" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="416" />
+    <option name="y" value="297" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -151,7 +157,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -168,17 +173,18 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../heima/work" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\zp\AppData\Roaming\npm\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.自定义" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -212,16 +218,18 @@
       <workItem from="1541476888631" duration="24000" />
       <workItem from="1541476931648" duration="1910000" />
       <workItem from="1541481746108" duration="57000" />
+      <workItem from="1543807544217" duration="708000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5403000" />
+    <option name="totallyTimeSpent" value="6111000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="416" y="297" width="1400" height="1000" extended-state="1" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49945712" visible="true" weight="0.2716115" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49945712" visible="true" weight="0.38490283" />
       <window_info id="Structure" order="1" sideWeight="0.5005429" side_tool="true" weight="0.25746268" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -256,13 +264,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/admin/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/password-reset.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -280,41 +281,11 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ea3670ff-af30-4b91-88c1-05d4f0acb163/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="das://ea02909f-a85d-4fcc-8314-16bedb5d17a3/schema/baixiu-dev/table/comments">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ea02909f-a85d-4fcc-8314-16bedb5d17a3/schema/baixiu-dev/table/options">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ea02909f-a85d-4fcc-8314-16bedb5d17a3/schema/baixiu-dev/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ea02909f-a85d-4fcc-8314-16bedb5d17a3/schema/baixiu-dev/table/posts">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ea02909f-a85d-4fcc-8314-16bedb5d17a3/schema/baixiu-dev/table/categories">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://ea02909f-a85d-4fcc-8314-16bedb5d17a3/schema/baixiu-dev/table/comments" />
+    <entry file="das://ea02909f-a85d-4fcc-8314-16bedb5d17a3/schema/baixiu-dev/table/options" />
+    <entry file="das://ea02909f-a85d-4fcc-8314-16bedb5d17a3/schema/baixiu-dev/table/users" />
+    <entry file="das://ea02909f-a85d-4fcc-8314-16bedb5d17a3/schema/baixiu-dev/table/posts" />
+    <entry file="das://ea02909f-a85d-4fcc-8314-16bedb5d17a3/schema/baixiu-dev/table/categories" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ea02909f-a85d-4fcc-8314-16bedb5d17a3/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -357,6 +328,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="789">
           <caret line="91" column="40" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/categories.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="29" column="43" lean-forward="true" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
         </state>
       </provider>
     </entry>
