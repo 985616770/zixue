@@ -294,3 +294,42 @@ console.log(add1(3));
 
 // Memorization
 
+var fibonacci = function(n) {
+  return n < 2 ? n : fibonacci(n - 1) + fibonacci(n - 2);
+};
+
+// for (let i = 0; i < 10; i++) {
+//   console.log(`0: ${fibonacci(i)}`);
+// }
+
+var fibonacci = function() {
+  var memo = [0, 1];
+  var fib = function(n) {
+    var result = memo[n];
+    if (typeof result !== 'number') {
+      result = fib(n - 1) + fib(n - 2);
+      memo[n] = result;
+      console.log(memo);
+    }
+    return result;
+  };
+  return fib;
+};
+console.log(fibonacci()(10));
+
+// 专门用来记忆的函数
+var memorizer = function(memo, formula) {
+  var recur = function(n) {
+    var result = memo[n];
+    if (typeof result !== 'number') {
+      result = formula(recur, n);
+      memo[n] = result;
+    }
+    return result;
+  };
+  return recur;
+};
+
+var fibonacci = memorizer([0, 1], function(recur, n) {
+  return recur(n - 1) + recur(n - 2);
+});
