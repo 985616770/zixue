@@ -199,3 +199,47 @@ var foo = function() {
     a += b + c;
   };
 };
+
+var myObject = (function() {
+  var value = 0;
+  return {
+    increment: function(inc) {
+      value += typeof inc === 'number' ? inc : 1;
+    },
+    getValue: function() {
+      return value;
+    }
+  };
+})();
+
+console.log(myObject);
+
+var quo = function(status) {
+  return {
+    get_status: function() {
+      return status;
+    }
+  };
+};
+
+var myQuo = quo('amazed');
+console.log(myQuo.get_status());
+
+// callbacks
+// request = prepare_the_request();
+// send_request_asynch
+
+// modules
+String.method('deentityify', function() {
+  var entity = {
+    quot: '"',
+    lt: '<',
+    gt: '>'
+  };
+  return function() {
+    return this.replace(/&([^&:]+);/g, function(a, b) {
+      var r = entity[b];
+      return typeof r === 'string' ? r : a;
+    });
+  };
+});
