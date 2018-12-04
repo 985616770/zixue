@@ -1,3 +1,4 @@
+const method = require('./common');
 var add = function(a, b) {
   return a + b;
 };
@@ -118,10 +119,10 @@ var try_it = function() {
  * add function to all function
  */
 
-Function.prototype.method = function(name, func) {
-  this.prototype[name] = func;
-  return this;
-};
+// Function.prototype.method = function(name, func) {
+//   this.prototype[name] = func;
+//   return this;
+// };
 
 Number.method('interger', function() {
   return Math[this < 0 ? 'ceil' : 'floor'](this); //Math["ceil"||"floor"]()
@@ -230,16 +231,66 @@ console.log(myQuo.get_status());
 // send_request_asynch
 
 // modules
-String.method('deentityify', function() {
-  var entity = {
-    quot: '"',
-    lt: '<',
-    gt: '>'
+String.method(
+  'deentityify',
+  (function() {
+    var entity = {
+      quot: '"',
+      lt: '<',
+      gt: '>'
+    };
+    return function() {
+      return this.replace(/&([^&:]+);/g, function(a, b) {
+        var r = entity[b];
+        return typeof r === 'string' ? r : a;
+      });
+    };
+  })()
+);
+
+// console.log('&lt;&quot;&gt;'.deentityify());
+
+var serial_maker = function() {
+  var prefix = '';
+  var seq = 0;
+  return {
+    set_prefix: function(p) {
+      prefix = String(p);
+    },
+    set_seq: function(s) {
+      seq = s;
+    },
+    gensym: function() {
+      var result = prefix + seq;
+      seq += 1;
+      return result;
+    }
   };
+};
+
+var seqer = serial_maker();
+seqer.set_prefix('Q');
+seqer.set_seq(1000);
+var unique = seqer.gensym();
+
+// console.log(seqer);
+
+// cascade
+
+// 类似于jQuery的链式调用
+
+//柯里化(curry)
+Function.method('curry', function() {
+  var slice = Array.prototype.slice,
+    args = slice.apply(arguments),
+    that = this;
   return function() {
-    return this.replace(/&([^&:]+);/g, function(a, b) {
-      var r = entity[b];
-      return typeof r === 'string' ? r : a;
-    });
+    return that.apply(null, args.concat(slice.apply(arguments)));
   };
 });
+
+var add1 = add.curry(1);
+console.log(add1(3));
+
+// Memorization
+
