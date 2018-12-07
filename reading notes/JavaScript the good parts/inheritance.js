@@ -1,0 +1,1 @@
+const common = require('./common');
