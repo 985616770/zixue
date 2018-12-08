@@ -6,7 +6,7 @@
   </head>
   <body>
     <div class="header">头部</div>
-    <div class="aside"><ul id="tpl"></ul></div>
+    <div class="aside"></div>
     <a href="todo/add.html">添加 todo</a>
     <ul id="container"></ul>
     <script id="tpl" type="text/template">
@@ -22,10 +22,6 @@
           todos: data
         });
         $('#container').html(htmlStr);
-        var s = `<a href="https://xuanjidd.xyz${url}">${title}</a>
-                <br/><font color="#555">阅读次数：${time}</font>
-                <br/>
-                <br/>`;
       });
     </script>
   </body>
