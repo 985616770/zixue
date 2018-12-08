@@ -1,0 +1,25 @@
+<div>
+  发现音乐
+  <hr>
+  <ul id="todos-container">
+    
+  </ul>
+</div>
+
+<script id="tpl-todos" type="text/template">
+  {{ each todos }}
+  <li>{{ $value.title }}</li>
+  {{ /each }}
+</script>
+
+<script>
+  console.log(123)
+  $.get('http://127.0.0.1:3000/todos', function (data) {
+    console.log(data)
+    var htmlStr = template('tpl-todos', {
+      todos: data
+    })
+    console.log(htmlStr)
+    $('#todos-container').html(htmlStr)
+  })
+</script>
