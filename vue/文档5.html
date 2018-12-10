@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table id="blog-posts-events-demo">
+      <div :style="{ fontSize: postFontSize + 'em' }">
+        <blog-post
+          v-for="post in posts"
+          :key="post.id"
+          :post="post"
+          @enlarge-text="postFontSize += $event"
+        ></blog-post>
+      </div>
+    </table>
+    <script src="./node_modules/vue/dist/vue.js"></script>
+    <script>
+      Vue.component('blog-post', {
+        props: ['post'],
+        template: `
+                      <div class="blog-post">
+                        <h3>{{ post.title }}</h3>
+                        <button @click= "$emit('enlarge-text', 1.1)">
+                          Enlarge text
+                        </button>
+                        <div v-html="post.content"></div>
+                      </div>
+                    `
+      });
+
+      new Vue({
+        el: '#blog-posts-events-demo',
+        data: {
+          posts: [
+            { id: 1, title: 'My journey with Vue' },
+            { id: 2, title: 'Blogging with Vue' },
+            { id: 3, title: 'Why Vue is so fun' }
+          ],
+          postFontSize: 1
+        }
+      });
+    </script>
+  </body>
+</html>
