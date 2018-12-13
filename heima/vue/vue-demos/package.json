@@ -1,0 +1,15 @@
+{
+  "name": "vue-demos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "element-ui": "^2.4.11",
+    "vue": "^2.5.21"
+  }
+}
