@@ -25,16 +25,24 @@
 //
 // foo();
 
-function baz() {
-  console.log("baz")
-  bar();
-}
+// function baz() {
+//   console.log("baz")
+//   bar();
+// }
 
-function bar() {
-  console.log( "bar")
-  foo();
-}
+// function bar() {
+//   console.log( "bar")
+//   foo();
+// }
+
+// function foo() {
+//   console.log("foo")
+// }
 
 function foo() {
-  console.log("foo")
+  'use strict';
+  console.log(this.a);
 }
+
+var a = 2;
+foo();
