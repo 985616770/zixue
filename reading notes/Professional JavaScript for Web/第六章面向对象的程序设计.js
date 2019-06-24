@@ -7,20 +7,20 @@
  */
 //6.1
 
-// var person = new Object();
-// person.name = "Nicholas";
-// person.age = 26;
-// person.sayName = function () {
-//     alert(this.name);
-// };
-// var person = {
-//     name: "Nisss",
-//     age: 298,
-//     job: "sortware",
-//     sayName: function () {
-//         alert(this.name);
-//     }
-// };
+var person = new Object();
+person.name = "Nicholas";
+person.age = 26;
+person.sayName = function () {
+    alert(this.name);
+};
+var person = {
+    name: "Nisss",
+    age: 298,
+    job: "sortware",
+    sayName: function () {
+        alert(this.name);
+    }
+};
 
 //6.1.1
 

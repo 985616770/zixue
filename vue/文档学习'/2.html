@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="node_modules\vue\dist\vue.js"></script>
+  </head>
+  <body>
+    <kbd></kbd>
+    <div id="app">
+      <p>{{ foo }}</p>
+      <!-- 这将不再更新 `foo`! -->
+      <button v-on:click="foo = 'baz'">点我修改</button>
+
+      <p>使用双花括号语法：{{ rawHtml }}</p>
+      <p>使用 v-html 指令：<span v-html="rawHtml"></span></p>
+    </div>
+    <script>
+      var obj = {
+        foo: 'bar'
+      };
+
+      Object.freeze(obj);
+
+      new Vue({
+        el: '#app',
+        data: obj,
+        created: function () {
+          console.log('a is :' + this.a);
+        }
+      });
+    </script>
+  </body>
+</html>
