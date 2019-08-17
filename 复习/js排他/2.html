@@ -1,0 +1,155 @@
+<!--
+ * @Author: xuanji
+ * @Date: 2019-08-17 15:55:02
+ * @LastEditors: xuanji
+ * @LastEditTime: 2019-08-17 15:59:33
+ * @Description: file content
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>tab切换</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      aside {
+        width: 260px;
+        height: 315px;
+        border: 1px solid #c3ccd6;
+        overflow: hidden;
+        margin-top: 50px;
+      }
+      ul {
+        list-style-type: none;
+        margin: 5px 5px 0 5px;
+        width: 250px;
+        height: 30px;
+      }
+      ul li a {
+        float: left;
+        width: 50px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        font-size: 14px;
+        color: #666;
+        border-bottom: 2px solid white;
+      }
+      ul li a:hover {
+        font-weight: bold;
+        color: #227fc6;
+        border-bottom: 2px solid #227fc6;
+      }
+      aside hr {
+        width: 250px;
+        margin: 0 auto;
+        background-color: #ecf3f9;
+        opacity: 0.5;
+      }
+      aside .bottom section {
+        margin: 5px auto;
+        width: 250px;
+        height: 115px;
+      }
+      aside .bottom section img {
+        width: 250px;
+        height: 115px;
+      }
+      aside .bottom ul li a {
+        width: 250px;
+        border: none;
+      }
+      aside .bottom ul li a:hover {
+        font-size: 14px;
+        font-weight: normal;
+        text-decoration: underline;
+      }
+      aside ul li .first {
+        font-weight: bold;
+        color: #227fc6;
+        border-bottom: 2px solid #227fc6;
+      }
+    </style>
+  </head>
+  <body>
+    <aside>
+      <ul>
+        <li οnmοuseοver="tab('tab1')"><a href="#">头条</a></li>
+        <li οnmοuseοver="tab('tab2')"><a href="#">军事</a></li>
+        <li οnmοuseοver="tab('tab3')"><a href="#">社会</a></li>
+        <li οnmοuseοver="tab('tab4')"><a href="#">明星</a></li>
+        <li οnmοuseοver="tab('tab5')"><a href="#">情感</a></li>
+      </ul>
+      <hr />
+      <div class="bottom">
+        <section></section>
+        <ul>
+          <li class="first">
+            <a href="#">直击:台风"天鸽"来袭人像纸片一样飞</a>
+          </li>
+          <li><a href="#">章莹颖家属:叶落归根找不到她不回国</a></li>
+          <li><a href="#">艳遇?协警执法遭过路女子搂脖强吻&nbsp;</a></li>
+          <li><a href="#">10岁女童多次遭"叔叔"强奸 产下女婴</a></li>
+          <li><a href="#">男子因心情不好 头戴女士内裤行窃&nbsp;</a></li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <section></section>
+        <ul>
+          <li><a href="#">军报发文:敌人盲目自信或致不战自败</a></li>
+          <li><a href="#">南亚盟友向北京发密电:印已进伏击圈</a></li>
+          <li><a href="#">种因得果!&nbsp;撞船的美舰全都来过南海</a></li>
+          <li><a href="#">北京砍新加坡第二刀 李显龙彻底傻眼</a></li>
+          <li><a href="#">华人归国感叹:中国跟俄罗斯差距太大</a></li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <section></section>
+        <ul>
+          <li><a href="#">派出所长遭围殴 混乱中发生枪支走火</a></li>
+          <li><a href="#">警察出警身中数刀:先不要告诉我父母</a></li>
+          <li><a href="#">大学生带5枚手雷上火车&nbsp;吓坏安检员</a></li>
+          <li><a href="#">无人机与客机擦肩而过 13趟航班停飞</a></li>
+          <li><a href="#">小伙救起溺水母子 自己体力不支遇难</a></li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <section></section>
+        <ul>
+          <li><a href="#">李枫:为保护他人必须曝光郭敬明性侵</a></li>
+          <li><a href="#">张歆艺为袁弘庆生晒牵手照 两人甜齁</a></li>
+          <li><a href="#">蔡依林着鱼尾裤大步擦地 微露事业线</a></li>
+          <li><a href="#">尺度大解放 陈乔恩真空上阵秀豪乳&nbsp;</a></li>
+          <li><a href="#">张馨予微博疑似暗讽杨幂 遭网友怒怼</a></li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <section></section>
+        <ul>
+          <li><a href="#">大妈网恋被骗60多万"爱人"竟是女婿</a></li>
+          <li><a href="#">男子杀友:他咋知道我女友比他老婆轻</a></li>
+          <li><a href="#">他接受不了我不堪的过往 我该怎么办</a></li>
+          <li><a href="#">凑合过的夫妻 最后都成了这三个样子</a></li>
+          <li><a href="#">只求同日死?男子卧轨自杀拉妻子陪葬</a></li>
+        </ul>
+      </div>
+    </aside>
+    <script>
+      function tab(temp_tab) {
+        var tabs = ['tab1', 'tab2', 'tab3', 'tab4', 'tab5'];
+        for (i = 0; i < 5; i++) {
+          if (tabs[i] == temp_tab) {
+            document.getElementById(tabs[i]).style.display = 'block';
+          } else {
+            document.getElementById(tabs[i]).style.display = 'none';
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
