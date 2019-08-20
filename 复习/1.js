@@ -2,7 +2,7 @@
  * @Author: xuanji
  * @Date: 2019-08-14 11:07:14
  * @LastEditors: xuanji
- * @LastEditTime: 2019-08-17 11:08:07
+ * @LastEditTime: 2019-08-18 10:41:19
  * @Description: file content
  */
 
@@ -86,10 +86,15 @@ const { toString: s } = 123;
 var person = {};
 person.name = 'coco';
 person.age = 23;
-person.sayName = function() {
+person.sayName = function () {
   console.log(person.name);
 };
 delete person.name;
 person.sayName();
 var as = Math.max.apply(null, [3, 3, 2]);
 console.log(as);
+
+function toDo(is) {
+  var is = 11;
+  let a = [];
+}
