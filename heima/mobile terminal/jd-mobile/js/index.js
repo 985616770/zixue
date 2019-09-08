@@ -12,8 +12,8 @@ const search = function() {
       window.pageXOffset !== undefined
         ? window.pageYOffset
         : (document.compatMode || '') === 'CSS1Compat'
-          ? document.documentElement.scrollTop
-          : document.body.scrollTop;
+        ? document.documentElement.scrollTop
+        : document.body.scrollTop;
     let opacity = 0;
 
     if (scrollTop < height) {

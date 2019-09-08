@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1600px;
+  min-width: 1600px;
+  margin: 0 auto;
+  font-family: 'Montserrat-Light';
+}
+
+/* header */
+
+header {
+  position: relative;
+  background-image: url(./img/图层1.png);
+  width: 100%;
+  height: 1000px;
+}
+
+header .zhe1 {
+  width: 100%;
+  height: 1000px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 100;
+}
+
+header .header-main {
+  width: 970px;
+  height: 600px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 999;
+  text-align: center;
+}
+
+header .header-main > h1 {
+  height: 48px;
+  font-size: 62px;
+  font-family: Montserrat-ExtraLight;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 48px;
+  color: #ffffff;
+  margin-bottom: 50px;
+}
+
+header .header-main > p {
+  width: 700px;
+  height: 80px;
+  font-family: Montserrat-ExtraLight;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 32px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 0.5;
+  margin: 0 auto 50px;
+}
+
+header .header-main .header-form {
+  position: relative;
+  width: 970px;
+  height: 250px;
+  border-radius: 2px;
+  border: solid 1px #ffffff;
+  z-index: 50;
+  opacity: 0.5;
+}
+
+header .header-main .header-form h3 {
+  margin: 40px auto 30px;
+  width: 241px;
+  height: 13px;
+  font-family: Montserrat-Light;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 28px;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+header .header-main .header-form p {
+  width: 200px;
+  height: 10px;
+  font-family: Montserrat-Light;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 2px;
+  color: #ffffff;
+  opacity: 0.3;
+  margin: 20px auto 40px;
+}
+
+header .header-main .header-form input {
+  width: 292px;
+  height: 50px;
+  border-radius: 2px;
+  border: solid 1px #ffffff;
+  margin-right: 10px;
+}
+
+header .header-main .header-form input:nth-last-child(1) {
+  width: 100px;
+  opacity: 1;
+}
+
+/* 第一块内容 */
+div.f {
+  height: 700px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+div.f > p {
+  width: 250px;
+  height: 11px;
+  font-family: Montserrat-Light;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 11px;
+  letter-spacing: 2px;
+  color: #141414;
+  margin: 60px auto;
+}
+
+div.f > h1 {
+  width: 600px;
+  height: 93px;
+  font-family: Montserrat-ExtraLight;
+  font-size: 42px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 52px;
+  letter-spacing: 0px;
+  color: #141414;
+  margin: 20px auto 100px;
+}
+
+div.f .f-content {
+  width: 1000px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+div.f .f-content .f-content-block {
+  float: left;
+  width: 45%;
+  height: 130px;
+  text-align: left;
+  margin: 50px 2% 50px;
+}
+
+div.f .f-content .f-content-block img {
+  float: left;
+  margin: 15px;
+}
+
+div.f .f-content .f-content-block h3 {
+  width: 250px;
+  height: 16px;
+  font-family: Montserrat-Light;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 16px;
+  letter-spacing: 0px;
+  color: #141414;
+  margin-bottom: 10px;
+  padding-left: 80px;
+}
+
+
+div.f .f-content .f-content-block p{
+  width: 355px;
+	font-family: Montserrat-ExtraLight;
+	font-size: 16px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 26px;
+	letter-spacing: 0px;
+	color: #141414;
+  opacity: 0.7;
+  padding-left: 80px;
+}

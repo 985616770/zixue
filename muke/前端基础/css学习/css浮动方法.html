@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  *{
+    margin: 0;padding: 0;
+  }
+  .clear {
+    clear: both;
+  }
+  .s1 {
+    border: 1px solid #000;
+    margin-bottom: 20px;
+  }
+  .s1 div:nth-child(1){
+    width: 100px;
+    height: 100px;
+    background-color: #e00;
+    float: left;
+  }
+  .s1 div:nth-child(2){
+    width: 100px;
+    height: 100px;
+    background-color: rgb(148, 124, 124);
+    float: left;
+  }
+  .s1 div:nth-child(3){
+    width: 100px;
+    height: 100px;
+    background-color: rgb(14, 220, 106);
+    float: left;
+  }
+
+
+ .s3 {
+    border: 1px solid #000;
+    margin-bottom: 20px;
+  }
+  .s3 div:nth-child(1){
+    width: 100px;
+    height: 100px;
+    background-color: #e00;
+    float: left;
+  }
+  .s3 div:nth-child(2){
+    width: 100px;
+    height: 100px;
+    background-color: rgb(148, 124, 124);
+    float: left;
+  }
+  .s3 div:nth-child(3){
+    width: 100px;
+    height: 100px;
+    background-color: rgb(14, 220, 106);
+    float: left;
+  }
+  .s3::after{
+    content: "";
+    display: block;
+    visibility: hidden;
+    clear: both;
+  }
+  .s3 {
+    zoom: 1;
+  }
+
+   .s2 {
+    border: 1px solid #000;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .s2 div:nth-child(1){
+    width: 100px;
+    height: 100px;
+    background-color: #e00;
+    float: left;
+  }
+  .s2 div:nth-child(2){
+    width: 100px;
+    height: 100px;
+    background-color: rgb(148, 124, 124);
+    float: left;
+  }
+  .s2 div:nth-child(3){
+    width: 100px;
+    height: 100px;
+    background-color: rgb(14, 220, 106);
+    float: left;
+  }
+
+   .s4 {
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    height: 100px;
+  }
+  .s4 div:nth-child(1){
+    width: 100px;
+    height: 100px;
+    background-color: #e00;
+    float: left;
+  }
+  .s4 div:nth-child(2){
+    width: 100px;
+    height: 100px;
+    background-color: rgb(148, 124, 124);
+    float: left;
+  }
+  .s4 div:nth-child(3){
+    width: 100px;
+    height: 100px;
+    background-color: rgb(14, 220, 106);
+    float: left;
+  }
+
+  .s5 {
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    height: 100px;
+    float: left;
+  }
+  .s5 div:nth-child(1){
+    width: 100px;
+    height: 100px;
+    background-color: #e00;
+    float: left;
+  }
+  .s5 div:nth-child(2){
+    width: 100px;
+    height: 100px;
+    background-color: rgb(148, 124, 124);
+    float: left;
+  }
+  .s5 div:nth-child(3){
+    width: 100px;
+    height: 100px;
+    background-color: rgb(14, 220, 106);
+    float: left;
+  }
+  </style>
+</head>
+<body>
+  <div class="s1">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="clear"></div>
+  </div>
+  <div class="s2">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="s3">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="s4">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="s5">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>

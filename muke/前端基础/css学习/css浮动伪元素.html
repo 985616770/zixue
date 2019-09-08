@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    ul {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+    }
+
+    body {
+      width: 1200px;
+      margin: 0 auto;
+    }
+    header {
+      background-color: aqua;
+    }
+    .img {
+      float: left;
+      width: 80px;
+      height: 80px;
+      margin: 0 20px;
+      background-color: #ee0;
+    }
+    header ul {
+      float: right;
+      margin-right: 80px;
+    }
+    header ul li {
+      float: left;
+      height: 80px;
+      line-height: 80px;
+      margin: 0 20px;
+      font-size: 18px;
+    }
+
+    main {
+      width: 100%;
+    }
+
+    main section {
+      width: 900px;
+      height: 600px;
+      background-color: #e11;
+      float: left;
+    }
+    main nav {
+      width: 300px;
+      height: 600px;
+      background-color: blue;
+      float: left;
+    }
+    footer {
+      background-color: #000;
+      height: 100px;
+    }
+
+    .clear::after {
+      content: "";
+      display: block;
+      visibility: hidden;
+      clear: both;
+    }
+    .clear{
+      zoom: 1;
+    }
+  </style>
+  <body>
+    <header class="clear">
+      <div class="img">
+        <img src="" alt="" />
+      </div>
+      <ul class="clear">
+        <li><a href="#">学习</a></li>
+        <li><a href="#">学习</a></li>
+        <li><a href="#">学习</a></li>
+        <li><a href="#">学习</a></li>
+        <li><a href="#">学习</a></li>
+      </ul>
+    </header>
+    <main class="clear">
+      <section>context</section>
+      <nav>nav</nav>
+    </main>
+    <footer>footer</footer>
+  </body>
+</html>

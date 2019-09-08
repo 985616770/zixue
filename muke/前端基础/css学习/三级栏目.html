@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      nav {
+        position: fixed;
+        left: 0;
+        top: 50%;
+        width: 160px;
+        height: auto;
+        text-align: center;
+        margin-top: -62px;
+        font-family:'Miscrosoft YaHei'
+      }
+
+      .first {
+        position: static;
+        line-height: 40px;
+        background-color: #333;
+        color: aliceblue;
+        border-bottom: 1px solid #fff;
+        cursor: pointer;
+      }
+      
+      /* 二级 */
+      .first:hover .second li {
+        display: block;
+      }
+
+      .second {
+        width: 160px;
+        height: auto;
+      }
+      .second li {
+        width: 160px;
+        height: auto;
+        line-height: 40px;
+        border-bottom: 1px dashed #666;
+        color: #222;
+        background-color: #fff;
+        display: none;
+        position: relative;
+      }
+
+      /* 三级 */
+      .second li:hover .third {
+        display: block;
+      }
+
+      .third {
+        position: absolute;
+        left: 160px;
+        top: 0;
+        display: none;
+      }
+      .third li {
+        width: 160px;
+        height: 40px;
+        background-color: #666;
+        color: aliceblue;
+        border-bottom: 1px dashed #000;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="first">
+        一级栏目
+        <ul class="second">
+          <li>
+            二级栏目
+            <ul class="third">
+              <li>三级栏目</li>
+              <li>三级栏目</li>
+              <li>三级栏目</li>
+            </ul>
+          </li>
+          <li>
+            二级栏目
+            <ul class="third">
+              <li>三级栏目</li>
+              <li>三级栏目</li>
+              <li>三级栏目</li>
+            </ul>
+          </li>
+          <li>
+            二级栏目
+            <ul class="third">
+              <li>三级栏目</li>
+              <li>三级栏目</li>
+              <li>三级栏目</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="first">
+        一级栏目
+        <ul class="second">
+          <li>
+            二级栏目
+            <ul class="third">
+              <li>三级栏目</li>
+              <li>三级栏目</li>
+              <li>三级栏目</li>
+            </ul>
+          </li>
+          <li>
+            二级栏目
+            <ul class="third">
+              <li>三级栏目</li>
+              <li>三级栏目</li>
+              <li>三级栏目</li>
+            </ul>
+          </li>
+          <li>
+            二级栏目
+            <ul class="third">
+              <li>三级栏目</li>
+              <li>三级栏目</li>
+              <li>三级栏目</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="first">
+        一级栏目
+        <ul class="second">
+          <li>
+            二级栏目
+            <ul class="third">
+              <li>三级栏目</li>
+              <li>三级栏目</li>
+              <li>三级栏目</li>
+            </ul>
+          </li>
+          <li>
+            二级栏目
+            <ul class="third">
+              <li>三级栏目</li>
+              <li>三级栏目</li>
+              <li>三级栏目</li>
+            </ul>
+          </li>
+          <li>
+            二级栏目
+            <ul class="third">
+              <li>三级栏目</li>
+              <li>三级栏目</li>
+              <li>三级栏目</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </body>
+</html>
