@@ -184,16 +184,490 @@ div.f .f-content .f-content-block h3 {
   padding-left: 80px;
 }
 
-
-div.f .f-content .f-content-block p{
+div.f .f-content .f-content-block p {
   width: 355px;
-	font-family: Montserrat-ExtraLight;
-	font-size: 16px;
-	font-weight: normal;
-	font-stretch: normal;
-	line-height: 26px;
-	letter-spacing: 0px;
-	color: #141414;
+  font-family: Montserrat-ExtraLight;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 26px;
+  letter-spacing: 0px;
+  color: #141414;
   opacity: 0.7;
   padding-left: 80px;
+}
+
+/* 第三块 */
+.s {
+  background-image: url(./img/图层2.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  position: relative;
+  height: 800px;
+}
+
+.s .zhe2 {
+  width: 100%;
+  height: 800px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 100;
+}
+.s .s-r {
+  position: relative;
+  right: 0;
+  top: 120px;
+  background-color: #eef;
+}
+.s .s-r img:nth-child(1) {
+  position: absolute;
+  right: -36px;
+  top: 0;
+}
+.s .s-r img:nth-child(2) {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  z-index: 99;
+}
+
+.s .s-l {
+  position: absolute;
+  top: 160px;
+  left: 300px;
+  z-index: 99999;
+}
+
+.s .s-l h1 {
+  width: 385px;
+  height: 137px;
+  font-family: Montserrat-ExtraLight;
+  font-size: 42px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 52px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  margin-bottom: 50px;
+}
+
+.s .s-l p {
+  width: 367px;
+  height: 130px;
+  font-family: Montserrat-ExtraLight;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 28px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 0.7;
+  margin-bottom: 60px;
+}
+
+.s .s-l button {
+  width: 235px;
+  height: 60px;
+  border-radius: 2px;
+  border: solid 1px #ffffff;
+}
+
+.s .s-l button.btn-r {
+  border: solid 1px #ffffff;
+  opacity: 0.3;
+  background: transparent;
+}
+
+/* 第四块 */
+.t {
+  width: 100%;
+  height: 520px;
+  margin-top: 100px;
+}
+
+.t > p {
+  height: 41px;
+  font-family: Montserrat-ExtraLight;
+  font-size: 42px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 52px;
+  letter-spacing: 0px;
+  color: #141414;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.t .t-container {
+  padding: 0 200px;
+}
+
+.t .t-container .t-block {
+  float: left;
+  width: 265px;
+  height: 260px;
+  padding: 10px;
+  margin: 0 67px;
+}
+
+.t .t-container .t-block img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.t .t-container .t-block p {
+  text-align: center;
+}
+
+/* 第五块 */
+.four {
+  width: 100%;
+  height: 1000px;
+  padding: 0 200px;
+  border-bottom: 1px solid #000;
+}
+
+.four .four-block {
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.four .four-block img {
+  width: 700px;
+  height: 430px;
+  background-color: #141414;
+  border-radius: 2px;
+}
+
+.four .four-block > div {
+  padding: 60px;
+}
+.four .four-block h3 {
+  width: 265px;
+  height: 47px;
+  font-family: Montserrat-Light;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 32px;
+  letter-spacing: 0px;
+  color: #141414;
+  margin-bottom: 40px;
+}
+
+.four .four-block p {
+  width: 305px;
+  height: 156px;
+  font-family: Montserrat-ExtraLight;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 28px;
+  letter-spacing: 0px;
+  color: #141414;
+  opacity: 0.7;
+}
+.float-l {
+  float: left;
+}
+.float-r {
+  float: right;
+}
+
+/* 第六块 */
+.five {
+  width: 100%;
+  height: 1100px;
+  padding: 0 200px;
+}
+
+.five > p {
+  width: 695px;
+  height: 46px;
+  font-family: Montserrat-ExtraLight;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 28px;
+  letter-spacing: 0px;
+  color: #141414;
+  opacity: 0.7;
+  margin: 60px auto;
+}
+.five > h2 {
+  width: 394px;
+  height: 30px;
+  font-family: Montserrat-ExtraLight;
+  font-size: 42px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 52px;
+  letter-spacing: 0px;
+  color: #141414;
+  margin: 90px auto;
+}
+
+.five .five-people {
+  margin: 0 auto;
+  width: 987px;
+}
+
+.five .five-people .five-b {
+  width: 470px;
+  height: 340px;
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.five .five-people .five-b h5 {
+  width: 128px;
+  height: 16px;
+  font-family: Montserrat-Light;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 32px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  margin: 20px auto;
+}
+.five .five-people .five-b p {
+  width: 184px;
+  height: 9px;
+  font-family: Montserrat-Light;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 28px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  opacity: 0.4;
+  margin: 30px auto;
+}
+
+.five .five-people .five-b .zhe3 {
+  position: relative;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  background-color: #000;
+  width: 470px;
+  height: 340px;
+  display: none;
+}
+
+.five .five-people .five-b .zhe3 .five-content {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -100px;
+  margin-top: -100px;
+}
+
+.five .five-people .five-b .zhe3 .five-content .five-pic img {
+  margin: 0 5px;
+}
+.five .five-people .five-b:hover .zhe3 {
+  display: block;
+}
+
+.p1 {
+  background: url(./img/1.png) no-repeat top center;
+}
+.p2 {
+  background: url(./img/2.png) no-repeat top center;
+}
+.p3 {
+  background: url(./img/3.png) no-repeat top center;
+}
+.p4 {
+  background: url(./img/4.png) no-repeat top center;
+}
+
+/* 第七快 */
+.six {
+  width: 100%;
+  height: 700px;
+  padding: 0 200px;
+}
+.six .six-l {
+  margin-left: 100px;
+  float: left;
+}
+.six .six-l form {
+  width: 470px;
+  height: 560px;
+  border-radius: 10px;
+  border: solid 1px #141414;
+  opacity: 0.6;
+}
+.six .six-l form p {
+  width: 273px;
+  height: 12px;
+  font-family: Montserrat-Light;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 32px;
+  letter-spacing: 2px;
+  color: #141414;
+  margin: 40px auto;
+}
+.six .six-l form textarea {
+  display: block;
+  width: 370px;
+  height: 144px;
+  border-radius: 2px;
+  border: solid 1px #262321;
+  margin: 0 auto;
+  font-family: Montserrat-Light;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 26px;
+  letter-spacing: 0px;
+  color: #141414;
+}
+.six .six-l form input {
+  display: block;
+  width: 370px;
+  height: 50px;
+  border-radius: 2px;
+  border: solid 1px #262321;
+  margin: 40px auto;
+  font-family: Montserrat-Light;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 26px;
+  letter-spacing: 0px;
+  color: #141414;
+}
+.six .six-l form input:nth-last-child(1) {
+  background-color: #141414;
+  color: #ffffff;
+}
+
+.six .six-r {
+  float: right;
+  width: 475px;
+}
+
+.six .six-r h1 {
+  width: 171px;
+  height: 30px;
+  font-family: Montserrat-ExtraLight;
+  font-size: 42px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 52px;
+  letter-spacing: 0px;
+  color: #141414;
+  margin: 60px 0;
+}
+.six .six-r p {
+  width: 351px;
+  height: 68px;
+  font-family: Montserrat-ExtraLight;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 26px;
+  letter-spacing: 0px;
+  color: #141414;
+  opacity: 0.7;
+  margin: 60px 0;
+}
+
+.six .six-r div {
+  height: 40px;
+  margin-bottom: 20px;
+}
+.six .six-r div img {
+  float: left;
+  margin-right: 10px;
+}
+
+footer {
+  width: 100%;
+  height: 410px;
+  background-color: #141414;
+}
+
+footer .footer-l {
+  float: left;
+  margin-left: 100px;
+}
+footer .footer-l dl {
+  display: inline-block;
+  margin: 100px 90px 10px;
+}
+footer .footer-l dl dt {
+  width: 113px;
+  height: 40px;
+  font-family: Montserrat-Light;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 40px;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+footer .footer-l dl dd {
+  width: 130px;
+  height: 40px;
+  font-family: Montserrat-ExtraLight;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 40px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 0.3;
+}
+
+footer .footer-r {
+  float: left;
+  margin-top: 75px;
+}
+
+footer .footer-r dl {
+}
+footer .footer-r dl dt {
+  width: 249px;
+  height: 11px;
+  font-family: Montserrat-Light;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 28px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  margin: 30px auto;
+}
+footer .footer-r dl dd {
+  width: 259px;
+  height: 43px;
+  font-family: Montserrat-ExtraLight;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 28px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 0.4;
+  margin: 30px auto;
+}
+footer .footer-r dl > div {
+  margin-top: 75px;
+}
+footer .footer-r dl > div img {
+  margin: 5px;
 }
