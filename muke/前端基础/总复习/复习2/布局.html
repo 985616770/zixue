@@ -6,41 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
   </head>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
-    .l1 {
-      background-color: #f00;
-      height: 100px;
-      line-height: 100px;
-      text-align: center;
-    }
-  </style>
-  <body>
-    <!-- 行布局 -->
-    <div class="l1">123</div>
 
+  <body>
     <!-- 两列布局 -->
 
-    <!-- margin + float -->
+    <!-- float + margin -->
     <div class="l2-1">
       <style scoped>
         .l2-1 {
           width: 100%;
-          overflow: hidden;
         }
 
         .l2-1 div:nth-of-type(1) {
           float: left;
-          width: 200px;
           height: 200px;
-          background-color: #f0f;
+          width: 200px;
+          background-color: #00e;
         }
         .l2-1 div:nth-of-type(2) {
           height: 200px;
-          background-color: #00f;
+          background-color: #eae;
           margin-left: 200px;
         }
       </style>
@@ -48,47 +33,22 @@
       <div>123</div>
     </div>
 
-    <!-- margin + float -->
+    <!-- float + bfc -->
     <div class="l2-2">
       <style scoped>
         .l2-2 {
           width: 100%;
-          overflow: hidden;
         }
 
         .l2-2 div:nth-of-type(1) {
-          float: right;
-          width: 200px;
+          float: left;
           height: 200px;
-          background-color: #aaf;
+          width: 200px;
+          background-color: rgb(126, 126, 144);
         }
         .l2-2 div:nth-of-type(2) {
           height: 200px;
-          background-color: #339;
-          margin-right: 200px;
-        }
-      </style>
-      <div>123</div>
-      <div>123</div>
-    </div>
-
-    <!-- float + BFC-->
-    <div class="l2-3">
-      <style scoped>
-        .l2-3 {
-          width: 100%;
-          overflow: hidden;
-        }
-
-        .l2-3 div:nth-of-type(1) {
-          float: right;
-          width: 200px;
-          height: 200px;
-          background-color: #f7f;
-        }
-        .l2-3 div:nth-of-type(2) {
-          height: 200px;
-          background-color: #77f;
+          background-color: #e0e;
           overflow: hidden;
         }
       </style>
@@ -97,22 +57,21 @@
     </div>
 
     <!-- flex -->
-    <div class="l2-4">
+    <div class="l2-3">
       <style scoped>
-        .l2-4 {
-          width: 100%;
+        .l2-3 {
           display: flex;
+          width: 100%;
         }
 
-        .l2-4 div:nth-of-type(2) {
+        .l2-3 div:nth-of-type(1) {
+          height: 200px;
           width: 200px;
-          height: 200px;
-          background-color: #f70;
+          background-color: rgb(126, 16, 144);
         }
-        .l2-4 div:nth-of-type(1) {
+        .l2-3 div:nth-of-type(2) {
           flex: 1;
-          height: 200px;
-          background-color: #00f;
+          background-color: rgb(126, 126, 1);
         }
       </style>
       <div>123</div>
@@ -120,25 +79,29 @@
     </div>
 
     <!-- absolute -->
-    <div class="l2-5">
+    <div class="l2-4">
       <style scoped>
-        .l2-5 {
+        .l2-4 {
           width: 100%;
+          height: 200px;
           position: relative;
         }
 
-        .l2-5 div:nth-of-type(2) {
+        .l2-4 div:nth-of-type(1) {
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 200px;
+          width: 200px;
+          background-color: rgb(12, 16, 144);
+        }
+        .l2-4 div:nth-of-type(2) {
           position: absolute;
           right: 0;
+          left: 200px;
           top: 0;
-          width: 200px;
           height: 200px;
-          background-color: #070;
-        }
-        .l2-5 div:nth-of-type(1) {
-          margin-right: 200px;
-          height: 200px;
-          background-color: #2af;
+          background-color: rgb(16, 126, 1);
         }
       </style>
       <div>123</div>
@@ -148,35 +111,36 @@
     <!-- 三列布局 -->
 
     <!-- 圣杯布局 -->
-    <div class="l3">
+    <div class="l3-1">
       <style scoped>
-        .l3 {
-          height: 200px;
+        .l3-1 {
           padding: 0 200px;
+          overflow: hidden;
         }
-        .l3 div:nth-of-type(1) {
+
+        .l3-1 div:nth-of-type(1) {
           float: left;
           width: 100%;
           height: 200px;
-          background-color: #ee0;
+          background-color: #0dff0e;
         }
-        .l3 div:nth-of-type(2) {
+        .l3-1 div:nth-of-type(2) {
           position: relative;
-          float: left;
-          width: 200px;
-          height: 200px;
-          margin-left: -100%;
           left: -200px;
-          background-color: #e0e;
-        }
-        .l3 div:nth-of-type(3) {
-          position: relative;
           float: left;
           width: 200px;
           height: 200px;
-          margin-left: -200px;
+          background-color: #0202ff;
+          margin-left: -100%;
+        }
+        .l3-1 div:nth-of-type(3) {
+          position: relative;
           right: -200px;
-          background-color: #0ee;
+          float: left;
+          width: 200px;
+          height: 200px;
+          background-color: #ff0fff;
+          margin-left: -200px;
         }
       </style>
       <div>123</div>
@@ -185,101 +149,105 @@
     </div>
 
     <!-- 双飞翼布局 -->
-    <div class="l3-1">
+    <div class="l3-2">
       <style scoped>
-        .l3-1 {
+        .l3-2 {
           height: 200px;
           overflow: hidden;
         }
-        .l3-1 > div:nth-of-type(1) {
-          float: left;
+
+        .l3-2 div:nth-of-type(1) {
           width: 100%;
-          height: 200px;
+          float: left;
         }
-        .l3-1 > div:nth-of-type(1) > div {
+        .l3-2 div:nth-of-type(1) > div {
+          height: 200px;
           margin: 0 200px;
-          height: 200px;
-          background-color: #eea;
+          background-color: #fdff0e;
         }
-        .l3-1 > div:nth-of-type(2) {
+        .l3-2 div:nth-of-type(2) {
           float: left;
           width: 200px;
           height: 200px;
+          background-color: #02ffff;
           margin-left: -100%;
-          background-color: #eae;
         }
-        .l3-1 > div:nth-of-type(3) {
+        .l3-2 div:nth-of-type(3) {
           float: left;
           width: 200px;
           height: 200px;
+          background-color: #9889ef;
           margin-left: -200px;
-          background-color: #aee;
         }
       </style>
-      <div>
-        <div>123</div>
-      </div>
+      <div><div>123</div></div>
       <div>123</div>
       <div>123</div>
     </div>
 
     <!-- flex -->
-    <div class="l3-2">
+    <div class="l3-3">
       <style scoped>
-        .l3-2 {
-          height: 200px;
+        .l3-3 {
           display: flex;
           justify-content: center;
           align-items: flex-start;
         }
-        .l3-2 div:nth-of-type(2) {
+
+        .l3-3 div:nth-of-type(2) {
           flex-grow: 1;
           height: 200px;
-          background-color: #ee0;
+          background-color: #ede;
         }
-        .l3-2 div:nth-of-type(1) {
+
+        .l3-3 div:nth-of-type(1) {
+          height: 200px;
+          flex-basis: 200px;
+          background-color: #ffee0f;
+        }
+        .l3-3 div:nth-of-type(3) {
           flex-basis: 200px;
           height: 200px;
-          background-color: #e0e;
-        }
-        .l3-2 div:nth-of-type(3) {
-          flex-basis: 200px;
-          height: 200px;
-          background-color: #0ee;
+          background-color: #9889ef;
         }
       </style>
       <div>123</div>
       <div>123</div>
       <div>123</div>
     </div>
+
     <!-- absolute -->
-    <div class="l3-3">
+    <div class="l3-4">
       <style scoped>
-        .l3-3 {
-          height: 200px;
+        .l3-4 {
           position: relative;
-        }
-        .l3-3 div:nth-of-type(1) {
-          margin: 0 200px;
-          width: calc(100% - 400px);
           height: 200px;
-          background-color: #0e0;
         }
-        .l3-3 div:nth-of-type(2) {
+
+        .l3-4 div:nth-of-type(1) {
           position: absolute;
-          top: 0;
           left: 0;
-          width: 200px;
-          height: 200px;
-          background-color: #00e;
-        }
-        .l3-3 div:nth-of-type(3) {
-          position: absolute;
           top: 0;
-          right: 0;
           width: 200px;
+          background-color: #ede;
           height: 200px;
-          background-color: #e0e;
+        }
+
+        .l3-4 div:nth-of-type(2) {
+          position: absolute;
+          left: 200px;
+          right: 200px;
+          top: 0;
+          background-color: #ffee0f;
+          height: 200px;
+        }
+        .l3-4 div:nth-of-type(3) {
+          position: absolute;
+          right: 0;
+          top: 0;
+          height: 200px;
+          width: 200px;
+          background-color: #0fe;
         }
       </style>
       <div>123</div>
