@@ -13,4 +13,7 @@
     "liveSassCompile.settings.includeItems": [
         "./1.scss"
     ],
+    "cSpell.words": [
+      "nosetril"
+    ],
 }

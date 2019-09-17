@@ -8,19 +8,52 @@
   </head>
   <body>
     <div class="dog">
-      <div class="forehead"></div>
-      <div class="face"></div>
-      <div class="chin"></div>
+      <div class="forehead center"></div>
+      <div class="face center"></div>
+      <div class="chin center"></div>
       <div class="ear "></div>
       <div class="ear right"></div>
+      <div class="birthmark"></div>
+      <div class="eye">
+        <div class="pupil"></div>
+      </div>
+      <div class="eye right">
+        <div class="pupil"></div>
+      </div>
+      <div class="nose center">
+        <div class="nostril"></div>
+        <div class="nostril right"></div>
+      </div>
+      <div class="mouth center">
+        <div class="teen"></div>
+        <div class="teen right"></div>
+        <div class="tongue center"></div>
+      </div>
+      <div class="body center">
+        <div class="arm"></div>
+        <div class="arm right"></div>
+      </div>
+      <div class="leg">
+        <div class="foot"></div>
+      </div>
+      <div class="leg right">
+        <div class="foot"></div>
+      </div>
     </div>
+
     <style>
       :root {
         --hl: #1b2f90;
         --bg: #f9f9f6;
+        --t: 1.5s;
       }
       body {
         background-color: #e0e;
+      }
+      .center {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
       }
       .dog {
         width: 300px;
@@ -31,16 +64,325 @@
         width: 102px;
         height: 48px;
         background-color: var(--bg);
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
+
         border-radius: 51px /40px 40px 8px 8px;
       }
       .face {
+        width: 110px;
+        height: 68px;
+        background-color: var(--bg);
+        border-radius: 50%;
+        top: 20px;
       }
       .chin {
+        width: 104px;
+        height: 36px;
+        background-color: var(--bg);
+        border-radius: 52px /0 0 36px 36px;
+        top: 60px;
       }
-      .forehead {
+      .ear {
+        width: 16px;
+        height: 70px;
+        background: var(--hl);
+        border-radius: 50%;
+        position: absolute;
+        z-index: -1;
+        left: 50%;
+        top: 34px;
+        transform-origin: 50% 0;
+        transform: translate(-42px, 0) rotate(10deg);
+        animation: rotate var(--t) ease-in-out infinite;
+      }
+
+      .ear.right {
+        transform: scale(-1, 1) translate(-28px, 0) rotate(10deg);
+        animation: rotate-r var(--t) ease-in-out infinite;
+      }
+
+      .eye {
+        width: 24px;
+        height: 24px;
+        background: var(--bg);
+        border-radius: 12px/13px 12px 12px 2px;
+        position: absolute;
+        z-index: 3;
+        left: 50%;
+        top: 20px;
+        transform-origin: 50% 0;
+        transform: translate(-44px, 0) rotate(10deg);
+        box-shadow: 1px 0px 0 1px #000 inset, -1px 1px 5px 1px #ddd;
+        overflow: hidden;
+      }
+
+      .eye.right {
+        transform: scale(-1, 1) translate(-21px, 0) rotate(10deg);
+        box-shadow: 1px 0px 0 1px #000 inset;
+      }
+
+      .pupil {
+        width: 26px;
+        height: 26px;
+        background-color: #e79101;
+        border-radius: 50%;
+        position: absolute;
+        left: 3px;
+        top: 1px;
+        box-shadow: 0 0 3px 1px #000 inset;
+        animation: eye var(--t) ease-in-out infinite;
+      }
+      .pupil::before {
+        content: '';
+        width: 18px;
+        height: 18px;
+        background-color: #000;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .pupil::after {
+        content: '';
+        width: 5px;
+        height: 5px;
+        background-color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        left: 3px;
+        top: 6px;
+      }
+      .birthmark {
+        width: 30px;
+        height: 36px;
+        background: var(--hl);
+        border-radius: 15px/ 17px 23px 2px 13px;
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        top: 10px;
+        transform: translate(17px, 0) rotate(-11deg);
+      }
+
+      .nose {
+        width: 62px;
+        height: 32px;
+        top: 40px;
+        border-radius: 32px/10px 10px 22px 22px;
+        background: #363035;
+        z-index: 4;
+      }
+
+      .nostril {
+        width: 15px;
+        height: 4px;
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        background: linear-gradient(0deg, #363305 0%, #000 100%);
+        border-radius: 32px/10px 10px 22px 22px;
+        transform: translate(-22px, 0) rotate(30deg);
+      }
+      .nose::before {
+        content: '';
+        width: 60px;
+        height: 12px;
+        position: absolute;
+        left: 50%;
+        top: 1px;
+        transform: translate(-50%, 0);
+        border-radius: 30px/8px 8px 4px 4px;
+        background: linear-gradient(
+          30deg,
+          #fff 0%,
+          #fff 8%,
+          #b1aeb1 15%,
+          #b1aeb1 50%,
+          #544d53 100%
+        );
+      }
+
+      .nostril.right {
+        transform: scale(-1, 1) translate(-7px, 0) rotate(30deg);
+      }
+
+      .mouth {
+        width: 68px;
+        height: 27px;
+        background: #671316;
+        border-radius: 34px/ 0 0 27px 27px;
+        z-index: 3;
+        box-shadow: 0 0 4px 0 #000 inset;
+        top: 68px;
+        animation: mouth var(--t) ease-in-out infinite alternate;
+      }
+
+      .mouth::before {
+        content: '';
+        width: 68px;
+        height: 5px;
+        background-color: var(--bg);
+        border-radius: 34px/ 0 0 5px 5px;
+        display: block;
+      }
+
+      .teen {
+        width: 8px;
+        height: 4px;
+        background: var(--bg);
+        border-radius: 4px/ 0 0 0px 1px;
+        position: absolute;
+        left: 50%;
+        top: 4px;
+        transform: translate(-8px, 0);
+      }
+      .teen.right {
+        transform: scale(-1, 1) translate(0, 0);
+      }
+
+      .tongue {
+        width: 34px;
+        height: 14px;
+        background: #a2504f;
+        box-shadow: 0 0 4px 0 #000 inset;
+        border-radius: 14px/0 0 12px 12px;
+        top: 0;
+        z-index: -1;
+        animation: tongue var(--t) ease-in-out 1s infinite alternate-reverse;
+      }
+
+      .body {
+        width: 66px;
+        height: 70px;
+        background: linear-gradient(
+          0deg,
+          #bbb 0%,
+          #bbb 1%,
+          var(--bg) 7%,
+          var(--bg) 100%
+        );
+        border-radius: 50%;
+        top: 85px;
+        z-index: 2;
+      }
+
+      .arm {
+        width: 26px;
+        height: 40px;
+        background: var(--bg);
+        position: absolute;
+        left: 50%;
+        top: 8px;
+        border-radius: 13px /20px 0 14px 20px;
+        transform: translate(-43px, 0) rotate(21deg);
+      }
+      .arm::before {
+        content: '';
+        width: 5px;
+        height: 20px;
+        border-radius: 14px /15px 0 0 13px;
+        box-shadow: -1px 0 0px 0 rgba(200, 200, 200, 0.5);
+        position: absolute;
+        right: 6px;
+        top: 15px;
+        transform: rotate(-10deg);
+      }
+
+      .arm.right {
+        transform: scale(-1, 1) translate(-18px, 0) rotate(21deg);
+      }
+
+      .leg {
+        width: 29px;
+        height: 50px;
+        background-image: linear-gradient(
+          -70deg,
+          #bbb 0%,
+          #bbb 8%,
+          var(--bg) 20%,
+          var(--bg) 100%
+        );
+        position: absolute;
+        left: 50%;
+        top: 127px;
+        border-radius: 15px /5px 5px 15px 45px;
+        transform: translate(-32px, 0);
+      }
+      .foot {
+        width: 29px;
+        height: 17px;
+        background: linear-gradient(
+          -120deg,
+          #bbb 0%,
+          #bbb 8%,
+          var(--bg) 20%,
+          var(--bg) 100%
+        );
+        position: absolute;
+        left: 33px;
+        bottom: -12px;
+        border-radius: 11px /9px 9px 4px 4px;
+        transform: translate(-32px, 0);
+      }
+      .leg.right {
+        transform: scale(-1, 1) translate(-2px, 0);
+      }
+
+      @keyframes rotate {
+        to {
+          transform: translate(-42px, 0) rotate(10deg);
+        }
+        50% {
+          transform: translate(-42px, 0) rotate(30deg);
+        }
+        from {
+          transform: translate(-42px, 0) rotate(10deg);
+        }
+      }
+      @keyframes rotate-r {
+        to {
+          transform: scale(-1, 1) translate(-28px, 0) rotate(10deg);
+        }
+        50% {
+          transform: scale(-1, 1) translate(-28px, 0) rotate(30deg);
+        }
+        from {
+          transform: scale(-1, 1) translate(-28px, 0) rotate(10deg);
+        }
+      }
+      @keyframes eye {
+        to {
+          left: 3px;
+          top: 1px;
+        }
+        50% {
+          left: 8px;
+          top: 3px;
+        }
+        from {
+          left: 3px;
+          top: 1px;
+        }
+      }
+
+      @keyframes mouth {
+        to {
+          height: 27px;
+          border-radius: 34px/ 0 0 27px 27px;
+        }
+        from {
+          height: 10px;
+          border-radius: 34px/ 0 0 13px 13px;
+        }
+      }
+      @keyframes tongue {
+        to {
+          height: 14px;
+        }
+        from {
+          height: 30px;
+        }
       }
     </style>
   </body>
