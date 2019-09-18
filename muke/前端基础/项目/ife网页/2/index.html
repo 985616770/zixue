@@ -1,17 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="index.css">
-</head>
-<body>
-  <!-- 侧边固定栏 -->
-  <div class="nav-l"></div>
-  <div class="nav-m"></div>
-  <!-- 主要内容栏 -->
-  <div class="main"></div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- 侧边固定栏 -->
+    <div class="nav-l">
+      <ul class="nav-l-t">
+        <li class="choose"></li>
+        <li></li>
+        <li class="choose"></li>
+        <li></li>
+      </ul>
+      <div class="nav-l-b">
+        <a href="#"><img src="./img/Grid.png" alt=""/></a>
+        <a href=""><img src="./img/Settings.png" alt=""/></a>
+      </div>
+    </div>
+    <div class="nav-m">
+      <div class="nav-m-t">
+        <dl>
+          <dt>MENU</dt>
+          <dd><a href="#">Overview</a></dd>
+          <dd class="nav-m-t-info"><a href="#">Sales</a></dd>
+          <dd><a href="#">Your Staff</a></dd>
+          <dd><a href="#">Analytics & Targeting</a></dd>
+          <dd><a href="#">What’s New</a></dd>
+        </dl>
+        <dl class="nav-m-t-icon">
+          <dt>YOUR PRODUCTS</dt>
+          <dd>
+            <a href="#"><i></i> Books</a>
+          </dd>
+          <dd>
+            <a href="#"><i></i>Tutorials</a>
+          </dd>
+          <dd>
+            <a href="#"><i></i>Stocks</a>
+          </dd>
+          <dd>
+            <a href="#"><i></i>Infographics</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>DASHBOARD</dt>
+          <dd class="choose-2 nav-m-t-warning"><a href="#">Messages</a></dd>
+          <dd><a href="#">Connections</a></dd>
+          <dd class="nav-m-t-info zhi"><a href="#">Integrations</a></dd>
+          <dd><a href="#">Account Settings</a></dd>
+          <dd><a href="#">App Settings</a></dd>
+        </dl>
+      </div>
+
+      <div class="nav-m-b">
+        <p>Monthly Goals&nbsp;&nbsp;$580/$3200</p>
+        <meter value="30" min="0" max="100" low="10" high="50" ></meter>
+      </div>
+    </div>
+    <!-- 主要内容栏 -->
+    <div class="main">
+      <nav></nav>
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </body>
 </html>
