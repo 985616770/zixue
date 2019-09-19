@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+    window.onload = function(){
+      var con = document.getElementById('content')
+      var Html = document.documentElement;
+      var sBottom = con.nextElementSibling;
+      var sTop = con.previousElementSibling;
+      var body = con.parentElement;
+      console.log(body);
+      console.log(Html.tagName);
+      console.log(Html.firstChild);
+      console.log(Html.childNodes[0]);
+      console.log(sBottom);
+      console.log(sTop);
+      console.log(Html.childNodes[1]); 
+      console.log(con.hasAttributes()); 
+      console.log(con.ownerDocument); 
+    }
+    </script>
+  </head>
+  <body>
+    <div>222</div>
+    <div id="content">
+      <p>12</p>
+      <p>34</p>
+    </div>
+    <p>123</p>
+  </body>
+</html>

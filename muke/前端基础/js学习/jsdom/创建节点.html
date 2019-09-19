@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      window.onload = function() {
+        var a = document.getElementById('id');
+        var li = null;
+        var frag = document.createDocumentFragment();
+        for (let i = 0; i < 3; i++) {
+          li = document.createElement('li');
+          li.appendChild(document.createTextNode(`item : ${i + 1}`));
+          frag.appendChild(li);
+        }
+        a.appendChild(frag);
+        var p = document.createElement('p')
+        a.appendChild(p);
+        p.appendChild(document.createTextNode('123'));
+        p.appendChild(document.createComment('ce shi'));
+      };
+    </script>
+  </head>
+  <body>
+    <ul id="id"></ul>
+  </body>
+</html>
