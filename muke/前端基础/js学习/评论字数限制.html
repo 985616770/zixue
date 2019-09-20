@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <p>
+        你还可以输入<span style="color: red;font-weight: 700" id="count"
+          >30</span
+        >/<span style="color: red;font-weight: 700">30字</span>
+      </p>
+      <textarea
+        name="pinLun"
+        id="pl"
+        cols="30"
+        rows="3"
+        placeholder="请输入文字"
+        value=""
+      ></textarea>
+    </div>
+    <script>
+      var count = document.getElementById('count');
+      var pl = document.getElementById('pl');
+
+      pl.onkeydown = function(e) {
+       if (e.keyCode == 8) {
+          count.innerHTML = 30 - this.value.length;
+        }
+      };
+      pl.onkeypress = function() {
+        if (count.innerHTML < 1) {
+          alert(1);
+        } else {
+          count.innerHTML = 29 - this.value.length;
+          console.log(this.value);
+        }
+      };
+      pl.onkeyup = function(e) {
+        
+      };
+    </script>
+  </body>
+</html>
