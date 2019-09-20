@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      var CC = {
+        getClass: function(ele) {
+          console.log();
+          return ele.className.replace(/\s+/, ' ').split(' ');
+        },
+        hasClass: function(ele, cls) {
+          return -1 < ` ${ele.className} `.indexOf(` ${cls} `);
+        },
+        addClass: function(ele, cls) {
+          if (!this.hasClass(ele, cls)) {
+            ele.className += ` ${cls}`;
+          }
+        },
+        removeClass: function(ele, cls) {
+          if (this.hasClass(ele, cls)) {
+            var reg = new RegExp(`(\\s|^)${cls}(\\s|$)`,'gi');
+            ele.className = ele.className.replace(reg, ' ');
+            console.log(reg);
+          }
+        },
+        toggleClass: function (ele,cls) {
+          if (this.hasClass(ele,cls)) {
+            this.removeClass(ele,cls)
+          }else{
+            this.addClass(ele,cls)
+          }
+        }
+      };
+
+      window.onload = function() {
+        var a = document.querySelector('#a');
+        console.log(CC.getClass(a));
+        console.log(CC.hasClass(a, 'cc'));
+        console.log(CC.addClass(a, 'fc'));
+        console.log(CC.removeClass(a, 'cc'));
+        console.log(CC.toggleClass(a, 'ccc'));
+
+      };
+    </script>
+  </head>
+  <body>
+    <div id="a" class="cc   dd ff"></div>
+  </body>
+</html>

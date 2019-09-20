@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      window.onload = function() {
+        var div = document.querySelector('div');
+        console.log(div.xx);
+        console.log(div.attributes.getNamedItem('zz').value);
+        console.log(div.attributes);
+        console.log(div.style);
+        console.log(div.getAttribute('style'));
+        console.log(div.onclick);
+        console.log(div.getAttribute('onclick'));
+        var div2= document.querySelector('data-class')
+        console.log(div2);
+      };
+    </script>
+  </head>
+  <body>
+    <div url="123.com" xx="aa" ZZ="q q " style="color:red" onclick="alert(0)">
+      123
+    </div>
+    <div data-class="123"></div>
+  </body>
+</html>
