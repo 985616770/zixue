@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      window.onload = function() {
+        var box = document.getElementById('list');
+        var nodes = box.childNodes;
+        function makeArray(nodeList) {
+          var arr = null;
+          try {
+            return Array.prototype.push.call(nodeList);
+          } catch (e) {
+            arr = new Array();
+            for (let i = 0; i < nodeList.length; i++) {
+              arr.push(nodeList[i]);
+            }
+          }
+          return arr;
+        }
+        console.log(makeArray(nodes));
+      };
+    </script>
+  </head>
+  <body>
+    <ul id="list">
+      <li>1123</li>
+      <li>2123</li>
+      <li>3123</li>
+      <li>4123</li>
+    </ul>
+  </body>
+</html>

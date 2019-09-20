@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="./getELementByClassName.js"></script>
+    <script>
+      window.onload = function() {
+        var l1 = document.getElementById('l1');
+        var l2 = document.getElementById('l2');
+
+      
+         var a =  getElementsByClassName({
+            searchClass: 'blue red',
+            node: l2,
+            tag:'li'
+          })
+          console.log(a[0].innerText);
+        
+      };
+    </script>
+  </head>
+  <body>
+    <ul id="l1">
+      <li class="blue">01</li>
+      <li class="blue red">02</li>
+      <li class="blue">03</li>
+    </ul>
+    <ul id="l2">
+      <li class="blue">01</li>
+      <li class="blue red">02</li>
+      <li class="blue">03</li>
+      <div class="blue red">00</div>
+    </ul>
+  </body>
+</html>
