@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box">
+      请输入搜索关键词
+      <input type="text" placeholder="请输入搜索词" id="key"/>
+      <input type="button" value="搜索" id="search" />
+    </div>
+    <a href="#" id="go">跳转</a>
+
+    <script>
+      document.getElementById('search').onclick = function() {
+        var key = encodeURIComponent(document.getElementById('key').value);
+        location.href = './调用练习.html?search_key=' + key;
+      };
+      var sea = '搜索'
+      document.getElementById('go').href = './调用练习.html?key=' + encodeURI(sea)
+    </script>
+  </body>
+</html>

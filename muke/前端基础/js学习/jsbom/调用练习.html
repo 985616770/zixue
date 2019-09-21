@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id=""></div>
+    <script>
+      var num = 1;
+      var max = 10;
+      var timer = null;
+
+      // timer  = setInterval(() => {
+      //   console.log(num);
+      //   num++;
+      //   if (num > max) {
+      //     clearInterval(timer)
+      //   }
+      // }, 1000);
+      function numAll() {
+        console.log(num);
+        num++;
+        if (num <= max) {
+          setTimeout(numAll, 1000);
+        } else {
+          clearTimeout(timer);
+        }
+      }
+      timer = setTimeout(numAll, 1000);
+    </script>
+  </body>
+</html>
