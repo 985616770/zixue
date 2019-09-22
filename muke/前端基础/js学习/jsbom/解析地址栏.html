@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="./解析地址栏.html?seach=sss&ss=sss&qwe=ss">search</a>
+  </body>
+  <script>
+    function getParam() {
+      var url = location.search;
+      if (!url) {
+        return null;
+      }
+      url = url.substr(1);
+      var params,
+        param = {},
+        arr;
+      params = url.split('&');
+      // 遍历 params 数组
+      for (var i = 0, len = params.length; i < len; i++) {
+        arr = params[i].split('=');
+        param[arr[0]] = decodeURIComponent(arr[1]);
+      }
+      return param;
+    }
+    console.log(getParam());
+  </script>
+</html>
