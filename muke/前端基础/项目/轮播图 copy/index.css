@@ -46,7 +46,7 @@ body {
 
 /* 轮播图 */
 .banner {
-  width: 4200px;
+  width: 100%;
   height: var(--mainH);
   overflow: hidden;
   position: absolute;
@@ -57,6 +57,7 @@ body {
   float: left;
   width: var(--mainW);
   height: var(--mainH);
+  transition: all 2s ease-in-out;
 }
 .tu1 {
   background-image: url(./img/cat.jpg);
@@ -78,7 +79,6 @@ body {
   background-image: url(./img/箭头.png);
   background-position: center center;
   background-size: 40px 80px;
-  z-index: 200;
 }
 .next {
   left: auto;
@@ -89,7 +89,7 @@ body {
 .prev {
   transform: rotate(180deg);
 }
-.button:hover{
+.button:hover {
   background-color: var(--color);
 }
 
@@ -98,23 +98,22 @@ body {
   right: 10px;
   bottom: 24px;
   line-height: 12px;
-  z-index: 200;
 }
 
 .dots span {
   display: inline-block;
-  width: 12px;
-  height: 12px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background-color: var(--color);
-  margin-left: 8px;
-  box-shadow: 0 0 0 2px #fff inset;
+  margin-left: 10px;
+  box-shadow: 0 0 0 5px #fff inset;
   cursor: pointer;
 }
 
 .dots span.active {
   background-color: #fff;
-  box-shadow: 0 0 0 2px var(--color) inset;
+  box-shadow: 0 0 0 5px var(--color) inset;
 }
 
 /* 一级菜单 */
@@ -142,9 +141,8 @@ body {
 .content-item {
   height: 67px;
   line-height: 66px;
-  padding: 0 20px;
+  padding: 20px 20px 0 20px;
   overflow: hidden;
-  margin: 20px;
 }
 
 .content-item a {
@@ -163,6 +161,9 @@ body {
   margin-right: 30px;
 }
 
+.content-item:hover{
+  background-color: var(--color);
+}
 /* 子菜单 */
 .sub-menu {
   width: 930px;
