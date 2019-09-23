@@ -13,7 +13,7 @@
         background-color: #eee;
         margin-top: 10px;
       }
-      div ~ li {
+      div  li:first-child ~ li {
         background-color: #e0e;
       }
       /* [value = "a"]{
@@ -34,6 +34,11 @@
        [value |= "a"]{
         background-color: #ef0;
       } */
+
+      ul div:only-child{
+        height: 10px;
+        background-color: #e00;
+      }
     </style>
   </head>
   <body>

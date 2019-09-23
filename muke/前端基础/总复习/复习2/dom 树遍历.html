@@ -5,29 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <div></div>
+    </div>
     <script>
       window.onload = function() {
         var s = '';
         function travel(space, node) {
           if (node.tagName) {
-            s += space + node.tagName + '<br/>';
+            s += space + node.tagName + '<br />';
           }
           var len = node.childNodes.length;
           for (let i = 0; i < len; i++) {
-            travel(space + '|- ', node.childNodes[i]);
+            travel(space + '|-', node.childNodes[i]);
           }
         }
 
-        travel("",document)
+        travel("  ", document);
         console.log(s);
-        // var body = document.documentElement
-        document.write(s)
-
-        // for (let i = 0; i < body.childNodes.length; i++) {
-        //   console.log(body.childNodes[i]);
-        // }
+        document.body.innerHTML = s;
       };
     </script>
-  </head>
-  <body></body>
+  </body>
 </html>
