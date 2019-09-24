@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function setName(obj){
+      //   obj.name = 'xm'
+      //   console.log(obj);
+      //   obj={};
+      //   obj.name = 'xh'
+      // }
+
+      // var person = {};
+      // setName(person)
+
+      // var person = {};
+      // person.name = 'xm';
+
+      // function a() {
+      //   with (person) {
+      //     name = 'xi';
+      //   }
+      // }
+      // a();
+      // console.log(person);
+
+      // js预解析
+      // var k = 2;
+      // var k = function() {
+      //   console.log(k);
+      //   var k = 1;
+      // };
+
+      // k();
+
+      // console.log(a);
+
+      // var a = 1;
+
+      // console.log(a);
+
+      // function a() {
+      //   console.log(2);
+      // }
+
+      // console.log(a);
+
+      // var a = 3;
+
+      // console.log(a);
+
+      // function a() {
+      //   console.log(4);
+      // }
+
+      // console.log(a);
+
+      // a();
+    </script>
+    <script>
+      // 四种
+
+      // var a = 1;
+      // function fn() {
+      //   console.log(a);
+      //   var a = 2;
+      // }
+
+      // fn();
+      // console.log(a);
+
+      // 2
+
+      // var a = 1;
+      // function fn() {
+      //   console.log(a);
+      //   a = 2;
+      // }
+
+      // fn();
+      // console.log(a);
+
+      // 3
+      // var a = 1;
+      // function fn(a) {
+      //   console.log(a);
+      //   a = 2;
+      // }
+
+      // fn();
+      // console.log(a);
+
+      // 4
+      // var a = 1;
+      // function fn(a) {
+      //   console.log(a);
+      //   a = 2;
+      // }
+
+      // fn(a);
+      // console.log(a);
+    </script>
+
+    <script>
+      // 循环引用
+    </script>
+
+    <script>
+      // if(for)函数代码块
+      var a = function() {
+        console.log(1);
+      };
+      var b = function() {
+        console.log(2);
+      };
+      if (true) {
+      } else {
+      }
+      a();
+      // b();
+      console.log(a);
+      console.log(b);
+    </script>
+  </body>
+</html>

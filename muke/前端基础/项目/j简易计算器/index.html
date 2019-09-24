@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #eee;
+      }
+      #calculator {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        width: 400px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 计算器 -->
+    <div id="calculator">
+      <p>
+        <input type="text" name="prev" id="prev" value="1" />
+        <span id="symbol"> + </span>
+        <input type="text" name="next" id="next" value="1" />
+        <span>=</span>
+        <span id="result">2</span>
+      </p>
+      <p id="buttonCollection">
+        <input type="button" class="btn" title="add" value="+" />
+        <input type="button" class="btn" title="subtract" value="-" />
+        <input type="button" class="btn" title="multiply" value="*" />
+        <input type="button" class="btn" title="divide" value="/" />
+        <input type="button" class="btn" title="mod" value="%" />
+        <input type="button" class="btn" title="power" value="^" />
+      </p>
+    </div>
+    <script>
+      (function() {
+        var calculator = document.querySelector('#calculator');
+        var wrapELe = {
+          prev: calculator.querySelector('#prev'),
+          next: calculator.querySelector('#next'),
+          result: calculator.querySelector('#result'),
+          symbol: calculator.querySelector('#symbol'),
+          buttonCollection: calculator.querySelector('#buttonCollection'),
+          btns: calculator.querySelectorAll('.btn')
+        };
+        // 事件代理
+        wrapELe.buttonCollection.addEventListener('click', function(event) {
+          var currentButton = event.target;
+          if (!currentButton.value) return;
+          updateSymbol(currentButton.value);
+          outPainter(
+            operate(currentButton.title, wrapELe.prev.value, wrapELe.next.value)
+          );
+        });
+        // //  使用循环
+        // for (var i = 0; i < wrapELe.btns.length; i++) {
+        //   wrapELe.btns[i].onclick = function() {
+        //     updateSymbol(this.value);
+        //     outPainter(
+        //       operate(this.title, wrapELe.prev.value, wrapELe.next.value)
+        //     );
+        //   };
+        // }
+        // 更新符号
+        function updateSymbol(symboll) {
+          if (!symboll) symboll = '+';
+          wrapELe.symbol.innerHTML = symboll;
+        }
+        // 运算结果
+        function outPainter(results) {
+          wrapELe.result.innerHTML = results;
+        }
+
+        var operate = (function() {
+          // 运算方法
+          function operate(name) {
+            if (!operation[name]) throw Error(`没有这个${name}属性`);
+            return operation[name].apply(
+              operation,
+              Array.prototype.slice.call(arguments, 1)
+            );
+          }
+
+          var operation = {
+            add: function(num1, num2) {
+              return +num1 + +num2;
+            },
+            subtract: function(num1, num2) {
+              return num1 - num2;
+            },
+            multiply: function(num1, num2) {
+              return num1 * num2;
+            },
+            divide: function(num1, num2) {
+              return num1 / num2;
+            },
+            addOperation: function(name, fn) {
+              if (!operation[name]) {
+                operation[name] = fn;
+              }
+              return operation;
+            }
+          };
+          operate.addOperation = operation.addOperation;
+          return operate;
+        })();
+        operate
+          .addOperation('mod', function(num1, num2) {
+            return num1 % num2;
+          })
+          .addOperation('power', function(base, power) {
+            return Math.pow(base, power);
+          });
+      })();
+    </script>
+  </body>
+</html>
