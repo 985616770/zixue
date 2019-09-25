@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      body {
+        font-size: 14px;
+      }
+      #regexp {
+        margin: 0 auto;
+        width: 650px;
+      }
+      .title {
+        text-align: center;
+      }
+      .textBox {
+        width: 638px;
+        height: 150px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 10px;
+        resize: none;
+      }
+      .textField {
+        width: 200px;
+        height: 20px;
+      }
+      #matchingBtn {
+        display: block;
+        float: right;
+        width: 80px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        background-color: rgba(12, 34, 174, 0.891);
+        border-radius: 40px;
+        border: none;
+        color: white;
+        margin-left: 20px;
+
+        box-shadow: 1px 1px 1px 1px #eee;
+      }
+      #matchingBtn:hover {
+        margin-top: -1px;
+        box-shadow: 1px 3px 1px 1px #eee;
+      }
+      [type='checkbox'] {
+        height: 20px;
+        vertical-align: top;
+        color: #ee0;
+        border-radius: 50%;
+        width: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="regexp">
+      <h1 class="title">正则表达式测试工具</h1>
+      <textarea
+        class="textBox"
+        name="input"
+        id="userText"
+        cols="30"
+        rows="10"
+        placeholder="在此输入你的待匹配文本"
+      ></textarea>
+      <p>
+        正则表达式:
+        <input
+          type="text"
+          id="userRegExp"
+          class="textField"
+          placeholder="请输入正则表达式"
+        />
+        <input type="checkbox" name="userModifier" value="i" />忽略大小写
+        <input type="checkbox" name="userModifier" value="g" />全局匹配
+        <input type="checkbox" name="userModifier" value="m" />多行匹配
+        <input type="button" id="matchingBtn" value="测试匹配" />
+      </p>
+      <textarea
+        class="textBox"
+        name="input"
+        id="matchingResult"
+        cols="30"
+        rows="10"
+        placeholder="输出结果"
+      ></textarea>
+    </div>
+  </body>
+</html>

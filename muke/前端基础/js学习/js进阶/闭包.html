@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function closure() {
+        var a = 2;
+        function closureAdd() {
+          a++;
+        }
+        function closure2() {
+          return a;
+        }
+        return {
+          closureAdd,
+          closure2
+        };
+      }
+
+      var b = closure();
+      b.closureAdd();
+      console.log(b.closure2());
+    </script>
+  </body>
+</html>

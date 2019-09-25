@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // var Person = function() {};
+      // Person.prototype.say = function () {
+      //   console.log('天气不错');
+      // }
+      // Person.prototype.gongzi = 500;
+      // var programmer = function() {};
+      // programmer.prototype = new Person();
+      // programmer.prototype.wcd = function() {
+      //   console.log('明天天气不错');
+      // };
+      // programmer.prototype.gongzi = 1000;
+      // var p = new programmer();
+      // p.say();
+    </script>
+
+    <script>
+    function Person(name,age,female) {
+      this.name = name;
+      this.age = age;
+    }
+
+    Person.prototype.female = this.female;
+    Person.prototype.say = function () {
+      console.log('你好');
+    }
+    function Student(subject,grade) {
+      this.subject = subject;
+      this.grade = grade;
+    }
+
+    Student.prototype = new Person('xm',18)
+    Student.prototype.play = function(sports){
+      console.log(`我会${sports},还有唱跳,打篮球`);
+    }
+
+    var person = new Student('计算机','99','nan');
+    person.say();
+    person.play('swimming')
+    console.log(person.age);
+    </script>
+  </body>
+</html>
