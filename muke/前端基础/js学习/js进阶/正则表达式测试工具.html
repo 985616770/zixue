@@ -24,6 +24,8 @@
         padding: 10px;
         resize: none;
       }
+      .textBox:last-child {
+      }
       .textField {
         width: 200px;
         height: 20px;
@@ -46,13 +48,6 @@
       #matchingBtn:hover {
         margin-top: -1px;
         box-shadow: 1px 3px 1px 1px #eee;
-      }
-      [type='checkbox'] {
-        height: 20px;
-        vertical-align: top;
-        color: #ee0;
-        border-radius: 50%;
-        width: 20px;
       }
     </style>
   </head>
@@ -87,7 +82,38 @@
         cols="30"
         rows="10"
         placeholder="输出结果"
+        value=""
+        disabled
       ></textarea>
     </div>
+    <script>
+      var userText = document.querySelector('#userText'),
+        userRegExp = document.querySelector('#userRegExp'),
+        matchingBtn = document.querySelector('#matchingBtn'),
+        matchingResult = document.querySelector('#matchingResult'),
+        userModifier = document.getElementsByName('userModifier');
+      var pattern,
+        modifier = '';
+
+      for (let i = 0; i < userModifier.length; i++) {
+        userModifier[i].onclick = function() {
+          modifier = '';
+          for (let j = 0; j < userModifier.length; j++) {
+            if (userModifier[j].checked) {
+              modifier += userModifier[j].value;
+            }
+          }
+          console.log(modifier);
+        };
+      }
+
+      matchingBtn.onclick = function() {
+        pattern = new RegExp(userRegExp.value, modifier);
+        matchingResult.value = pattern.exec(userText.value) || '没有匹配结果';
+        console.log(matchingResult.value);
+        console.log(userRegExp.value);
+        console.log(userText.value);
+      };
+    </script>
   </body>
 </html>

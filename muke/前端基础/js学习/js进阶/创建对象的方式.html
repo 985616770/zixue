@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 字面量式声明对象
+      // var person = {
+      //   name: 'jane',
+      //   way: function() {
+      //     console.log('no');
+      //   }
+      // };
+
+      // // new Object() new操作符后接object构造函数
+      // var person = new Object();
+      // person.name = 'jane';
+      // person.say = function() {
+      //   console.log('no');
+      // };
+
+      // // js中构造方法声明对象
+      // function Person(name) {
+      //   this.name = name;
+      //   this.say = function() {
+      //     console.log('no');
+      //   };
+      //   var per = new Person('jane');
+      //   // 工厂模式
+      //   function createObject(name) {
+      //     var obj = new Object();
+      //     obj.name = name;
+      //     obj.say = function() {
+      //       console.log('no');
+      //     };
+      //     return obj;
+      //   }
+      // }
+      // var per1 = createObject('jane');
+      // // 原型模式
+      // function Person() {}
+      // Person.prototype.name = 'jane';
+      // Person.prototype.say = function() {
+      //   console.log('no');
+      // };
+      // // 混合模式声明对象
+      // function Person(name) {
+      //   this.name = name;
+      // }
+
+      // Person.prototype.say = function() {
+      //   console.log('no');
+      // };
+
+      var obj = {
+        name: 'jane',
+        age: '200',
+        fire: function() {
+          console.log('I can fire everything');
+        }
+      };
+
+      for (const key in obj) {
+        console.log(key, obj[key]);
+      }
+    </script>
+  </body>
+</html>
