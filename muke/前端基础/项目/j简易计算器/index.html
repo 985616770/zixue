@@ -76,6 +76,7 @@
         }
         // 运算结果
         function outPainter(results) {
+          
           wrapELe.result.innerHTML = results;
         }
 
@@ -91,7 +92,7 @@
 
           var operation = {
             add: function(num1, num2) {
-              return +num1 + +num2;
+              return( +num1 + +num2).toFixed(2);
             },
             subtract: function(num1, num2) {
               return num1 - num2;

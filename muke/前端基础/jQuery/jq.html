@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <script src="./js/jquery-3.4.1.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" value="123">
+  <textarea  value="123">123</textarea>
+  <select name="" id="">
+    <option value="1">1</option>
+    <option value="2">2</option>
+  </select>
+  <script>
+  $(document).ready(function () {
+    $('select').select(function () { 
+      console.log('hi');
+     })
+  });
+  </script>
+</body>
+</html>

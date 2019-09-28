@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      body {
+        font-size: 14px;
+      }
+      #regexp {
+        margin: 0 auto;
+        width: 650px;
+        position: relative;
+      }
+      .title {
+        text-align: center;
+      }
+      .textBox {
+        width: 638px;
+        height: 150px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 10px;
+        resize: none;
+        box-shadow: 1px 1px 1px 1px #eee;
+      }
+      .textBox:last-child {
+      }
+      .textField {
+        width: 200px;
+        height: 20px;
+      }
+      input[type='button'] {
+        display: block;
+        float: right;
+        width: 80px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        background-color: rgba(12, 34, 174, 0.891);
+        border-radius: 40px;
+        border: none;
+        color: white;
+        margin-left: 20px;
+
+        box-shadow: 1px 1px 1px 1px #eee;
+      }
+      input[type='button']:hover {
+        margin-top: -1px;
+        box-shadow: 1px 3px 1px 1px #eee;
+      }
+      #sidebar {
+        width: 200px;
+        height: 600px;
+        position: absolute;
+        left: 685px;
+        top: 50px;
+        border: 1px solid #ccc;
+        box-shadow: 1px 1px 1px 1px #eee;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      #sidebar dt {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        margin-top: 10px;
+        background-color: rgb(0, 99, 238);
+        box-shadow: 1px 1px 1px 0 #ccc;
+        border-radius: 10px;
+        color: white;
+      }
+      #sidebar dt:hover {
+        margin-left: -5px;
+        margin-top: 9px;
+        box-shadow: 2px 3px 5px 0 #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="regexp">
+      <h1 class="title">正则表达式测试工具</h1>
+      <textarea
+        class="textBox"
+        name="input"
+        id="userText"
+        cols="30"
+        rows="10"
+        placeholder="在此输入你的待匹配文本"
+      ></textarea>
+      <p>
+        正则表达式:
+        <input
+          type="text"
+          id="userRegExp"
+          class="textField"
+          placeholder="请输入正则表达式"
+        />
+        <input type="checkbox" name="userModifier" value="i" />忽略大小写
+        <input type="checkbox" name="userModifier" value="g" />全局匹配
+        <input type="checkbox" name="userModifier" value="m" />多行匹配
+        <input type="button" id="matchingBtn" value="测试匹配" />
+      </p>
+      <div class="textBox" id="matchingResult"></div>
+      <p>
+        替换内容:
+        <input
+          type="text"
+          id="replaceText"
+          class="textField"
+          placeholder="请输入你需要替换的文本"
+        />
+        <input type="button" id="replaceBtn" value="替换" />
+      </p>
+      <div class="textBox" id="replaceResult"></div>
+      <dl id="sidebar">
+        <dt data-name="qq">QQ</dt>
+        <dt data-name="nickname">昵称</dt>
+        <dt data-name="password">密码</dt>
+        <dt data-name="trim">去除首尾空白</dt>
+        <dt data-name="hump">转驼峰</dt>
+        <dt data-name="markup">HTML标签</dt>
+        <dt data-name="email">邮箱</dt>
+        <dt data-name="url">URL地址</dt>
+      </dl>
+    </div>
+
+    <script>
+      var userText = document.querySelector('#userText'),
+        userRegExp = document.querySelector('#userRegExp'),
+        matchingBtn = document.querySelector('#matchingBtn'),
+        matchingResult = document.querySelector('#matchingResult'),
+        userModifier = document.getElementsByName('userModifier'),
+        replaceBtn = document.querySelector('#replaceBtn'),
+        replaceResult = document.querySelector('#replaceResult'),
+        replaceText = document.querySelector('#replaceText'),
+        sidebar = document.querySelector('#sidebar');
+      var pattern,
+        modifier = '';
+      function verify() {
+        if (!userRegExp.value) {
+          alert('请输入正则表达式');
+        }
+        if (!userText.value) {
+          alert('请输入文本');
+        }
+      }
+      for (let i = 0; i < userModifier.length; i++) {
+        userModifier[i].onclick = function() {
+          modifier = '';
+          for (let j = 0; j < userModifier.length; j++) {
+            if (userModifier[j].checked) {
+              modifier += userModifier[j].value;
+            }
+          }
+          console.log(modifier);
+        };
+      }
+      matchingBtn.onclick = function() {
+        verify();
+        pattern = new RegExp(userRegExp.value, modifier);
+        matchingResult.innerHTML = userText.value.match(pattern)
+          ? `<span style="background-color:yellow">${userText.value.match(
+              pattern
+            )}</span>`
+          : '没有匹配到结果';
+      };
+      var Reg = {
+        qq: /^\d{1,10}$/,
+        nickname: /[\u4e00-\u9fa5a-zA-Z0-9_]{2,18}/,
+        password: /^[^\S]{6,18}$/,
+        trim: /^\s+|\s+$/
+      };
+      sidebar.onclick = function(event) {
+        var target = event.target;
+        if (!target.dataset.name) return;
+        userRegExp.value = Reg[target.dataset.name] || '没有这个正则表达式';
+        console.log(target.dataset.name);
+      };
+      replaceBtn.onclick = function() {
+        verify();
+        pattern = new RegExp(userRegExp.value, modifier);
+        replaceResult.innerHTML = userText.value.replace(
+          pattern,
+          replaceText.value
+        )
+          ? userText.value.replace(pattern, replaceText.value)
+          : '没结果';
+      };
+    </script>
+  </body>
+</html>
