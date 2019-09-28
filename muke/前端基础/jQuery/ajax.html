@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="./js/jquery-3.4.1.js"></script>
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #box {
+        width: 600px;
+        height: 338px;
+        margin: 0 auto;
+        /* overflow: hidden; */
+      }
+      a {
+        display: block;
+        width: 600px;
+        height: 338px;
+      }
+      img {
+        width: 600px;
+        height: 338px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+    <script>
+      // ajax
+      // 封装通用的xhr对象
+      // function createXHR() {
+      //   // 检测是否有XMLHttpRequest对象(IE,火狐,opera)
+      //   if (typeof XMLHttpRequest != 'undefined') {
+      //     return new XMLHttpRequest();
+      //   } else if (typeof ActiveXObject != 'undefined') {
+      //     // ie
+      //     var xhrArr = [
+      //       'Microsoft.XMLHTTP',
+      //       'MSXML2.XMLHTTP.6.0',
+      //       'MSXML2.XMLHTTP.5.0',
+      //       'MSXML2.XMLHTTP.4.0',
+      //       'MSXML2.XMLHTTP.3.0',
+      //       'MSXML2.XMLHTTP.2.0'
+      //     ];
+      //     for (var i = 0; i < xhrArr.length; i++) {
+      //       try {
+      //         xhr = new ActiveXObject(xhrArr[i]);
+      //         break;
+      //       } catch (ex) {}
+      //       return xhr;
+      //     }
+      //   } else {
+      //     throw new Error('The brower don not have XMLHttpRequest object');
+      //   }
+      // }
+      // var xhr = createXHR();
+      // var data = null;
+      // xhr.onreadystatechange = function() {
+      //   if (xhr.readyState === 4) {
+      //     if ((xhr.status >= 200 && xhr.status <= 300) || xhr.status === 304) {
+      //       // do something there ..
+      //       data = JSON.parse(xhr.responseText);
+      //       console.log(data);
+      //     }
+      //   }
+      // };
+      // xhr.open('GET', './server/slider.json', true);
+      // xhr.send(null);
+    </script>
+    <script>
+      // // JSONP
+      // function getJSONP(url, callback) {
+      //   // 自定义名称
+      //   var r1 = ['a', 'b', 'c', 'd', 'e', 'f', 'h', 'i', 'j', 'k'];
+      //   var name = 'getJSONP';
+      //   for (let i = 0; i < r1.length; i++) {
+      //     name += r1[Math.floor(Math.random() * r1.length)];
+      //   }
+      //   var cbName = 'getJSONP.' + name;
+      //   // 替换url地址
+      //   if (url.indexOf('?') == -1) {
+      //     url += '?jsonp=' + cbName;
+      //   } else if (url.indexOf('&') == -1) {
+      //     url += 'jsonp=' + cbName;
+      //   } else {
+      //     url += '&jsonp=' + cbName;
+      //   }
+      //   // 动态创建script
+      //   var script = document.createElement('script');
+      //   script.src = url;
+      //   document.getElementsByTagName('head')[0].appendChild(script);
+      //   // 调用回调函数(根据后台定义)
+      //   getJSONP[name] = function(data) {
+      //     try {
+      //       callback && callback(data);
+      //     } catch (e) {
+      //     } finally {
+      //       delete getJSONP[name];
+      //       script.parentNode.removeChild(script);
+      //     }
+      //   };
+      // }
+      // getJSONP('http://class.imooc.com/api/jsonp', function(data) {
+      //   console.log(data);
+      // });
+    </script>
+    <script>
+      $.ajax({
+        type: 'get',
+        url: './server/slider.json',
+        data: 'data',
+        dataType: 'json',
+        success: function(data) {
+          var arr = data.slider;
+          renderDom(arr);
+        }
+      });
+      function renderDom(data) {
+        var string = '';
+        $.each(data, function(index, value) {
+          string += `<a href = "${data[index].linkUrl}"><img src="${data[index].picUrl}"></a>`;
+        });
+        $('#box').html(string);
+        console.log(string);
+        console.log($('#box'));
+      }
+
+      
+    </script>
+  </body>
+</html>
