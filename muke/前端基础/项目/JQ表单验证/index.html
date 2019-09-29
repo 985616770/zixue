@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Register</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+  <body>
+    <div class="register">
+      <p class="title" id="title">
+        <span>登 录</span>
+        <span class="current">注 册</span>
+      </p>
+      <div class="form">
+        <div>
+          <span>+86</span>
+          <input
+            type="text"
+            name="user"
+            id="user"
+            placeholder="请输入注册手机号"
+            autocomplete="off"
+            maxlength="11"
+          />
+          <i id="user_icon"></i>
+          <p class="info" id="user_info"></p>
+        </div>
+        <div>
+          <input type="password" name="pwd" id="pwd" placeholder="请设置密码" />
+          <i id="pwd_icon"></i>
+          <p class="info" id="pwd_info"></p>
+        </div>
+        <p class="button">
+          <a href="javascript:void(0)" id="sigup-btn" class="btn show">注 册</a>
+          <a href="javascript:void(0)" id="login-btn" class="btn">登 录</a>
+        </p>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/ajax.js"></script>
+    <script type="text/javascript">
+      var user = document.getElementById('user'),
+        pwd = document.getElementById('pwd'),
+        sigup = document.getElementById('sigup-btn'),
+        login = document.getElementById('login-btn'),
+        titles = document.getElementById('title').getElementsByTagName('span'),
+        userInfo = document.getElementById('user_info'),
+        userIcon = document.getElementById('user_icon'),
+        pwdInfo = document.getElementById('pwd_info'),
+        pwdIcon = document.getElementById('pwd_icon'),
+        userReg = /^1[3578]\d{9}$/,
+        pwdReg = /^\w{5,12}$/,
+        isRepeat = false; // 记录用户名是否被占用
+
+      // 检测用户
+      function checkUser() {
+        var userVal = user.value;
+        if (!userReg.test(userVal)) {
+          userInfo.innerHTML = '手机号码无效';
+          userIcon.className = 'no';
+        } else {
+          userInfo.innerHTML = '';
+          userIcon.className = '';
+          $.ajax({
+            url: 'http://muke/%e9%a1%b9%e7%9b%ae/JQ%e8%a1%a8%e5%8d%95%e9%aa%8c%e8%af%81/server/isUserRepeat.php',
+            method: "POST",
+            data: { username: userVal },
+            success: function(data) {
+              console.log(data);
+              if (data.code == 1) {
+                userIcon.className = 'ok';
+                isRepeat = false;
+                 userInfo.innerHTML = data.msg;
+              } else if (data.code == 0) {
+                userIcon.className = 'no';
+                isRepeat = true;
+                userInfo.innerHTML = data.msg;
+              } else {
+                userInfo.innerHTML = '检测失败，请重试...';
+              }
+            }
+          });
+        }
+      }
+      console.log(user.addEventListener('blur',checkUser,false));
+      
+      //检测密码
+
+    </script>
+  </body>
+</html>
