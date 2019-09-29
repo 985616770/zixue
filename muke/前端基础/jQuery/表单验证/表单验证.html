@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./表单验证.css" />
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="./verify.js"></script>
+  </head>
+  <body>
+    <div class="register">
+      <p class="title">
+        <span>登 入</span>
+        <span class="current">注 册</span>
+      </p>
+      <div class="form">
+        <div>
+          <span>+86</span>
+          <input
+            type="text"
+            name="user"
+            id="user"
+            value="123"
+            placeholder="请输入注册手机号"
+            autocomplete="off"
+            maxlength="11"
+          />
+          <i class="no"></i>
+          <p class="info"></p>
+        </div>
+
+        <div>
+          <span></span>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="请设置密码"
+          />
+          <i class="no"></i>
+          <p class="info">4到10位数字,字母下划线</p>
+        </div>
+        <p class="button">
+          <a href="#" id="sigup-btn" class="btn">注册</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #333;
+      }
+      .register {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 300px;
+        height: 250px;
+        background-color: #eee;
+        text-align: center;
+        border-radius: 20px;
+        box-shadow: 0 0 10px 0 rgb(56, 46, 46);
+        padding: 20px;
+      }
+      .title > span {
+        background-color: #fff;
+        padding: 5px 10px;
+        margin: 0 30px;
+        border-radius: 10px;
+        box-shadow: 1px 0 3px 0 #cccccc;
+        cursor: pointer;
+      }
+      .current {
+        color: red;
+      }
+      .form {
+        margin-top: 20px;
+      }
+      .form > div {
+        width: 260px;
+        height: 40px;
+        border-radius: 8px;
+        background-color: #fff;
+        margin-bottom: 33px;
+        line-height: 38px;
+        text-align: left;
+      }
+      .form > div > input {
+        height: 40px;
+        width: 170px;
+        border: none;
+        margin-left: 0px;
+        overflow: hidden;
+      }
+      .form > div > i {
+        float: right;
+        margin-right: 10px;
+      }
+      .form > div:nth-of-type(2) > input {
+        width: 200px;
+      }
+      .info {
+        color: #f20d0d;
+        text-align: left;
+      }
+      .form > div :first-child {
+        margin-left: 10px;
+      }
+
+      .button {
+        display: block;
+        width: 260px;
+        height: 30px;
+        text-align: center;
+      }
+      .button a {
+        display: block;
+        text-decoration: none;
+        width: 260px;
+        height: 30px;
+        line-height: 30px;
+        background-color: #f20d0d;
+        border-radius: 9px;
+        color: #fff;
+      }
+      i {
+        width: 35px;
+        height: 35px;
+        background-image: url(./icon.png);
+        background-repeat: no-repeat;
+        background-size: 164px 59px;
+      }
+      .ok {
+        background-position: -50px 0;
+      }
+      .no {
+        background-position: -100px 0;
+      }
+    
