@@ -15,6 +15,8 @@ var $ = {
       }
       params = params.replace(/&$/, '');
     }
+
+    
     // 根据method的值改变url
     if (method === 'get') {
       url += '?' + params;
@@ -43,6 +45,7 @@ var $ = {
     } else {
       throw new Error('No XHR object availabel.');
     }
+
     xhr.onreadystatechange = function() {
       if (xhr.readyState === 4) {
         if ((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304) {
