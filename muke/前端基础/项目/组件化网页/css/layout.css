@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: red;
+}
+
+.warp {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.top {
+  height: 30px;
+  background-color: #f5f5f5;
+}
+
+.nav {
+  height: 36px;
+  background-color: #60bff2;
+}
+
+.banner {
+  width: 1000px;
+  margin: 0 auto;
+  height: 414px;
+  background-color: #eee;
+}
+
+.content {
+}
+.footer {
+}
