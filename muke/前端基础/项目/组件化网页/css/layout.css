@@ -1,22 +1,10 @@
-
-.wrap {
-  width: 1000px;
-  margin: 0 auto;
-  position: relative;
-}
-.clearFix::after{
-  content: '';
-  display: block;
-  visibility: hidden;
-  clear: both;
-}
 .top {
   height: 30px;
   background-color: #f5f5f5;
 }
-.header{
-  height: 100px;
-  background-color: #eee;
+
+.header {
+  height: 92px;
 }
 .nav {
   height: 36px;
@@ -28,7 +16,6 @@
   margin: 0 auto;
   height: 414px;
   padding: 9px 0 0 198px;
-  /* background-color: #eee; */
 }
 
 .banner-slider {
@@ -71,7 +58,20 @@
   border-color: blue;
 }
 .footer {
-  height: 132px;
+  height: 70px;
   padding: 25px;
   background-color: #eceef2;
+}
+
+.wrap {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.clearFix::after {
+  content: '';
+  display: block;
+  visibility: hidden;
+  clear: both;
 }
