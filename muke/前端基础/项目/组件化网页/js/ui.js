@@ -1,15 +1,18 @@
 // ui-search
 $.fn.UiSearch = function() {
-  var ui = $(this);
+  var ui = $(this); // 当前绑定的对象
+  // 点击显示下拉框
   $('.ui-search-selected').on('click', function() {
     $('.ui-search-select-list').show();
     return false;
   });
+  //  点击下拉框,将内容放在框中,并隐藏
   $('.ui-search-select-list a').on('click', function() {
     $('.ui-search-selected').text($(this).text());
     $('.ui-search-select-list').hide();
     return false;
   });
+  // 点击其他地方,隐藏下拉快
   $('body').on('click', function() {
     $('.ui-search-select-list').hide();
   });
@@ -22,12 +25,15 @@ $.fn.UiSearch = function() {
  * @param {string} focus_prefix  选项卡高亮样式前缀，可选
  */
 $.fn.UiTab = function(header, content, focus_prefix) {
+
   var ui = $(this);
+  // 样式焦点前缀
   var focus_prefix = focus_prefix || '';
+  // 上级tab
   var header = $(header, ui);
+  // 下级tab
   var content = $(content, ui);
   header.on('click', function() {
-    console.log(content);
     $(this)
       .addClass(focus_prefix + 'item_focus')
       .siblings()
@@ -61,21 +67,22 @@ $.fn.UiTop = function() {
 
 // ui-slider
 $.fn.UiSlider = function() {
-  console.log('1');
   var ui = $(this);
-  var left = $('.ui-slider-content');
+  // 容器的宽度
+  var banner = $('.ui-slider-content');
   var oneWidth = $('.ui-slider-content img')
     .eq(0)
     .width();
   var len = $('.ui-slider-content img').length;
   var index = 0;
+  // 边界的判断
   function slider() {
     if (index < 0) {
       index = len - 1;
     } else if (index > len - 1) {
       index = 0;
     }
-    left.css('left', -(index * oneWidth) + 'px');
+    banner.css('left', -(index * oneWidth) + 'px');
     $('.ui-slider-pots span')
       .eq(index)
       .addClass('ui-slider_focus')
@@ -112,11 +119,10 @@ $.fn.UiSlider = function() {
   });
 };
 
-// ui-cascading
+// ui-cascading 多级联动下拉框
 $.fn.UiCascading = function() {
   var ui = $(this);
   var selects = $('select', ui);
-
   selects
     .on('change', function() {
       var val = $(this).val();
@@ -125,11 +131,12 @@ $.fn.UiCascading = function() {
       var where = $(this).attr('data-where');
       where = where ? where.split(',') : [];
       where.push(val);
+      // 更新下一个的where属性,并清空后面所有的的数据
       selects
         .eq(index + 1)
         .attr('data-where', where.join(','))
         .triggerHandler('reloadOptions');
-     
+
       ui.slice(index + 1).each(function() {
         $(this)
           .attr('data-where', '')

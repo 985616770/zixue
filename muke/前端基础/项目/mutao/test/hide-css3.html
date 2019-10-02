@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 400px;
+        margin: 0 auto;
+      }
+      p {
+        margin: 0;
+      }
+      .btn {
+        width: 50%;
+        height: 30px;
+      }
+      #box {
+        width: 100%;
+        background-color: #f00;
+        overflow: hidden;
+      }
+      .transition {
+        -o-transition: all 1s ease-in-out;
+        -ms-transition: all 1s ease-in-out;
+        -moz-transition: all 1s ease-in-out;
+        -webkit-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;
+      }
+
+      .fadeOut {
+        opacity: 0 !important;
+        visibility: hidden !important;
+      }
+      .slideUpDown {
+        height: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+      .slideLeftRight{
+        width: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn" id="btn-show">显示</button
+    ><button class="btn" id="btn-hide">隐藏</button>
+    <div id="box">
+      <p>12</p>
+      <p>12</p>
+      <p>12</p>
+      <p>12</p>
+      <p>12</p>
+    </div>
+    <button class="btn" id="">显示</button>
+    <script src="./js/jquery-3.4.1.js"></script>
+    <script src="./js/transition.js"></script>
+    <script src="./js/hide.js"></script>
+    <script>
+      var $box = $('#box');
+      js.fadeslideUpDown.init($box);
+      $('#btn-show').on('click', function() {
+        // 发布订阅
+        js.fadeslideUpDown.show($box);
+      });
+
+      $('#btn-hide').on('click', function() {
+        js.fadeslideUpDown.hide($box);
+      });
+
+      // 注册事件,为订阅的事件编写代码
+      $box.on('show shown hide hidden', function(e) {
+        console.log(e.type);
+      });
+    </script>
+  </body>
+</html>

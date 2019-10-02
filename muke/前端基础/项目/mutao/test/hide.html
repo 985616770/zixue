@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 400px;
+        margin: 0 auto;
+      }
+      p {
+        margin: 0;
+      }
+      .btn {
+        width: 50%;
+        height: 30px;
+      }
+      #box {
+        width: 100%;
+        height: 300px;
+        background-color: #f00;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn" id="btn-show">显示</button
+    ><button class="btn" id="btn-hide">隐藏</button>
+    <div id="box"></div>
+    <script src="./js/jquery-3.4.1.js"></script>
+    <script src="./js/hide.js"></script>
+    <script>
+      var $box = $('#box');
+      slient.init($box)
+      $('#btn-show').on('click', function() {
+        // 回调函数 调整输出内容
+        // slient.show(
+        //   $box,function() {
+        //     $box.html('<p>我要显示了</p>');
+        //   }, function() {
+        //     setTimeout(function() {
+        //       $box.html($box.html() + '<p>我已经显示了</p>'); //显示后输出相应内容
+        //     }, 1000);
+        //   }
+        // );
+
+        // 发布订阅
+        slient.show($box);
+      });
+
+      // 注册事件
+      $box.on('show shown hide hidden', function(e) {
+        console.log(e.type);
+      });
+      $('#btn-hide').on('click', function() {
+        slient.hide($box);
+      });
+    </script>
+  </body>
+</html>
