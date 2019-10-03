@@ -59,7 +59,7 @@
     <button class="btn" id="">显示</button>
     <script src="./js/jquery-3.4.1.js"></script>
     <script src="./js/transition.js"></script>
-    <script src="./js/mode.js"></script>
+    <script src="./js/showHide.js"></script>
     <script>
       var $box = $('#box');
       // 全局对象添加方法
@@ -67,40 +67,24 @@
       //   js: true,
       //   animation: 'fade'
       // });
+/* 
+fade
+slideUpDown
+slideLeftRight
+fadeslideUpDown
+fadeslideLeftRight
+*/
       // 插件调用
       $box.showHide({
-        css3: true,
-        js: true,
-        animation: 'fade'
+        css3: false,
+        js: false,
+        animation: ''
       });
-      console.log($box.showHide({
-        css3: true,
-        js: true,
-        animation: 'fade'
-      }));
       $('#btn-show').on('click', function() {
-        // 回调函数 调整输出内容
-        // slient.show(
-        //   $box,function() {
-        //     $box.html('<p>我要显示了</p>');
-        //   }, function() {
-        //     setTimeout(function() {
-        //       $box.html($box.html() + '<p>我已经显示了</p>'); //显示后输出相应内容
-        //     }, 1000);
-        //   }
-        // );
-        // 发布订阅
-        // slient.show($box);
-        // showHide.show();
         $box.showHide('show');
       });
 
       $('#btn-hide').on('click', function() {
-        // slient.hide($box);
-        // 全局调用事件
-        // showHide.hide();
-
-        // 插件调用
         $box.showHide('hide');
       });
       // 注册事件

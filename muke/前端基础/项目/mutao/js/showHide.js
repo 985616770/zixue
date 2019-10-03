@@ -1,49 +1,50 @@
 (function($) {
+  'use strict';
   var transition = window.mt.transition;
+  // 提取init公共部分
+  function init($elem, hiddenCallback) {
+    if ($elem.is(':hidden')) {
+      $elem.data('status', 'hidden');
+      if (typeof hiddenCallback === 'function') hiddenCallback();
+    } else {
+      $elem.data('status', 'shown');
+    }
+  }
+
+  // 提取show公共部分
+
+  function show($elem, callback) {
+    if ($elem.data('status') === 'show') return;
+    if ($elem.data('status') === 'shown') return;
+    $elem.data('status', 'show').trigger('show');
+    callback();
+  }
+
+  function hide($elem, callback) {
+    if ($elem.data('status') === 'hide') return;
+    if ($elem.data('status') === 'hidden') return;
+    $elem.data('status', 'hide').trigger('hide');
+    callback();
+  }
 
   // 无特效调用 隐藏
   var slient = {
-    init: function($ele) {
-      init($ele);
-    },
-
+    init: init,
     // 发布-订阅模式
     show: function($ele) {
-      show($ele);
-      $ele.show();
-      $ele.data('status', 'shown').trigger('shown');
+      show($ele, function() {
+        $ele.show();
+        $ele.data('status', 'shown').trigger('shown');
+      });
     },
     hide: function($ele) {
-      hide($ele);
-      $ele.hide();
-      $ele.data('status', 'hidden').trigger('hidden');
+      hide($ele, function() {
+        $ele.hide();
+        $ele.data('status', 'hidden').trigger('hidden');
+      });
     }
   };
-  // 初始化共同部分
-  function init($ele, callback) {
-    if ($ele.is(':hidden')) {
-      $ele.data('status', 'hidden');
-      callback();
-    } else {
-      $ele.data('status', 'shown');
-    }
-  }
-  // 显示部分通用代码
-  function show($ele, callback) {
-    if ($ele.data('status') == 'show') return;
-    if ($ele.data('status') == 'shown') return;
-    $ele.data('status', 'show').trigger('show');
-    // 继续执行的代码
-    if (typeof callback === 'function') callback();
-  }
-  // 隐藏部分通用代码
-  function hide($ele, callback) {
-    if ($ele.data('status') == 'hide') return;
-    if ($ele.data('status') == 'hidden') return;
-    $ele.data('status', 'hide').trigger('hide');
-    // 继续执行的代码
-    if (typeof callback === 'function') callback();
-  }
+
   var css3 = {
     fade: {
       //  提取公共样式
@@ -61,49 +62,49 @@
       //  初始化
       init: function($ele) {
         $ele.height($ele.height()); //获取高度(包括隐藏)
-        css3._init($ele, 'slideUpDown');
+        css3._init($ele, 'slideUpDownCollapse');
       },
       show: function($ele) {
-        css3._show($ele, 'slideUpDown');
+        css3._show($ele, 'slideUpDownCollapse');
       },
       hide: function($ele) {
-        css3._hide($ele, 'slideUpDown');
+        css3._hide($ele, 'slideUpDownCollapse');
       }
     },
     slideLeftRight: {
       init: function($ele) {
         $ele.width($ele.width()); //获取宽度包括隐藏)
-        css3._init($ele, 'slideLeftRight');
+        css3._init($ele, 'slideLeftRightCollapse');
       },
       show: function($ele) {
-        css3._show($ele, 'slideLeftRight');
+        css3._show($ele, 'slideLeftRightCollapse');
       },
       hide: function($ele) {
-        css3._hide($ele, 'slideLeftRight');
+        css3._hide($ele, 'slideLeftRightCollapse');
       }
     },
     fadeslideUpDown: {
       init: function($ele) {
         $ele.height($ele.height()); //获取高度(包括隐藏)
-        css3._init($ele, 'slideUpDown fadeOut');
+        css3._init($ele, 'slideUpDownCollapse fadeOut');
       },
       show: function($ele) {
-        css3._show($ele, 'slideUpDown fadeOut');
+        css3._show($ele, 'slideUpDownCollapse fadeOut');
       },
       hide: function($ele) {
-        css3._hide($ele, 'slideUpDown fadeOut');
+        css3._hide($ele, 'slideUpDownCollapse fadeOut');
       }
     },
     fadeslideLeftRight: {
       init: function($ele) {
         $ele.width($ele.width()); //获取宽度(包括隐藏)
-        css3._init($ele, 'slideLeftRight fadeOut');
+        css3._init($ele, 'slideLeftRightCollapse fadeOut');
       },
       show: function($ele) {
-        css3._show($ele, 'slideLeftRight fadeOut');
+        css3._show($ele, 'slideLeftRightCollapse fadeOut');
       },
       hide: function($ele) {
-        css3._hide($ele, 'slideLeftRight fadeOut');
+        css3._hide($ele, 'slideLeftRightCollapse fadeOut');
       }
     }
   };
@@ -155,10 +156,10 @@
         js._init($ele);
       },
       show: function($ele) {
-        js._show($ele, 'slideUpDown');
+        js._show($ele, 'slideDown');
       },
       hide: function($ele) {
-        js._show($ele, 'slideUp');
+        js._hide($ele, 'slideUp');
       }
     },
     slideLeftRight: {
@@ -184,10 +185,9 @@
       init: function($ele) {
         js._customInit($ele, {
           opacity: 0,
-          visibility: 'hidden',
           height: 0,
-          'padding-left': 0,
-          'padding-right': 0
+          'padding-top': 0,
+          'padding-bottom': 0
         });
       },
       show: function($ele) {
@@ -196,10 +196,9 @@
       hide: function($ele) {
         js._customHide($ele, {
           opacity: 0,
-          visibility: 'hidden',
           height: 0,
-          'padding-left': 0,
-          'padding-right': 0
+          'padding-top': 0,
+          'padding-bottom': 0
         });
       }
     },
@@ -207,7 +206,6 @@
       init: function($ele) {
         js._customInit($ele, {
           opacity: 0,
-          visibility: 'hidden',
           width: 0,
           'padding-left': 0,
           'padding-right': 0
@@ -219,7 +217,6 @@
       hide: function($ele) {
         js._customHide($ele, {
           opacity: 0,
-          visibility: 'hidden',
           width: 0,
           'padding-left': 0,
           'padding-right': 0
@@ -227,9 +224,9 @@
       }
     }
   };
-  js._init = function($ele) {
+  js._init = function($ele, hiddenCallback) {
     $ele.removeClass('transition');
-    init($ele);
+    init($ele, hiddenCallback);
   };
   js._customInit = function($ele, options) {
     var styles = {};
@@ -242,22 +239,23 @@
     });
   };
 
-  js._show = function($ele, action) {
+  js._show = function($ele, mode) {
     show($ele, function() {
-      $ele.stop()[action](function() {
+      $ele.stop()[mode](function() {
         $ele.data('status', 'shown').trigger('shown');
       });
     });
   };
-  js._hide = function($ele, action) {
-    show($ele, function() {
-      $ele.stop()[action](function() {
+  js._hide = function($ele, mode) {
+    hide($ele, function() {
+      $ele.stop()[mode](function() {
         $ele.data('status', 'hidden').trigger('hidden');
       });
     });
   };
   js._customShow = function($ele) {
     show($ele, function() {
+      $ele.show();
       $ele.stop().animate($ele.data('styles'), function() {
         $ele.data('status', 'shown').trigger('shown');
       });
@@ -266,6 +264,7 @@
   js._customHide = function($ele, options) {
     hide($ele, function() {
       $ele.stop().animate(options, function() {
+        $ele.hide();
         $ele.data('status', 'hidden').trigger('hidden');
       });
     });
@@ -287,7 +286,6 @@
     } else {
       mode = slient;
     }
-    // debugger;
     mode.init($ele);
     return {
       show: $.proxy(mode.show, this, $ele),
@@ -315,5 +313,4 @@
       });
     }
   });
-  window.mt.showHide = showHide;
 })(jQuery);
