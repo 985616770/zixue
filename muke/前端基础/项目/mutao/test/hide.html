@@ -19,20 +19,65 @@
       }
       #box {
         width: 100%;
-        height: 300px;
         background-color: #f00;
+        overflow: hidden;
+      }
+      .transition {
+        -o-transition: all 1s ease-in-out;
+        -ms-transition: all 1s ease-in-out;
+        -moz-transition: all 1s ease-in-out;
+        -webkit-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;
+      }
+
+      .fadeOut {
+        opacity: 0 !important;
+        visibility: hidden !important;
+      }
+      .slideUpDown {
+        height: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+      .slideLeftRight {
+        width: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
       }
     </style>
   </head>
   <body>
     <button class="btn" id="btn-show">显示</button
     ><button class="btn" id="btn-hide">隐藏</button>
-    <div id="box"></div>
+    <div id="box">
+      <p>12</p>
+      <p>12</p>
+      <p>12</p>
+      <p>12</p>
+      <p>12</p>
+    </div>
+    <button class="btn" id="">显示</button>
     <script src="./js/jquery-3.4.1.js"></script>
-    <script src="./js/hide.js"></script>
+    <script src="./js/transition.js"></script>
+    <script src="./js/mode.js"></script>
     <script>
       var $box = $('#box');
-      slient.init($box)
+      // 全局对象添加方法
+      // var showHide = window.mt.showHide($box, {
+      //   js: true,
+      //   animation: 'fade'
+      // });
+      // 插件调用
+      $box.showHide({
+        css3: true,
+        js: true,
+        animation: 'fade'
+      });
+      console.log($box.showHide({
+        css3: true,
+        js: true,
+        animation: 'fade'
+      }));
       $('#btn-show').on('click', function() {
         // 回调函数 调整输出内容
         // slient.show(
@@ -44,17 +89,23 @@
         //     }, 1000);
         //   }
         // );
-
         // 发布订阅
-        slient.show($box);
+        // slient.show($box);
+        // showHide.show();
+        $box.showHide('show');
       });
 
+      $('#btn-hide').on('click', function() {
+        // slient.hide($box);
+        // 全局调用事件
+        // showHide.hide();
+
+        // 插件调用
+        $box.showHide('hide');
+      });
       // 注册事件
       $box.on('show shown hide hidden', function(e) {
         console.log(e.type);
-      });
-      $('#btn-hide').on('click', function() {
-        slient.hide($box);
       });
     </script>
   </body>

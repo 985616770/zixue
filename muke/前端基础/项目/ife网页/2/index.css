@@ -213,20 +213,6 @@ body {
   text-align: center;
   line-height: 24px;
 }
-meter::-webkit-meter-bar {
-    background: #FFF;
-    border: 1px solid #CCC;
-}
-meter::-webkit-meter-optimum-value {
-    background: #87C7DE;
-    background: -moz-linear-gradient(top, #a1d4e6 0%, #6bb4d1 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a1d4e6), color-stop(100%, #6bb4d1));
-    background: -webkit-linear-gradient(top, #a1d4e6 0%, #6bb4d1 100%);
-    background: -o-linear-gradient(top, #a1d4e6 0%, #6bb4d1 100%);
-    background: -ms-linear-gradient(top, #a1d4e6 0%, #6bb4d1 100%);
-    background: linear-gradient(to bottom, #a1d4e6 0%, #6bb4d1 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a1d4e6', endColorstr='#6bb4d1',GradientType=0);
-}
 /* 右侧自适应栏 */
 .main {
   width: calc(100% - 350px);
