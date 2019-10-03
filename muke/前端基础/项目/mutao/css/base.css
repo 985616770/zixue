@@ -65,3 +65,7 @@
 	.cf {
 		*zoom: 1;
 	}
+
+  .text-hidden{
+    font-size: 0;
+  }

@@ -34,11 +34,7 @@
           </li>
         </ul>
         <ul class="fr">
-          <li
-            class="menu dropdown fl"
-            data-active="menu"
-            data-load="./js/dropdown.json"
-          >
+          <li class="menu dropdown fl" data-active="menu">
             <a href="###" target="_self" class="dropdown-toggle link "
               >我的慕淘<i class="dropdown-arrow icon transition">&#xe609;</i></a
             >
@@ -69,7 +65,11 @@
               >商品分类</a
             >
           </li>
-          <li class="menu dropdown fl" data-active="menu">
+          <li
+            class="menu dropdown fl"
+            data-active="menu"
+            data-load="./js/dropdown.json"
+          >
             <a href="###" target="_blank" class="dropdown-toggle link"
               >卖家中心<i class="dropdown-arrow icon transition">&#xe609;</i></a
             >
@@ -112,6 +112,18 @@
       </div>
     </div>
     <!-- 站点导航结束 -->
+
+    <!-- 头部开始 -->
+    <div class="header">
+      <div class="container">
+        <h1 class="fl">
+          <a href="./index.html" class="header-logo text-hidden">慕课网</a>
+        </h1>
+        <div class="search fl"></div>
+        <div class="cart fr"></div>
+      </div>
+    </div>
+    <!-- 头部结束 -->
     <script src="./js/jquery-3.4.1.js"></script>
     <script>
       //两种判断是否有jquery库的写法：
@@ -121,39 +133,7 @@
     <script src="./js/transition.js"></script>
     <script src="./js/showHide.js"></script>
     <script src="./js/dropDown.js"></script>
-    <script>
-      $('.dropdown').on('dropdown-show', function(e) {
-        var $this = $(this),
-          dataLoad = $this.data('load');
-        if (!dataLoad) return;
-
-        if (!$this.data('loaded')) {
-          var $layer = $this.find('.dropdown-layer'),
-            html = '';
-          $.getJSON(dataLoad, function(data) {
-            setTimeout(function() {
-              for (var i = 0; i < data.length; i++) {
-                html +=
-                  '<li><a href="' +
-                  data[i].url +
-                  '" target="_blank" class="menu-item">' +
-                  data[i].name +
-                  '</a></li>';
-              }
-              $layer.html(html);
-              $this.data('loaded', true);
-            }, 500);
-          });
-        }
-      });
-      $('.dropdown').dropdown({
-        event: '',
-        css3: false,
-        js: true,
-        animation: 'fade',
-        active: 'menu',
-        delay: 0
-      });
-    </script>
+    <script src="./js/index.js"></script>
+    <script></script>
   </body>
 </html>

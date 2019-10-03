@@ -27,6 +27,7 @@
 .nav-site-service {
   margin-right: 15px;
 }
+
 /*下拉菜单样式dropdown*/
 .dropdown {
   position: relative;
@@ -42,9 +43,7 @@
 }
 .dropdown-arrow {
   display: inline-block;
-  /*width:8px;
-	height:6px;*/
-  /*background: url(../img/dropdown-arrow.png) no-repeat;*/
+
   margin-left: 8px;
   vertical-align: middle;
 }
@@ -82,4 +81,13 @@
   height: 32px;
   background: url(../img/loading.gif) no-repeat;
   margin: 0 30px;
+}
+
+/* header部分样式书写 */
+.header-logo {
+  display: block;
+  width: 136px;
+  height: 48px;
+  background: url(../img/header-logo.png) no-repeat;
+  margin: 36px 0 0 15px;
 }
