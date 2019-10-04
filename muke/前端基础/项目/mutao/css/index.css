@@ -89,5 +89,26 @@
   width: 136px;
   height: 48px;
   background: url(../img/header-logo.png) no-repeat;
-  margin: 36px 0 0 15px;
+  margin-left: 15px;
+}
+
+.header .header-logo,
+.header .search,
+.header .cart {
+  margin-top: 36px;
+}
+.header .search {
+  margin-left: 145px;
+}
+.header .cart {
+}
+.header .cart .cart-text {
+  padding: 0 10px;
+}
+.header .cart .cart-icon {
+  padding-right: 10px;
+}
+.header .cart .cart-icon-arrow{
+  display: inline-block;
+  margin-left: 12px;
 }

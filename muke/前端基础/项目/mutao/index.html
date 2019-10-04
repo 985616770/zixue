@@ -33,10 +33,10 @@
             >
           </li>
         </ul>
-        <ul class="fr">
-          <li class="menu dropdown fl" data-active="menu">
+        <ul class="fr ">
+          <li class="menu dropdown fl transition" data-active="menu">
             <a href="###" target="_self" class="dropdown-toggle link "
-              >我的慕淘<i class="dropdown-arrow icon transition">&#xe609;</i></a
+              >我的慕淘<i class="dropdown-arrow icon transition">&#xe642;</i></a
             >
             <ul class="dropdown-layer dropdown-left">
               <li>
@@ -47,9 +47,9 @@
               </li>
             </ul>
           </li>
-          <li class="menu dropdown fl" data-active="menu">
+          <li class="menu dropdown fl transition" data-active="menu">
             <a href="###" target="_blank" class="dropdown-toggle link"
-              >收藏夹<i class="dropdown-arrow icon transition">&#xe609;</i></a
+              >收藏夹<i class="dropdown-arrow icon transition">&#xe642;</i></a
             >
             <ul class="dropdown-layer dropdown-left">
               <li>
@@ -66,12 +66,12 @@
             >
           </li>
           <li
-            class="menu dropdown fl"
+            class="menu dropdown fl transition"
             data-active="menu"
             data-load="./js/dropdown.json"
           >
             <a href="###" target="_blank" class="dropdown-toggle link"
-              >卖家中心<i class="dropdown-arrow icon transition">&#xe609;</i></a
+              >卖家中心<i class="dropdown-arrow icon transition">&#xe642;</i></a
             >
             <ul class="dropdown-layer dropdown-left">
               <li class="dropdown-loading"></li>
@@ -97,7 +97,7 @@
           </li>
           <li class="nav-site-service menu dropdown fl" data-active="menu">
             <a href="###" target="_blank" class="dropdown-toggle link"
-              >联系客服<i class="dropdown-arrow icon transition">&#xe609;</i></a
+              >联系客服<i class="dropdown-arrow icon transition">&#xe642;</i></a
             >
             <ul class="dropdown-layer dropdown-right">
               <li>
@@ -114,13 +114,36 @@
     <!-- 站点导航结束 -->
 
     <!-- 头部开始 -->
-    <div class="header">
+    <div class="header cf">
       <div class="container">
         <h1 class="fl">
           <a href="./index.html" class="header-logo text-hidden">慕课网</a>
         </h1>
-        <div class="search fl"></div>
-        <div class="cart fr"></div>
+        <div class="search fl" id="header-search">
+          <form action="https://s.taobao.com/search" class="search-form">
+            <input
+              type="text"
+              name="q"
+              placeholder="搜索啥都没有"
+              autocomplete="off"
+              class="search-inputBox fl"
+            />
+            <input type="submit" value="搜索" class="search-bth fl" />
+          </form>
+          <ul class="search-layer"></ul>
+        </div>
+        <div class="cart fr">
+          <div class="cart-btn">
+            <i class="icon cart-icon">&#xe621;</i>购物车<span class="cart-text"
+              >|</span
+            ><span>0</span
+            ><i class="icon transition cart-icon-arrow">&#xe642;</i>
+          </div>
+          <div class="cart-white"></div>
+          <div class="cart-layer">
+            123
+          </div>
+        </div>
       </div>
     </div>
     <!-- 头部结束 -->
@@ -133,6 +156,7 @@
     <script src="./js/transition.js"></script>
     <script src="./js/showHide.js"></script>
     <script src="./js/dropDown.js"></script>
+    <script src="./js/search.js"></script>
     <script src="./js/index.js"></script>
     <script></script>
   </body>

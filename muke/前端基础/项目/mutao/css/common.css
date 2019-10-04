@@ -51,24 +51,23 @@ a.link:hover {
 /*icon*/
 @font-face {
   font-family: 'iconfont';
-  src: url('../font/iconfont.eot?t=1477124206');
-  /* IE9*/
-  src: url('../font/iconfont.eot?t=1477124206#iefix')
+  src: url('../font/iconfont.eot?t=1570198783997'); /* IE9 */
+  src: url('../font/iconfont.eot?t=1570198783997#iefix')
       format('embedded-opentype'),
-    /* IE6-IE8 */ url('../font/iconfont.woff?t=1477124206') format('woff'),
-    /* chrome, firefox */ url('../font/iconfont.ttf?t=1477124206')
-      format('truetype'),
-    /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-      url('../font/iconfont.svg?t=1477124206#iconfont') format('svg');
-  /* iOS 4.1- */
+    /* IE6-IE8 */
+      url('../font/data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAN8AAsAAAAAB7AAAAMuAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqDDIJJATYCJAMMCwgABCAFhG0HRBudBhHVm2PIfiZkcgn7m8y8XxzrRpwr04SqjW+C50nv+3MzE7zJgip3Pwy2cOnSqrK5WXXvjYgwTMl58L98gaSDES6EFQAp1Au+cEx9CkXPbneroorQSMALHiw6AA/2gxzIP4zdRNAQ10MAQwZlSINGLTrgoQHdBJARQwf3xcvI0A3JgofgVIzVyBpsPGup9QDDav59+UgtHljYCtC3zaCGA6jzJvsNNSeYQw+KgDOdBjAmgQLKAA3Sq1LXBRX5ylAYT6ybox00gjWVMwg425c6G/3jWSAOIDEMgCJZZF0UBzMg8AZLxgGqswP4wERguYSNm9MgjuO6EpLwpIT46WWJmzcldCin73I8cVw6KZsOmZ4ZkrzxoN/RbD26/PjcY8uO9DVzth5cfnj73G2Hlh3YMnyTiVh2ZM7R/MgOfQ4c2Xm0sP/mw4ndt5/rEtZr27UCUx7p99x6NT/88MDI/ssT/cFm8xiWuAGDNtXcId4M3Fi5Xf+EHj2W72n3dt63p1ClaacmEh0K90+VNpEokw5pN6u5QdWIkqpF/j+dcfp95nv6qv8Ze7J0jZhBuYOiIka8GZ8kXaIXsjzlTGrVxRlboy58PN+wWcfUMetqM+Y3bFC59ZrbJH0JbodPlt615WhadOrkZmXqhYtTotOOSp/ak+kDQHBHPVO1AdQcq87f+Q0ld3/eO7LGb8/XADxrYsBtwR1Nd6l37iIZyPoXnI5l2ucBudIuG7PDoKIP5k5lmEQZAEwxvB4uje+cCIJHvAoWLumg8MhDamwZ2PiUg4NHbTCU0niyTyzjUIgOASUslECI4jRYRHAbFFE8RGrsK7BJ4DM4RIkCQyeJndNHL5Bo6ws6xRH6B+LAKyGlWpH8Rn/MTtI8Tv6j7NEJVV7mgx2uKFMM2E9fqxKQ8AKttBnOM8MmnHDQPKhuTVFQ1YvygRdjqS/oFEegf4A48Eq0ttrC59/oj9lJQ1aP+Y+yx/qBipyyA7ITr52ybuWS/fQ1qgSQ8AK0kgZn6GNgq26VcNCcMMCzNRRKNeoqzpeXLu9XykvMAfZRYokSjT8ZYx8da8yy1x3d7BKJWpUPYwAAAA==')
+      format('woff2'),
+    url('../font/iconfont.woff?t=1570198783997') format('woff'),
+    url('../font/iconfont.ttf?t=1570198783997') format('truetype'),
+    /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+      url('../font/iconfont.svg?t=1570198783997#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .icon {
   font-family: 'iconfont' !important;
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -87,7 +86,6 @@ a.link:hover {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 
 .fadeOut {
   visibility: hidden !important;
@@ -146,4 +144,105 @@ a.link:hover {
   border-color: #cdd0d4;
 }
 
+/* search */
 
+.search {
+  position: relative;
+  border: 1px solid #cfd2d5;
+}
+.search-inputBox {
+  width: 582px;
+  height: 40px;
+  line-height: 40px;
+  page-break-after: 0 10px;
+  border: none;
+  background-color: #fff;
+  outline: none;
+}
+.search-bth {
+  height: 40px;
+  width: 73px;
+  background-color: #07111b;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+}
+.search-layer {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #cfd2d5;
+}
+.search-layer-item {
+  height: 24px;
+  line-height: 24px;
+  cursor: pointer;
+  padding: 0 10px;
+}
+.search-layer-item_focus {
+  background-color: #f3f5f7;
+}
+.search-layer-item:hover {
+  background-color: #f3f5f7;
+}
+
+/* cart */
+.cart {
+  position: relative;
+}
+.cart-btn {
+  width: 130px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #f01414;
+  color: #fff;
+  padding: 0 15px;
+  font-size: 14px;
+  position: relative;
+  z-index: 2;
+}
+.cart-white {
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 9;
+}
+.cart-layer {
+  display: block;
+  position: absolute;
+  left: -100px;
+  top: 100%;
+  height: 300px;
+  width: 260px;
+  z-index: 1;
+  box-shadow: 0 0 5px 0 #ccc;
+}
+
+.cart-btn:hover .cart-icon-arrow {
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.cart-btn:hover {
+  background-color: #fff;
+  color: #f01414;
+  box-shadow: 0 0 5px 0 #ccc;
+  z-index: 2;
+}
+.cart-btn:hover + .cart-white{
+  display: block;
+   z-index: 9;
+}
+.cart-btn:hover ~ .cart-layer {
+  display: block;
+}
