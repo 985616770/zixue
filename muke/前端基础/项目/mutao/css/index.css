@@ -1,10 +1,8 @@
 /* header样式 */
-.nav .{
-}
-.nav .nav-l {
-}
 
-
+/* nav左边 */
+.nav {
+}
 .nav .nav-text.text-red {
   color: #f01414;
 }
@@ -12,4 +10,49 @@
   font-size: 12px;
   margin-left: 13px;
   color: #4d555d;
+}
+
+/* nav右边 */
+.menu {
+  font-size: 12px;
+}
+.menu-item {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 12px;
+  color: #4d555d;
+  white-space: nowrap;
+}
+
+.menu-item:hover {
+  background-color: #f3f5f7;
+}
+
+.menu .dropdown-toggle {
+  display: block;
+  height: 100%;
+  padding: 0 13px 0 12px;
+  border-left: 1px solid #f3f5f7;
+  border-right: 1px solid #f3f5f7;
+}
+
+.menu .dropdown-arrow {
+  margin-left: 8px;
+}
+
+.menu .dropdown-layer {
+  top: 43px;
+  background-color: #fff;
+  border: 1px solid #cdd0d4;
+}
+.menu-active .dropdown-toggle {
+  background-color: #fff;
+  border-left: 1px solid #cdd0d4;
+  border-right: 1px solid #cdd0d4;
+  color: #f01414;
+}
+
+.menu-active .dropdown-arrow {
+  transform: rotate(180deg);
 }

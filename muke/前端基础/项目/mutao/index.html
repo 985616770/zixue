@@ -23,22 +23,90 @@
             <a href="javascript:void(0);" class="link nav-text">免费注册</a>
           </li>
           <li class="fl">
-            <a href="javascript:void(0);" class="link nav-text"
-              >手机逛慕淘</a
-            >
+            <a href="javascript:void(0);" class="link nav-text">手机逛慕淘</a>
           </li>
         </ul>
         <ul class="fr">
-          <li class="dropdown menu fl" data-active="">
+          <li class="dropdown menu fl menu-active" data-active="menu">
             <a href="javascript:void(0);" class="link dropdown-toggle">
               <span>我的主页</span>
-              <i class="iconfont"></i>
+              <i class="iconfont dropdown-arrow transition"
+                >&#xe642;</i
+              >
             </a>
-            <ul class="dropdown-layer"></ul>
+            <ul class="dropdown-layer dropdown-left">
+              <li>
+                <a href="###" target="_blank" class="menu-item">已买到的宝贝</a>
+              </li>
+              <li>
+                <a href="###" target="_blank" class="menu-item">我的足迹</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu dropdown fl" data-active="menu">
+            <a
+              href="###"
+              target="_blank"
+              class="dropdown-toggle link "
+              >收藏夹<i class="dropdown-arrow iconfont transition">&#xe642;</i></a
+            >
+            <ul class="dropdown-layer dropdown-left">
+              <li>
+                <a href="###" target="_blank" class="menu-item">收藏的宝贝</a>
+              </li>
+              <li>
+                <a href="###" target="_blank" class="menu-item">收藏的店铺</a>
+              </li>
+            </ul>
+          </li>
+          <li class="fl">
+            <a href="###" target="_blank" class="nav-site-category link"
+              >商品分类</a
+            >
+          </li>
+          <li
+            class="menu dropdown fl"
+            data-active="menu"
+            data-load="js/dropdown-seller.json"
+          >
+            <a
+              href="###"
+              target="_blank"
+              class="dropdown-toggle link "
+              >卖家中心<i class="dropdown-arrow iconfont transition">&#xe642;</i></a
+            >
+            <ul class="dropdown-layer dropdown-left">
+              <li class="dropdown-loading"></li>
+              <!--  <li><a href="###" target="_blank" class="menu-item">免费开店</a></li>
+						<li><a href="###" target="_blank" class="menu-item">已卖出的宝贝</a></li>
+						<li><a href="###" target="_blank" class="menu-item">出售中的宝贝</a></li>
+						<li><a href="###" target="_blank" class="menu-item">卖家服务市场</a></li>
+						<li><a href="###" target="_blank" class="menu-item">卖家培训中心</a></li>
+						<li><a href="###" target="_blank" class="menu-item">体验中心</a></li> -->
+            </ul>
+          </li>
+          <li class="nav-site-service menu dropdown fl" data-active="menu">
+            <a
+              href="###"
+              target="_blank"
+              class="dropdown-toggle link "
+              >联系客服<i class="dropdown-arrow iconfont transition">&#xe642;</i></a
+            >
+            <ul class="dropdown-layer dropdown-right">
+              <li>
+                <a href="###" target="_blank" class="menu-item">消费者客服</a>
+              </li>
+              <li>
+                <a href="###" target="_blank" class="menu-item">卖家客服</a>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
     </div>
-    <!-- nav 结束 --> 
+    <!-- nav 结束 -->
+    <script src="./js/jquery.js"></script>
+    <script src="./js/dropdown.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

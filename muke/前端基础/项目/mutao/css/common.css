@@ -36,11 +36,11 @@
 }
 
 .transition {
-  -webkit-transition: all 1s;
-  -ms-transition: all 1s;
-  -moz-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .container {
@@ -48,7 +48,6 @@
   height: 100%;
   position: relative;
   margin: 0 auto;
-  background-color: #0ee;
 }
 
 .text-red {
@@ -65,8 +64,42 @@
 .nav {
   height: 45px;
   line-height: 45px;
+  background-color: #f3f4f7;
 }
 
 /* 组件固定样式 */
 
 /* 下拉组件样式 */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-layer {
+  position: absolute;
+  top: 100%;
+  display: none;
+  z-index: 1;
+}
+
+.dropdown-left {
+  left: 0;
+  right: auto;
+}
+
+.dropdown-right {
+  right: 0;
+  left: auto;
+}
+
+.dropdown-toggle {
+  position: relative;
+  z-index: 2;
+}
+.dropdown-arrow {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  font-size: 8px;
+  line-height: 8px;
+}
+
