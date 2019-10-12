@@ -1,9 +1,28 @@
-var dropdown = $('.dropdown');
+$('.menu').dropdown({
+  css3: true,
+  js: false,
+  animation: 'fade',
+  active: 'menu'
+});
 
-// dropdown.on('hover',slient.show(dropdown),slient.hide(dropdown))
-// dropdown.hover(slient.show(dropdown), slient.hide(dropdown));
-dropdown.hover(function() {
-  slient.show(this);
-},function (){
-  slient.hide(this);
+$('.menu').on('dropdown-show', function(e) {
+  var $this = $(this),
+    dataLoad = $this.data('load');
+
+  if (!dataLoad) {
+    return;
+  }
+
+  if (!$this.data('loaded')) {
+    var $layer = $this.find('.dropdown-layer'),
+      html = '';
+
+    $.getJSON(dataLoad, function(data) {
+      for (let i = 0; i < data.length; i++) {
+        html += `<li><a href=${data[i].url}  class="menu-item">${data[i].name}</a></li>`;
+      }
+      $layer.html(html);
+      $this.data('loaded', true);
+    });
+  }
 });

@@ -27,77 +27,74 @@
           </li>
         </ul>
         <ul class="fr">
-          <li class="dropdown menu fl menu-active" data-active="menu">
+          <li class="dropdown menu fl transition" data-active="menu">
             <a href="javascript:void(0);" class="link dropdown-toggle">
               <span>我的主页</span>
-              <i class="iconfont dropdown-arrow transition"
-                >&#xe642;</i
-              >
+              <i class="iconfont dropdown-arrow transition">&#xe642;</i>
             </a>
             <ul class="dropdown-layer dropdown-left">
               <li>
-                <a href="###" target="_blank" class="menu-item">已买到的宝贝</a>
+                <a href="javascript:void(0);" class="menu-item">已买到的宝贝</a>
               </li>
               <li>
-                <a href="###" target="_blank" class="menu-item">我的足迹</a>
+                <a href="javascript:void(0);" class="menu-item">我的足迹</a>
               </li>
             </ul>
           </li>
-          <li class="menu dropdown fl" data-active="menu">
-            <a
-              href="###"
-              target="_blank"
-              class="dropdown-toggle link "
-              >收藏夹<i class="dropdown-arrow iconfont transition">&#xe642;</i></a
+          <li class="menu dropdown fl transition" data-active="menu">
+            <a href="javascript:void(0);" class="dropdown-toggle link "
+              >收藏夹<i class="dropdown-arrow iconfont transition"
+                >&#xe642;</i
+              ></a
             >
             <ul class="dropdown-layer dropdown-left">
               <li>
-                <a href="###" target="_blank" class="menu-item">收藏的宝贝</a>
+                <a href="javascript:void(0);" class="menu-item">收藏的宝贝</a>
               </li>
               <li>
-                <a href="###" target="_blank" class="menu-item">收藏的店铺</a>
+                <a href="javascript:void(0);" class="menu-item">收藏的店铺</a>
               </li>
             </ul>
           </li>
+
           <li class="fl">
-            <a href="###" target="_blank" class="nav-site-category link"
+            <a href="javascript:void(0);" class="nav-site-category link"
               >商品分类</a
             >
           </li>
+
           <li
-            class="menu dropdown fl"
+            class="menu dropdown fl transition"
             data-active="menu"
             data-load="js/dropdown-seller.json"
           >
-            <a
-              href="###"
-              target="_blank"
-              class="dropdown-toggle link "
-              >卖家中心<i class="dropdown-arrow iconfont transition">&#xe642;</i></a
+            <a href="javascript:void(0);" class="dropdown-toggle link "
+              >卖家中心<i class="dropdown-arrow iconfont transition"
+                >&#xe642;</i
+              ></a
             >
             <ul class="dropdown-layer dropdown-left">
               <li class="dropdown-loading"></li>
-              <!--  <li><a href="###" target="_blank" class="menu-item">免费开店</a></li>
-						<li><a href="###" target="_blank" class="menu-item">已卖出的宝贝</a></li>
-						<li><a href="###" target="_blank" class="menu-item">出售中的宝贝</a></li>
-						<li><a href="###" target="_blank" class="menu-item">卖家服务市场</a></li>
-						<li><a href="###" target="_blank" class="menu-item">卖家培训中心</a></li>
-						<li><a href="###" target="_blank" class="menu-item">体验中心</a></li> -->
+              <!--  <li><a href="javascript:void(0);"  class="menu-item">免费开店</a></li>
+						<li><a href="javascript:void(0);"  class="menu-item">已卖出的宝贝</a></li>
+						<li><a href="javascript:void(0);"  class="menu-item">出售中的宝贝</a></li>
+						<li><a href="javascript:void(0);"  class="menu-item">卖家服务市场</a></li>
+						<li><a href="javascript:void(0);"  class="menu-item">卖家培训中心</a></li>
+						<li><a href="javascript:void(0);"  class="menu-item">体验中心</a></li> -->
             </ul>
           </li>
-          <li class="nav-site-service menu dropdown fl" data-active="menu">
-            <a
-              href="###"
-              target="_blank"
-              class="dropdown-toggle link "
-              >联系客服<i class="dropdown-arrow iconfont transition">&#xe642;</i></a
+          <li class="nav-site-service menu dropdown fl transition" data-active="menu">
+            <a href="javascript:void(0);" class="dropdown-toggle link "
+              >联系客服<i class="dropdown-arrow iconfont transition"
+                >&#xe642;</i
+              ></a
             >
             <ul class="dropdown-layer dropdown-right">
               <li>
-                <a href="###" target="_blank" class="menu-item">消费者客服</a>
+                <a href="javascript:void(0);" class="menu-item">消费者客服</a>
               </li>
               <li>
-                <a href="###" target="_blank" class="menu-item">卖家客服</a>
+                <a href="javascript:void(0);" class="menu-item">卖家客服</a>
               </li>
             </ul>
           </li>
@@ -105,8 +102,40 @@
       </div>
     </div>
     <!-- nav 结束 -->
-    <script src="./js/jquery.js"></script>
+
+    <!-- header区开始 -->
+    <div class="header">
+        <div class="container">
+            <h1 class="fl"><a href="./index.html" class="header-logo text-hidden">慕课网</a></h1>
+            <div id="header-search" class="header-search search fl">
+                <form action="https://s.taobao.com/search" class="search-form">
+                    <input type="text" name="q" placeholder="灵魂没事一元抢" autocomplete="off" class="search-inputBox fl" />
+                    <input type="submit" value="搜索" class="search-btn btn fl" />
+                </form>
+                <ul class="search-layer">
+                    <li class="search-layer-item text-ellipsis">111</li>
+                    <li class="search-layer-item text-ellipsis">111</li>
+                    <li class="search-layer-item text-ellipsis">111</li>
+                </ul>
+            </div>
+            <div id="cart" class="header-cart fl" data-active="cart">
+              <div>123</div>
+              <div>123</div>
+            </div>
+        </div>
+    </div>
+    <!-- header区结束 -->
+    <script>
+	    //两种判断是否有jquery库的写法：
+		// window.jQuery || document.write('<script src="js/jquery.js"><' + '/script>')
+		window.jQuery || document.write('<script src="js/jquery.js"><\/script>');
+	</script>
+    <script src="./js/transition.js"></script>
+    <script src="./js/showHide.js"></script>
     <script src="./js/dropdown.js"></script>
     <script src="./js/index.js"></script>
+    <script>
+    
+    </script>
   </body>
 </html>

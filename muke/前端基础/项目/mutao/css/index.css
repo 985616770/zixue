@@ -1,5 +1,3 @@
-/* header样式 */
-
 /* nav左边 */
 .nav {
 }
@@ -16,6 +14,8 @@
 .menu {
   font-size: 12px;
 }
+
+/* 下拉组件的单个格子样式 */
 .menu-item {
   display: block;
   height: 30px;
@@ -55,4 +55,71 @@
 
 .menu-active .dropdown-arrow {
   transform: rotate(180deg);
+}
+.menu-active .dropdown-layer {
+  display: block;
+}
+.nav-site-category {
+  height: 100%;
+  padding: 0 13px 0 12px;
+}
+
+/* header样式 */
+.header {
+  height: 124px;
+}
+.header-search,
+.header-cart,
+.header-logo {
+  margin-top: 36px;
+}
+.header-logo {
+  display: block;
+  background: url(../img/header-logo.png) left center no-repeat;
+  width: 136px;
+  height: 48px;
+}
+.text-hidden {
+  text-indent: -999px;
+}
+.header-search {
+  margin-left: 150px;
+  position: relative;
+}
+.search-form {
+}
+.search-inputBox {
+  width: 607px;
+  height: 38px;
+}
+.search-btn {
+  width: 73px;
+  height: 42px;
+}
+.btn {
+  color: #fff;
+  background-color: #07111b;
+  font-size: 14px;
+  border: none;
+}
+.search-layer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 682px;
+  border: 1px solid #4d555d;
+}
+.search-layer-item {
+  height: 20px;
+  line-height: 20px;
+  text-align: left;
+}
+.search-layer-item:hover {
+  background-color: #0002;
+}
+.header-cart {
+  margin-left: 50px;
+  width: 160px;
+  height: 42px;
+  background-color: #f01414;
 }

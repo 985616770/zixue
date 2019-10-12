@@ -1,59 +1,83 @@
-// (function($) {
-'use strict';
-var slient = {
-  init: function(ele) {},
-  show: function(ele) {
-    console.log($(ele));
-
-    $(ele)
-      .addClass('menu-active')
-      .siblings()
-      .removeClass('menu-active')
-      .end()
-      .find('.dropdown-layer')
-      .css({
-        display: 'block'
-      });
-  },
-  hide: function(ele) {
-    console.log('2');
-
-    $(ele)
-      .removeClass('menu-active')
-      .siblings()
-      .removeClass('menu-active')
-      .end()
-      .find('.dropdown-layer')
-      .css({
-        display: 'none'
-      });
+(function($) {
+  'use strict';
+  function Dropdown($elem, options) {
+    this.$elem = $elem;
+    this.$layer = this.$elem.find('.dropdown-layer');
+    this.options = options;
+    this.activeClass = options.active + '-active';
+    // 初始化
+    this._init();
   }
-};
-var css3 = {};
-var js = {};
+  // 配置的默认信息
+  Dropdown.DEFAULTS = {
+    event: 'hover', // click
+    css3: false,
+    js: false,
+    animation: 'fade',
+    delay: 0,
+    active: 'dropdown'
+  };
 
-// function Dropdown(elem, options){
+  Dropdown.prototype._init = function() {
+    var self = this;
+    this.$layer.showHide(this.options);
+    this.$layer.on('show shown hide hidden', function(e) {
+      self.$elem.trigger('dropdown-' + e.type);
+    });
+    if (this.options.event === 'click') {
+      this.$elem.on('click', function(e) {
+        self.show();
+        e.stopPropagation();
+      });
+      $(document).click($.proxy(this.hide, this));
+    } else {
+      this.$elem.hover($.proxy(this.show, this), $.proxy(this.hide, this));
+    }
+  };
+  Dropdown.prototype.hide = function() {
+    if (this.options.delay) {
+      clearTimeout(this.timer);
+    }
+    this.$layer.showHide('hide');
+    this.$elem.removeClass(this.activeClass);
+  };
+  Dropdown.prototype.show = function() {
+    var self = this;
+    // 防止过快滑过,直接显示
+    if (this.options.delay) {
+      this.timer = setTimeout(function() {
+        _show();
+      }, this.options.delay);
+    } else {
+      _show();
+    }
 
-// };
-// Dropdown.DEFAULTS = {
-//   css3:,
-//   js:,
-//   animation:
-// }
-// Dropdown.prototype.init = function () {
+    function _show() {
+      self.$elem.addClass(self.activeClass);
+      self.$layer.showHide('show');
+    }
+  };
 
-//  }
-// })(jQuery);
-var clone = function(obj) {
-  var _f = function() {};
-  //这句是原型式继承最核心的地方，函数的原型对象为对象字面量
-  _f.prototype = obj;
-  return new _f();
-};
-//先声明一个对象字面量
-var Person = {
-  name: 'Darren',
-  getName: function() {
-    return this.name;
-  }
-};
+  $.fn.extend({
+    dropdown: function(option) {
+      return this.each(function() {
+        var $this = $(this),
+          dropdown = $this.data('dropdown'),
+          options = $.extend(
+            {},
+            Dropdown.DEFAULTS,
+            $(this).data(),
+            typeof option === 'object' && option
+          );
+        // 单例模式
+        if (!dropdown) {
+          $this.data('dropdown', (dropdown = new Dropdown($this, options)));
+        }
+
+        if (typeof dropdown[option] === 'function') {
+          dropdown[option]();
+        }
+      });
+    }
+  });
+})(jQuery);
