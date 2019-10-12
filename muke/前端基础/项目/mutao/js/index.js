@@ -26,3 +26,11 @@ $('.menu').on('dropdown-show', function(e) {
     });
   }
 });
+
+function loadOnce($elem, success){
+  var dataLoad = $elem.data('load')
+  if(!dataLoad) return;
+  if(!$elem.data('loaded')) {
+    $elem.data
+  }
+};
