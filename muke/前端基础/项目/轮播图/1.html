@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>carousel</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      ul,
+      li,
+      ol {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .container {
+        width: 422px;
+        height: 282px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        margin: 0 auto;
+        position: relative;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+      .container .screen {
+        width: 400px;
+        height: 260px;
+        position: relative;
+        overflow: hidden;
+      }
+      .container .screen ul {
+        font-size: 0;
+        width: 400%;
+        transition: all 0.35s ease-in-out;
+      }
+      .container .screen ul li {
+        display: inline-block;
+      }
+      .container .screen ol {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+      }
+      .container .screen ol li {
+        display: inline-block;
+        margin-right: 3px;
+        padding: 1px 6px;
+        border: 1px solid #ddd;
+        background: lightgrey;
+        cursor: pointer;
+      }
+      .container .screen ol li.active {
+        background: #db192a;
+        color: #ddd;
+      }
+      .container .arrow {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 15px;
+        /*display: flex;*/
+        justify-content: space-between;
+        display: none;
+      }
+      .container .arrow span {
+        font-size: 34px;
+        color: #ffffff;
+        padding: 0 5px;
+        background: rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="box">
+      <div class="screen">
+        <ul>
+          <li>
+            <img
+              src="http://cdn.impressivewebs.com/2011-11/greece001.jpg"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="http://cdn.impressivewebs.com/2011-11/greece002.jpg"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="http://cdn.impressivewebs.com/2011-11/greece003.jpg"
+              alt=""
+            />
+          </li>
+        </ul>
+        <ol>
+          <!--<li class="active">1</li>-->
+          <!--<li>2</li>-->
+        </ol>
+      </div>
+      <div class="arrow">
+        <span>&lt;</span>
+        <span>&gt;</span>
+      </div>
+    </div>
+
+    <script>
+      function Carousel(el) {
+        this.box = el;
+        this.screen = this.box.children[0];
+        this.width = this.screen.offsetWidth;
+        this.ulBox = this.screen.children[0];
+        this.list = this.ulBox.children;
+        this.olBox = this.screen.children[1];
+        this.arrowBox = this.box.children[1];
+        this.left = this.arrowBox.children[0];
+        this.right = this.arrowBox.children[1];
+        this.index = 0; // 指示器index
+        this.timeId = null; // 定时器id
+        this.activeCls = 'active';
+      }
+      // 初始化
+      Carousel.prototype.init = function() {
+        this.createNodes();
+        this.bindEvent();
+        this.timeId = setInterval(this.runHandle.bind(this), 2000);
+      };
+      // 动画
+      Carousel.prototype.animate = function() {
+        this.ulBox.style.transform =
+          'translateX(' + -this.index * this.width + 'px)';
+      };
+      // 创建节点
+      Carousel.prototype.createNodes = function() {
+        let self = this;
+        for (let i = 0; i < self.list.length; i++) {
+          let liObj = document.createElement('li');
+          liObj.innerText = i + 1;
+          self.olBox.appendChild(liObj);
+          liObj.onclick = function() {
+            self.index = this.innerText - 1;
+            self.animate();
+            self.switch_sel();
+          };
+        }
+        // 默认选中第一个，克隆第一张图片放到相框最后
+        self.olBox.children[0].className = self.activeCls;
+        self.ulBox.appendChild(self.ulBox.children[0].cloneNode(true));
+      };
+      // 轮播效果
+      Carousel.prototype.runHandle = function() {
+        let self = this;
+        if (self.index === self.list.length - 1) {
+          self.index = 0;
+          self.ulBox.style.transitionDuration = '0s';
+          self.animate();
+        }
+        setTimeout(function() {
+          self.index++;
+          self.ulBox.style.transitionDuration = '.35s';
+          self.animate();
+          if (self.index === self.list.length - 1) {
+            self.olBox.children[self.olBox.children.length - 1].removeAttribute(
+              'class'
+            );
+            self.olBox.children[0].className = self.activeCls;
+          } else {
+            self.switch_sel();
+          }
+        }, 20);
+      };
+      // 绑定事件
+      Carousel.prototype.bindEvent = function() {
+        let self = this;
+        self.right.onclick = function() {
+          self.runHandle();
+        };
+        self.left.onclick = function() {
+          if (self.index === 0) {
+            self.index = self.list.length - 1;
+            self.ulBox.style.transitionDuration = '0s';
+            self.animate();
+          }
+          setTimeout(function() {
+            self.index--;
+            self.ulBox.style.transitionDuration = '.35s';
+            self.animate();
+            self.switch_sel();
+          }, 20);
+        };
+        self.box.onmouseover = function() {
+          self.arrowBox.style.display = 'flex';
+          self.timeId && clearInterval(self.timeId);
+        };
+        self.box.onmouseout = function() {
+          self.arrowBox.style.display = 'none';
+          self.timeId = setInterval(self.runHandle.bind(self), 2000);
+        };
+      };
+      // 切换状态
+      Carousel.prototype.switch_sel = function() {
+        let self = this;
+        let list = self.olBox.children;
+        for (let i = 0; i < list.length; i++) {
+          list[i].removeAttribute('class');
+        }
+        list[self.index].className = self.activeCls;
+      };
+      
+      
+      let carousel = new Carousel(document.getElementById('box'));
+      carousel.init();
+    </script>
+  </body>
+</html>

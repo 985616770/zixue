@@ -50,14 +50,22 @@ body {
   height: var(--mainH);
   overflow: hidden;
   position: absolute;
+  left: 0;
   top: 0;
-  transition: all 2s ease-in-out;
+}
+.transition {
+  transition: all 0.2s ease-in-out;
 }
 .banner .banner-slide {
   float: left;
   width: var(--mainW);
   height: var(--mainH);
 }
+.banner a {
+  width: var(--mainW);
+  height: var(--mainH);
+}
+
 .tu1 {
   background-image: url(./img/cat.jpg);
 }
@@ -89,7 +97,7 @@ body {
 .prev {
   transform: rotate(180deg);
 }
-.button:hover{
+.button:hover {
   background-color: var(--color);
 }
 
@@ -209,4 +217,11 @@ body {
 }
 .hide {
   display: none;
+}
+
+.banner:after {
+  content: '';
+  display: block;
+  clear: both;
+  visibility: hidden;
 }
