@@ -48,7 +48,7 @@
   Search.DEFAULTS = {
     autocomplete: false,
     url:
-      'https://suggest.taobao.com/sug?code=utf-8&_ksTS=1484204931352_18291&callback=jsonp18292&k=1&area=c2c&bucketid=6&q=',
+      'https://suggest.taobao.com/sug?code=utf-8&_ksTS=1570928454867_1910&callback=jsonp1911&k=1&area=c2c&bucketid=19&q=',
     css3: false,
     js: false,
     animation: 'fade',
@@ -91,10 +91,11 @@
   Search.prototype.getData = function() {
     var self = this;
     var inputVal = this.getInputVal();
+    console.log(inputVal);
+
     // 没获得数据 触发事件
-    if ((inputVal = '')) {
-      return self.$elem.trigger('search-noData');
-    }
+    if (inputVal == '') return self.$elem.trigger('search-noData');
+
     // 从缓存中获取数据
     if (cache.readData(inputVal)) {
       return self.$elem.trigger('search-getData', [cache.readData(inputVal)]);
@@ -109,6 +110,8 @@
     })
       .done(function(data) {
         cache.addData(data);
+        console.log(data);
+        
         self.$elem.trigger('search-getData', [data]);
       })
       .fail(function() {
