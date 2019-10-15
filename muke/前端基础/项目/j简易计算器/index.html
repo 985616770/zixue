@@ -60,15 +60,7 @@
             operate(currentButton.title, wrapELe.prev.value, wrapELe.next.value)
           );
         });
-        // //  使用循环
-        // for (var i = 0; i < wrapELe.btns.length; i++) {
-        //   wrapELe.btns[i].onclick = function() {
-        //     updateSymbol(this.value);
-        //     outPainter(
-        //       operate(this.title, wrapELe.prev.value, wrapELe.next.value)
-        //     );
-        //   };
-        // }
+      
         // 更新符号
         function updateSymbol(symboll) {
           if (!symboll) symboll = '+';
@@ -82,6 +74,7 @@
 
         var operate = (function() {
           // 运算方法
+          // 难点 使用
           function operate(name) {
             if (!operation[name]) throw Error(`没有这个${name}属性`);
             return operation[name].apply(
