@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <video controls autoplay loop poster="../data/poster.jpg" muted id="video" width="400">
+      <source src="../data/imooc.ogv" />
+      <source src="../data/imooc.webm" />
+      <source src="../data/imooc.mp4" />
+    </video>
+    <div id="stopNode">暂停</div>
+    <script>
+    var video = document.getElementById('video')
+    console.dir(video);
+    stopNode.onclick = function () {
+      video.pause()
+    }
+    </script>
+  </body>
+</html>

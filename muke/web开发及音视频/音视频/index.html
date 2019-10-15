@@ -5,20 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .outerNode {
+        width: 540px;
+        height: 331px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -166px 0 0 -270px;
+        box-shadow: 0 0 4px 4px #5b606d;
+      }
+      .videoNode {
+        width: 100%;
+        height: 304px;
+        position: relative;
+        float: left;
+      }
+      .controlNode {
+        width: 100%;
+        height: 27px;
+        float: left;
+        background: url('../images/ctrs_bg.gif') repeat-x;
+      }
+    </style>
   </head>
   <body>
-    <video controls autoplay loop poster="../data/poster.jpg" muted id="video" width="400">
-      <source src="../data/imooc.ogv" />
-      <source src="../data/imooc.webm" />
-      <source src="../data/imooc.mp4" />
-    </video>
-    <div id="stopNode">暂停</div>
-    <script>
-    var video = document.getElementById('video')
-    console.dir(video);
-    stopNode.onclick = function () {
-      video.pause()
-    }
-    </script>
+    <div class="outerNode">
+      <video
+        src="../data/imooc.mp4"
+        class="videoNode"
+        poster="../data/poster.jpg"
+      ></video>
+      <div class="controlNode">
+        <div></div>
+      </div>
+    </div>
   </body>
 </html>
