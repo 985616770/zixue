@@ -1,0 +1,51 @@
+<!doctype html> 
+<html> 
+<head> 
+    <meta charset="utf-8"> 
+    <title></title> 
+    <link rel="stylesheet" type="text/css" href="video-js.min.css">
+    <script type="text/javascript" src='video.min.js'></script>
+</head>
+<body>
+	<video id='my-video' class='video-js vjs-big-play-centered' controls data-setup="{}" width="660" height='400' poster="./../data/poster.jpg">
+		<source src="./../data/imooc.mp4" >
+	</video>
+	<script type="text/javascript">
+		var myVideo = videojs('my-video');
+		//ready 已经可以播放了 类似于canplay
+		videojs('my-video').ready(function(){
+			//console.log(1);
+			//this.play();
+			//currentTime 获取播放进度的时间
+			console.log(myVideo.currentTime());
+		});
+
+
+		onclick = function(){
+			console.log(myVideo.currentTime())
+			//videojs('my-video').play();
+		};
+
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

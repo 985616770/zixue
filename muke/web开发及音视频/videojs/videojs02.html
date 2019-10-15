@@ -1,0 +1,97 @@
+<!doctype html> 
+<html> 
+<head> 
+    <meta charset="utf-8"> 
+    <title></title> 
+    <link rel="stylesheet" type="text/css" href="video-js.min.css">
+    <script type="text/javascript" src='video.min.js'></script>
+</head>
+<body>
+	<video id='my-video' class='video-js vjs-big-play-centered' controls data-setup="{}" width="660" height='400' poster="./../data/poster.jpg">
+		<source src="./../data/imooc.mp4" >
+	</video>
+	<script type="text/javascript">
+		var myVideo = videojs('my-video');
+		//ready 已经可以播放了 类似于canplay
+		//设置时间
+		myVideo.currentTime(100);
+		//设置声音
+		myVideo.volume(0.5);
+		//设置宽度
+		myVideo.width(860);
+		//设置高度
+		myVideo.height(500);
+		videojs('my-video').ready(function(){
+			//console.log(1);
+			//this.play();
+			//currentTime 获取播放进度的时间
+			console.log(myVideo.currentTime());
+			//返回下载了多少
+			console.log(myVideo.buffered())
+			//声音
+			console.log(myVideo.volume());
+
+			//获取视频宽度
+			console.log(myVideo.width());
+			//获取视频的高度
+			console.log(myVideo.height());
+		});
+
+/*
+		myVideo.on('ended',function(){
+			console.log(1111);
+		});
+*/
+		myVideo.on('pause',function(){
+			console.log('点击了暂停 ')
+		});
+
+		myVideo.on('play',function(){
+			console.log('点击了播放');
+		});
+
+		myVideo.on('volumechange',function(){
+			console.log('声音发生改变时')
+		});
+
+		myVideo.on('timeupdate',function(){
+			console.log('视频正在播放中');
+		});
+
+		myVideo.on('seeking',function(){
+			console.log('视频进度的位置改变');
+		});
+
+		//console.log(myVideo);
+		/*
+		onclick = function(){
+			console.log(myVideo.currentTime());
+			console.log(myVideo.duration());
+
+			//videojs('my-video').play();
+		};
+		*/
+
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
