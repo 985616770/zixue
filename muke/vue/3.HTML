@@ -8,18 +8,59 @@
   </head>
   <body>
     <div id="app">{{ a }}--{{ b }}</div>
+    <div id="app8">
+      <p>Using mustaches: {{ rawHtml }}</p>
+      <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+      <button v-bind:disabled="isButtonDisabled">Button</button>
+      {{ number + 1 }}
+      <a :href="url">...</a>
+      <a @click="doSomething">...</a>
+      <p>Original message: "{{ message }}"</p>
+      <p>Computed reversed message: "{{ reversedMessage }}"</p>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
-      var data = {
-        a: 1
+      var elm = {
+        a: 1,
+        b: null
       };
+      // Object.freeze(elm)
       var vm = new Vue({
         el: '#app',
-        data: data
+        data: elm
       });
       vm.a = 2;
-      data.a = 3,
-      vm.b =2;
+      console.log(vm.$data === elm);
+      vm.$watch('a', function(newValue, oldValue) {
+        // 这个回调将在 `vm.a` 改变后调用
+        console.log('1');
+      });
+
+      var app8 = new Vue({
+        el: '#app8',
+        data: {
+          rawHtml: '<span style="color:red">123</span>',
+          isButtonDisabled: null,
+          number: 2,
+          url: 'https://baidu.com',
+          message: 'hello,vuejs'
+        },
+        methods: {
+          doSomething() {
+            alert(123);
+          }
+        },
+        computed: {
+          // 计算属性的 getter
+          reversedMessage: function() {
+            // `this` 指向 vm 实例
+            return this.message
+              .split('')
+              .reverse()
+              .join('');
+          }
+        }
+      });
     </script>
   </body>
 </html>
