@@ -30,7 +30,7 @@
         width: 540px;
         height: 27px;
         float: left;
-        background: url(../images/ctrs_bg.gif) repeat-x;
+        background: url(./images/ctrs_bg.gif) repeat-x;
       }
 
       .outerNode .controlsNode .playNode {
@@ -38,7 +38,7 @@
         width: 15px;
         height: 17px;
         margin: 6px 0 0 14px;
-        background: url(../images/playNode.png) no-repeat;
+        background: url(./images/playNode.png) no-repeat;
         cursor: pointer;
       }
       .outerNode .controlsNode .pauseNode {
@@ -46,7 +46,7 @@
         width: 15px;
         height: 17px;
         margin: 6px 0 0 14px;
-        background: url(../images/pause.png) no-repeat;
+        background: url(./images/pause.png) no-repeat;
         cursor: pointer;
       }
 
@@ -55,7 +55,7 @@
         height: 10px;
         margin: 9px 0 0 14px;
         float: left;
-        background: url(../images/load_bg.png) repeat-x;
+        background: url(./images/load_bg.png) repeat-x;
         position: relative;
       }
       .outerNode .controlsNode .loadNode .lineNode {
@@ -64,7 +64,7 @@
         position: absolute;
         left: 0;
         top: 1px;
-        background: url(../images/line_bg.png) repeat-x;
+        background: url(./images/line_bg.png) repeat-x;
       }
       .outerNode .controlsNode .loadNode .lineNode .lineRight {
         width: 2px;
@@ -72,7 +72,7 @@
         position: absolute;
         right: 0;
         top: 0;
-        background: url(../images/line_r_bg.png) no-repeat;
+        background: url(./images/line_r_bg.png) no-repeat;
       }
 
       .outerNode .controlsNode .loadNode .loadLeft {
@@ -81,7 +81,7 @@
         position: absolute;
         left: 0;
         top: 0;
-        background: url(../images/left_bg.png) no-repeat;
+        background: url(./images/left_bg.png) no-repeat;
         z-index: 4;
       }
       .outerNode .controlsNode .loadNode .loadRight {
@@ -90,12 +90,12 @@
         position: absolute;
         right: 0;
         top: 0;
-        background: url(../images/right_bg.png) no-repeat;
+        background: url(./images/right_bg.png) no-repeat;
       }
       .outerNode .controlsNode .loadNode .crlNode {
         width: 17px;
         height: 17px;
-        background: url(../images/crl_bg.png);
+        background: url(./images/crl_bg.png);
         position: absolute;
         left: -8.5px;
         top: -3.5px;
@@ -124,14 +124,14 @@
         height: 16px;
         float: left;
         margin: 5px 0 0 6px;
-        background: url(../images/volume_bg.png);
+        background: url(./images/volume_bg.png);
       }
       .outerNode .controlsNode .volumeLine {
         height: 8px;
         width: 61px;
         float: left;
         margin: 10px 0 0 4px;
-        background: url(../images/volumeLine_bg.png) repeat-x;
+        background: url(./images/volumeLine_bg.png) repeat-x;
         position: relative;
       }
       .outerNode .controlsNode .volumeLine .v_left {
@@ -140,7 +140,7 @@
         position: absolute;
         left: 0;
         top: 0;
-        background: url(../images/v_left.png) no-repeat;
+        background: url(./images/v_left.png) no-repeat;
       }
       .outerNode .controlsNode .volumeLine .v_right {
         width: 3px;
@@ -148,7 +148,7 @@
         position: absolute;
         right: 0;
         top: 0;
-        background: url(../images/v_right.png) no-repeat;
+        background: url(./images/v_right.png) no-repeat;
       }
       .outerNode .controlsNode .volumeLine .v_DragNode {
         width: 15px;
@@ -156,7 +156,7 @@
         position: absolute;
         left: 58.5px;
         top: -3.5px;
-        background: url(../images/vo_d.png) no-repeat;
+        background: url(./images/vo_d.png) no-repeat;
         cursor: pointer;
       }
       .outerNode .controlsNode .fullNode {
@@ -164,27 +164,25 @@
         height: 17px;
         float: left;
         margin: 6px 0 0 35px;
-        background: url(../images/full_bg.png) no-repeat;
+        background: url(./images/full_bg.png) no-repeat;
         cursor: pointer;
         transition: 0.7s;
       }
       .outerNode .controlsNode .fullNode:hover {
-        background: url(../images/full_hover_bg.png) no-repeat;
+        background: url(./images/full_hover_bg.png) no-repeat;
       }
     </style>
   </head>
   <body>
-
     <!-- 基于h5的视频api -->
 
-    
     <!-- 最外层的元素 -->
     <div class="outerNode">
       <!-- video元素 -->
       <video
         class="videoNode"
-        src="../data/imooc.mp4"
-        poster="../data/poster.jpg"
+        src="./data/imooc.mp4"
+        poster="./data/poster.jpg"
       ></video>
       <!-- 控制器的元素 -->
       <div class="controlsNode">

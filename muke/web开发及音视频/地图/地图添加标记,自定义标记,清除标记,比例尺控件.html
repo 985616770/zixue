@@ -7,7 +7,7 @@
     <title>Document</title>
     <script
       type="text/javascript"
-      src="https://webapi.amap.com/maps?v=1.4.15&key=f758f8e90a38bcb7b8be511bd5325934&plugin=AMap.Autocomplete,AMap.PlaceSearch"
+      src="https://webapi.amap.com/maps?v=1.4.15&key=f758f8e90a38bcb7b8be511bd5325934&plugin=AMap.Scale,AMap.ToolBar"
     ></script>
     <style>
       * {
@@ -60,36 +60,8 @@
         zoom: 12, //初始的地图级别
         center: [116.379391, 39.861536] //初始化地图的中心点
       });
-      var searchNode = new AMap.Autocomplete({
-        input: 'searchIpt'
-      });
-      var placeSearch = new AMap.PlaceSearch({
-        map: map
-      });
-
-      AMap.event.addListener(searchNode, 'select', function(e) {
-        console.log(e);
-
-        placeSearch.search(e.poi.name);
-        var marker = new AMap.Marker({
-          icon:
-            'https://a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-default.png', //标记的图标
-          position: [116.379391, 39.861536], //标记的坐标
-          offset: new AMap.Pixel(-25, -25) // 像素的偏差值
-        });
-        marker.setMap(map);
-      });
-      map.on('click', function(e) {
-        //  console.log(e.lnglat)
-        var marker = new AMap.Marker({
-          icon:
-            'https://a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-default.png', //标记的图标
-          position: [e.lnglat.lng, e.lnglat.lat], //标记的坐标
-          // offset: new AMap.Pixel(-25, -25) // 像素的偏差值
-        });
-
-        marker.setMap(map);
-      });
+      map.addControl(new AMap.Scale());
+      map.addControl(new AMap.ToolBar());
     </script>
   </body>
 </html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script
+      type="text/javascript"
+      src="https://webapi.amap.com/maps?v=1.4.15&key=f758f8e90a38bcb7b8be511bd5325934&plugin=AMap.MapType,AMap.Autocomplete,AMap.OverView,AMap.ToolBar,AMap.Scale"
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      #container {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      #searchNode {
+        width: 280px;
+        height: 30px;
+        background: white;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+      }
+      #panel {
+        position: fixed;
+        left: 50%;
+        top: 20px;
+        margin-left: -100px;
+        width: 200px;
+        height: 100px;
+        z-index: 9999;
+        background: white;
+        box-shadow: 0 0 10px #0006;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <div id="panel">
+      <button id="btnShow">绑定</button>
+      <button id="btnHide">解绑</button>
+    </div>
+
+    <script>
+      var map = new AMap.Map('container', {
+        zoom: 12, //初始的地图级别
+        center: [116.379391, 39.861536], //初始化地图的中心点
+        resizeEnable: true // 浏览大小改变必备
+      });
+      var circle = new AMap.Circle({
+        center: [116.379391, 39.861536],
+        radius: 1000
+      });
+      var text = new AMap.Text({
+        text: '覆盖物事件',
+        position: [116.379391, 39.861536]
+      });
+
+      var context = new AMap.ContextMenu();
+
+      // 右键的地方添加
+      map.on('rightclick', function(e) {
+        context.open(map, e.lnglat);
+      });
+      // 添加项目
+      context.addItem('放大一级', function() {
+        map.zoomIn();
+      });
+      context.addItem('缩小一级', function() {
+        map.zoomOut();
+      });
+      // 渲染地图,添加
+      map.add([circle, text]);
+
+      btnShow.onclick = function() {
+        circle.show();
+        text.show();
+        context.show();
+      };
+
+      btnHide.onclick = function() {
+        circle.hide();
+        text.hide();
+        context.hide();
+      };
+
+      circle.on('mouseover', function() {
+        console.log('移入');
+      });
+      circle.on('mouseout', function() {
+        console.log('移出');
+      });
+      circle.on('mousemove', function() {
+        console.log('移动');
+      });
+    </script>
+  </body>
+</html>
