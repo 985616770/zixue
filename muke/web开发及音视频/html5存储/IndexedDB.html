@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var request = indexedDB.open('zpTest', 3);
+      request.onsuccess = function() {
+        console.log('创建成功');
+      };
+      request.onerror = function() {
+        console.log('创建失败');
+      };
+      request.onupgradeneeded = function() {
+        var db = request.result;
+        db.createObjectStore('test1', { keyPath: 'id' });
+        console.log('版本升级了');
+      };
+      var json = [
+        { id: '1006', name: 'zz', age: 18 },
+        { id: '1003', name: 'zq', age: 19 },
+        { id: '1004', name: 'zs', age: 20 }
+      ];
+
+      setTimeout(function() {
+        var db = request.result;
+        var transaction = db.transaction('test1', 'readwrite');
+        var store = transaction.objectStore('test1');
+        console.log(db);
+        console.log(transaction);
+        console.log(store);
+
+        // 清除所有的数据
+        // store.clear();
+
+        // delete 进行删除
+        // store.delete('1009')
+
+        // put 进行修改
+        // store.put({ id: '1009', name: 'ww', age: 22 });
+
+        // 循环添加
+        // for (let i = 0; i < json.length; i++) {
+        //   store.add(json[i]);
+        // }
+
+        // 查询数据库 获取数据
+        var node = store.getAll();
+        console.log(node);
+
+        // 成功后的回调函数
+        // node.onsuccess = function() {
+        //   for (let i = 0; i < node.result.length; i++) {
+        //     const ele = node.result[i];
+        //     console.log(`名字是${ele.name},
+        //                  年龄是${ele.age},
+        //                  id是${ele.id}`);
+        //   }
+        // };
+      }, 200);
+    </script>
+  </body>
+</html>
