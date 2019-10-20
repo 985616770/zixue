@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script
+      type="text/javascript"
+      src="https://webapi.amap.com/maps?v=1.4.15&key=f758f8e90a38bcb7b8be511bd5325934&plugin=AMap.Autocomplete,AMap.PlaceSearch"
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      #container {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      #setZoomNode,
+      #setCenterNode {
+        width: 280px;
+        position: absolute;
+        z-index: 99;
+        right: 20px;
+        top: 50px;
+        border: 1px solid black;
+        box-shadow: 0 0 5px black;
+        background: white;
+      }
+      #setCenterNode {
+        top: 50px;
+      }
+      #node li {
+        cursor: pointer;
+      }
+      #searchNode {
+        width: 280px;
+        height: 30px;
+        background: white;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <div id="searchNode">
+      <input type="" name="" id="searchIpt" />
+    </div>
+
+    <script>
+      var map = new AMap.Map('container', {
+        zoom: 12, //初始的地图级别
+        center: [116.379391, 39.861536] //初始化地图的中心点
+      });
+      var searchNode = new AMap.Autocomplete({
+        input: 'searchIpt'
+      });
+      var placeSearch = new AMap.PlaceSearch({
+        map: map
+      });
+
+      AMap.event.addListener(searchNode, 'select', function(e) {
+        console.log(e);
+
+        placeSearch.search(e.poi.name);
+      });
+    </script>
+  </body>
+</html>

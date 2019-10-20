@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <!-- <script>
+    window.init = function () {
+      new AMap.Map('container')
+    }
+    </script> -->
+    <script
+      type="text/javascript"
+      src="https://webapi.amap.com/maps?v=1.4.15&key=f758f8e90a38bcb7b8be511bd5325934"
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #container {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .node {
+        position: absolute;
+        right: 100px;
+        top: 100px;
+        width: 400px;
+        height: 200px;
+        box-shadow: 0 0 10px 0 #0004;
+        background: #fff;
+      }
+      #btn {
+        width: 50px;
+        height: 30px;
+        background-color: #00e5;
+        color: #fff;
+      }
+      input {
+        width: 30px;
+        height: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <div class="node">
+      <div class="info">
+        级别:<span id="zoom"></span> <br />位置:<span id="center"></span><br />
+        行政区:<span id="city"></span>
+        <br />
+        级别:<input type="text" id="setZoom" />
+        <br />
+        中心点:<input type="text" id="setCenterX" />,<input
+          type="text"
+          id="setCenterY"
+        />
+        <br />
+        城市:<input type="text" id="setCity" />
+        <br />
+        <button id="btn">确定</button>
+      </div>
+    </div>
+    <script>
+      var map = new AMap.Map('container', {
+        zoom: 11, // 初始的地图级别
+        center: [121, 30] // 初始化地图的中心点
+      });
+      map.getCity(function(info) {
+        console.dir(info);
+        city.innerHTML = `${info.province},${info.city},${info.district}`;
+      });
+      zoom.innerHTML = map.getZoom();
+      center.innerHTML = map.getCenter();
+      btn.onclick = function() {
+        var zoomValue = setZoom.value || map.getZoom();
+        // var centerValue = getCenterX.value || map.Zoom()
+        map.setZoom(setZoom.value);
+        if (!setCenterX.value) {
+          map.setCity(setCity.value);
+        } else {
+          map.setCenter([+setCenterX.value, +setCenterY.value]);
+        }
+        //
+      };
+
+      map.on('mapmove', function() {
+        zoom.innerHTML = map.getZoom();
+        center.innerHTML = map.getCenter();
+        map.getCity(function(info) {
+          city.innerHTML = `${info.province},${info.city},${info.district}`;
+        });
+      });
+    </script>
+  </body>
+</html>

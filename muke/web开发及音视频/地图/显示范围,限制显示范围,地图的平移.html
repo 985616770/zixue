@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script
+      type="text/javascript"
+      src="https://webapi.amap.com/maps?v=1.4.15&key=f758f8e90a38bcb7b8be511bd5325934"
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      #container {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .node {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 200px;
+        height: 300px;
+        background-color: #fff;
+        box-shadow: 0 0 10px #0006;
+        z-index: 9999;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="node">
+        右上角坐标:
+        <span id="ne"></span><br />
+        左下角坐标:
+        <span id="sw"></span><br />
+        限制显示范围:X:<input type="text" id="nodeX" /> Y:<input
+          type="text"
+          id="nodeY"
+        />
+        <input type="button" value="限制" id="add" />
+        <input type="button" value="取消限制" id="remove" />
+      </div>
+    </div>
+    <script>
+      var map = new AMap.Map('container', {
+        zoom: 10,
+        center: [121, 30]
+      });
+      var bounds = map.getBounds();
+      map.on('mapmove', function(e) {
+        var bounds = map.getBounds();
+        ne.innerHTML = bounds.northeast;
+        sw.innerHTML = bounds.southwest;
+      });
+      add.onclick = function() {
+        // 跳转到
+        //   map.setBounds(
+        //     new AMap.Bounds([+nodeX.value, +nodeY.value], [bounds.southwest.lng,bounds.southwest.lat])
+        //   );
+        map.setLimitBounds(
+          new AMap.Bounds(
+            [+nodeX.value, +nodeY.value],
+            [bounds.southwest.lng, bounds.southwest.lat]
+          )
+        );
+      };
+      remove.onclick = function() {
+        map.clearLimitBounds();
+      };
+      console.log(map.getBounds());
+    </script>
+  </body>
+</html>

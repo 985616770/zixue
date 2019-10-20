@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .outerNode {
+        width: 540px;
+        height: 332px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -166px 0 0 -270px;
+        box-shadow: 0 0 4px #5b606d;
+      }
+      .outerNode .videoNode {
+        width: 540px;
+        height: 305px;
+        float: left;
+        background: black;
+      }
+      .outerNode .controlsNode {
+        width: 540px;
+        height: 27px;
+        float: left;
+        background: url(../images/ctrs_bg.gif) repeat-x;
+      }
+
+      .outerNode .controlsNode .playNode {
+        float: left;
+        width: 15px;
+        height: 17px;
+        margin: 6px 0 0 14px;
+        background: url(../images/playNode.png) no-repeat;
+        cursor: pointer;
+      }
+      .outerNode .controlsNode .pauseNode {
+        float: left;
+        width: 15px;
+        height: 17px;
+        margin: 6px 0 0 14px;
+        background: url(../images/pause.png) no-repeat;
+        cursor: pointer;
+      }
+
+      .outerNode .controlsNode .loadNode {
+        width: 267px;
+        height: 10px;
+        margin: 9px 0 0 14px;
+        float: left;
+        background: url(../images/load_bg.png) repeat-x;
+        position: relative;
+      }
+      .outerNode .controlsNode .loadNode .lineNode {
+        width: 0%;
+        height: 7px;
+        position: absolute;
+        left: 0;
+        top: 1px;
+        background: url(../images/line_bg.png) repeat-x;
+      }
+      .outerNode .controlsNode .loadNode .lineNode .lineRight {
+        width: 2px;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: url(../images/line_r_bg.png) no-repeat;
+      }
+
+      .outerNode .controlsNode .loadNode .loadLeft {
+        height: 100%;
+        width: 3px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: url(../images/left_bg.png) no-repeat;
+        z-index: 4;
+      }
+      .outerNode .controlsNode .loadNode .loadRight {
+        height: 100%;
+        width: 3px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: url(../images/right_bg.png) no-repeat;
+      }
+      .outerNode .controlsNode .loadNode .crlNode {
+        width: 17px;
+        height: 17px;
+        background: url(../images/crl_bg.png);
+        position: absolute;
+        left: -8.5px;
+        top: -3.5px;
+        cursor: pointer;
+        z-index: 5;
+      }
+
+      .outerNode .controlsNode .timeNode {
+        float: left;
+        width: 75px;
+        height: 10px;
+        margin: 9px 0 0 9px;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .outerNode .controlsNode .timeNode span {
+        font-size: 10px;
+        float: left;
+        line-height: 10px;
+        color: white;
+      }
+      .outerNode .controlsNode .volumeNode {
+        width: 17px;
+        height: 16px;
+        float: left;
+        margin: 5px 0 0 6px;
+        background: url(../images/volume_bg.png);
+      }
+      .outerNode .controlsNode .volumeLine {
+        height: 8px;
+        width: 61px;
+        float: left;
+        margin: 10px 0 0 4px;
+        background: url(../images/volumeLine_bg.png) repeat-x;
+        position: relative;
+      }
+      .outerNode .controlsNode .volumeLine .v_left {
+        width: 3px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: url(../images/v_left.png) no-repeat;
+      }
+      .outerNode .controlsNode .volumeLine .v_right {
+        width: 3px;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: url(../images/v_right.png) no-repeat;
+      }
+      .outerNode .controlsNode .volumeLine .v_DragNode {
+        width: 15px;
+        height: 13px;
+        position: absolute;
+        left: 58.5px;
+        top: -3.5px;
+        background: url(../images/vo_d.png) no-repeat;
+        cursor: pointer;
+      }
+      .outerNode .controlsNode .fullNode {
+        width: 15px;
+        height: 17px;
+        float: left;
+        margin: 6px 0 0 35px;
+        background: url(../images/full_bg.png) no-repeat;
+        cursor: pointer;
+        transition: 0.7s;
+      }
+      .outerNode .controlsNode .fullNode:hover {
+        background: url(../images/full_hover_bg.png) no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- 基于h5的视频api -->
+
+    
+    <!-- 最外层的元素 -->
+    <div class="outerNode">
+      <!-- video元素 -->
+      <video
+        class="videoNode"
+        src="../data/imooc.mp4"
+        poster="../data/poster.jpg"
+      ></video>
+      <!-- 控制器的元素 -->
+      <div class="controlsNode">
+        <!-- 控制播放暂停的按钮 -->
+        <div class="playNode"></div>
+        <!-- video的进度条 -->
+        <div class="loadNode">
+          <div class="loadLeft"></div>
+          <div class="loadRight"></div>
+          <!-- 拖动进度条的按钮 -->
+          <div class="crlNode"></div>
+          <!-- 真正的进度条 -->
+          <div class="lineNode">
+            <div class="lineRight"></div>
+          </div>
+        </div>
+        <!-- 时间的元素 -->
+        <div class="timeNode">
+          <span class="now">00:00</span>
+          <span> - </span>
+          <span class="all">4:30</span>
+        </div>
+        <!-- 声音的标志 -->
+        <div class="volumeNode"></div>
+        <!-- 声音的条 -->
+        <div class="volumeLine">
+          <div class="v_left"></div>
+          <div class="v_right"></div>
+          <div class="v_DragNode"></div>
+        </div>
+        <!-- 全屏的按钮 -->
+        <div class="fullNode"></div>
+      </div>
+    </div>
+    <script>
+      var playButton = document.querySelector('.playNode'),
+        video = document.querySelector('.videoNode'),
+        fullScreen = document.querySelector('.fullNode'),
+        allTime = document.querySelector('.all'),
+        nowTime = document.querySelector('.now'),
+        lineNode = document.querySelector('.lineNode'),
+        crlNode = document.querySelector('.crlNode'),
+        loadNode = document.querySelector('.loadNode'),
+        v_DragNode = document.querySelector('.v_DragNode'),
+        volumeLine = document.querySelector('.volumeLine'),
+        volumeNode = document.querySelector('.volumeNode'),
+        playActive = false;
+
+      // 播放暂停按钮
+      playButton.onclick = function() {
+        this.classList.toggle('pauseNode');
+        playActive = !playActive;
+        playActive === true ? video.play() : video.pause();
+      };
+
+      fullScreen.onclick = function() {
+        if (video.mozRequestFullscreen) {
+          video.mozRequestFullscreen();
+        } else if (video.webkitRequestFullscreen) {
+          video.webkitRequestFullscreen();
+        } else {
+          video.requestFullscreen();
+        }
+      };
+
+      video.addEventListener('canplay', function() {
+        var timeHtml = formatTime(video.duration);
+        allTime.innerHTML = timeHtml;
+      });
+      video.addEventListener('timeupdate', function() {
+        lineNode.style.width = `${(video.currentTime / video.duration) * 100}%`;
+        crlNode.style.left = `${(video.currentTime / video.duration) * 100 -
+          1}%`;
+        var timeHtml = formatTime(video.currentTime);
+        nowTime.innerHTML = timeHtml;
+      });
+
+      crlNode.onmousedown = function(e) {
+        var ev = e || window.event;
+        var l = ev.clientX - this.offsetLeft;
+        video.pause();
+        playActive = false;
+        playButton.className = 'pauseNode';
+        document.onmousemove = function(e) {
+          var ev = e || event;
+          var needX = ev.clientX - l;
+          var maxX = loadNode.offsetWidth - 8.5;
+          needX = needX < -8.5 ? -8.5 : needX;
+          needX = needX > maxX ? maxX : needX;
+          crlNode.style.left = needX + 'px';
+          lineNode.style.width =
+            ((crlNode.offsetLeft + 9) / loadNode.offsetWidth) * 100 + '%';
+        };
+        document.onmouseup = function() {
+          document.onmousemove = document.onmouseup = null;
+          // 总时间* (拖拽按钮的偏移量 / 容器的总宽度) = 当前的时间
+          video.currentTime =
+            video.duration * ((crlNode.offsetLeft + 9) / loadNode.offsetWidth);
+          console.log(video.currentTime);
+          playActive = true;
+          playButton.className = 'playNode';
+          video.play();
+        };
+        return false;
+      };
+      v_DragNode.onmousedown = function(e) {
+        var ev = e || window.event;
+        var l = ev.clientX - this.offsetLeft;
+        document.onmousemove = function(e) {
+          var ev = e || event;
+          var needX = ev.clientX - l;
+          var maxX = volumeLine.offsetWidth - 2.5;
+
+          needX = needX < 0 ? 0 : needX;
+          needX = needX > maxX ? maxX : needX;
+          v_DragNode.style.left = needX + 'px';
+          var lastTime = (v_DragNode.offsetLeft + 2) / volumeLine.offsetWidth;
+          video.volume = lastTime < 0 ? 0 : lastTime;
+          console.log(v_DragNode.offsetLeft + 2);
+          console.log(volumeLine.offsetWidth);
+          console.log(video.volume);
+        };
+        document.onmouseup = function() {
+          document.onmousemove = document.onmouseup = null;
+        };
+        return false;
+      };
+
+      // 格式化时间
+      function formatTime(duration) {
+        var needTime = parseInt(duration);
+        var s = needTime % 60;
+        var m = parseInt(needTime / 60);
+        var h = parseInt(needTime / 60 / 60);
+        if (h === 0) {
+          var timeNum = `${todo(m)}:${todo(s)}`;
+          return timeNum;
+        }
+        var timeNum = `${h}:${todo(m)}:${todo(s)}`;
+        function todo(num) {
+          return num < 10 ? `0${num}` : num;
+        }
+
+        return timeNum;
+      }
+    </script>
+  </body>
+</html>

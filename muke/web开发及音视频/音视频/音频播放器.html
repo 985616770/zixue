@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .outerNode {
+        width: 503px;
+        height: 404px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid #7e7670;
+        box-shadow: 0 0 16px 0 #c8c7c8;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .innerNode {
+        width: 501px;
+        height: 402px;
+        border-top: 2px solid #e2d3bb;
+        border-left: 1px solid #ceccbf;
+        border-bottom: 1px solid #837a73;
+        border-bottom: 1px solid #ceccbf;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .bannerNode {
+        width: 100%;
+        height: 203px;
+        border-bottom: 1px solid #787463;
+        background-image: url('.././music/pic/fmt02.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+      }
+
+      .lineNode {
+        width: 100%;
+        height: 46px;
+        border-top: 1px solid #f9f7ee;
+        background: url('../musicimage/linebg.jpg');
+      }
+
+      .line {
+        float: left;
+        width: 439px;
+        height: 18px;
+        margin: 14px 0 0 29px;
+        background: url('.././musicimage/progressbg.jpg');
+        position: relative;
+      }
+      .line::after,
+      .line::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        display: block;
+        width: 7px;
+        height: 18px;
+      }
+      .line::after {
+        right: 0;
+        background: url('../musicimage/rightNode.jpg') no-repeat center;
+        background-size: cover;
+      }
+      .line::before {
+        left: 0;
+        background: url('../musicimage/leftNode.jpg');
+      }
+
+      .lineTime {
+        width: 0px;
+        height: 16px;
+        background: url('../musicimage/green_bg.png') repeat-x center;
+        position: relative;
+        margin-left: 8px;
+      }
+      .lineTime::after,
+      .lineTime::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        display: block;
+        width: 7px;
+        height: 16px;
+      }
+
+      .lineTime::before {
+        left: -7px;
+        background: url('../musicimage/greenLeft.png');
+        z-index: 2;
+      }
+      .lineTime::after {
+        right: -7px;
+        background: url('../musicimage/greenRight.png');
+        z-index: 2;
+      }
+      .playNode {
+        position: relative;
+        width: 100%;
+        height: 153px;
+        background: url('../musicimage/bottomBg.jpg') repeat-x;
+        border-top: 2px solid #a29d8a;
+      }
+      .playLeft {
+        cursor: pointer;
+        position: absolute;
+        background: url('../musicimage/lastBg.png') center no-repeat;
+        left: 126px;
+        top: 44px;
+        height: 13px;
+        width: 68px;
+        height: 68px;
+      }
+      .play_play_pause {
+        cursor: pointer;
+        position: absolute;
+        background: url('../musicimage/playNode.png') center no-repeat;
+        left: 202px;
+        top: 34px;
+        width: 89px;
+        height: 89px;
+      }
+      .playRight {
+        cursor: pointer;
+        position: absolute;
+        background: url('../musicimage/rightBg.png') center no-repeat;
+        right: 123px;
+        top: 44px;
+        width: 68px;
+        height: 68px;
+      }
+      .playVolume {
+        cursor: pointer;
+        position: absolute;
+        background: url('../musicimage/volume.png') center no-repeat;
+        right: 46px;
+        top: 60px;
+        width: 40px;
+        height: 40px;
+      }
+      .no_Volume {
+        background: url('../musicimage/no_volume.png') center no-repeat;
+      }
+      .musicName {
+        position: absolute;
+        bottom: 40px;
+        width: 100%;
+        left: 20px;
+        font-size: 20px;
+        color: #fff;
+      }
+      .transition {
+        transition: all 0.5s ease-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outerNode">
+      <div class="innerNode">
+        <div class="bannerNode transition">
+          <div class="musicName">123</div>
+        </div>
+        <div class="lineNode transition">
+          <div class="line">
+            <div class="lineTime"></div>
+          </div>
+        </div>
+        <div class="playNode">
+          <div class="playLeft"></div>
+          <div class="play_play_pause"></div>
+          <div class="playRight"></div>
+          <div class="playVolume transition"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var data = [
+        {
+          MusicSrc: '../music/mus/AcousticGuitar1.mp3',
+          MusicPic: '../music/pic/fmt01.jpg',
+          MusicName: 'AcousticGuitar1'
+        },
+        {
+          MusicSrc: '../music/mus/AmazingGrace.mp3',
+          MusicPic: '../music/pic/fmt02.png',
+          MusicName: 'AmazingGrace'
+        },
+        {
+          MusicSrc: '../music/mus/FeelsGood2B.mp3',
+          MusicPic: '../music/pic/fmt03.jpg',
+          MusicName: 'FeelsGood2B'
+        },
+        {
+          MusicSrc: '../music/mus/FunBusyIntro.mp3',
+          MusicPic: '../music/pic/fmt04.jpg',
+          MusicName: 'FunBusyIntro'
+        },
+        {
+          MusicSrc: '../music/mus/GreenDaze.mp3',
+          MusicPic: '../music/pic/fmt05.jpg',
+          MusicName: 'GreenDaze'
+        },
+        {
+          MusicSrc: '../music/mus/Limosine.mp3',
+          MusicPic: '../music/pic/fmt06.jpg',
+          MusicName: 'Limosine'
+        }
+      ];
+
+      var playNode = document.querySelector('.play_play_pause'),
+        outerNode = document.querySelector('.outerNode'),
+        playPrevious = document.querySelector('.playLeft'),
+        playNext = document.querySelector('.playRight'),
+        volumeButton = document.querySelector('.playVolume'),
+        lineNode = document.querySelector('.line'),
+        lineTime = document.querySelector('.lineTime'),
+        bannerNode = document.querySelector('.bannerNode'),
+        musicName = document.querySelector('.musicName');
+      var active = false,
+        index = 0;
+      function init() {
+        var audio = new Audio();
+        audio.src = data[0].MusicSrc;
+        musicName.innerHTML = data[0].MusicName;
+        return audio;
+      }
+      var audio = init();
+      console.log(bannerNode);
+
+      playNode.onclick = function() {
+        active = !active;
+        active === true ? audio.play() : audio.pause();
+      };
+      volumeButton.onclick = function() {
+        this.classList.toggle('no_Volume');
+        audio.volume = audio.volume !== 0 ? 0 : 1;
+      };
+      audio.addEventListener('timeupdate', function() {
+        lineTime.style.width = (audio.currentTime / audio.duration) * 100 + '%';
+      });
+
+      lineNode.onclick = function(e) {
+        var e = e || event;
+        // console.log(outerNode.offsetLeft - 252);
+        var left = e.clientX - lineNode.offsetLeft - outerNode.offsetLeft + 252;
+        lineTime.style.width = (left / this.offsetWidth) * 100 + '%';
+        audio.currentTime = (left / this.offsetWidth) * audio.duration;
+        active === true ? audio.play() : audio.pause();
+      };
+
+      playPrevious.onclick = function() {
+        index--;
+        toggleMusic();
+      };
+      playNext.onclick = function() {
+        index++;
+        toggleMusic();
+      };
+      function toggleMusic() {
+        index = index < 0 ? data.length - 1 : index;
+        index = index > data.length - 1 ? 0 : index;
+        audio.src = data[index].MusicSrc;
+        audio.currentTime = 0;
+        musicName.innerHTML = data[index].MusicName;
+        bannerNode.style.backgroundImage = `url(${data[index].MusicPic})`;
+        audio.play();
+        console.log(index);
+      }
+    </script>
+  </body>
+</html>
