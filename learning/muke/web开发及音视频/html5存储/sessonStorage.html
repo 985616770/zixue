@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var json = [
+        { id: 1, name: 'zp' },
+        { id: 2, name: 'pz' },
+        { id: 3, name: 'oo' }
+      ];
+      for (let i = 0; i < json.length; i++) {
+        const element = json[i];
+
+        sessionStorage.setItem(element.id, element.name);
+      }
+      // sessionStorage.clear()
+      var a = sessionStorage.getItem(1);
+      sessionStorage.removeItem(2);
+
+      console.log(a);
+      console.log(sessionStorage);
+    </script>
+  </body>
+</html>

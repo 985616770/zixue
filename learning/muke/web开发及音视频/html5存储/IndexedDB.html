@@ -7,60 +7,103 @@
     <title>Document</title>
   </head>
   <body>
+    <ul>
+      <li id="li"></li>
+      <li id="result"></li>
+    </ul>
     <script>
-      var request = indexedDB.open('zpTest', 3);
+      var li = document.querySelector('#li');
+      var result = document.querySelector('#result');
+      function x(text) {
+        li.innerHTML = text;
+      }
+      function y(text) {
+        result.innerHTML = text;
+      }
+      var request = indexedDB.open('test1', 3);
       request.onsuccess = function() {
-        console.log('创建成功');
+        x('done');
       };
       request.onerror = function() {
-        console.log('创建失败');
+        x('failed');
       };
+
       request.onupgradeneeded = function() {
+        x('The Version is update');
         var db = request.result;
-        db.createObjectStore('test1', { keyPath: 'id' });
-        console.log('版本升级了');
+        //{ autoIncrement: true }
+        var store = db.createObjectStore('test1', { keyPath: 'id' });
+        store.createIndex('l', 'age', { unique: false });
       };
       var json = [
-        { id: '1006', name: 'zz', age: 18 },
-        { id: '1003', name: 'zq', age: 19 },
-        { id: '1004', name: 'zs', age: 20 }
+        { id: 1000, name: 'steve', age: 22 },
+        { id: 1001, name: 'alice', age: 20 },
+        { id: 1002, name: 'bob', age: 21 },
+        { id: 1003, name: 'keven', age: 19 },
+        { id: 1004, name: 'bread', age: 18 }
       ];
-
-      setTimeout(function() {
+      setTimeout(() => {
         var db = request.result;
         var transaction = db.transaction('test1', 'readwrite');
         var store = transaction.objectStore('test1');
-        console.log(db);
-        console.log(transaction);
-        console.log(store);
 
-        // 清除所有的数据
-        // store.clear();
-
-        // delete 进行删除
-        // store.delete('1009')
-
-        // put 进行修改
-        // store.put({ id: '1009', name: 'ww', age: 22 });
-
-        // 循环添加
+        // add
         // for (let i = 0; i < json.length; i++) {
+        //   const ele = json[i];
         //   store.add(json[i]);
         // }
 
-        // 查询数据库 获取数据
-        var node = store.getAll();
-        console.log(node);
-
-        // 成功后的回调函数
-        // node.onsuccess = function() {
-        //   for (let i = 0; i < node.result.length; i++) {
-        //     const ele = node.result[i];
-        //     console.log(`名字是${ele.name},
-        //                  年龄是${ele.age},
-        //                  id是${ele.id}`);
-        //   }
+        // get & getAll
+        // var getR = store.get(1);
+        // getR.onsuccess = function() {
+        //   y(getR.result.name);
         // };
+
+        // var getAll = store.getAll();
+        // var getAllKeys = store.getAllKeys();
+        // console.log(getAll);
+        // console.log(getAllKeys);
+
+        // put 修改
+        // store.put( { id: 1000, name: 'god', age: 22 })
+
+        // delete 删除
+        // store.delete(1004)
+
+        // clear
+        // store.clear()
+
+        // index 索引
+        // store.index('l').get(22).onsuccess = function(event) {
+        //   console.log(event.target.result.name);
+        // };
+
+        // cursor 游标
+
+        // var a = store.openCursor(IDBKeyRange.lowerBound(22));
+        // a.onsuccess = function() {
+        //   console.log(a.result);
+        // };
+
+        // cursor 和 index 结合
+
+        var index = store.index('l');
+        var Cursor = index.openCursor(IDBKeyRange.upperBound(22), 'next');
+        var Cursor = index.openCursor(IDBKeyRange.upperBound(22,true), 'next');
+        // var Cursor = index.openCursor(IDBKeyRange.lowerBound(22,true), 'next');
+        // var Cursor = index.openCursor(IDBKeyRange.lowerBound(22), 'next');
+        // var Cursor = index.openCursor(IDBKeyRange.bound(19,22), 'next');
+        // var Cursor = index.openCursor(IDBKeyRange.bound(19,22,true,true), 'next');
+        // var Cursor = index.openCursor(IDBKeyRange.bound(19,22,true,false), 'next');
+        // var Cursor = index.openCursor(IDBKeyRange.bound(19,22,false,false), 'next');
+        // var Cursor = index.openCursor(IDBKeyRange.bound(19,22,false,true), 'next');
+        Cursor.onsuccess = function() {
+          var cursor = Cursor.result;
+          if (cursor) {
+            console.log(cursor);
+            cursor.continue();
+          }
+        };
       }, 200);
     </script>
   </body>
