@@ -2,7 +2,7 @@
  * @Author: xuanji
  * @Date: 2019-08-14 11:07:14
  * @LastEditors: xuanji
- * @LastEditTime: 2019-08-18 10:41:19
+ * @LastEditTime: 2019-10-21 22:53:45
  * @Description: file content
  */
 
@@ -55,10 +55,13 @@ console.log(xiao.hasOwnProperty('name')); // 检测自身是否拥有
 // MAP AND SET
 
 var m = new Map([['mi', 95], ['aa', 22]]);
+var s1 = new Set([1, 2, 31, 1, 3, 1, 1, 1]);
 var json = {
   name: 'xiaoming',
   age: '10'
 };
+console.log(s1);
+console.log(m);
 for (const key in json) {
   console.log(json[key]);
 }
@@ -83,14 +86,14 @@ whoIs(user);
 const { length: len } = 'abc';
 const { toString: s } = 123;
 
-var person = {};
-person.name = 'coco';
-person.age = 23;
-person.sayName = function () {
-  console.log(person.name);
+var person1 = {};
+person1.name = 'coco';
+person1.age = 23;
+person1.sayName = function() {
+  console.log(person1.name);
 };
-delete person.name;
-person.sayName();
+delete person1.name;
+person1.sayName();
 var as = Math.max.apply(null, [3, 3, 2]);
 console.log(as);
 

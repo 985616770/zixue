@@ -53,6 +53,7 @@ _packaging.prototype = {
 
 /* 继承本身就是一个抽象的话题，在JavaScript中继承更是一个复杂的话题，因为JavaScript想要实现继承有两种实现方式，分别是类式继承和原型式继承，每种实现的方式都需要采取不少措施，下面本人通过分析例子的方式讲解JavaScript中这个很重要的话题。 */
 /* -- 类式继承 -- */
+
 function Person(name) {
   this.name = name;
 } //给这个超类的原型对象上添加方法 getName
@@ -70,7 +71,7 @@ Programmer.prototype = new Person();
 //因为子类的原型对象等于超类的实例，所以prototype.constructor这个方法也等于超类构造函数，你可以自己测试一下，如果没这一步，alert(Programmer.prototype.constructor)，这个是Person超类的引用，所以要从新赋值为自己本身
 Programmer.prototype.constructor = Programmer; //子类本身添加了getSex 方法
 Programmer.prototype.getSex = function() {
-  returnthis.sex;
+  return this.sex;
 }; //实例化这个子类
 var _m = new Programmer('Darren2', 'male'); //自身的方法
 alert(_m.getSex()); //继承超类的方法

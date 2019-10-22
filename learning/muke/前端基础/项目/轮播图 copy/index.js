@@ -74,7 +74,10 @@ addEvent(prev, 'click', function() {
   changeImg();
 });
 
-addEvent(dotS, 'click', function() {
+addEvent(dotS, 'click', function(e) {
+  if (e.target.tagName !== 'SPAN') {
+    return;
+  }
   for (var i = 0; i < size; i++) {
     dots[i].setAttribute('data-id', i);
     addEvent(dots[i], 'click', function() {
@@ -114,6 +117,6 @@ addEvent(banner, 'mouseout', function() {
 addEvent(menuContent, 'mouseout', function() {
   subMenu.classList.add('hide');
 });
-addEvent(subMenu,'mouseover',function () {
-  this.classList.remove('hide')
-})
+addEvent(subMenu, 'mouseover', function() {
+  this.classList.remove('hide');
+});

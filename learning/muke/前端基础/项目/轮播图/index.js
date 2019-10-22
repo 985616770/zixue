@@ -95,6 +95,5 @@ Slider.prototype.move = function(index) {
   // debugger;
 };
 
-
 var b = document.getElementById('slider');
 var a = new Slider(b);

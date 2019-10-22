@@ -171,5 +171,3 @@ $(document).ready(function() {
   $('.ui-slider').UiSlider();
   $('.ui-cascading').UiCascading();
 });
-
-function stop(param,callback) {  }

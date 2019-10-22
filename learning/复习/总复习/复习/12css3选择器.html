@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style: none;
+      }
+      li {
+        background-color: #eee;
+        margin-top: 10px;
+      }
+      div  li:first-child ~ li {
+        background-color: #e0e;
+      }
+      /* [value = "a"]{
+        background-color: #00e;
+      }
+       [value ~= "ad"]{
+        background-color: #a0e;
+      }
+       [value ^= "a"]{
+        background-color: #0fe;
+      }
+       [value $= "c"]{
+        background-color: #cce;
+      }
+       [value *= "f"]{
+        background-color: #af0;
+      }
+       [value |= "a"]{
+        background-color: #ef0;
+      } */
+
+      ul div:only-child{
+        height: 10px;
+        background-color: #e00;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <div></div>
+      <li class="" value="c">1234</li>
+      <li class="" value="bae">1234</li>
+      <li class="" value="baf">1234</li>
+      <li class="" value="bab">1234</li>
+      <li class="" value="a">1234</li>
+      <li class="" value="baf">1234</li>
+      <li class="" value="bad">1234</li>
+      <li class="" value="bac">1234</li>
+      <li class="" value="ba">1234</li>
+      <li class="" value="a-d">1234</li>
+      <li class="" value="ade">1234</li>
+    </ul>
+  </body>
+</html>

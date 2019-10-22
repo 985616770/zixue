@@ -64,19 +64,19 @@
       new AMap.Autocomplete({
         input: searchIpt
       });
-      AMap.service(['AMap.PlaceSearch'], function() {
-        btn.onclick = function() {
-          new AMap.PlaceSearch({
-            type: '住宿',
-            pageSize: 5,
-            pageIndex: 1,
-            city: '010',
-            citylimit: true,
-            map: map, //展示在哪个地图里
-            panel: 'setCenterNode' //放在哪个元素下
-          }).searchNearBy('北京', [116.379391, 39.861536], 2000, function() {});
-        };
-      });
+      // AMap.service(['AMap.PlaceSearch'], function() {
+      //   btn.onclick = function() {
+      //     new AMap.PlaceSearch({
+      //       type: '住宿',
+      //       pageSize: 5,
+      //       pageIndex: 1,
+      //       city: '010',
+      //       citylimit: true,
+      //       map: map, //展示在哪个地图里
+      //       panel: 'setCenterNode' //放在哪个元素下
+      //     }).searchNearBy('北京', [116.379391, 39.861536], 2000, function() {});
+      //   };
+      // });
     </script>
   </body>
 </html>
