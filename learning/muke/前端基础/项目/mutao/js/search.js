@@ -111,7 +111,7 @@
       .done(function(data) {
         cache.addData(data);
         console.log(data);
-        
+
         self.$elem.trigger('search-getData', [data]);
       })
       .fail(function() {
@@ -135,7 +135,7 @@
   };
 
   Search.prototype.getInputVal = function() {
-    return $.trim(this.$input.val());
+    return encodeURIComponent($.trim(this.$input.val()));
   };
   // 返回的数据含有html标签
   Search.prototype.setInputVal = function(val) {

@@ -313,7 +313,7 @@ lazyLoad.loadUntil({
 slider.$focusSlider.slider({
   css3: true,
   js: false,
-  animation: 'fade', // fade  slide
+  animation: 'slide', // fade  slide
   activeIndex: 0,
   interval: 0
 });

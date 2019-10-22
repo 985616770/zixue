@@ -137,10 +137,10 @@
         $elem.data('status', 'shown').trigger('shown');
       });
       $elem.show();
-      // 异步清除任务,同步> 微任务> 回调
+      // 异步清除任务,同步> 微任务> 宏任务
       setTimeout(function() {
         $elem.removeClass(className);
-      });
+      },0);
     });
   };
   // css3的隐藏动画

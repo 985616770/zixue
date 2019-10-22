@@ -24,7 +24,7 @@
   };
 
   var Slient = function($elem) {
-    init.call(this, $elem); //改变this的指向，这里this指外面的this,如不使用call，this指init。
+    init.call(this, $elem); //改变this的指向，这里this指外面的this,如不使用call，this指init(继承)
     this.$elem.removeClass('transition');
   };
   
