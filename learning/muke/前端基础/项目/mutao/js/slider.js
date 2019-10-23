@@ -42,7 +42,7 @@
       this.$items.on('move moved', function(e) {
         var index = self.$items.index(this);
         console.log(index);
-        
+
         if (e.type === 'move') {
           if (index === self.curIndex) {
             self.$elem.trigger('slider-hide', [index, this]);
@@ -196,3 +196,11 @@
     }
   });
 })(jQuery);
+num =
+  num > 0
+    ? num < 10
+      ? num++
+      : num--
+    : num == 0
+    ? (num++, (num = num / 10))
+    : num;
