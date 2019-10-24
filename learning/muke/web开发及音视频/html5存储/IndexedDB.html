@@ -20,6 +20,8 @@
       function y(text) {
         result.innerHTML = text;
       }
+
+
       var request = indexedDB.open('test1', 3);
       request.onsuccess = function() {
         x('done');
@@ -89,7 +91,7 @@
 
         var index = store.index('l');
         var Cursor = index.openCursor(IDBKeyRange.upperBound(22), 'next');
-        var Cursor = index.openCursor(IDBKeyRange.upperBound(22,true), 'next');
+        // var Cursor = index.openCursor(IDBKeyRange.upperBound(22,true), 'next');
         // var Cursor = index.openCursor(IDBKeyRange.lowerBound(22,true), 'next');
         // var Cursor = index.openCursor(IDBKeyRange.lowerBound(22), 'next');
         // var Cursor = index.openCursor(IDBKeyRange.bound(19,22), 'next');
