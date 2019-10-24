@@ -11,7 +11,8 @@
       <p>
         你还可以输入<span style="color: red;font-weight: 700" id="count"
           >30</span
-        >/<span style="color: red;font-weight: 700">30字</span>
+        >/<span style="color: red;font-weight: 700">30字</span
+        ><span id="pp"></span>
       </p>
       <textarea
         name="pinLun"
@@ -26,21 +27,17 @@
       var count = document.getElementById('count');
       var pl = document.getElementById('pl');
 
-      pl.onkeydown = function(e) {
-       if (e.keyCode == 8) {
-          count.innerHTML = 30 - this.value.length;
-        }
-      };
-      pl.onkeypress = function() {
-        if (count.innerHTML < 1) {
-          alert(1);
+      pl.oninput = function() {
+        if (this.value.length < 0) {
+          pp.innerHTML = '吵了';
+          // pl.disabled = true;
         } else {
-          count.innerHTML = 29 - this.value.length;
-          console.log(this.value);
+          pp.innerHTML = '';
+          count.innerHTML =
+            this.value.length < 10
+              ? '0' + this.value.length
+              : this.value.length;
         }
-      };
-      pl.onkeyup = function(e) {
-        
       };
     </script>
   </body>

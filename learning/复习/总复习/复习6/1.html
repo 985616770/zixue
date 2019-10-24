@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="id">123</div>
+    <button id="qwe">sss</button>
+    <input type="text" id="input" />
+    <script>
+      let id = document.querySelector('#id');
+      let p = document.createElement('p');
+      p.innerHTML = '456';
+      id.insertBefore(p, null);
+      qwe.addEventListener('click', function(e) {
+        e.stopPropagation();
+        console.table(e);
+      });
+      input.addEventListener('textInput', function(e) {
+        console.log(e.data);
+      });
+    </script>
+  </body>
+</html>

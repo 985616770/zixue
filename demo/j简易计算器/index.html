@@ -60,7 +60,7 @@
             operate(currentButton.title, wrapELe.prev.value, wrapELe.next.value)
           );
         });
-      
+
         // 更新符号
         function updateSymbol(symboll) {
           if (!symboll) symboll = '+';
@@ -68,24 +68,13 @@
         }
         // 运算结果
         function outPainter(results) {
-          
           wrapELe.result.innerHTML = results;
         }
-
+        // 运算模块
         var operate = (function() {
-          // 运算方法
-          // 难点 使用
-          function operate(name) {
-            if (!operation[name]) throw Error(`没有这个${name}属性`);
-            return operation[name].apply(
-              operation,
-              Array.prototype.slice.call(arguments, 1)
-            );
-          }
-
           var operation = {
             add: function(num1, num2) {
-              return( +num1 + +num2).toFixed(2);
+              return (+num1 + +num2).toFixed(2);
             },
             subtract: function(num1, num2) {
               return num1 - num2;
@@ -103,9 +92,19 @@
               return operation;
             }
           };
+          // 运算方法
+          // 难点 使用
+          function operate(name) {
+            if (!operation[name]) throw Error(`没有这个${name}属性`);
+            return operation[name].apply(
+              operation,
+              Array.prototype.slice.call(arguments, 1)
+            );
+          }
           operate.addOperation = operation.addOperation;
           return operate;
         })();
+        // 添加方法
         operate
           .addOperation('mod', function(num1, num2) {
             return num1 % num2;
