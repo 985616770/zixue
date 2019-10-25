@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .container {
+        margin: 0 auto;
+        width: 300px;
+      }
+      input,
+      select,
+      textarea {
+        width: 200px;
+        outline: none;
+      }
+      input:required,
+      select:required,
+      textarea:required {
+        border-width: 1px;
+        border-right-color: red;
+      }
+      input:required:focus,
+      select:required:focus,
+      textarea:required:focus {
+        box-shadow: 0 0 5px #00e5;
+      }
+      input:optional,
+      select:optional,
+      textarea:optional {
+        border-width: 1px;
+        border-color: gray;
+      }
+      input:optional:focus,
+      select:optional:focus,
+      textarea:optional:focus {
+        box-shadow: 0 0 5px grey;
+      }
+      input[type="submit"]{
+        color: #fff;
+        background: blue;
+        border: none;
+        border-radius: 10px;
+      }
+      input[type="submit"]:hover{
+        box-shadow: 3px 3px 3px #0002;
+ 
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="#">
+        <input type="name" required /><label>名称</label>
+        <input type="email" required /><label>邮箱</label>
+        <input type="tel" /><label>手机</label> <input type="url" /><label
+          >网址</label
+        >
+        <select name="" id="">
+          <option value="">非必选项一</option>
+          <option value="">非必选项二</option>
+          <option value="">非必选项三</option>
+          <option value="">非必选项四</option>
+        </select>
+        <textarea
+          name="#"
+          cols="30"
+          rows="10"
+          placeholder="留言（必填）"
+          required
+        ></textarea>
+        <input type="submit" value="提交表单" />
+      </form>
+    </div>
+  </body>
+</html>

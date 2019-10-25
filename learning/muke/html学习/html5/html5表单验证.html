@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form
+      action=""
+      method="post"
+      autocomplete="on"
+      enctype="multipart/form-data"
+    >
+      <input type="file" name="" id="" />
+      <label
+        >姓名:
+        <input
+          type="text"
+          id="nameL"
+          required
+          maxlength="3"
+          value="123111"
+          minlength="2"
+        />
+      </label>
+      <label for=""
+        >密码:
+        <input type="password" pattern="\d{0,6}" required id="password" />
+      </label>
+      <input type="submit" value="提交" id="submit" />
+    </form>
+    <script>
+      // var name = document.querySelector('#name');
+      console.dir(window.name);
+      console.dir(nameL.validity);
+      console.dir(password.validity);
+      console.dir(submit.validity);
+    </script>
+  </body>
+</html>

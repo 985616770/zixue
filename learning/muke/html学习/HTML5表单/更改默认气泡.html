@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <title>表单验证默认样式修改</title>
+  </head>
+  <style>
+    .oneline {
+      line-height: 1.5;
+      margin: 10px auto;
+    }
+    .oneline label {
+      width: 100px;
+      text-indent: 15px;
+      font-size: 14px;
+      font-family: 'Microsoft Yahei';
+      display: inline-block;
+    }
+    .oneline .sinput {
+      width: 60%;
+      height: 30px;
+      border-radius: 6px;
+      border: 1px solid #e2e2e2;
+    }
+    .oneline input[type='submit'] {
+      margin-left: 20px;
+      width: 80px;
+      height: 30px;
+      border: 0;
+      background-color: #5899d0;
+      color: #fff;
+      font-size: 14px;
+      border-radius: 6px;
+    }
+    .error-message {
+      color: red;
+      font-size: 12px;
+      text-indent: 108px;
+    }
+  </style>
+
+  <body>
+    <form id="forms">
+      <div class="oneline">
+        <label for="name">用户名:</label>
+        <input
+          id="name"
+          name="name"
+          class="sinput"
+          required
+          autocomplete="off"
+          oninvalid="this.setCustomValidity('ssssssss')"
+          oninput="setCustomValidity('')"
+        />
+      </div>
+      <div class="oneline">
+        <label for="email">Email:</label>
+        <input
+          id="email"
+          name="email"
+          class="sinput"
+          type="email"
+          autocomplete="off"
+          required
+        />
+      </div>
+      <div class="oneline">
+        <input type="submit" value="提交" id="submit" />
+      </div>
+    </form>
+    <script>
+      var form = document.querySelector('#forms'),
+        nameT = document.querySelector('#name'),
+        email = document.querySelector('#email'),
+        submit = document.querySelector('#submit');
+
+      form.addEventListener(
+        'invalid',
+        function(e) {
+          e.preventDefault();
+        },
+        true
+      );
+      form.addEventListener('submit', e => {
+        if (!this.checkValidity()) {
+          e.preventDefault();
+        }
+      });
+
+      submit.addEventListener('click', function(event) {
+        var invalids = form.querySelectorAll(':invalid'),
+          errors = form.querySelectorAll('.error-message'),
+          parent;
+        if (!invalids) return;
+        errors.forEach(value => {
+          value.parentNode.removeChild(value);
+        });
+        invalids.forEach((value, index) => {
+          let html = `<div class="error-message">${value.validationMessage}</div>`;
+          value.parentNode.innerHTML += html;
+        });
+        if (invalids.length > 0) {
+          invalids[0].focus();
+        }
+      });
+      submit.click();
+    </script>
+  </body>
+</html>

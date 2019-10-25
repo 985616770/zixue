@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .container {
+        position: relative;
+        margin-left: 100px;
+      }
+      input:focus {
+        outline: none;
+      }
+      input[type='email'] {
+        width: 200px;
+        text-indent: 36px;
+        transition: all 0.5s;
+        border-radius: 5px;
+      }
+      .title {
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        font-size: 0.9em;
+        transition: all 0.5s;
+      }
+      input:focus,
+      input:hover {
+        text-indent: 2px;
+      }
+      input:focus + .title,
+      input:hover + .title {
+        transform: translateX(-120%);
+      }
+      input:valid ~ label::after {
+        content: '邮箱正确';
+        color: green;
+      }
+      input:invalid {
+        border-color: red;
+      }
+      input:valid {
+        border-color: green;
+      }
+      input:invalid ~ label::after {
+        content: '邮箱有误';
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <div class="container">
+        <input id="mail" type="email" required placeholder="输入邮箱" />
+        <span class="title">邮箱</span>
+        <label for="mail"></label>
+      </div>
+    </form>
+  </body>
+</html>
