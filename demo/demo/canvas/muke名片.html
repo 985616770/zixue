@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body,
+      html {
+        height: 100%;
+      }
+      input {
+        outline: none;
+        text-indent: 20px;
+        width: 200px;
+        height: 30px;
+        border-radius: 15px;
+        font-size: 14px;
+        border-style: none;
+        margin-top: 20px;
+      }
+      nav {
+        display: block;
+        width: 30%;
+        height: 100%;
+        background: #a4a296;
+        float: left;
+        overflow: hidden;
+        position: relative;
+      }
+      section {
+        display: block;
+        overflow: hidden;
+        width: 70%;
+        height: 100%;
+        background: #eee9d3;
+        position: relative;
+      }
+      button {
+        border: none;
+        background-color: #8ff;
+        width: 90px;
+        height: 30px;
+        border-radius: 15px;
+        margin-top: 20px;
+      }
+      .form {
+        text-align: center;
+        position: absolute;
+        width: 250px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      canvas {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -50px;
+        margin-left: -300px;
+      }
+      #canvas2 {
+        top: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <form class="form">
+        <input type="text" id="name" placeholder="姓名" />
+        <input type="text" id="address" placeholder="地址" />
+        <input type="text" id="job" placeholder="职业" />
+        <input type="text" id="kouHao" placeholder="口号" />
+        <button id="button">生成名片</button>
+      </form>
+    </nav>
+    <section>
+      <canvas id="canvas" width="600" height="100"> </canvas>
+      <canvas id="canvas2" width="600" height="100" style="display: none;">
+      </canvas>
+    </section>
+    <script>
+      let canvas2 = document.querySelector('#canvas'),
+        canvas = document.querySelector('#canvas2'),
+        ctx2 = canvas.getContext('2d'),
+        ctx = canvas2.getContext('2d');
+
+      let img = new Image();
+      img.src = './logo.png';
+      img.onload = function() {
+        ctx.drawImage(img, 10, 10, 80, 80);
+      };
+      let linearColor = ctx.createLinearGradient(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+      );
+      linearColor.addColorStop(0.5, '#000');
+      linearColor.addColorStop(1, '#ccc');
+
+      let name, address, job, kouHao;
+      button.onclick = function(e) {
+        name = document.querySelector('#name').value || '请输入姓名';
+        address = document.querySelector('#address').value || '请输入地址';
+        job = document.querySelector('#job').value || '请输入职业';
+        kouHao = document.querySelector('#kouHao').value || '请输入口号';
+        e.preventDefault();
+        ctx2.clearRect(0, 0, canvas.width, canvas.height);
+
+        ctx2.save();
+        ctx2.fillStyle = linearColor;
+        ctx2.fillRect(0, 0, canvas.width, canvas.height);
+        ctx2.fillStyle = '#fff';
+        ctx2.font = 'bold 30px sans-serif';
+        ctx2.fillText(name, 100, 35);
+        ctx2.font = 'bold 20px sans-serif';
+        ctx2.fillText(address, 100, 60);
+        ctx2.fillText(job, 100, 80);
+
+        ctx2.beginPath();
+        ctx2.translate(400, 50);
+        ctx2.rotate(-0.1);
+        ctx2.shadowOffsetX = 10;
+        ctx2.shadowOffsetY = 10;
+        ctx2.shadowColor = '#0009';
+        ctx2.shadowBlur = 1;
+        ctx2.fillText(kouHao, 0, 0);
+        ctx2.strokeStyle = '#fff';
+        ctx2.moveTo(0, 15);
+        ctx2.quadraticCurveTo(10, 0, ctx2.measureText(kouHao).width, 10);
+        ctx2.stroke()
+        ctx2.restore();
+      };
+
+      button.click();
+      let circles = [];
+      setInterval(function() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(
+          canvas,
+          0,
+          0,
+          canvas.width,
+          canvas.height,
+          0,
+          0,
+          canvas.width,
+          canvas.height
+        );
+        ctx.drawImage(img, 10, 10, 80, 80);
+        for (let i = 0; i <= 20; i++) {
+          if (!circles[i]) {
+            circles[i] = {};
+            circles[i].radius = Math.floor(Math.random() * 4) + 1;
+            circles[i].y = circles[i].radius - Math.floor(Math.random() * 10);
+            circles[i].x = i * 30 + Math.floor(Math.random() * 10) - 5;
+            circles[i].vy = Math.floor(Math.random() * 8) + 1;
+          }
+          ctx.beginPath();
+          ctx.arc(
+            circles[i].x,
+            circles[i].y,
+            circles[i].radius,
+            0,
+            Math.PI * 2
+          );
+          ctx.fillStyle = '#fff';
+          ctx.fill();
+          circles[i].y = circles[i].y + circles[i].vy;
+          if (circles[i].y > canvas.height) {
+            circles[i].y = 0;
+          }
+        }
+      }, 100);
+    </script>
+  </body>
+</html>
