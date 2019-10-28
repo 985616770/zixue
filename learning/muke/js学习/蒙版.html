@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        width: 350px;
+        height: 350px;
+        margin: 100px;
+        border: 1px solid #cccccc;
+        position: relative;
+      }
+
+      .small {
+        position: relative;
+      }
+
+      .mask {
+        width: 175px;
+        height: 175px;
+        background: rgba(255, 255, 0, 0.4);
+        position: absolute;
+        left: 0;
+        top: 0;
+        cursor: move;
+        display: none;
+      }
+
+      .big {
+        width: 398px;
+        height: 398px;
+        position: absolute;
+        top: 0;
+        left: 360px;
+        border: 1px solid #cccccc;
+        overflow: hidden;
+        /* display: none; */
+      }
+      .imgl {
+        display: block;
+        width: 350px;
+        height: 350px;
+        background: linear-gradient(to left, #0f0 0%, #fee 50%, #000 100%);
+      }
+      .imgb {
+        display: block;
+        width: 800px;
+        height: 800px;
+        background: linear-gradient(to left, #0f0 0%, #fee 50%, #000 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="box">
+      <div class="small">
+        <img src="" alt="" class="imgl" />
+        <div class="mask" id="mask"></div>
+      </div>
+      <div class="big">
+        <img src="" alt="" class="imgb" />
+      </div>
+    </div>
+    <script>
+      var boxObjc = document.getElementById('box');
+
+      var smallObjc = boxObjc.children[0];
+
+      var bigObjc = boxObjc.children[1];
+      var bigImgObjc = bigObjc.children[0];
+
+      var maskObjc = document.getElementById('mask');
+
+      boxObjc.onmouseover = function() {
+        maskObjc.style.display = 'block';
+        bigObjc.style.display = 'block';
+      };
+      boxObjc.onmouseout = function() {
+        maskObjc.style.display = 'none';
+        bigObjc.style.display = 'none';
+      };
+
+      //获取宽度
+
+      smallObjc.onmousemove = function(e) {
+        e = window.event || e;
+        var x = e.clientX - maskObjc.offsetWidth * 0.5;
+        var y = e.clientY - maskObjc.offsetHeight * 0.5;
+        //因为box有一个margin ，所以需要减去
+        x = x - 100;
+        y = y - 100;
+        //处理边界
+        //上边界和左边界
+        x = x < 0 ? 0 : x;
+        y = y < 0 ? 0 : y;
+
+        //下边界和左边界
+        var maxX = this.offsetWidth - maskObjc.offsetWidth;
+        x = x > maxX ? maxX : x;
+        var maxY = this.offsetHeight - maskObjc.offsetHeight;
+        y = y > maxY ? maxY : y;
+        maskObjc.style.left = x + 'px';
+        maskObjc.style.top = y + 'px';
+
+        //比例放大
+        //大图移动的范围
+        var bigMoveMaxX = bigImgObjc.offsetWidth - bigObjc.offsetWidth;
+        var bigMoveMaxY = bigImgObjc.offsetHeight - bigObjc.offsetHeight;
+
+        //计算   移动的距离/移动的范围 = 大图移动的距离/大图移动的范围
+        var bigMoveX =
+          (x * bigMoveMaxX) / (this.offsetWidth - maskObjc.offsetWidth);
+
+        var bigMoveY =
+          (y * bigMoveMaxY) / (this.offsetHeight - maskObjc.offsetHeight);
+
+        bigImgObjc.style.marginLeft = -bigMoveX + 'px';
+        bigImgObjc.style.marginTop = -bigMoveY + 'px';
+      };
+    </script>
+  </body>
+</html>

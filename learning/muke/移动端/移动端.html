@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,user-scalable=no,maximum-scale=1,minimum-scale=1"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="./font/iconfont.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .icon {
+        width: 10em;
+        height: 10em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <svg class="icon" aria-hidden="true">
+      <use
+        xlink:href="#icon-question
+      "
+      ></use>
+    </svg>
+
+    <svg class="icon" aria-hidden="true">
+      <use xlink:href="#icon-cloud"></use>
+    </svg>
+
+    <script>
+      var deviceWidth =
+        document.documentElement.clientWidth ||
+        window.innerWidth ||
+        document.documentElement.getBoundingClientRect().width ||
+        screen.width;
+      var dpr = window.devicePixelRatio;
+      console.log(deviceWidth);
+      console.log(dpr);
+    </script>
+  </body>
+</html>

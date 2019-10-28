@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      body {
+      }
+      #message {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 200px;
+        height: 200px;
+        box-shadow: 0 0 10px #0003;
+        padding: 10px;
+        border: 1px solid #ee0;
+        margin: 10px;
+        word-break: break-all;
+        white-space: normal;
+      }
+      .a {
+        position: relative;
+        left: 100px;
+        top: 100px;
+        width: 1000px;
+        height: 1000px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="a">
+      <div id="message">
+        <span>1231111111111111111111111111111111111111111111111111111111</span>
+      </div>
+    </div>
+    <script>
+      // var scrollX, scrollY, clientY;
+      // window.onscroll = function() {
+      //   (scrollX = window.scrollX), (scrollY = window.scrollY);
+      //   message.innerHTML = `
+      //   水平滚动:${scrollX}<br/>
+      //   垂直滚动:${scrollY}
+      //   innerHeight:${this.innerHeight}<br/>
+      //   innerWidth:${this.innerWidth}<br/>
+      //   outerWidth:${this.outerWidth}<br/>
+      //   outerHeight:${this.outerHeight}<br/>
+      //   clientHeight:${message.clientHeight}<br/>
+      //   clientWidth:${message.clientWidth}<br/>
+      //   offsetWidth:${message.offsetWidth}<br/>
+      //   offsetHeight:${message.offsetHeight}<br/>
+      //   `;
+      //   // console.log(message.getBoundingClientRect());
+      //   // console.log(window);
+      // };
+
+      message.onmousedown = function(e) {
+        let rect = this.getBoundingClientRect();
+
+        console.log(rect);
+
+        this.onmousemove = function(e) {
+          rect = this.getBoundingClientRect();
+          this.style.left =
+            e.offsetX + rect.left - rect.width + window.scrollX + 'px';
+          this.style.top =
+            e.offsetY + rect.top - rect.height + window.scrollY + 'px';
+          console.log();
+        };
+        this.onmouseup = function() {
+          this.onmousemove = null;
+          message.innerHTML = `left:${rect.left}<br>
+                                top:${rect.top}
+                                x:${rect.x}
+                                y${rect.y}`;
+        };
+      };
+
+      let spans = document.getElementsByTagName('span')[0];
+      console.log(spans.getClientRects());
+      console.log(window.screenTop);
+      console.log(message.clientLeft);
+    </script>
+  </body>
+</html>
