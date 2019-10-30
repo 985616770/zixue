@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      #box {
+        width: 200px;
+        height: 200px;
+        box-shadow: 0 0 10px #0004;
+      }
+    </style>
+  </head>
+  <body>
+    <div><div id="box"></div></div>
+    <script src="./zepto.js"></script>
+    <script>
+      (function($) {
+        'use strict';
+
+        console.log($('#box').width(300));
+        $(document).on('mylib:change', function(e, from, to) {
+          console.log('change on %o with data %s, %s', e.target, from, to);
+        });
+        // trigger the custom event
+        $(document.body).trigger('mylib:change', ['one', 'two']);
+      })(Zepto);
+    </script>
+  </body>
+</html>

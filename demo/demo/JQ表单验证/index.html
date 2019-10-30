@@ -75,7 +75,7 @@
             url:
               'http://muke/%e9%a1%b9%e7%9b%ae/JQ%e8%a1%a8%e5%8d%95%e9%aa%8c%e8%af%81/server/isUserRepeat.php',
             method: 'POST',
-            data: { username: userVal },
+            data: { username: userVal }, // 传给服务器的值
             success: function(data) {
               console.log(data);
               if (data.code == 1) {
@@ -198,7 +198,7 @@
 
       // var jsonp = $.jsonp;
       $.jsonp('http://class.imooc.com/api/jsonp', function(data) {
-        console.log(this);
+        console.log(data);
       });
     </script>
   </body>
