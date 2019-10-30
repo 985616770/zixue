@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <style>
+    .dropTop {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      width: 100px;
+      height: 100px;
+      text-align: center;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 40px;
+
+      border-radius: 50%;
+      background-color: #0005;
+      /* transition: transform 0.3s; */
+      /* transform: translate3d(0, 0, 0); */
+    }
+  </style>
+  console.log();
+  <body>
+    <div id="dropTop" class="dropTop">&uArr;</div>
+    <script>
+      let drop = document.querySelector('#dropTop');
+
+      function drag(el, options = { x: true, y: false }) {
+        if (!options.x && !options.y) return;
+
+        let curPoint = {
+            x: 0,
+            y: 0
+          },
+          isMove = false,
+          startPoint = {};
+
+        el.addEventListener('touchstart', handleStart, false);
+        el.addEventListener('touchmove', handleMove, false);
+        el.addEventListener('touchend', handleEnd, false);
+
+        function handleStart(ev) {
+          let touch = ev.changedTouches[0];
+          // 开始的位置
+          startPoint.x = touch.pageX;
+          startPoint.y = touch.pageY;
+        }
+        function handleMove(ev) {
+          ev.preventDefault();
+          isMove = true;
+          let touch = ev.changedTouches[0];
+          // 当前的点 - 存储的开始的点
+          let diffPoint = {};
+          // 移动的位置
+          let movePoint = { x: 0, y: 0 };
+
+          diffPoint.x = touch.pageX - startPoint.x;
+          diffPoint.y = touch.pageY - startPoint.y;
+
+          // 实际移动的位置
+          if (options.x) {
+            // 移动的x的位置 = 移动的距离 + 上一个x的位置
+            movePoint.x = diffPoint.x + curPoint.x;
+          }
+          if (options.y) {
+            movePoint.y = diffPoint.y + curPoint.y;
+          }
+          move(el, movePoint.x, movePoint.y);
+        }
+        function handleEnd(ev) {
+          if (!isMove) return;
+          let touch = ev.changedTouches[0];
+          // 记录移动后 当前的位置
+          curPoint.x += touch.pageX - startPoint.x;
+          curPoint.y += touch.pageY - startPoint.y;
+
+          isMove = false;
+        }
+        function move(el, x = 0, y = 0) {
+          el.style.transform = `translate3d(${x}px,${y}px,0)`;
+        }
+      }
+
+      drag(drop, {
+        x: true,
+        y: true
+      });
+    </script>
+  </body>
+</html>
