@@ -30,7 +30,16 @@
       [data-dpr='3'] .backtop {
         font-size: 48px;
       }
+      [data-dpr='2'] .swiper-pagination-bullet {
+        width: 16px;
+        height: 16px;
+      }
+      [data-dpr='3'] .swiper-pagination-bullet {
+        width: 24px;
+        height: 24px;
+      }
     </style>
+    <link rel="stylesheet" href="./node_modules/swiper/css/swiper.min.css" />
     <script src="js/flexible.js"></script>
   </head>
   <body>
@@ -60,9 +69,26 @@
       </div>
     </header>
 
-    <div class="main-container">
-      <div class="slider-container">
-        <img src="img/slider/1.jpg" alt="slider" />
+    <div class="main-container " id="swiper">
+      <div class=" slider-container swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="img/slider/1.jpg" alt="slider" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/slider/2.jpg" alt="slider" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/slider/3.jpg" alt="slider" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/slider/4.jpg" alt="slider" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/slider/5.jpg" alt="slider" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
       </div>
 
       <nav class="nav-container">
@@ -386,7 +412,15 @@
     </div>
 
     <button id="backtop" class="backtop">顶部</button>
-
+    <script src="./node_modules/swiper/js/swiper.min.js"></script>
+    <script>
+      var mySwiper = new Swiper('.swiper-container', {
+        autoplay: true, //可选选项，自动滑动
+        pagination: {
+          el: '.swiper-pagination'
+        }
+      });
+    </script>
     <script>
       let backtopEl = document.getElementById('backtop');
       backtopEl.addEventListener(
@@ -402,7 +436,7 @@
       let imgArray = [].slice.call(imgAll);
       console.log(imgArray);
       let timer = null;
-      loadImg()
+      loadImg();
       window.addEventListener('scroll', function() {
         clearTimeout(timer);
         timer = setTimeout(() => {
