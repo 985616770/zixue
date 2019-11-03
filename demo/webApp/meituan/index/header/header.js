@@ -1,13 +1,13 @@
+/* eslint-disable no-undef */
 (function() {
-  'use strict';
   function changeSearch() {
     window.addEventListener('scroll', function() {
-      let scroll = document.documentElement.scrollTop;
-      let $headerHeight = $('.header').height();
-      let $contentHeight = $('.category-content').height();
+      const scroll = document.documentElement.scrollTop;
+      const $headerHeight = $('.header').height();
+      const $contentHeight = $('.category-content').height();
       if (scroll >= $contentHeight + $headerHeight) {
         $('.header').addClass('header-active');
-      }else{
+      } else {
         $('.header').removeClass('header-active');
       }
     });

@@ -1,13 +1,13 @@
+/* eslint-disable no-undef */
 (function() {
-  'use strict';
-  let itemTmpl = `
+  const itemTmpl = `
   <a class="$key btn-item" href="/$key/$key.html">
       <div class="tab-icon"> </div>
       <div class="btn-name">$text</div>
   </a>`;
 
   function init() {
-    let items = [
+    const items = [
       {
         key: 'index',
         text: '首页'
@@ -28,10 +28,10 @@
     });
     $('.bottom-bar').append($(str));
 
-    let arr = window.location.pathname.split('/');
-    let page = arr[arr.length - 1].replace('.html', '');
+    const arr = window.location.pathname.split('/');
+    const page = arr[arr.length - 1].replace('.html', '');
 
-    $('a.' + page).addClass('active');
+    $(`a.${page}`).addClass('active');
   }
   init();
 })();

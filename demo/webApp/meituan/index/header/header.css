@@ -2,7 +2,6 @@
   position: fixed;
   z-index: 999;
   top: 0;
-
 }
 
 .header-img img {
@@ -11,6 +10,6 @@
   vertical-align: top;
 }
 
-.header-active{
-  
+.header-active {
+  transition: all 0.3s;
 }
