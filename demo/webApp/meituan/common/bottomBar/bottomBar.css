@@ -29,22 +29,22 @@
   font-size: 0.432rem;
   color: #999;
 }
-.bottom-bar .index .tab-icon {
+.bottom-bar .btn-item.index .tab-icon {
   background-image: url(./img/homeIcon.png);
 }
-.bottom-bar .order .tab-icon {
+.bottom-bar .btn-item.order .tab-icon {
   background-image: url(./img/orderIcon.png);
 }
-.bottom-bar .my .tab-icon {
+.bottom-bar .btn-item.my .tab-icon {
   background-image: url(./img/myIcon.png);
 }
-.bottom-bar .index.active .tab-icon {
+.bottom-bar .btn-item.index.active .tab-icon {
   background-image: url(./img/homeIconActive.png);
 }
-.bottom-bar .order.active .tab-icon {
+.bottom-bar .btn-item.order.active .tab-icon {
   background-image: url(./img/orderIconActive.png);
 }
-.bottom-bar .my.active .tab-icon {
+.bottom-bar .btn-item.my.active .tab-icon {
   background-image: url(./img/myIconActive.png);
 }
 .bottom-bar .btn-item.active .btn-name{

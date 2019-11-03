@@ -118,8 +118,7 @@
       const { clientHeight } = document.documentElement;
       const { scrollHeight } = document.body;
 
-      const scrollTop =
-        document.documentElement.scrollTop || document.body.scrollTop;
+      const { scrollTop } = document.documentElement;
       // 阈值
       const proDis = 30;
       if (scrollTop + clientHeight >= scrollHeight - proDis) {
@@ -135,6 +134,13 @@
           $('.loading').html('没了啊,还吃不吃啊');
         }
       }
+    });
+    let timer = null;
+    $('.list-warp').on('touchend', '.r-item-content', function() {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        window.location = '../menu/menu.html';
+      }, 1500);
     });
   }
   function init() {

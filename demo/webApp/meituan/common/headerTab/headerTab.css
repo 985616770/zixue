@@ -1,0 +1,35 @@
+.tab-bar {
+  font-size: 0.4266666667rem;
+  display: flex;
+  border-bottom: 0.027rem solid #f0f0f0;
+  margin-top: 1.7066666667rem;
+}
+
+.tab-bar .tab-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 1.243rem;
+  color: #666;
+  position: relative;
+}
+
+.tab-bar .btn-name {
+  margin-top: 0.135rem;
+  font-size: 0.432rem;
+  color: #999;
+}
+
+.tab-bar .tab-item.active::after {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 60px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffd161;
+}
