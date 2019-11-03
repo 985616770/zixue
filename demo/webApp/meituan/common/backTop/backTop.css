@@ -1,0 +1,14 @@
+.backTop {
+  width: 1.352rem;
+  height: 1.352rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  bottom: 1.892rem;
+  right: 0.27rem;
+  text-align: center;
+  line-height: 1.082rem;
+  border-radius: 50%;
+  color: #fff;
+  display: none;
+  font-size: 1.541rem;
+}

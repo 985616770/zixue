@@ -1,0 +1,21 @@
+.category-content {
+  margin-top: 1.243rem;
+}
+.category-content .category-item {
+  float: left;
+  width: 25%;
+  padding-top: 0.378rem;
+  font-size: 0.378rem;
+
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+}
+
+.category-content .item-icon {
+  width: 1.27rem;
+}
+.category-content .item-name {
+  margin-top: 0.405rem;
+}

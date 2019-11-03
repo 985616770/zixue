@@ -1,0 +1,16 @@
+.header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+
+}
+
+.header-img img {
+  width: 100%;
+  height: 1.243rem;
+  vertical-align: top;
+}
+
+.header-active{
+  
+}

@@ -1,0 +1,116 @@
+.list-content {
+  overflow: hidden;
+  padding-top: 0.432rem;
+}
+
+.list-content .list-title {
+  text-align: center;
+  font-size: 0.432rem;
+  margin-top: 0.378rem;
+  margin-bottom: 0.135rem;
+}
+
+.list-content .title-line {
+  display: inline-block;
+  border-bottom: 0.027rem solid #949494;
+  height: 0.027rem;
+  width: 0.811rem;
+  margin-left: 0.108rem;
+  margin-right: 0.108rem;
+  margin-bottom: 0.108rem;
+}
+.loading {
+  padding-bottom: 0.27rem;
+  padding-top: 0.27rem;
+  font-size: 0.432rem;
+  text-align: center;
+  color: #ccc;
+}
+.list-content .r-item-content {
+  display: flex;
+  padding-top: 0.405rem;
+  padding-bottom: 0.405rem;
+  margin-left: 0.27rem;
+  margin-right: 0.27rem;
+  color: #656565;
+  position: relative;
+}
+.r-item-content .item-img {
+  width: 2.162rem;
+  height: 1.892rem;
+  border: 0.027rem solid #e4e4e4;
+}
+.r-item-content .item-info-content {
+  flex: 1;
+  margin-left: 0.216rem;
+  overflow: hidden;
+}
+.r-item-content .brand {
+  position: absolute;
+  left: 0.027rem;
+  top: 0.541rem;
+  font-size: 0.378rem;
+  padding: 0.054rem;
+  color: #fff;
+}
+.r-item-content .brand-xin {
+  background-color: #21c562;
+}
+.r-item-content .brand-pin {
+  background-color: #ffa627;
+}
+
+.r-item-content .item-title {
+  margin-top: 0.081rem;
+  font-size: 0.432rem;
+  font-weight: 500;
+  color: #333;
+}
+.r-item-content .item-desc {
+  margin-top: 0.351rem;
+  font-size: 0.324rem;
+}
+.r-item-content .item-score {
+  float: left;
+}
+.r-item-content .item-count {
+  float: left;
+  margin-left: 0.135rem;
+}
+.r-item-content .item-time {
+  float: right;
+}
+.r-item-content .item-distance {
+  float: right;
+}
+.r-item-content .item-price {
+  margin-top: 0.27rem;
+  font-size: 0.324rem;
+  height: 0.324rem;
+}
+.r-item-content .item-pre-price {
+}
+
+.r-item-content .item-others {
+}
+.r-item-content .other-info {
+  color: #898989;
+  margin-top: 0.189rem;
+  font-size: 0.378rem;
+  display: flex;
+}
+.r-item-content .other-tag {
+  width: 0.378rem;
+  height: 0.378rem;
+}
+.r-item-content .other-content {
+  margin-left: 0.081rem;
+  height: 0.378rem;
+  width: 6.216rem;
+}
+
+.one-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ch">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      (function() {
+        'use strict';
+        let viewport = document.documentElement;
+        // metaEle = document.querySelector('meta[name="viewport"]'),
+        // title = document.head.querySelector('title'),
+        // dpr = window.devicePixelRatio || 1;
+
+        // dpr = dpr >= 3 ? 3 : dpr >= 2 ? 2 : 1;
+        // viewport.setAttribute('data-dpr', dpr);
+
+        // let scale = 1 / dpr;
+        // let content = `width=device-width, initial-scale=${scale}, maximum-scale=${scale}, minimum-scale=${scale}, user-scalable=no`;
+
+        // if (metaEle) {
+        //   metaEle.setAttribute('content', content);
+        // } else {
+        //   let metaNewEle = document.createElement('meta');
+        //   metaNewEle.setAttribute('name', 'viewport');
+        //   metaNewEle.setAttribute('content', content);
+        //   document.head.insertBefore(metaNewEle, title);
+        // }
+        getRem();
+        window.addEventListener('resize', getRem);
+        window.addEventListener('pageshow', function(e) {
+          if (e.persisted) getRem();
+        });
+        function getRem() {
+          let ratioNum = 10;
+          let viewWidth =
+            viewport.getBoundingClientRect().width || window.innerWidth;
+
+          viewport.style.fontSize = viewWidth / ratioNum + 'px';
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="../lib/reset.css" />
+    <link rel="stylesheet" href="../common/bottomBar/bottomBar.css" />
+    <link rel="stylesheet" href="./header/header.css" />
+    <link rel="stylesheet" href="./contentList/contentList.css" />
+  </head>
+  <body>
+    <!-- 头部开始 -->
+    <div class="header">
+      订单
+    </div>
+    <!-- 头部结束 -->
+
+    <!-- 订单列表开始 -->
+    <div class="content-list">
+      <div class="order-item">
+        <div class="order-item-inner">
+          <img class="item-img" src="$poi_pic" alt="" />
+          <div class="item-right">
+            <div class="item-top">
+              <p class="order-name one-line">$poi_name</p>
+              <div class="arrow"></div>
+              <div class="order-state">$status_description</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 订单列表结束 -->
+    <!-- 底部栏 -->
+    <div class="bottom-bar"></div>
+    <script src="../lib/jquery.min.js"></script>
+    <script src="./header/header.js"></script>
+    <script src="../common/bottomBar/bottomBar.js"></script>
+  </body>
+</html>
