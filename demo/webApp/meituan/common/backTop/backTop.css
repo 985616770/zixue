@@ -6,9 +6,17 @@
   bottom: 1.892rem;
   right: 0.27rem;
   text-align: center;
-  line-height: 1.082rem;
+  line-height: 1.352rem;
   border-radius: 50%;
   color: #fff;
   display: none;
-  font-size: 1.541rem;
+}
+.backTop .arrow {
+  width: 0.541rem;
+  height: 0.541rem;
+  border: 0.027rem solid #fff;
+  border-width: 0.054rem 0.054rem 0 0;
+  margin: 0 auto;
+  margin-top: 0.54rem;
+  transform: rotate(-45deg);
 }

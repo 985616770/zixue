@@ -134,3 +134,12 @@ table {
 a {
   text-decoration: none;
 }
+
+.one-line{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.gray{
+  background-color: #efefef;
+}

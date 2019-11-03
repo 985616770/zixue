@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 (function() {
   const itemTmpl = `
-  <a class="$key btn-item" href="/$key/$key.html">
+  <a class="$key btn-item" href="../$key/$key.html">
       <div class="tab-icon"> </div>
       <div class="btn-name">$text</div>
   </a>`;

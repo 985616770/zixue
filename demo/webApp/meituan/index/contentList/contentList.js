@@ -1,7 +1,8 @@
 (function($) {
   'use strict';
+
   // 类目的假数据
-  let itemTmpl = `
+  const itemTmpl = `
       <div class="r-item-content">
           <img src="$pic_url" alt="" class="item-img" />
           $brand
@@ -29,8 +30,7 @@
     page++;
     isScroll = true;
     $.get('../../json/homelist.json', function(data) {
-      console.log(data);
-      let list = data.data.poilist || [];
+      const list = data.data.poilist || [];
       initContentList(list);
       isScroll = false;
     });
@@ -43,9 +43,8 @@
   function getBrand(data) {
     if (data.brand_type) {
       return `<div class="brand brand-pin">品牌</div>`;
-    } else {
-      return `<div class="brand brand-xin">新到</div>`;
     }
+    return `<div class="brand brand-xin">新到</div>`;
   }
   /**
    * 渲染月售
@@ -55,16 +54,15 @@
     let num = data.month_sale_num;
     if (num > 999) {
       return `999+`;
-    } else {
-      return num;
     }
+    return num;
   }
   /**
    * 获取其他活动
    * @param {object} data
    */
   function getOthers(data) {
-    let arr = data.discounts2;
+    const arr = data.discounts2;
     let str = '';
     // 内部的模板字符串替换
     arr.forEach(item => {
@@ -78,30 +76,29 @@
       _str = _str
         .replace('$icon_url', item.icon_url)
         .replace('$info', item.info);
-      str = str + _str;
+      str += _str;
     });
     return str;
   }
 
-   /**
-     * 是否需要渲染美团专送tag
-     * @param {*} data 
-     */
-    function getMeituanFlag(data) {
+  /**
+   * 是否需要渲染美团专送tag
+   * @param {*} data
+   */
+  function getMeituanFlag(data) {
+    if (data.delivery_type) {
+      return '<div class="item-meituan-flag">美团专送</div>';
+    }
 
-      if(data.delivery_type) {
-          return '<div class="item-meituan-flag">美团专送</div>';
-      }
-
-      return '';
+    return '';
   }
   /**
    * 渲染菜品栏
    * @param {Array} list : 获取的json数据
    */
   function initContentList(list) {
-    list.forEach((ele, index) => {
-      let str = itemTmpl
+    list.forEach(ele => {
+      const str = itemTmpl
         .replace('$pic_url', ele.pic_url)
         .replace('$name', ele.name)
         .replace('$distance', ele.distance)
@@ -111,19 +108,20 @@
         .replace('$mouthNum', getMonthSale(ele))
         .replace('$others', getOthers(ele))
         .replace('$wm_poi_score', new StarScore(ele.wm_poi_score).getStars())
-        .replace('$meituanFlag',getMeituanFlag(ele))
+        .replace('$meituanFlag', getMeituanFlag(ele));
       $('.list-warp').append($(str));
     });
   }
 
   function addEvent() {
     window.addEventListener('scroll', () => {
-      let clientHeight = document.documentElement.clientHeight;
-      let scrollHeight = document.body.scrollHeight;
-      let scrollTop =
+      const { clientHeight } = document.documentElement;
+      const { scrollHeight } = document.body;
+
+      const scrollTop =
         document.documentElement.scrollTop || document.body.scrollTop;
       // 阈值
-      let proDis = 30;
+      const proDis = 30;
       if (scrollTop + clientHeight >= scrollHeight - proDis) {
         // 最多三页
         if (page < 3) {
@@ -133,6 +131,8 @@
           }
           // 请求再次渲染页面
           getList();
+        } else {
+          $('.loading').html('没了啊,还吃不吃啊');
         }
       }
     });

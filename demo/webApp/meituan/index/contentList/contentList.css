@@ -19,13 +19,7 @@
   margin-right: 0.108rem;
   margin-bottom: 0.108rem;
 }
-.loading {
-  padding-bottom: 0.27rem;
-  padding-top: 0.27rem;
-  font-size: 0.432rem;
-  text-align: center;
-  color: #ccc;
-}
+
 .list-content .r-item-content {
   display: flex;
   padding-top: 0.405rem;
