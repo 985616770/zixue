@@ -1,0 +1,56 @@
+.menu-inner {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 3rem;
+  display: flex;
+  overflow: hidden;
+}
+.menu-inner .left-bar {
+  background-color: #eee;
+  overflow: auto;
+  height: 100%;
+  /* ios端顺滑滚动 */
+  -webkit-overflow-scrolling: touch;
+}
+.menu-inner .left-bar-inner {
+  padding-bottom: 2.297rem;
+}
+.left-bar-inner .left-item {
+  font-size: 0.378rem;
+  color: #666;
+  text-align: center;
+  height: 1.351rem;
+  line-height: 1.351rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  transition: all .5s;
+  width: 1.892rem;
+}
+.left-bar-inner .left-item::before {
+  content: '';
+  position: absolute;
+  top: 0.406rem;
+  left: 0;
+  width: 0.135rem;
+  height: 0.567rem;
+  border-radius: 3px;
+  background-color: #ffd161;
+  display: none;
+}
+
+.left-bar-inner .left-item.active {
+  background-color: #fff;
+}
+.left-bar-inner .left-item.active::before {
+  display: block;
+}
+.left-bar-inner .item-text {
+
+}
+.left-bar-inner .item-icon {
+  margin-right: 0.27rem;
+  width: 0.378rem;
+  height: 0.378rem;
+}

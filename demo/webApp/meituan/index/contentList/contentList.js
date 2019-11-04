@@ -136,7 +136,9 @@
       }
     });
     let timer = null;
-    $('.list-warp').on('touchend', '.r-item-content', function() {
+    $('.list-warp').on('touchend', '.r-item-content', function(e) {
+      const $target = $(e.currentTarget);
+      if (!$target) return;
       clearTimeout(timer);
       timer = setTimeout(() => {
         window.location = '../menu/menu.html';

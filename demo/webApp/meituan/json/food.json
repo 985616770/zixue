@@ -72,7 +72,7 @@
             "praise_content": "赞7",
             "tread_num": 1,
             "praise_num_new": 7,
-            "unit": "例",
+            "unit": "杯",
             "description": "麦辣鸡翅2块（主要原料：鸡肉，腌料，裹粉，油）",
             "picture": "http://p0.meituan.net/xianfuwm/38bbfa3f955cbce3330f1cb6818d0ce6216794.png",
             "video_icon": "",
@@ -86,7 +86,7 @@
             "skus": [
               {
                 "id": 102106728,
-                "spec": "例",
+                "spec": "杯",
                 "description": "麦辣鸡翅2块（主要原料：鸡肉，腌料，裹粉，油）",
                 "picture": "http://p0.meituan.net/xianfuwm/38bbfa3f955cbce3330f1cb6818d0ce6216794.png",
                 "price": 11.5,
@@ -157,7 +157,7 @@
             "praise_content": "赞10",
             "tread_num": 0,
             "praise_num_new": 10,
-            "unit": "例",
+            "unit": "杯",
             "description": "5块麦乐鸡（主要原料：鸡肉，油）",
             "picture": "http://p0.meituan.net/xianfu/6d44a0f1f33512472ee113396dba5d40109871.png",
             "video_icon": "",
@@ -171,7 +171,7 @@
             "skus": [
               {
                 "id": 102107180,
-                "spec": "例",
+                "spec": "杯",
                 "description": "5块麦乐鸡（主要原料：鸡肉，油）",
                 "picture": "http://p0.meituan.net/xianfu/6d44a0f1f33512472ee113396dba5d40109871.png",
                 "price": 11.5,
@@ -242,7 +242,7 @@
             "praise_content": "赞3",
             "tread_num": 0,
             "praise_num_new": 3,
-            "unit": "例",
+            "unit": "杯",
             "description": "麦辣鸡翅4块（主要原料：鸡肉，腌料，裹粉，油）",
             "picture": "http://p0.meituan.net/xianfuwm/416b9ebd6b13d45b39cac9f7a21967ba234597.png",
             "video_icon": "",
@@ -256,7 +256,7 @@
             "skus": [
               {
                 "id": 102106722,
-                "spec": "例",
+                "spec": "杯",
                 "description": "麦辣鸡翅4块（主要原料：鸡肉，腌料，裹粉，油）",
                 "picture": "http://p0.meituan.net/xianfuwm/416b9ebd6b13d45b39cac9f7a21967ba234597.png",
                 "price": 23.0,
@@ -327,7 +327,7 @@
             "praise_content": "赞5",
             "tread_num": 0,
             "praise_num_new": 5,
-            "unit": "例",
+            "unit": "杯",
             "description": "主要原料：薯条，油，盐",
             "picture": "http://p1.meituan.net/xianfuwm/af31248c3489ed58435de3f88f1ee09d235371.png",
             "video_icon": "",
@@ -341,7 +341,7 @@
             "skus": [
               {
                 "id": 240989784,
-                "spec": "例",
+                "spec": "杯",
                 "description": "主要原料：薯条，油，盐",
                 "picture": "http://p1.meituan.net/xianfuwm/af31248c3489ed58435de3f88f1ee09d235371.png",
                 "price": 13.0,
@@ -497,7 +497,7 @@
             "praise_content": "赞5",
             "tread_num": 0,
             "praise_num_new": 5,
-            "unit": "例",
+            "unit": "杯",
             "description": "1份那么大鸡小块（主要原料：鸡肉，油）",
             "picture": "http://p0.meituan.net/xianfu/9e99c2e1f20b451f8a2cae139fbf51df33875.jpg",
             "video_icon": "",
@@ -582,7 +582,7 @@
             "praise_content": "赞1",
             "tread_num": 0,
             "praise_num_new": 1,
-            "unit": "例",
+            "unit": "杯",
             "description": "主要原料：面包、鸡肉、生菜、风味沙拉酱",
             "picture": "http://p1.meituan.net/xianfuwm/11d12a87c1a7aa58fa677c7b966b6594323357.png",
             "video_icon": "",
@@ -596,7 +596,7 @@
             "skus": [
               {
                 "id": 102107181,
-                "spec": "例",
+                "spec": "杯",
                 "description": "主要原料：面包、鸡肉、生菜、风味沙拉酱",
                 "picture": "http://p1.meituan.net/xianfuwm/11d12a87c1a7aa58fa677c7b966b6594323357.png",
                 "price": 20.0,
@@ -667,7 +667,7 @@
             "praise_content": "赞2",
             "tread_num": 0,
             "praise_num_new": 2,
-            "unit": "例",
+            "unit": "杯",
             "description": "奥利奥原味麦旋风1个（主要原料：香草风味冰淇淋，奥利奥饼干碎）",
             "picture": "http://p1.meituan.net/xianfuwm/9ac14a8fd87fd35a406d89ddd262c03c217385.png",
             "video_icon": "",
@@ -681,7 +681,7 @@
             "skus": [
               {
                 "id": 512720307,
-                "spec": "例",
+                "spec": "杯",
                 "description": "奥利奥原味麦旋风1个（主要原料：香草风味冰淇淋，奥利奥饼干碎）",
                 "picture": "http://p1.meituan.net/xianfuwm/9ac14a8fd87fd35a406d89ddd262c03c217385.png",
                 "price": 12.5,
@@ -776,7 +776,7 @@
             "praise_content": "赞1",
             "tread_num": 0,
             "praise_num_new": 1,
-            "unit": "例",
+            "unit": "杯",
             "description": "麦辣鸡腿堡“金球版”1个（主要原料：足球形面包，鸡肉，生菜，风味沙拉酱）",
             "picture": "http://p1.meituan.net/xianfu/f50ef0141a647397745b8932f157782c74101.jpg",
             "video_icon": "",
@@ -1861,7 +1861,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "那么大鸡排1份 那么大鸡小块1份 金球薯饼1份 麦辣鸡翅2对（主要原料：鸡肉，薯饼，鸡翅）",
             "picture": "http://p0.meituan.net/xianfu/208db5937b2950817482ae24098b1ac385705.jpg",
             "video_icon": "",
@@ -1952,7 +1952,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "大鸡排1份 麦辣鸡翅1对 麦乐鸡4块",
             "picture": "http://p0.meituan.net/xianfu/80bb317ad5c4d5de5f0fc8dd5a5242a0106896.jpg",
             "video_icon": "",
@@ -1966,7 +1966,7 @@
             "skus": [
               {
                 "id": 452440221,
-                "spec": "例",
+                "spec": "杯",
                 "description": "大鸡排1份 麦辣鸡翅1对 麦乐鸡4块",
                 "picture": "http://p0.meituan.net/xianfu/80bb317ad5c4d5de5f0fc8dd5a5242a0106896.jpg",
                 "price": 30.0,
@@ -2207,7 +2207,7 @@
             "praise_content": "赞1",
             "tread_num": 0,
             "praise_num_new": 1,
-            "unit": "例",
+            "unit": "杯",
             "description": "金球薯饼1份（3块）（主要原料：薯饼）",
             "picture": "http://p0.meituan.net/xianfu/78dbb2292ca3415d93225f96c30632e895180.jpg",
             "video_icon": "",
@@ -2298,7 +2298,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "香蕉派1个（主要原料：香蕉派）",
             "picture": "http://p1.meituan.net/xianfu/64e051213e5858fb14ddad6bd406336c55103.jpg",
             "video_icon": "",
@@ -2735,7 +2735,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "奇乐圈1份（主要原料：原味吉事果面团）",
             "picture": "http://p0.meituan.net/xianfu/0289e0d54d820af3c745cdccbb9569db33754.png",
             "video_icon": "",
@@ -3020,7 +3020,7 @@
             "praise_content": "赞1",
             "tread_num": 0,
             "praise_num_new": 1,
-            "unit": "例",
+            "unit": "杯",
             "description": "主要原料：面包、鸡肉、生菜、风味沙拉酱",
             "picture": "http://p1.meituan.net/xianfuwm/11d12a87c1a7aa58fa677c7b966b6594323357.png",
             "video_icon": "",
@@ -3034,7 +3034,7 @@
             "skus": [
               {
                 "id": 102107181,
-                "spec": "例",
+                "spec": "杯",
                 "description": "主要原料：面包、鸡肉、生菜、风味沙拉酱",
                 "picture": "http://p1.meituan.net/xianfuwm/11d12a87c1a7aa58fa677c7b966b6594323357.png",
                 "price": 20.0,
@@ -3105,7 +3105,7 @@
             "praise_content": "赞1",
             "tread_num": 0,
             "praise_num_new": 1,
-            "unit": "例",
+            "unit": "杯",
             "description": "主要原料：面包、鱼、芝士、风味沙拉酱",
             "picture": "http://p0.meituan.net/xianfuwm/bdfe3463e5dab4e29418c21f719f1944283715.png",
             "video_icon": "",
@@ -3119,7 +3119,7 @@
             "skus": [
               {
                 "id": 102107177,
-                "spec": "例",
+                "spec": "杯",
                 "description": "主要原料：面包、鱼、芝士、风味沙拉酱",
                 "picture": "http://p0.meituan.net/xianfuwm/bdfe3463e5dab4e29418c21f719f1944283715.png",
                 "price": 19.0,
@@ -3190,7 +3190,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "主要原料：面包、牛肉、生菜、洋葱、腌黄瓜、芝士、风味沙拉酱",
             "picture": "http://p1.meituan.net/xianfu/bea403c55f25302e3a342e2ce68d1673479937.png",
             "video_icon": "",
@@ -3204,7 +3204,7 @@
             "skus": [
               {
                 "id": 102106748,
-                "spec": "例",
+                "spec": "杯",
                 "description": "主要原料：面包、牛肉、生菜、洋葱、腌黄瓜、芝士、风味沙拉酱",
                 "picture": "http://p1.meituan.net/xianfu/bea403c55f25302e3a342e2ce68d1673479937.png",
                 "price": 23.0,
@@ -3275,7 +3275,7 @@
             "praise_content": "赞1",
             "tread_num": 0,
             "praise_num_new": 1,
-            "unit": "例",
+            "unit": "杯",
             "description": "主要原料：面包、牛肉、生菜、番茄、培根、番茄酱、风味沙拉酱",
             "picture": "http://p1.meituan.net/xianfuwm/8bdfa160293b923cfbd50e2a90c6b8e9127708.jpg",
             "video_icon": "",
@@ -3289,7 +3289,7 @@
             "skus": [
               {
                 "id": 102106720,
-                "spec": "例",
+                "spec": "杯",
                 "description": "主要原料：面包、牛肉、生菜、番茄、培根、番茄酱、风味沙拉酱",
                 "picture": "http://p1.meituan.net/xianfuwm/8bdfa160293b923cfbd50e2a90c6b8e9127708.jpg",
                 "price": 23.0,
@@ -3360,7 +3360,7 @@
             "praise_content": "赞2",
             "tread_num": 0,
             "praise_num_new": 2,
-            "unit": "例",
+            "unit": "杯",
             "description": "主要原料：面包、鸡肉、生菜、风味沙拉酱",
             "picture": "http://p1.meituan.net/xianfu/85ce1f49ad8b5420d7a21067d274110c303543.png",
             "video_icon": "",
@@ -3374,7 +3374,7 @@
             "skus": [
               {
                 "id": 102106723,
-                "spec": "例",
+                "spec": "杯",
                 "description": "主要原料：面包、鸡肉、生菜、风味沙拉酱",
                 "picture": "http://p1.meituan.net/xianfu/85ce1f49ad8b5420d7a21067d274110c303543.png",
                 "price": 13.0,
@@ -3445,7 +3445,7 @@
             "praise_content": "赞3",
             "tread_num": 0,
             "praise_num_new": 3,
-            "unit": "例",
+            "unit": "杯",
             "description": "主要原料：面包、牛肉、洋葱、腌黄瓜、芝士、番茄酱",
             "picture": "http://p1.meituan.net/xianfuwm/8174b6a1e067c2e86dac3ac468dab2bd266410.png",
             "video_icon": "",
@@ -3459,7 +3459,7 @@
             "skus": [
               {
                 "id": 102106752,
-                "spec": "例",
+                "spec": "杯",
                 "description": "主要原料：面包、牛肉、洋葱、腌黄瓜、芝士、番茄酱",
                 "picture": "http://p1.meituan.net/xianfuwm/8174b6a1e067c2e86dac3ac468dab2bd266410.png",
                 "price": 19.0,
@@ -3530,7 +3530,7 @@
             "praise_content": "赞2",
             "tread_num": 0,
             "praise_num_new": 2,
-            "unit": "例",
+            "unit": "杯",
             "description": "主要原料：面包、牛肉、洋葱、腌黄瓜、芝士、番茄酱",
             "picture": "http://p0.meituan.net/xianfuwm/970dc52c58f4039daaead6580a9afb9b409187.jpg",
             "video_icon": "",
@@ -3544,7 +3544,7 @@
             "skus": [
               {
                 "id": 102106746,
-                "spec": "例",
+                "spec": "杯",
                 "description": "主要原料：面包、牛肉、洋葱、腌黄瓜、芝士、番茄酱",
                 "picture": "http://p0.meituan.net/xianfuwm/970dc52c58f4039daaead6580a9afb9b409187.jpg",
                 "price": 10.0,
@@ -3615,7 +3615,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "主要原料：面包、牛肉、洋葱、腌黄瓜、番茄酱",
             "picture": "http://p1.meituan.net/xianfuwm/2464c58bb059694acd717269ec112750238375.png",
             "video_icon": "",
@@ -3629,7 +3629,7 @@
             "skus": [
               {
                 "id": 211513587,
-                "spec": "例",
+                "spec": "杯",
                 "description": "主要原料：面包、牛肉、洋葱、腌黄瓜、番茄酱",
                 "picture": "http://p1.meituan.net/xianfuwm/2464c58bb059694acd717269ec112750238375.png",
                 "price": 9.0,
@@ -3785,7 +3785,7 @@
             "praise_content": "赞1",
             "tread_num": 0,
             "praise_num_new": 1,
-            "unit": "例",
+            "unit": "杯",
             "description": "不素之霸双层牛肉堡1个（主要原料：主要原料：面包，牛肉，猪肉，风味酱）",
             "picture": "http://p1.meituan.net/xianfuwm/6f8868b72f259c225fa3b66c597a325485367.jpg",
             "video_icon": "",
@@ -3799,7 +3799,7 @@
             "skus": [
               {
                 "id": 261734515,
-                "spec": "例",
+                "spec": "杯",
                 "description": "不素之霸双层牛肉堡1个（主要原料：主要原料：面包，牛肉，猪肉，风味酱）",
                 "picture": "http://p1.meituan.net/xianfuwm/6f8868b72f259c225fa3b66c597a325485367.jpg",
                 "price": 21.0,
@@ -3870,7 +3870,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "双层阿拉斯加狭鳕鱼堡1个（主要原料：主要原料：面包，鳕鱼，风味酱）",
             "picture": "http://p0.meituan.net/xianfuwm/e86a0cc9c259fb60b8a53d1729e1ba0761104.jpg",
             "video_icon": "",
@@ -3884,7 +3884,7 @@
             "skus": [
               {
                 "id": 255362616,
-                "spec": "例",
+                "spec": "杯",
                 "description": "双层阿拉斯加狭鳕鱼堡1个（主要原料：主要原料：面包，鳕鱼，风味酱）",
                 "picture": "http://p0.meituan.net/xianfuwm/e86a0cc9c259fb60b8a53d1729e1ba0761104.jpg",
                 "price": 21.0,
@@ -3955,7 +3955,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "蜜汁鸡腿满碗饭1份（主要原料：主要原料：大米，鸡肉，生菜，油，风味酱）",
             "picture": "http://p0.meituan.net/xianfuwm/6284d37a9e54269fd0400efa02d5c90a285459.png",
             "video_icon": "",
@@ -3969,7 +3969,7 @@
             "skus": [
               {
                 "id": 420579410,
-                "spec": "例",
+                "spec": "杯",
                 "description": "蜜汁鸡腿满碗饭1份（主要原料：主要原料：大米，鸡肉，生菜，油，风味酱）",
                 "picture": "http://p0.meituan.net/xianfuwm/6284d37a9e54269fd0400efa02d5c90a285459.png",
                 "price": 24.0,
@@ -7852,7 +7852,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "果木烟熏风味那么大鸡翅1个（主要原料：鸡肉，油）",
             "picture": "http://p0.meituan.net/xianfuwm/747a06549fafa6ccec259322b42d822777591.jpg",
             "video_icon": "",
@@ -7866,7 +7866,7 @@
             "skus": [
               {
                 "id": 322084159,
-                "spec": "例",
+                "spec": "杯",
                 "description": "果木烟熏风味那么大鸡翅1个（主要原料：鸡肉，油）",
                 "picture": "http://p0.meituan.net/xianfuwm/747a06549fafa6ccec259322b42d822777591.jpg",
                 "price": 16.0,
@@ -7937,7 +7937,7 @@
             "praise_content": "赞5",
             "tread_num": 0,
             "praise_num_new": 5,
-            "unit": "例",
+            "unit": "杯",
             "description": "1份那么大鸡小块（主要原料：鸡肉，油）",
             "picture": "http://p0.meituan.net/xianfu/9e99c2e1f20b451f8a2cae139fbf51df33875.jpg",
             "video_icon": "",
@@ -8022,7 +8022,7 @@
             "praise_content": "赞1",
             "tread_num": 0,
             "praise_num_new": 1,
-            "unit": "例",
+            "unit": "杯",
             "description": "主要原料：鸡肉，油",
             "picture": "http://p1.meituan.net/xianfuwm/1d10359106bac049aace956c563a03e3108864.jpg",
             "video_icon": "",
@@ -8036,7 +8036,7 @@
             "skus": [
               {
                 "id": 420625529,
-                "spec": "例",
+                "spec": "杯",
                 "description": "主要原料：鸡肉，油",
                 "picture": "http://p1.meituan.net/xianfuwm/1d10359106bac049aace956c563a03e3108864.jpg",
                 "price": 13.0,
@@ -8107,7 +8107,7 @@
             "praise_content": "赞7",
             "tread_num": 1,
             "praise_num_new": 7,
-            "unit": "例",
+            "unit": "杯",
             "description": "麦辣鸡翅2块（主要原料：鸡肉，腌料，裹粉，油）",
             "picture": "http://p0.meituan.net/xianfuwm/38bbfa3f955cbce3330f1cb6818d0ce6216794.png",
             "video_icon": "",
@@ -8121,7 +8121,7 @@
             "skus": [
               {
                 "id": 102106728,
-                "spec": "例",
+                "spec": "杯",
                 "description": "麦辣鸡翅2块（主要原料：鸡肉，腌料，裹粉，油）",
                 "picture": "http://p0.meituan.net/xianfuwm/38bbfa3f955cbce3330f1cb6818d0ce6216794.png",
                 "price": 11.5,
@@ -8192,7 +8192,7 @@
             "praise_content": "赞3",
             "tread_num": 0,
             "praise_num_new": 3,
-            "unit": "例",
+            "unit": "杯",
             "description": "麦辣鸡翅4块（主要原料：鸡肉，腌料，裹粉，油）",
             "picture": "http://p0.meituan.net/xianfuwm/416b9ebd6b13d45b39cac9f7a21967ba234597.png",
             "video_icon": "",
@@ -8206,7 +8206,7 @@
             "skus": [
               {
                 "id": 102106722,
-                "spec": "例",
+                "spec": "杯",
                 "description": "麦辣鸡翅4块（主要原料：鸡肉，腌料，裹粉，油）",
                 "picture": "http://p0.meituan.net/xianfuwm/416b9ebd6b13d45b39cac9f7a21967ba234597.png",
                 "price": 23.0,
@@ -8277,7 +8277,7 @@
             "praise_content": "赞1",
             "tread_num": 0,
             "praise_num_new": 1,
-            "unit": "例",
+            "unit": "杯",
             "description": "麦辣鸡翅9块（主要原料：鸡肉，腌料，裹粉，油）",
             "picture": "http://p0.meituan.net/xianfuwm/a6fea039b5b1461cfe2431a00ed4cd87244211.png",
             "video_icon": "",
@@ -8291,7 +8291,7 @@
             "skus": [
               {
                 "id": 102106735,
-                "spec": "例",
+                "spec": "杯",
                 "description": "麦辣鸡翅9块（主要原料：鸡肉，腌料，裹粉，油）",
                 "picture": "http://p0.meituan.net/xianfuwm/a6fea039b5b1461cfe2431a00ed4cd87244211.png",
                 "price": 46.0,
@@ -8702,7 +8702,7 @@
             "praise_content": "赞3",
             "tread_num": 0,
             "praise_num_new": 3,
-            "unit": "例",
+            "unit": "杯",
             "description": "主要原料：鸡肉，油",
             "picture": "http://p1.meituan.net/xianfuwm/e2bc458aec29f590dca898919077d839237268.png",
             "video_icon": "",
@@ -8716,7 +8716,7 @@
             "skus": [
               {
                 "id": 102106753,
-                "spec": "例",
+                "spec": "杯",
                 "description": "主要原料：鸡肉，油",
                 "picture": "http://p1.meituan.net/xianfuwm/e2bc458aec29f590dca898919077d839237268.png",
                 "price": 13.0,
@@ -8787,7 +8787,7 @@
             "praise_content": "赞10",
             "tread_num": 0,
             "praise_num_new": 10,
-            "unit": "例",
+            "unit": "杯",
             "description": "5块麦乐鸡（主要原料：鸡肉，油）",
             "picture": "http://p0.meituan.net/xianfu/6d44a0f1f33512472ee113396dba5d40109871.png",
             "video_icon": "",
@@ -8801,7 +8801,7 @@
             "skus": [
               {
                 "id": 102107180,
-                "spec": "例",
+                "spec": "杯",
                 "description": "5块麦乐鸡（主要原料：鸡肉，油）",
                 "picture": "http://p0.meituan.net/xianfu/6d44a0f1f33512472ee113396dba5d40109871.png",
                 "price": 11.5,
@@ -8872,7 +8872,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "10块麦乐鸡（主要原料：鸡肉，油）",
             "picture": "http://p1.meituan.net/xianfu/5803608c7c743cac4a41a9bce94c96dd210030.png",
             "video_icon": "",
@@ -8886,7 +8886,7 @@
             "skus": [
               {
                 "id": 102106734,
-                "spec": "例",
+                "spec": "杯",
                 "description": "10块麦乐鸡（主要原料：鸡肉，油）",
                 "picture": "http://p1.meituan.net/xianfu/5803608c7c743cac4a41a9bce94c96dd210030.png",
                 "price": 23.0,
@@ -9297,7 +9297,7 @@
             "praise_content": "赞1",
             "tread_num": 0,
             "praise_num_new": 1,
-            "unit": "例",
+            "unit": "杯",
             "description": "美味鲜蔬杯1个（主要原料：生菜，胡萝卜，紫甘蓝，番茄，风味酱）",
             "picture": "http://p0.meituan.net/xianfuwm/969a5ef3cb5f1781c0b3f485b6079882192918.png",
             "video_icon": "",
@@ -9311,7 +9311,7 @@
             "skus": [
               {
                 "id": 332600740,
-                "spec": "例",
+                "spec": "杯",
                 "description": "美味鲜蔬杯1个（主要原料：生菜，胡萝卜，紫甘蓝，番茄，风味酱）",
                 "picture": "http://p0.meituan.net/xianfuwm/969a5ef3cb5f1781c0b3f485b6079882192918.png",
                 "price": 11.0,
@@ -9382,7 +9382,7 @@
             "praise_content": "赞1",
             "tread_num": 0,
             "praise_num_new": 1,
-            "unit": "例",
+            "unit": "杯",
             "description": "主要原料：薯条，油，盐",
             "picture": "http://p1.meituan.net/xianfuwm/044f7883cbf16fec46154dca47949785201447.png",
             "video_icon": "",
@@ -9396,7 +9396,7 @@
             "skus": [
               {
                 "id": 240989786,
-                "spec": "例",
+                "spec": "杯",
                 "description": "主要原料：薯条，油，盐",
                 "picture": "http://p1.meituan.net/xianfuwm/044f7883cbf16fec46154dca47949785201447.png",
                 "price": 11.0,
@@ -9467,7 +9467,7 @@
             "praise_content": "赞5",
             "tread_num": 0,
             "praise_num_new": 5,
-            "unit": "例",
+            "unit": "杯",
             "description": "主要原料：薯条，油，盐",
             "picture": "http://p1.meituan.net/xianfuwm/af31248c3489ed58435de3f88f1ee09d235371.png",
             "video_icon": "",
@@ -9481,7 +9481,7 @@
             "skus": [
               {
                 "id": 240989784,
-                "spec": "例",
+                "spec": "杯",
                 "description": "主要原料：薯条，油，盐",
                 "picture": "http://p1.meituan.net/xianfuwm/af31248c3489ed58435de3f88f1ee09d235371.png",
                 "price": 13.0,
@@ -9552,7 +9552,7 @@
             "praise_content": "赞1",
             "tread_num": 0,
             "praise_num_new": 1,
-            "unit": "例",
+            "unit": "杯",
             "description": "主要原料：玉米",
             "picture": "http://p0.meituan.net/xianfuwm/fc2fdebd9afd8bf2a35d3e29d607d79a256160.png",
             "video_icon": "",
@@ -9566,7 +9566,7 @@
             "skus": [
               {
                 "id": 102106727,
-                "spec": "例",
+                "spec": "杯",
                 "description": "主要原料：玉米",
                 "picture": "http://p0.meituan.net/xianfuwm/fc2fdebd9afd8bf2a35d3e29d607d79a256160.png",
                 "price": 11.0,
@@ -9637,7 +9637,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "主要原料：玉米",
             "picture": "http://p1.meituan.net/xianfuwm/63cd65e96856e1f200ad480aa305f86c241534.png",
             "video_icon": "",
@@ -9651,7 +9651,7 @@
             "skus": [
               {
                 "id": 102106745,
-                "spec": "例",
+                "spec": "杯",
                 "description": "主要原料：玉米",
                 "picture": "http://p1.meituan.net/xianfuwm/63cd65e96856e1f200ad480aa305f86c241534.png",
                 "price": 13.0,
@@ -9746,7 +9746,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "1杯那么大珍珠奶茶（热）（主要原料：茶，焦糖珍珠）",
             "picture": "http://p0.meituan.net/xianfu/4dbee3c117cbb142012c5a417936da6525219.jpg",
             "video_icon": "",
@@ -9831,7 +9831,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "1杯那么大珍珠奶茶（冷）（主要原料：茶，焦糖珍珠）",
             "picture": "http://p0.meituan.net/xianfu/afadda249415429f27ce1fe90a622a0826078.jpg",
             "video_icon": "",
@@ -9916,7 +9916,7 @@
             "praise_content": "赞1",
             "tread_num": 0,
             "praise_num_new": 1,
-            "unit": "例",
+            "unit": "杯",
             "description": "那么大鲜柠特饮（可乐）1杯（主要原料：可口可乐，鲜柠檬片）",
             "picture": "http://p0.meituan.net/xianfuwm/1eede0291ec843701aa9126209169dc745139.jpg",
             "video_icon": "",
@@ -9930,7 +9930,7 @@
             "skus": [
               {
                 "id": 686794922,
-                "spec": "例",
+                "spec": "杯",
                 "description": "那么大鲜柠特饮（可乐）1杯（主要原料：可口可乐，鲜柠檬片）",
                 "picture": "http://p0.meituan.net/xianfuwm/1eede0291ec843701aa9126209169dc745139.jpg",
                 "price": 13.5,
@@ -10001,7 +10001,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "那么大鲜柠特饮（雪碧）1杯（主要原料：雪碧，鲜柠檬片）",
             "picture": "http://p0.meituan.net/xianfuwm/0666362216a11cdb20bed65324dab66a33094.jpg",
             "video_icon": "",
@@ -10015,7 +10015,7 @@
             "skus": [
               {
                 "id": 686798651,
-                "spec": "例",
+                "spec": "杯",
                 "description": "那么大鲜柠特饮（雪碧）1杯（主要原料：雪碧，鲜柠檬片）",
                 "picture": "http://p0.meituan.net/xianfuwm/0666362216a11cdb20bed65324dab66a33094.jpg",
                 "price": 13.5,
@@ -10086,7 +10086,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "那么大鲜柠特饮柠檬红茶1杯（主要原料：茶，鲜柠檬片）",
             "picture": "http://p0.meituan.net/xianfuwm/0e0513894645daa4f6129f45a4c4b11641680.jpg",
             "video_icon": "",
@@ -10100,7 +10100,7 @@
             "skus": [
               {
                 "id": 686798650,
-                "spec": "例",
+                "spec": "杯",
                 "description": "那么大鲜柠特饮柠檬红茶1杯（主要原料：茶，鲜柠檬片）",
                 "picture": "http://p0.meituan.net/xianfuwm/0e0513894645daa4f6129f45a4c4b11641680.jpg",
                 "price": 13.5,
@@ -10171,7 +10171,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "1杯那么大鲜柠特饮（海盐柠檬苏打风味汽水)（主要原料：雪碧，鲜柠檬片，风味糖浆）",
             "picture": "http://p0.meituan.net/xianfu/79fe0a17600b66b83f53ab0cfa240e0b35674.jpg",
             "video_icon": "",
@@ -10256,7 +10256,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "柠檬红茶味饮料（大杯）",
             "picture": "http://p1.meituan.net/xianfuwm/604e4776d4aee590139ce60827eb3434198868.png",
             "video_icon": "",
@@ -10270,7 +10270,7 @@
             "skus": [
               {
                 "id": 105249489,
-                "spec": "例",
+                "spec": "杯",
                 "description": "柠檬红茶味饮料（大杯）",
                 "picture": "http://p1.meituan.net/xianfuwm/604e4776d4aee590139ce60827eb3434198868.png",
                 "price": 12.0,
@@ -10341,7 +10341,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "咖啡",
             "picture": "http://p0.meituan.net/xianfuwm/72653d8e8b515bb74747b41fc9edae2e163177.png",
             "video_icon": "",
@@ -10355,7 +10355,7 @@
             "skus": [
               {
                 "id": 102106755,
-                "spec": "例",
+                "spec": "杯",
                 "description": "咖啡",
                 "picture": "http://p0.meituan.net/xianfuwm/72653d8e8b515bb74747b41fc9edae2e163177.png",
                 "price": 11.0,
@@ -10426,7 +10426,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "主要原料：巧克力粉、白砂糖",
             "picture": "http://p0.meituan.net/xianfuwm/bd0a9471992916e6f5399377d2b50f2e192093.png",
             "video_icon": "",
@@ -10440,7 +10440,7 @@
             "skus": [
               {
                 "id": 102107189,
-                "spec": "例",
+                "spec": "杯",
                 "description": "主要原料：巧克力粉、白砂糖",
                 "picture": "http://p0.meituan.net/xianfuwm/bd0a9471992916e6f5399377d2b50f2e192093.png",
                 "price": 11.5,
@@ -10511,7 +10511,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "红茶",
             "picture": "http://p1.meituan.net/xianfuwm/af13987f896175369b9b10bc020c3c32181548.png",
             "video_icon": "",
@@ -10525,7 +10525,7 @@
             "skus": [
               {
                 "id": 102106741,
-                "spec": "例",
+                "spec": "杯",
                 "description": "红茶",
                 "picture": "http://p1.meituan.net/xianfuwm/af13987f896175369b9b10bc020c3c32181548.png",
                 "price": 11.5,
@@ -10596,7 +10596,7 @@
             "praise_content": "赞1",
             "tread_num": 0,
             "praise_num_new": 1,
-            "unit": "例",
+            "unit": "杯",
             "description": "美汁源阳光橙1杯，包装以实物为准，图片仅供参考 美汁源阳光橙",
             "picture": "http://p1.meituan.net/xianfuwm/f852a8cc236f94b6e7b96b42e01a71ba39934.jpg",
             "video_icon": "",
@@ -10610,7 +10610,7 @@
             "skus": [
               {
                 "id": 168423998,
-                "spec": "例",
+                "spec": "杯",
                 "description": "美汁源阳光橙1杯，包装以实物为准，图片仅供参考 美汁源阳光橙",
                 "picture": "http://p1.meituan.net/xianfuwm/f852a8cc236f94b6e7b96b42e01a71ba39934.jpg",
                 "price": 11.0,
@@ -10681,7 +10681,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "可口可乐",
             "picture": "http://p1.meituan.net/xianfuwm/48324d17ec0a6a97104c8f42e9320e87209138.png",
             "video_icon": "",
@@ -10695,7 +10695,7 @@
             "skus": [
               {
                 "id": 102107170,
-                "spec": "例",
+                "spec": "杯",
                 "description": "可口可乐",
                 "picture": "http://p1.meituan.net/xianfuwm/48324d17ec0a6a97104c8f42e9320e87209138.png",
                 "price": 9.5,
@@ -10766,7 +10766,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "可口可乐",
             "picture": "http://p1.meituan.net/xianfuwm/48324d17ec0a6a97104c8f42e9320e87209138.png",
             "video_icon": "",
@@ -10780,7 +10780,7 @@
             "skus": [
               {
                 "id": 102106732,
-                "spec": "例",
+                "spec": "杯",
                 "description": "可口可乐",
                 "picture": "http://p1.meituan.net/xianfuwm/48324d17ec0a6a97104c8f42e9320e87209138.png",
                 "price": 11.5,
@@ -10851,7 +10851,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "零度可口",
             "picture": "http://p0.meituan.net/xianfuwm/9451e7213bf806b4ad952ea51a3cf056220741.png",
             "video_icon": "",
@@ -10865,7 +10865,7 @@
             "skus": [
               {
                 "id": 337178840,
-                "spec": "例",
+                "spec": "杯",
                 "description": "零度可口",
                 "picture": "http://p0.meituan.net/xianfuwm/9451e7213bf806b4ad952ea51a3cf056220741.png",
                 "price": 11.5,
@@ -10936,7 +10936,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "零度可口",
             "picture": "http://p0.meituan.net/xianfuwm/9451e7213bf806b4ad952ea51a3cf056220741.png",
             "video_icon": "",
@@ -10950,7 +10950,7 @@
             "skus": [
               {
                 "id": 170275687,
-                "spec": "例",
+                "spec": "杯",
                 "description": "零度可口",
                 "picture": "http://p0.meituan.net/xianfuwm/9451e7213bf806b4ad952ea51a3cf056220741.png",
                 "price": 9.5,
@@ -11021,7 +11021,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "雪碧",
             "picture": "http://p1.meituan.net/xianfuwm/52e60b0647b69c08cf2dd5aaef9321d7247464.png",
             "video_icon": "",
@@ -11035,7 +11035,7 @@
             "skus": [
               {
                 "id": 102106736,
-                "spec": "例",
+                "spec": "杯",
                 "description": "雪碧",
                 "picture": "http://p1.meituan.net/xianfuwm/52e60b0647b69c08cf2dd5aaef9321d7247464.png",
                 "price": 9.5,
@@ -11106,7 +11106,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "雪碧",
             "picture": "http://p1.meituan.net/xianfuwm/52e60b0647b69c08cf2dd5aaef9321d7247464.png",
             "video_icon": "",
@@ -11120,7 +11120,7 @@
             "skus": [
               {
                 "id": 102106717,
-                "spec": "例",
+                "spec": "杯",
                 "description": "雪碧",
                 "picture": "http://p1.meituan.net/xianfuwm/52e60b0647b69c08cf2dd5aaef9321d7247464.png",
                 "price": 11.5,
@@ -11191,7 +11191,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "纯牛奶",
             "picture": "http://p1.meituan.net/xianfuwm/37c02518469ae550943a3e423e72cdcf170364.png",
             "video_icon": "",
@@ -11205,7 +11205,7 @@
             "skus": [
               {
                 "id": 102107179,
-                "spec": "例",
+                "spec": "杯",
                 "description": "纯牛奶",
                 "picture": "http://p1.meituan.net/xianfuwm/37c02518469ae550943a3e423e72cdcf170364.png",
                 "price": 9.0,
@@ -11276,7 +11276,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "矿物质水",
             "picture": "http://p1.meituan.net/xianfuwm/3e0eaaa7434c2e1eb730c63a9388a0a9210697.png",
             "video_icon": "",
@@ -11290,7 +11290,7 @@
             "skus": [
               {
                 "id": 102106743,
-                "spec": "例",
+                "spec": "杯",
                 "description": "矿物质水",
                 "picture": "http://p1.meituan.net/xianfuwm/3e0eaaa7434c2e1eb730c63a9388a0a9210697.png",
                 "price": 7.0,
@@ -11361,7 +11361,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "柠檬红茶味饮料（中杯）",
             "picture": "http://p0.meituan.net/xianfuwm/9bf14f1e35b628e39ba5c5273751f94f166367.png",
             "video_icon": "",
@@ -11375,7 +11375,7 @@
             "skus": [
               {
                 "id": 105249488,
-                "spec": "例",
+                "spec": "杯",
                 "description": "柠檬红茶味饮料（中杯）",
                 "picture": "http://p0.meituan.net/xianfuwm/9bf14f1e35b628e39ba5c5273751f94f166367.png",
                 "price": 10.0,
@@ -11470,7 +11470,7 @@
             "praise_content": "赞0",
             "tread_num": 1,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "朱古力新地1个（主要原料：香草风味冰淇淋，朱古力酱）",
             "picture": "http://p1.meituan.net/xianfuwm/d6fd83b288529028ecc32af6396d0109200287.png",
             "video_icon": "",
@@ -11484,7 +11484,7 @@
             "skus": [
               {
                 "id": 512721139,
-                "spec": "例",
+                "spec": "杯",
                 "description": "朱古力新地1个（主要原料：香草风味冰淇淋，朱古力酱）",
                 "picture": "http://p1.meituan.net/xianfuwm/d6fd83b288529028ecc32af6396d0109200287.png",
                 "price": 9.5,
@@ -11555,7 +11555,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "草莓新地1个（主要原料：香草风味冰淇淋，草莓酱）",
             "picture": "http://p0.meituan.net/xianfuwm/07c21e029d27d1a46aeb78b153c342d3198050.png",
             "video_icon": "",
@@ -11569,7 +11569,7 @@
             "skus": [
               {
                 "id": 512721138,
-                "spec": "例",
+                "spec": "杯",
                 "description": "草莓新地1个（主要原料：香草风味冰淇淋，草莓酱）",
                 "picture": "http://p0.meituan.net/xianfuwm/07c21e029d27d1a46aeb78b153c342d3198050.png",
                 "price": 9.5,
@@ -11640,7 +11640,7 @@
             "praise_content": "赞2",
             "tread_num": 0,
             "praise_num_new": 2,
-            "unit": "例",
+            "unit": "杯",
             "description": "奥利奥原味麦旋风1个（主要原料：香草风味冰淇淋，奥利奥饼干碎）",
             "picture": "http://p1.meituan.net/xianfuwm/9ac14a8fd87fd35a406d89ddd262c03c217385.png",
             "video_icon": "",
@@ -11654,7 +11654,7 @@
             "skus": [
               {
                 "id": 512720307,
-                "spec": "例",
+                "spec": "杯",
                 "description": "奥利奥原味麦旋风1个（主要原料：香草风味冰淇淋，奥利奥饼干碎）",
                 "picture": "http://p1.meituan.net/xianfuwm/9ac14a8fd87fd35a406d89ddd262c03c217385.png",
                 "price": 12.5,
@@ -11725,7 +11725,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "奥利奥草莓麦旋风1个（主要原料：香草风味冰淇淋，草莓酱，奥利奥饼干碎）",
             "picture": "http://p1.meituan.net/xianfuwm/4f38120dd850218041a1d040dd7bdcc8228566.png",
             "video_icon": "",
@@ -11739,7 +11739,7 @@
             "skus": [
               {
                 "id": 512719583,
-                "spec": "例",
+                "spec": "杯",
                 "description": "奥利奥草莓麦旋风1个（主要原料：香草风味冰淇淋，草莓酱，奥利奥饼干碎）",
                 "picture": "http://p1.meituan.net/xianfuwm/4f38120dd850218041a1d040dd7bdcc8228566.png",
                 "price": 12.5,
@@ -11810,7 +11810,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "1个香芋派 主要原料：香芋派",
             "picture": "http://p1.meituan.net/xianfuwm/aaca50687be923c0758429b2fce98154184600.png",
             "video_icon": "",
@@ -11824,7 +11824,7 @@
             "skus": [
               {
                 "id": 102106721,
-                "spec": "例",
+                "spec": "杯",
                 "description": "1个香芋派 主要原料：香芋派",
                 "picture": "http://p1.meituan.net/xianfuwm/aaca50687be923c0758429b2fce98154184600.png",
                 "price": 7.5,
@@ -11980,7 +11980,7 @@
             "praise_content": "赞2",
             "tread_num": 0,
             "praise_num_new": 2,
-            "unit": "例",
+            "unit": "杯",
             "description": "1个菠萝派 主要原料：菠萝派",
             "picture": "http://p1.meituan.net/xianfuwm/f057f2fe9b436aa928ece89868734ce717118.jpg",
             "video_icon": "",
@@ -11994,7 +11994,7 @@
             "skus": [
               {
                 "id": 261736344,
-                "spec": "例",
+                "spec": "杯",
                 "description": "1个菠萝派 主要原料：菠萝派",
                 "picture": "http://p1.meituan.net/xianfuwm/f057f2fe9b436aa928ece89868734ce717118.jpg",
                 "price": 7.5,
@@ -12799,7 +12799,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "烟肉蛋麦满分1个",
             "picture": "http://p0.meituan.net/xianfu/5852ee7d402e1df5e00b4edb374a8e4254016.jpg",
             "video_icon": "",
@@ -12819,7 +12819,7 @@
             "skus": [
               {
                 "id": 931552946,
-                "spec": "例",
+                "spec": "杯",
                 "description": "烟肉蛋麦满分1个",
                 "picture": "http://p0.meituan.net/xianfu/5852ee7d402e1df5e00b4edb374a8e4254016.jpg",
                 "price": 13.0,
@@ -12890,7 +12890,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "猪柳麦满分1个（主要原料：英式松饼、芝士、香肠）",
             "picture": "http://p0.meituan.net/xianfu/bebc01bef79a90a982739bf5fe742b6257048.jpg",
             "video_icon": "",
@@ -12910,7 +12910,7 @@
             "skus": [
               {
                 "id": 931575434,
-                "spec": "例",
+                "spec": "杯",
                 "description": "猪柳麦满分1个（主要原料：英式松饼、芝士、香肠）",
                 "picture": "http://p0.meituan.net/xianfu/bebc01bef79a90a982739bf5fe742b6257048.jpg",
                 "price": 11.0,
@@ -12981,7 +12981,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "原味板烧鸡腿麦满分1个（主要原料：英式松饼、鸡肉、甘蓝、胡萝卜、风味沙拉酱）",
             "picture": "http://p0.meituan.net/xianfu/fe7091508d712ab415005e3c3b19e64269337.jpg",
             "video_icon": "",
@@ -13001,7 +13001,7 @@
             "skus": [
               {
                 "id": 931565971,
-                "spec": "例",
+                "spec": "杯",
                 "description": "原味板烧鸡腿麦满分1个（主要原料：英式松饼、鸡肉、甘蓝、胡萝卜、风味沙拉酱）",
                 "picture": "http://p0.meituan.net/xianfu/fe7091508d712ab415005e3c3b19e64269337.jpg",
                 "price": 11.0,
@@ -13072,7 +13072,7 @@
             "praise_content": "赞2",
             "tread_num": 0,
             "praise_num_new": 2,
-            "unit": "例",
+            "unit": "杯",
             "description": "双层原味板烧鸡腿麦满分1个（主要原料：英式松饼、鸡肉、甘蓝、胡萝卜、风味沙拉酱）",
             "picture": "http://p1.meituan.net/xianfu/c32280de53dee9128a50bd13351376b283565.jpg",
             "video_icon": "",
@@ -13163,7 +13163,7 @@
             "praise_content": "赞0",
             "tread_num": 0,
             "praise_num_new": 0,
-            "unit": "例",
+            "unit": "杯",
             "description": "猪柳蛋堡1个",
             "picture": "http://p0.meituan.net/xianfu/266930c1ad360ecc7419ad36f597565859054.jpg",
             "video_icon": "",
@@ -13183,7 +13183,7 @@
             "skus": [
               {
                 "id": 931599485,
-                "spec": "例",
+                "spec": "杯",
                 "description": "猪柳蛋堡1个",
                 "picture": "http://p0.meituan.net/xianfu/266930c1ad360ecc7419ad36f597565859054.jpg",
                 "price": 15.0,
@@ -14964,7 +14964,7 @@
             "praise_content": "赞2",
             "tread_num": 0,
             "praise_num_new": 2,
-            "unit": "例",
+            "unit": "杯",
             "description": "优品豆浆（大）（主要原料：大豆、白砂糖）",
             "picture": "http://p1.meituan.net/xianfu/15da864a97ac5b19127b9038df46eb4c155078.png",
             "video_icon": "",
@@ -14984,7 +14984,7 @@
             "skus": [
               {
                 "id": 235151612,
-                "spec": "例",
+                "spec": "杯",
                 "description": "优品豆浆（大）（主要原料：大豆、白砂糖）",
                 "picture": "http://p1.meituan.net/xianfu/15da864a97ac5b19127b9038df46eb4c155078.png",
                 "price": 11.0,
@@ -15237,7 +15237,7 @@
             "praise_content": "赞3",
             "tread_num": 0,
             "praise_num_new": 3,
-            "unit": "例",
+            "unit": "杯",
             "description": "脆香油条（主要原料：油条）",
             "picture": "http://p1.meituan.net/xianfu/41f8b8c156442461300cfb2a47c2aa8964691.jpg",
             "video_icon": "",
@@ -15257,7 +15257,7 @@
             "skus": [
               {
                 "id": 724321914,
-                "spec": "例",
+                "spec": "杯",
                 "description": "脆香油条（主要原料：油条）",
                 "picture": "http://p1.meituan.net/xianfu/41f8b8c156442461300cfb2a47c2aa8964691.jpg",
                 "price": 6.0,
