@@ -92,7 +92,8 @@
   background-color: #ffd161;
   color: #333;
   text-align: center;
-  line-height: 50px;
+  /* line-height: 60px; */
+  padding-top: 0.431rem;
   font-size: 0.486rem;
 }
 
