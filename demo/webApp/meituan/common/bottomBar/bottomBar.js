@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 (function() {
+  // 进行渲染的模板
   const itemTmpl = `
   <a class="$key btn-item" href="../$key/$key.html">
       <div class="tab-icon"> </div>
@@ -7,6 +8,7 @@
   </a>`;
 
   function init() {
+    // 定义数据
     const items = [
       {
         key: 'index',
@@ -23,6 +25,7 @@
     ];
 
     let str = '';
+    // 进行替换
     items.forEach(item => {
       str += itemTmpl.replace(/\$key/g, item.key).replace('$text', item.text);
     });

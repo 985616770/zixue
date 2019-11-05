@@ -1,105 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../lib/icon.ico" type="image/x-icon" />
-    <title>美团外卖</title>
-    <script>
-      (function() {
-        'use strict';
-        let viewport = document.documentElement;
-        // metaEle = document.querySelector('meta[name="viewport"]'),
-        // title = document.head.querySelector('title'),
-        // dpr = window.devicePixelRatio || 1;
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="../lib/icon.ico" type="image/x-icon" />
+        <title>美团外卖</title>
+        <script>
+            (function() {
+                'use strict';
+                let viewport = document.documentElement,
+                    metaEle = document.querySelector('meta[name="viewport"]'),
+                    title = document.head.querySelector('title'),
+                    dpr = window.devicePixelRatio || 1;
 
-        // dpr = dpr >= 3 ? 3 : dpr >= 2 ? 2 : 1;
-        // viewport.setAttribute('data-dpr', dpr);
+                dpr = dpr >= 3 ? 3 : dpr >= 2 ? 2 : 1;
+                viewport.setAttribute('data-dpr', dpr);
 
-        // let scale = 1 / dpr;
-        // let content = `width=device-width, initial-scale=${scale}, maximum-scale=${scale}, minimum-scale=${scale}, user-scalable=no`;
+                let scale = 1 / dpr;
+                let content = `width=device-width, initial-scale=${scale}, maximum-scale=${scale}, minimum-scale=${scale}, user-scalable=no`;
 
-        // if (metaEle) {
-        //   metaEle.setAttribute('content', content);
-        // } else {
-        //   let metaNewEle = document.createElement('meta');
-        //   metaNewEle.setAttribute('name', 'viewport');
-        //   metaNewEle.setAttribute('content', content);
-        //   document.head.insertBefore(metaNewEle, title);
-        // }
-        getRem();
-        window.addEventListener('resize', getRem);
-        function getRem() {
-          let ratioNum = 10;
-          let viewWidth =
-            viewport.getBoundingClientRect().width || window.innerWidth;
+                if (metaEle) {
+                    metaEle.setAttribute('content', content);
+                } else {
+                    let metaNewEle = document.createElement('meta');
+                    metaNewEle.setAttribute('name', 'viewport');
+                    metaNewEle.setAttribute('content', content);
+                    document.head.insertBefore(metaNewEle, title);
+                }
+                getRem();
+                window.addEventListener('resize', getRem);
+                function getRem() {
+                    let ratioNum = 10;
+                    let viewWidth =
+                        viewport.getBoundingClientRect().width ||
+                        window.innerWidth;
 
-          viewport.style.fontSize = viewWidth / ratioNum + 'px';
-        }
-      })();
-    </script>
-    <link rel="stylesheet" href="../lib/reset.css" />
-    <link rel="stylesheet" href="./header/header.css" />
-    <link rel="stylesheet" href="./searchBar/searchBar.css" />
-    <link rel="stylesheet" href="./category/category.css" />
-    <link rel="stylesheet" href="./starScore/starScore.css" />
-    <link rel="stylesheet" href="./contentList/contentList.css" />
-    <link rel="stylesheet" href="../common/bottomBar/bottomBar.css" />
-    <link rel="stylesheet" href="../common/backTop/backTop.css" />
-    <link rel="stylesheet" href="../common/loading/loading.css" />
-  </head>
-  <body>
-    <!-- 头部开始 -->
-    <div class="header">
-      <div class="search-bar">
-        <div class="bar-location">
-          <div class="location-icon"></div>
-          <div class="location-text">昆明市</div>
+                    viewport.style.fontSize = viewWidth / ratioNum + 'px';
+                }
+            })();
+        </script>
+        <link rel="stylesheet" href="../lib/reset.css" />
+        <link rel="stylesheet" href="./header/header.css" />
+        <link rel="stylesheet" href="./searchBar/searchBar.css" />
+        <link rel="stylesheet" href="./category/category.css" />
+        <link rel="stylesheet" href="./starScore/starScore.css" />
+        <link rel="stylesheet" href="./contentList/contentList.css" />
+        <link rel="stylesheet" href="../common/bottomBar/bottomBar.css" />
+        <link rel="stylesheet" href="../common/backTop/backTop.css" />
+        <link rel="stylesheet" href="../common/loading/loading.css" />
+    </head>
+    <body>
+        <!-- 头部开始 -->
+        <div class="header">
+            <div class="search-bar">
+                <div class="bar-location">
+                    <div class="location-icon"></div>
+                    <div class="location-text">昆明市</div>
+                </div>
+                <div class="search-btn">
+                    <input
+                        type="search"
+                        value=""
+                        class="place-holder"
+                        placeholder="鸡翅"
+                    />
+                </div>
+            </div>
+
+            <div class="header-img">
+                <img src="./header/header.png" alt="" />
+            </div>
         </div>
-        <div class="search-btn">
-          <input
-            type="search"
-            value=""
-            class="place-holder"
-            placeholder="鸡翅"
-          />
+        <!-- 头部结束 -->
+        <!-- 类目开始 -->
+        <div class="category-content clearfix"></div>
+        <!-- 类目结束 -->
+        <!-- 商家列表 -->
+        <div class="list-content">
+            <h4 class="list-title">
+                <span class="title-line"></span>
+                <span>附近商家</span>
+                <span class="title-line"></span>
+            </h4>
+            <div class="list-warp"></div>
         </div>
-      </div>
-
-      <div class="header-img">
-        <img src="./header/header.png" alt="" />
-      </div>
-    </div>
-    <!-- 头部结束 -->
-    <!-- 类目开始 -->
-    <div class="category-content clearfix"></div>
-    <!-- 类目结束 -->
-    <!-- 商家列表 -->
-    <div class="list-content">
-      <h4 class="list-title">
-        <span class="title-line"></span>
-        <span>附近商家</span>
-        <span class="title-line"></span>
-      </h4>
-      <div class="list-warp"></div>
-    </div>
-    <!-- 商家列表结束 -->
-    <!-- loading -->
-    <div class="loading">加载中</div>
-    <!-- 底栏开始 -->
-    <div class="bottom-bar"></div>
-    <!-- 底栏结束 -->
-    <!-- 回到顶部 -->
-    <div></div>
-    <div id="backTop" class="backTop"><div class="arrow"></div></div>
-    <script src="../lib/jquery.min.js"></script>
-    <script src="./category/category.js"></script>
-    <script src="./header/header.js"></script>
-    <script src="./contentList/contentList.js"></script>
-    <script src="./starScore/starScore.js"></script>
-    <script src="./contentList/contentList.js"></script>
-    <script src="../common/bottomBar/bottomBar.js"></script>
-    <script src="../common/backTop/backTop.js"></script>
-  </body>
+        <!-- 商家列表结束 -->
+        <!-- loading -->
+        <div class="loading">加载中</div>
+        <!-- 底栏开始 -->
+        <div class="bottom-bar"></div>
+        <!-- 底栏结束 -->
+        <!-- 回到顶部 -->
+        <div></div>
+        <div id="backTop" class="backTop"><div class="arrow"></div></div>
+        <script src="../lib/zepto.min.js"></script>
+        <script src="../lib/touch.js"></script>
+        <script src="./category/category.js"></script>
+        <script src="./header/header.js"></script>
+        <script src="./contentList/contentList.js"></script>
+        <script src="./starScore/starScore.js"></script>
+        <script src="../common/bottomBar/bottomBar.js"></script>
+        <script src="../common/backTop/backTop.js"></script>
+    </body>
 </html>
