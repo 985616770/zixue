@@ -1,0 +1,7 @@
+<view>
+  <image src="/images/avatar/1.png" style="width:100px;height:100px"></image>
+  <text>hello,,hhhh</text>
+  <view>
+    <text>开启小程序</text>
+  </view>
+</view>
