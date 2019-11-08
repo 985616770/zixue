@@ -1,0 +1,15 @@
+{
+    "name": "babel",
+    "version": "1.0.0",
+    "description": "",
+    "main": "babel.config.js",
+    "dependencies": {},
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "babel entry.js -d lib"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
