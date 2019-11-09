@@ -71,7 +71,7 @@ class MultiTransform extends Transform {
     }
 
     sleep(value) {
-        return this._add('speep', '', value);
+        return this._add('sleep', '', value);
     }
     _getTransform({ time, value, type }) {
         const _tsf = this._transform;
@@ -90,7 +90,6 @@ class MultiTransform extends Transform {
             case 'multi':
                 value.forEach(item => {
                     this._getTransform(item);
-                    
                 });
             case 'sleep':
                 break;

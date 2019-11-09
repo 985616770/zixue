@@ -15,3 +15,5 @@ let arr = [1, 2, 34, 5, 667];
 for (const i of arr.entries()) {
     console.log(i);
 }
+
+console.log(Array.of(1, 'asd', 'sdf', 'df'));

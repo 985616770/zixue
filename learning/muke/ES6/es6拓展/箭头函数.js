@@ -14,7 +14,9 @@ let xiaoming = {
     name: 'xiaoming',
     getAge: () => {
         setTimeout(() => {
-            console.log(this);
+            setTimeout(() => {
+                console.log(this);
+            }, 1);
         }, 1000);
     }
 };
