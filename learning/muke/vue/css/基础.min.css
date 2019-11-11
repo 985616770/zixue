@@ -1,0 +1,30 @@
+html {
+  color: #bbbbbb;
+}
+
+.div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  font-size: 14px;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+}
+
+#div {
+  left: 1px;
+  top: 2px;
+  right: 3px;
+  bottom: 5px;
+}

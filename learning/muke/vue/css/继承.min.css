@@ -1,0 +1,37 @@
+.l, .r {
+  width: 100px;
+  height: 100px;
+}
+
+.r {
+  color: #000;
+}
+
+.c, .q {
+  width: 10px;
+}
+
+.c.e, .e.q {
+  height: 10px;
+}
+
+.div1, .div2, .div3 {
+  width: 100px;
+  height: 100px;
+}
+
+.div2, .div3 {
+  color: #000;
+}
+
+.div3 {
+  font-size: 16px;
+}
+
+a:hover, .link {
+  text-decoration: none;
+}
+
+.link {
+  font-size: 15px;
+}

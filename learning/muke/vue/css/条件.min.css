@@ -1,0 +1,51 @@
+div {
+  color: #0f0;
+}
+
+.div1 {
+  z-index: 1;
+}
+
+.div2 {
+  z-index: 2;
+}
+
+.div3 {
+  z-index: 3;
+}
+
+.div4 {
+  z-index: 4;
+}
+
+.div_0 {
+  color: red;
+}
+
+.div_1 {
+  color: red;
+}
+
+.div_2 {
+  color: red;
+}
+
+.div_3 {
+  color: red;
+}
+
+.div_4 {
+  color: red;
+}
+
+.div_5 {
+  color: red;
+}
+
+.div.left {
+  left: 1px;
+}
+
+.div.top {
+  top: 2px;
+}

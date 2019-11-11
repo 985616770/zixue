@@ -1,0 +1,102 @@
+html,
+body,
+div,
+span,
+object,
+button,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+a,
+code,
+em,
+img,
+q,
+small,
+strong,
+dd,
+dl,
+dt,
+li,
+ol,
+ul,
+fieldset,
+form,
+label,
+table,
+tbody,
+tr,
+th,
+td,
+input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  background: #fff;
+  font-family: 'STHeiti', 'Microsoft YaHei', 'Helvetica', 'Arial', sans-serif;
+  -webkit-text-size-adjust: none;
+  word-break: break-word;
+}
+
+.header {
+  height: 45px;
+  background-color: #d43d3d;
+}
+
+.header .title_logo {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("/assets/logo.png");
+}
+
+.top_bar {
+  background-color: #f4f5f6;
+  height: 34px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.top_bar .top_menu_list {
+  white-space: nowrap;
+  overflow: hidden;
+  height: 100%;
+  display: inline-block;
+}
+
+.top_bar .btn {
+  padding: 8px;
+  display: inline-block;
+  font-size: 17px;
+}
+
+.top_bar .btn.cur {
+  color: #d43d3d;
+}

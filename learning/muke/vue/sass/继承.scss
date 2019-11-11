@@ -1,0 +1,49 @@
+// 简单继承
+.l {
+  width: 100px;
+  height: 100px;
+}
+.r {
+  @extend .l;
+  color: #000;
+}
+
+// 关联属性继承
+.c {
+  width: 10px;
+}
+
+.c.e {
+  height: 10px;
+}
+
+.q {
+  @extend .c;
+}
+
+//  链式继承
+
+.div1 {
+  width: 100px;
+  height: 100px;
+}
+
+.div2 {
+  @extend .div1;
+  color: #000;
+}
+
+.div3 {
+  @extend .div2;
+  font-size: 16px;
+}
+// 伪类继承
+
+a:hover{
+  text-decoration: none;
+}
+
+.link{
+  @extend a:hover;
+  font-size: 15px;
+}

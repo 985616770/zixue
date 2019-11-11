@@ -1,0 +1,34 @@
+@import 'base';
+$map: (
+  left: 1px,
+  top: 2px,
+  right: 3px,
+  bottom: 5px
+);
+$zoom: (1, 2, 3, 4, 5);
+// sdafad
+@mixin flex($size, $weight) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+
+  font: {
+    size: $size;
+    weight: $weight;
+  }
+}
+.div {
+  @include flex(14px, 700);
+  position: relative;
+  z-index: nth($list: $zoom, $n: 2);
+}
+#div {
+  @each $key, $value in $map {
+    #{$key}: $value;
+  }
+}
+
+p {
+  // width: (100% - 100px);
+}

@@ -1,0 +1,13 @@
+$width:200px;
+$height:100px;
+
+
+.div {
+  width: $width;
+  .inner-div{
+    height: $height;
+  }
+  &{
+    color: #000;
+  }
+}
