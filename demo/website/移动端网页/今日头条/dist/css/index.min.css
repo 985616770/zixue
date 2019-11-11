@@ -62,6 +62,13 @@ html {
   word-break: break-word;
 }
 
+body {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 .header {
   height: 45px;
   background-color: #d43d3d;
@@ -99,4 +106,77 @@ html {
 
 .top_bar .btn.cur {
   color: #d43d3d;
+}
+
+.content_list .section_item, .content_list .section_images {
+  margin-left: 15px;
+  margin-right: 15px;
+  border-bottom: 1px solid rgba(33, 33, 33, 0.6);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.content_list .section_item .title, .content_list .section_images .title {
+  font-size: 20px;
+}
+
+.content_list .section_item .item_info_base, .content_list .section_images .item_info_base, .content_list .section_item .item_info, .content_list .section_images .item_info, .content_list .section_item .src, .content_list .section_images .src, .content_list .section_item .cmt, .content_list .section_images .cmt, .content_list .section_item .time, .content_list .section_images .time {
+  color: #999;
+  font-size: 14px;
+}
+
+.content_list .section_item .item_info, .content_list .section_images .item_info {
+  margin-top: 11px;
+  margin-bottom: 2px;
+}
+
+.content_list .section_item .stick_label, .content_list .section_images .stick_label, .content_list .section_images .gg_label {
+  margin-right: 10px;
+  font-size: 14px;
+  color: #d43d3d;
+  border: 1px solid #d43d3d;
+}
+
+.content_list .section_images {
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.content_list .section_images .clearfix::after {
+  content: '';
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+
+.content_list .section_images img {
+  width: 100%;
+}
+
+.content_list .section_images .list_img_holder {
+  float: left;
+  height: 80px;
+  width: 33.3%;
+}
+
+.content_list .section_images .list_img_holder img {
+  border: none;
+  width: 100%;
+  display: block;
+}
+
+.content_list .section_images .list_img_holder_large img {
+  border: none;
+  width: 100%;
+}
+
+.content_list .section_images .gg_label {
+  font-size: 14px;
+  color: #2a90d7;
+  border: 1px solid #2a90d7;
 }
