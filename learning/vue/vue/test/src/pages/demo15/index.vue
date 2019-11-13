@@ -10,7 +10,7 @@
     >
     </mt-range>
 
-   <input type="range" v-model="rangeValue" value="">
+    <input type="range" v-model="rangeValue" value="" />
   </div>
 </template>
 
