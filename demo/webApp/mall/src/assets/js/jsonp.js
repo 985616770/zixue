@@ -1,26 +1,24 @@
 import jsonp from 'jsonp';
 
-// {
-//   page: 1,
-//   psize: 20
-// }
-// page=1&psize=20
-
-const parseParam = (param) => {
+/**
+ * 转换对象为字符串
+ * @param {object} param
+ */
+const parseParam = param => {
   const params = [];
 
-  for (const key in param) {
-    params.push([key, encodeURIComponent(param[key])]);
+  for (const item of Object.entries(param)) {
+    params.push(item);
   }
-  // [[page, 1], [pszie, 20]]
-  return params.map(value => value.join('=')).join('&');
-  // [[page, 1], [pszie, 20]]
-  // [page=1, psize=20]
-  // page=1&psize=20
+
+  return params.map(item => item.join('=')).join('&');
 };
 
+/**
+ * 转换jsonp 为 promise 对象
+ */
 export default (url, data, options) => {
-  url += (url.indexOf('?') < 0 ? '?' : '&') + parseParam(data);
+  url += `${url.indexOf('?') < 0 ? '?' : '&'}${parseParam(data)}`;
 
   return new Promise((resolve, reject) => {
     jsonp(url, options, (err, data) => {

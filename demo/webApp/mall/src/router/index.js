@@ -12,7 +12,7 @@ export default new Router({
       children: [
         {
           path: 'product/:id',
-          name: 'Product',
+          name: 'home-product',
           component: () => import('pages/product'),
         },
       ],

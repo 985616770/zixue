@@ -1,21 +1,58 @@
 <template>
-  <div>
-    <me-navbar class="header">
-     <i class="iconfont icon-scan" slot="left"></i>
-     <i class="iconfont icon-scan" slot="center"></i>
-     <i class="iconfont icon-scan" slot="right"></i>
-    </me-navbar>
-  </div>
+  <me-navbar class="header" title="" v-show="visible">
+    <i class="iconfont icon-scan" slot="left"></i>
+    <div slot="center">
+      <slot></slot>
+    </div>
+    <i class="iconfont icon-msg" slot="right"></i>
+  </me-navbar>
 </template>
 
 <script>
 import MeNavbar from 'base/navbar';
+
 export default {
   name: 'Header',
   components: {
     MeNavbar,
   },
+  data() {
+    return {
+      visible: true,
+    };
+  },
+  methods: {
+    // API
+    show() {
+      this.visible = true;
+    },
+    hide() {
+      this.visible = false;
+    },
+
+    goToSearch() {
+      this.$router.push('/search');
+    },
+  },
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import '~assets/scss/mixins';
+.header {
+  &.mine-navbar {
+    /*background-color: $header-bgc-translucent; */
+    background-color: transparent;
+    transition: background-color 0.5s;
+  }
+
+  &.header-transition {
+    background-color: $header-bgc-translucent;
+  }
+
+  .iconfont {
+    color: $icon-color-default;
+    font-size: $icon-font-size;
+  }
+}
+</style>
