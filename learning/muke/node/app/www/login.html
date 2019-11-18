@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="./jquery.min.js"></script>
+  </head>
+  <body>
+    user: <input type="text" name="user" id="username" /><br />
+    password: <input type="password" name="password" id="password" /> <br />
+    <input type="submit" value="submit" id="submit" />
+    <input type="submit" value="register" id="register" />
+
+    <script>
+      $('#submit').click(function() {
+        $.ajax({
+          url: '/login',
+          type: 'GET',
+          data: {
+            username: $('#username').val(),
+            password: $('#password').val(),
+          },
+          dataType: 'json',
+          success(res) {
+            if (res.err) {
+              alert('用户名或密码错误');
+            } else {
+              alert('成功登入');
+              window.location = './admin.html';
+            }
+          },
+        });
+      });
+
+      $('#register').click(function() {
+        $.ajax({
+          url: '/reg',
+          type: 'POST',
+          data: {
+            username: $('#username').val(),
+            password: $('#password').val(),
+          },
+          dataType: 'json',
+          success(res) {
+            if (res.err) {
+              alert('用户名已存在');
+            } else {
+              alert('成功注册');
+            }
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

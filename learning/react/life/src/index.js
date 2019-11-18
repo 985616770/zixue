@@ -1,33 +1,34 @@
 import React, { Component } from 'react';
 import ReactDom from 'react-dom';
+import { Layout } from 'antd';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
-import AppHeader from './components/header';
+import AppHeader from './components/Header/';
+import Login from './components/Login/';
 import List from './containers/List/';
 import Detail from './containers/Detail/';
-
+import Vip from './containers/Vip/';
 import 'antd/dist/antd.css';
-import './index.css';
-import { Layout } from 'antd';
+import './style.css';
 
 const { Header, Footer, Content } = Layout;
 
 class App extends Component {
-  state = {};
   render() {
     return (
       <BrowserRouter>
-        <Layout style={{ minWidth: 1200 }}>
+        <Layout style={{ minWidth: 1260, height: '100%' }}>
           <Header className='header'>
-            <AppHeader></AppHeader>
+            <AppHeader />
           </Header>
           <Content className='content'>
+            <Login />
             <Switch>
+              <Route path='/vip' component={Vip} />
               <Route path='/detail/:id' component={Detail} />
-              <Route path='/:id' component={List} />
+              <Route path='/:id?' component={List} />
             </Switch>
           </Content>
-          <Footer className='footer'>Footer</Footer>
+          <Footer className='footer'>@copyright Dell-Lee 2018</Footer>
         </Layout>
       </BrowserRouter>
     );

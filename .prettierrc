@@ -6,7 +6,7 @@
   "jsxSingleQuote": true,
   "bracketSpacing": true,
   "jsxBracketSameLine": false,
-  "arrowParens": "avoid",
+  "arrowParens": "always",
   "proseWrap": "preserve",
   "htmlWhitespaceSensitivity": "css",
   "vueIndentScriptAndStyle": false
