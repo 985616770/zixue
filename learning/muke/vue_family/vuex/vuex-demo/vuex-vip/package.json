@@ -1,5 +1,5 @@
 {
-  "name": "vuex-demo",
+  "name": "vuex-vip",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -18,8 +18,7 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.10",
-    "vuex": "^3.1.2"
+    "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
     "root": true,
@@ -32,8 +31,7 @@
     ],
     "rules": {},
     "parserOptions": {
-      "parser": "babel-eslint",
-      "no-console": 0
+      "parser": "babel-eslint"
     }
   },
   "postcss": {
