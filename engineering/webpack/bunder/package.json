@@ -1,0 +1,19 @@
+{
+  "name": "bunder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bundler.js",
+  "dependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/parser": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/traverse": "^7.7.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

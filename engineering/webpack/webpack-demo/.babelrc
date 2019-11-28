@@ -1,0 +1,20 @@
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "targets": {
+          "edge": "18",
+          "firefox": "70",
+          "chrome": "70",
+          "safari": "13.1",
+        },
+        "useBuiltIns": "usage",
+        "corejs": 2
+      }
+    ],
+  ],
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import"
+  ]
+}

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import service from './contactApi';
 import { Toast } from 'vant';
+
 // service 循环遍历输出不同的请求方法
 let instance = axios.create({
   baseURL: 'http://localhost:9000/api',
