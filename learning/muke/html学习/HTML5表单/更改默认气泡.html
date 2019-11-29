@@ -92,6 +92,7 @@
       });
 
       submit.addEventListener('click', function(event) {
+        console.log(event)
         var invalids = form.querySelectorAll(':invalid'),
           errors = form.querySelectorAll('.error-message'),
           parent;
@@ -100,6 +101,7 @@
           value.parentNode.removeChild(value);
         });
         invalids.forEach((value, index) => {
+          
           let html = `<div class="error-message">${value.validationMessage}</div>`;
           value.parentNode.innerHTML += html;
         });

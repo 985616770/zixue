@@ -20,7 +20,6 @@ class Unlock {
 
     this.bindEvent();
 
-    console.log(this.arr, this.radius, this.canvas.width, this.o.password);
   }
   // 动态添加HTML元素
   initDom() {

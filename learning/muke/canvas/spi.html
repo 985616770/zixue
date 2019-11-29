@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+    
+    @media screen and (min-width: 900px){
+      
+    }
+    </style>
+  </head>
+  <body>
+    <script src="https://unpkg.com/spritejs/dist/spritejs.min.js"></script>
+    <div id="container"></div>
+    <script>
+      const imgUrl = 'https://s5.ssl.qhres.com/static/ec9f373a383d7664.svg';
+      const { Scene, Sprite } = spritejs;
+      const paper = new Scene('#container', { viewport: [400, 400] });
+
+      const sprite = new Sprite(imgUrl);
+      sprite.attr({
+        bgcolor: '#fff',
+        pos: [0, 0],
+        size: [400, 400],
+        borderRadius: '200',
+      });
+
+      paper.layer().appendChild(sprite);
+    </script>
+  </body>
+</html>
