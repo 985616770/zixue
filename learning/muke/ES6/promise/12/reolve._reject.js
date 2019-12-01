@@ -45,6 +45,7 @@ function a(val) {
 // console.log(p === por);
 /*
  * thenable => duck type
+ * FIXME:
  */
 let obj = {
     then(cb) {
