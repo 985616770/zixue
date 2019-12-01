@@ -1,9 +1,8 @@
-
 // 实现常量的es5方法
 /**
  * 1. 遍历属性和方法
  * 2. 修改遍历到的属性的描述
- * 3. Object.seal()
+ * 3. Object.seal() => 
  */
 Object.defineProperty(Object, 'freezePolyFill', {
     value: function(obj) {
