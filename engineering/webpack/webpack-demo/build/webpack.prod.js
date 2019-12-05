@@ -9,10 +9,13 @@ const prodConfig = {
     minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
   },
   plugins: [
+    // 分隔css
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css',
     }),
+
+    // pwa
     new GenerateSW({
       clientsClaim: true,
       skipWaiting: true,
@@ -23,7 +26,7 @@ const prodConfig = {
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          MiniCssExtractPlugin.loader, // 使用分割css文件的loader
           'css-loader',
           'postcss-loader',
           'sass-loader',

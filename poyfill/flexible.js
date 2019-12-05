@@ -39,7 +39,7 @@
   window.addEventListener('resize', setRemUnit);
 
   function setRemUnit() {
-    var ratio = 18.75;
+    var ratio = 10;
     var viewWidth = docEl.getBoundingClientRect().width || window.innerWidth;
 
     // console.log(viewWidth);

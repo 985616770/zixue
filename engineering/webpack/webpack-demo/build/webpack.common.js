@@ -50,14 +50,16 @@ const commonConfig = {
     // runtimeChunk: {
     //   name: 'runtime',
     // },
+    // 开启tree-shaking
     usedExports: true,
+    // 开启code-splitting
     splitChunks: {
-      chunks: 'all',
+      chunks: 'all', // 对引入的方式的代码打包 async
       cacheGroups: {
         vendors: {
-          test: /[\\/]node_modules[\\/]/,
-          priority: -10,
-          name: 'vendors',
+          test: /[\\/]node_modules[\\/]/, // 是否在
+          priority: -10, // 优先级
+          name: 'vendors', // 名字
         },
       },
     },
