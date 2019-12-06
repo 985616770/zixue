@@ -6,10 +6,13 @@ const babel = require('@babel/core');
 
 // 将代码分析为ast,且转义为对象传出
 const modelAnalyser = (filename) => {
+  // 读取文件
   const content = fs.readFileSync(filename, 'utf-8');
+  // 编译为ast结构
   const ast = parser.parse(content, {
     sourceType: 'module',
   });
+  // 遍历ast,获取模块文件
   const dependencies = {};
   traverse(ast, {
     ImportDeclaration({ node }) {
