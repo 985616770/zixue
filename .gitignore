@@ -1,3 +1,4 @@
 
 heima/vue/todomvc-app-template
-**/node_modules/
+**/node_modules/**/*
+.vscode

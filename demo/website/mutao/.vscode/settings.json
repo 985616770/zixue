@@ -3,5 +3,6 @@
     "dropdown",
     "iconfont",
     "opentype"
-  ]
+  ],
+  "liveServer.settings.port": 5501
 }
