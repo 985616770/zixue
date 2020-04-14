@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>websocket</title>
+  </head>
+  <body>
+    <script>
+      const ws = new WebSocket('ws://localhost:8080')
+      console.log(ws.readyState)
+
+      ws.onopen = function (e) {
+        console.log(ws.readyState)
+        console.log('is connecting')
+        ws.send('Hello WebSocket')
+      }
+      ws.onmessage = function (e) {
+        console.log('res:  ' + e.data)
+        console.log(ws.readyState)
+        ws.close()
+      }
+      ws.onclose = function (e) {
+        console.log(ws.readyState)
+        console.log('Connection is  closed')
+      }
+    </script>
+  </body>
+</html>

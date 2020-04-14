@@ -1,0 +1,72 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+body {
+  /* body 为容器直接的父元素 */
+  overflow: hidden;
+}
+
+#pureFullPage {
+  /* 只有当 position 的值不是 static 时，top 值才有效 */
+  position: relative;
+  /* 设置初始值 */
+  top: 0;
+  transition: top 0.5s linear;
+}
+.page {
+  /* 此处不能为 100vh，后面详述 */
+  /* 其父元素，也就是 #pureFullPage 的高度，通过 js 动态设置*/
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page> div{
+  font-size: 5rem;
+  color: lightgoldenrodyellow;
+}
+.page:nth-child(1) {
+  background: lightpink no-repeat center/cover;
+}
+.page:nth-child(2) {
+  background: lightgreen no-repeat center/cover;
+}
+.page:nth-child(3) {
+  background: lightskyblue no-repeat center/cover;
+}
+.nav {
+  position: fixed;
+  top: 50%;
+  right: 15px;
+  width: 18px;
+  transform: translateY(-50%);
+}
+.nav-dot {
+  width: 18px;
+  height: 20px;
+  padding: 14px 0;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.nav-dot span {
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 12px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  transition: all 150ms ease-in-out;
+}
+.nav-dot.active span {
+  width: 10px;
+  height: 20px;
+  background-color: #fff;
+}

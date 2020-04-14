@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookie</title>
+  </head>
+  <body>
+    <script>
+      function setCookie(c_name, value, expire_days) {
+        const exDate = new Date()
+        exDate.setDate(exDate.getDate() + expire_days)
+        document.cookie = `${c_name}=${encodeURI(value)}${
+          expire_days === null ? '' : ';expires=' + exDate.toGMTString()
+        }`
+      }
+      setCookie('name', 'zp', 10)
+      setCookie('aaa', '123', 10)
+      console.log(document.cookie)
+    </script>
+  </body>
+</html>

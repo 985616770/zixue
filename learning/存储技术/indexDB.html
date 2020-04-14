@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>indexDB</title>
+  </head>
+  <body>
+    <script>
+      let db
+      const request = window.indexedDB.open('indexDB')
+      request.onsuccess = function (event) {
+        db = request.result
+      }
+      request.onerror = function (event) {
+        console.error('error')
+      }
+      request.onupgradeneeded = function (event) {
+        let db = event.target.result
+        let objStore = db.createObjectStore('testItem', { keyPath: 'id', autoIncrement: true })
+        objStore.createIndex('id', 'id', { unique: true })
+        objStore.createIndex('name', 'name')
+        objStore.createIndex('age', 'age')
+
+        objStore.add({ name: '123', age: '22', id: 1 })
+      }
+
+      let timer = setTimeout(() => {
+        if (db) {
+          const transaction = db.transaction(['testItem'], 'readwrite')
+          let objStore = transaction.objectStore('testItem')
+          objStore.add({ name: '1ss', age: '23' })
+          objStore.add({ name: '12d3', age: '12' })
+        }
+      }, 100)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>裁剪图像</title>
+    <style>
+      input {
+        transform: scale(1.5); /* 只是用来放大复选框大小 */
+        margin: 10px 5px;
+        color: #fff;
+      }
+
+      img {
+        width: 1920px;
+        height: 1080px;
+        transition: 0s;
+      }
+
+      /* css选择器锁定复选框被选中时的状态 */
+      input:checked + br + img {
+        width: 500px;
+        height: 500px;
+        object-fit: cover;
+        object-position: left-top;
+        transition: width 2s, height 4s;
+      }
+    </style>
+  </head>
+  <body>
+    勾选裁剪图片 <input type="checkbox" />
+    <br />
+    <img src="https://img-blog.csdnimg.cn/2020032122230564.png" alt="Random" />
+  </body>
+</html>
