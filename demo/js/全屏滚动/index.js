@@ -1,9 +1,28 @@
 const $ = ele => document.querySelector(ele)
 const $$ = ele => document.querySelectorAll(ele)
+const debounce = (action, delay) => {
+  let last
+  return function (arg) {
+    clearTimeout(last)
+    last = setTimeout(() => {
+      action(arg)
+    }, delay)
+  }
+}
+const throttle = (action, delay) => {
+  let last = 0
+  return function (args) {
+    let curr = +new Date()
+    if (curr - last > delay) {
+      action(args)
+      last = curr
+    }
+  }
+}
 
-const fullPageContainer = $('#pureFullPage')
-const pageList = $$('#pureFullPage > .page')
-
+/**
+ * 滚轮事件的兼容监听函数
+ */
 ;(function (window, document) {
   let prefix = '',
     _addEventListener,
@@ -44,7 +63,7 @@ const pageList = $$('#pureFullPage > .page')
             !originalEvent && (originalEvent = window.event)
 
             // create a normalized event object
-            const  event = {
+            const event = {
               // keep a ref to the original event object
               originalEvent: originalEvent,
               target: originalEvent.target || originalEvent.srcElement,
@@ -52,7 +71,7 @@ const pageList = $$('#pureFullPage > .page')
               deltaMode: originalEvent.type === 'MozMousePixelScroll' ? 0 : 1,
               deltaX: 0,
               deltaZ: 0,
-              preventDefault () {
+              preventDefault() {
                 originalEvent.preventDefault ? originalEvent.preventDefault() : (originalEvent.returnValue = false)
               }
             }
@@ -73,27 +92,9 @@ const pageList = $$('#pureFullPage > .page')
     )
   }
 })(window, document)
-
-const debounce = (action, delay) => {
-  let last
-  return function (...arg) {
-    clearTimeout(last)
-    last = setTimeout(() => {
-      action(arg)
-    }, delay)
-  }
-}
-const throttle = function (action, delay) {
-  let last = 0
-  return function (...args) {
-    let curr = +new Date()
-    if (curr - last > delay) {
-      action(args)
-      last = curr
-    }
-  }
-}
-
+/**
+ * 全屏滚动类
+ */
 class PureFullPage {
   constructor(elem, list, delay) {
     this.elem = elem
@@ -113,12 +114,7 @@ class PureFullPage {
     }
   }
   pcWheelListener() {
-    window.addWheelListener(
-      document,
-      throttle(event => {
-        this.scrollMouse(event)
-      }, this.delay)
-    )
+    window.addWheelListener(document, throttle(this.scrollMouse.bind(this), this.delay))
   }
   mobileWheelListener() {
     // 手指接触屏幕
@@ -155,7 +151,9 @@ class PureFullPage {
   }
   // 鼠标滚动逻辑（全屏滚动关键逻辑）
   scrollMouse(event) {
-    let delta = this.getWheelDelta(...event)
+    let delta = this.getWheelDelta(event)
+    console.log(delta)
+
     // delta < 0，鼠标往前滚动，页面向下滚动
     if (delta < 0) {
       this.goDown()
@@ -221,6 +219,5 @@ class PureFullPage {
   }
 }
 
-const newFullPage = new PureFullPage(fullPageContainer, pageList, 400)
-
+const newFullPage = new PureFullPage($('#pureFullPage'), $$('#pureFullPage > .page'), 400)
 newFullPage.init()

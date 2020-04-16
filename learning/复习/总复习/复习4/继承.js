@@ -18,5 +18,4 @@ Student.prototype.sing = function() {
 };
 
 var xm = new Student('小明', '人');
-xm.walk();
-xm.sing();
+console.dir(xm)

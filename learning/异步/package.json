@@ -1,0 +1,11 @@
+{
+  "name": "async",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "co": "^4.6.0",
+    "q": "^1.5.1",
+    "thunkify": "^2.1.2"
+  }
+}

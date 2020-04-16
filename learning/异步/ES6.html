@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const wait = function () {
+        const promise = new Promise((resolve, reject) => {
+          const task = function () {
+            console.log('done')
+            resolve()
+          }
+          setTimeout(task, 1000)
+        })
+        return promise
+      }
+
+      wait()
+        .then(
+          () => {
+            console.log('ok 1')
+          },
+          () => {
+            console.log('err 1')
+          }
+        )
+        .then(
+          () => {
+            console.log('ok 2')
+          },
+          () => {
+            console.log('err 1')
+          }
+        )
+    </script>
+  </body>
+</html>

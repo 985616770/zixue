@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="./jq.js"></script>
+    <script>
+      function waitHandle(arguments) {
+        const dtd = $.Deferred()
+        const wait = function (dtd) {
+          const task = function () {
+            console.log('done')
+            dtd.resolve()
+          }
+          setTimeout(task, 2000)
+          return dtd.promise()
+        }
+        return wait(dtd)
+      }
+
+      const w = waitHandle()
+      
+      w.then(
+        () => {
+          console.log('ok 1')
+        },
+        () => {
+          console.log('err 1')
+        }
+      ).then(
+        () => {
+          console.log('ok 2')
+        },
+        () => {
+          console.log('err 1')
+        }
+      )
+    </script>
+  </body>
+</html>
