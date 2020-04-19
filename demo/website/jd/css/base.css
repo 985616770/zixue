@@ -22,7 +22,7 @@ i {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 input,
@@ -43,8 +43,10 @@ body {
 @font-face {
   /* 声明字体 */
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?8qhwk5");
-  src: url("../fonts/icomoon.eot?8qhwk5#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?8qhwk5") format("truetype"), url("../fonts/icomoon.woff?8qhwk5") format("woff"), url("../fonts/icomoon.svg?8qhwk5#icomoon") format("svg");
+  src: url('../fonts/icomoon.eot?8qhwk5');
+  src: url('../fonts/icomoon.eot?8qhwk5#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?8qhwk5') format('truetype'), url('../fonts/icomoon.woff?8qhwk5') format('woff'),
+    url('../fonts/icomoon.svg?8qhwk5#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -126,7 +128,7 @@ header #close {
   left: 0;
   top: -30px;
   -webkit-box-shadow: 2px 1px 2px #858383;
-          box-shadow: 2px 1px 2px #858383;
+  box-shadow: 2px 1px 2px #858383;
   background: white;
 }
 
@@ -240,17 +242,22 @@ header #close {
   top: 0;
 }
 
-.header-t #header-t-logo .ad-r {
+
+#header-t-logo .img-r {
   height: 480px;
   width: 0;
   position: absolute;
   left: 0;
   top: 0;
+  overflow: hidden;
   -webkit-transition: all 1s;
   transition: all 1s;
 }
-
-.header-t #header-t-logo:hover .ad-r {
+#header-t-logo .img-r .ad-r{
+  width: 990px;
+  height: 100%;
+}
+#header-t-logo:hover .img-r {
   width: 990px;
 }
 
@@ -295,8 +302,8 @@ footer .footer-f ul {
 
 footer .footer-f ul li {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   height: 42px;
   width: 215px;
   line-height: 42px;

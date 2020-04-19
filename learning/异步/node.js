@@ -37,12 +37,12 @@ Promise.race([result1, result2])
     // console.error(error.stack)
   })
 
-
 // 定义一个 thenable 对象
 const thenable = {
   // 所谓 thenable 对象，就是具有 then 属性，而且属性值是如下格式函数的对象
   then: (resolve, reject) => {
-      resolve(200)
+    console.log('thenable')
+    resolve(200)
   }
 }
 
