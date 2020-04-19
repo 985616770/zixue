@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="module">
+      import el from './element.js'
+       // 步骤一：用JS对象模拟DOM树
+      const ul = el('ul', { id: 'list' }, [
+        el('li', { class: 'item' }, ['Item 1']),
+        el('li', { class: 'item' }, ['Item 2']),
+        el('li', { class: 'item' }, ['Item 3'])
+      ])
+      const ulRoot = ul.render()
+      document.body.appendChild(ulRoot)
+       // 步骤二：比较两棵虚拟DOM树的差异
+
+      
+    </script>
+  </body>
+</html>

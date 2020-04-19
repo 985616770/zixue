@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" id="a" v-model="text" />
+      {{text}}
+    </div>
+    <script>
+      const $ = document.querySelector.bind(document)
+      const app = $('#app')
+
+      // 编译 HTML
+      // 创建fragment文档片段,将vm的绑定的dom依次存入片段中,且在此过程中编译模版,添加订阅者(new Watcher).
+      function nodeToFragment(node, vm) {
+        const flag = document.createDocumentFragment()
+        let child
+        while ((child = node.firstChild)) {
+          compile(child, vm)
+          flag.appendChild(child)
+        }
+        return flag
+      }
+
+      // 编译 HTML
+      function compile(node, vm) {
+        // 匹配模版字符串
+        const reg = /\{\{(.*)\}\}/
+        // 节点为元素
+        if (node.nodeType === 1) {
+          const attr = node.attributes
+          let vmName = ''
+          // 解析属性
+          for (let i = 0; i < attr.length; i++) {
+            if (attr[i].nodeName === 'v-model') {
+              const name = attr[i].nodeValue
+              vmName = name
+              // 监听事件
+              node.addEventListener('input', function (e) {
+                // 给相应的data属性赋值,进而触发该属性的set方法
+                vm[name] = e.target.value
+              })
+              // 将data的值赋给该node
+              node.value = vm[name]
+              node.removeAttribute('v-model')
+            }
+          }
+           // 设置一个订阅者对象
+          new Watcher(vm, node, vmName, 'input')
+        }
+        if (node.nodeType === 3) {
+          if (reg.test(node.nodeValue)) {
+            //  获取匹配的字符串
+            let name = RegExp.$1
+
+            name = name.trim()
+            // 将data的值赋给该node
+            // node.nodeValue = vm.data[name]
+            // 设置一个订阅者对象
+            new Watcher(vm, node, name, 'text')
+          }
+        }
+      }
+      // 实现数据劫持,给vue的属性添加访问器属性
+      function defineReactive(obj, key, val) {
+        const dep = new Dep()
+
+        Object.defineProperty(obj, key, {
+          get() {
+            // 添加订阅者watcher到主题对象Dep
+            if (Dep.target) dep.addSub(Dep.target)
+            return val
+          },
+          set(newVal) {
+            if (newVal === val) {
+              return
+            }
+            val = newVal
+            // 作为发布者发出通知
+            dep.notify()
+            console.log(val)
+          }
+        })
+      }
+      // 监听数据
+      function observe(obj, vm) {
+        Object.keys(obj).forEach(key => {
+          defineReactive(vm, key, obj[key])
+        })
+      }
+      // 订阅者
+      class Watcher {
+        constructor(vm, node, name, nodeType) {
+          // 与发布者联系上
+          Dep.target = this
+          this.name = name
+          this.node = node
+          this.vm = vm
+          this.nodeType = nodeType
+          this.update()
+          // 添加到主题对象后,清楚连接
+          Dep.target = null
+        }
+        // 更新数据
+        update() {
+          this.get()
+          if (this.nodeType == 'text') {
+            this.node.nodeValue = this.value
+          }
+          if (this.nodeType == 'input') {
+            this.node.value = this.value
+          }
+        }
+        // 获取data中的属性值
+        get() {
+          this.value = this.vm[this.name] // 触发相应的属性的get
+        }
+      }
+      // 主题对象
+      class Dep {
+        constructor() {
+          this.subs = []
+        }
+        notify() {
+          this.subs.forEach(sub => {
+            sub.update()
+          })
+        }
+        addSub(sub) {
+          this.subs.push(sub)
+        }
+      }
+
+      class Vue {
+        constructor(options) {
+          this.data = options.data
+          let data = this.data
+
+          // 将所有属性绑定,数据劫持
+          observe(data, this)
+          const id = options.el
+          // 编译dom,模版编译
+          const dom = nodeToFragment($(id), this)
+          // 编译完成后,将dom返回app中
+          $(id).appendChild(dom)
+        }
+      }
+
+      const vm = new Vue({
+        el: '#app',
+        data: {
+          text: 'hello world'
+        }
+      })
+    </script>
+  </body>
+</html>
