@@ -1,0 +1,26 @@
+{
+  "name": "zixue",
+  "version": "1.0.0",
+  "description": "自学的资源来自于网络以及 书籍",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "git-cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/985616770/zixue.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/985616770/zixue/issues"
+  },
+  "homepage": "https://github.com/985616770/zixue#readme",
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  }
+}
