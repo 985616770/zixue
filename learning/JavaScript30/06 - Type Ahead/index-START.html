@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Type Ahead 👀</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      span.population {
+        align-self: flex-end;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="search-form">
+      <input type="text" class="search" placeholder="诗句 诗名 诗人" />
+      <ul class="suggestions">
+        <li>输入关键词进行搜索</li>
+      </ul>
+    </form>
+    <script>
+      ;(async function () {
+        const endpoint =
+          'https://gist.githubusercontent.com/soyaine/81399bb2b24ca1bb5313e1985533c640/raw/bdf7df2cbcf70706c4a5e51a7dfb8c933ed78878/TangPoetry.json'
+        let response = await fetch(endpoint)
+        let result = await response.json()
+        
+        result = result.map(val => ({ text: val.detail_text, author: val.detail_author[0], title: val.title }))
+
+        const searchInput = document.querySelector('.search')
+        const suggestions = document.querySelector('.suggestions')
+
+        function match(e) {
+          let value = e.target.value
+          let searchOut = result.filter(({ text, author = '无名', title = '无名' }) => {
+            const regex = new RegExp(value, 'gi')
+            return text.match(regex) || author.match(regex) || author.match(regex)
+          })
+
+          let html = searchOut
+            .map(({ text, author = '无名', title = '无名' }) => {
+              const regex = new RegExp(value, 'gi')
+              const textHtml = text.replace(regex, `<span class="hl">${value}</span>`)
+              const authorHtml = author.replace(regex, `<span class="hl">${value}</span>`)
+              const titleHtml = title.replace(regex, `<span class="hl">${value}</span>`)
+              return `
+      <li>
+        <span class="name">${textHtml}</span>
+        <span class="population">${authorHtml}-${titleHtml}</span>
+      </li>
+    `
+            })
+            .join('')
+          suggestions.innerHTML = html
+        }
+        searchInput.addEventListener('change', match)
+        searchInput.addEventListener('keyup', match)
+      })()
+    </script>
+  </body>
+</html>

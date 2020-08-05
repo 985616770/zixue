@@ -66,4 +66,5 @@ h2 {
 }
 .outer {
   border: 1px dashed silver;
+  visibility: ;
 }
