@@ -37,3 +37,4 @@ console.log(p.age)
 p.newPropKey = '新属性'
 console.log(p.newPropKey)
 
+const a = 'ads'
